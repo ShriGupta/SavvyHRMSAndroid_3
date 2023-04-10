@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savvy.hrmsnewapp.saleForce.Sale_Contact_Activity">
+
+   <androidx.coordinatorlayout.widget.CoordinatorLayout
+       android:id="@+id/coordinatorLayout"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/border_custom"
+          android:layout_gravity="center"
+          android:gravity="center">
+
+
+         <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+             android:id="@+id/txtDataNotFound"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:textStyle="bold"
+             android:text="Data Not Found"
+             android:textColor="@color/color_red"
+             android:gravity="center"
+             android:visibility="gone"
+             android:layout_gravity="center" />
+
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/sale_contact_recycler"
+             android:layout_margin="10dip">
+
+         </androidx.recyclerview.widget.RecyclerView>
+      </LinearLayout>
+
+
+   </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

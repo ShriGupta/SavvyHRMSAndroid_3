@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dropdown_menu1"
+        android:title="Full Day"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/dropdown_menu2"
+        android:title="First Half"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/dropdown_menu3"
+        android:title="Second Half"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+</menu>

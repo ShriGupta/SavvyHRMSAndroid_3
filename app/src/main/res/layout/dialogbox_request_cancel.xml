@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_custom_new"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:id="@+id/dialogCancel_header"
+            android:layout_width="wrap_content"
+            android:layout_height="25dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="5"
+            android:paddingLeft="15dp"
+            android:text="Approval"
+            android:gravity="bottom"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_line"
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="top"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="0.5dp"
+        android:background="@color/color_red" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="10"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="Are you sure, Do you want to Cancel the Request."
+            android:textColor="@color/my_custom_color"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:font="@string/font_name_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearCommentRow"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:id="@+id/edt_comment_dialogCancel"
+            android:layout_width="0dip"
+            android:layout_height="70dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="3"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="Comment *"
+            android:textColor="@color/my_custom_color"
+            android:textSize="12dp"
+            app:font="@string/font_name_light" />
+
+        <EditText
+            android:id="@+id/edt_approve_comment_Cancel"
+            android:layout_width="0dip"
+            android:layout_height="70dip"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="7"
+            android:background="@drawable/border_custom_new"
+            android:gravity="left"
+            android:hint="Comment"
+            android:lines="5"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/my_custom_color"
+            android:textColorHint="@color/color_gray"
+            android:textSize="12dp"
+            app:font="@string/font_name_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="10">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:id="@+id/txt_reason_dialogCancel"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="10dp"
+            android:layout_weight="3"
+            android:text="Cancel Reason *"
+            android:gravity="center_vertical"
+            android:textColor="@color/my_custom_color"
+            android:textSize="12dp"
+            app:font="@string/font_name_light" />
+
+        <Spinner
+            android:id="@+id/spin_reason_commentCancel"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="6.3"
+            android:background="@drawable/border_custom_new"
+            android:paddingLeft="0dp"
+            android:textColorHint="@color/color_gray"
+            android:textColor="@color/my_custom_color"
+            android:textSize="12dp"
+            app:font="@string/font_name_light" />
+
+        <ImageView
+            android:layout_weight="0.7"
+            android:padding="5dp"
+            android:layout_width="0dip"
+            android:background="@drawable/spin_border_new"
+            android:layout_marginLeft="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_down"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_height="0.5dp"
+        android:background="@color/color_red" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="#ffffff"
+            android:padding="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_weight="1"
+            android:nextFocusRight="@+id/btn_close"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_border_cancel"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="GO" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:padding="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_border_cancel"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Back" />
+
+    </LinearLayout>
+
+</LinearLayout>

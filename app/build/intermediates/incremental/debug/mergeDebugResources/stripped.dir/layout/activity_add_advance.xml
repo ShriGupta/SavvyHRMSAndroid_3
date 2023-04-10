@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddAdvanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:inputType="number"
+                android:text="Advance :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/edt_AdvanceAmount"
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_weight="7"
+                android:background="@drawable/border_custom"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:text="Currency :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/accommodeCurrencySpinner"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:hint="Label"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:text="Pay Mode :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <Spinner
+                android:id="@+id/payModeSpinner"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:hint="Label"
+                android:inputType="number"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:text="Remark :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/advanceRemark"
+                android:layout_width="0dip"
+                android:layout_height="35sp"
+                android:layout_weight="7"
+                android:background="@drawable/border_custom"
+                android:hint="Enter Remarks "
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30sp"
+            android:weightSum="10">
+
+            <Button
+                android:id="@+id/addAdvanceButton"
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/button_border_cancel"
+                android:text="Add"
+                android:textColor="#ffff"
+                android:textSize="@dimen/text_size"/>
+
+
+            <Button
+                android:id="@+id/addcloseButton"
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10sp"
+                android:layout_weight="4"
+                android:background="@drawable/button_border_cancel"
+                android:text="Add &amp; Close"
+                android:textColor="#ffff"
+                android:textSize="@dimen/text_size"/>
+
+
+            <Button
+                android:id="@+id/close_advanceButton"
+                android:layout_width="0dip"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10sp"
+                android:layout_weight="3"
+                android:background="@drawable/button_border_cancel"
+                android:text="Close"
+                android:textColor="#ffff"
+                android:textSize="@dimen/text_size"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

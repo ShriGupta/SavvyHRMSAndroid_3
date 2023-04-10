@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dip"
+    android:layout_marginRight="5dip"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:weightSum="5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_weight="3.5"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/sale_activity_name"
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dip"
+                android:text="Name of Customer"
+                android:textColor="#173f7c"
+                android:textSize="12dip"
+                app:font="@string/font_name_bold" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/sale_activity_location"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_weight="4"
+                android:gravity="left"
+                android:paddingTop="2dip"
+                android:paddingLeft="5dip"
+                android:text="Location"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                app:font="@string/font_name_light" />
+
+        </LinearLayout>
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:id="@+id/sale_activity_time"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical|right"
+            android:text="Time"
+            android:textColor="@color/my_custom_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size"
+            app:font="@string/font_name_light"
+            android:layout_marginRight="5dip"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/right_arrow"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="#8b0a0a"/>
+</LinearLayout>

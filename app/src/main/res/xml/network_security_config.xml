@@ -1,0 +1,7 @@
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">aamod.savvyhrms.com</domain>
+        <domain includeSubdomains="true">savvyhrms.com</domain>
+        <domain includeSubdomains="true">49.50.64.180</domain>
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shadow_border_background"
+        android:outlineSpotShadowColor="@color/color_gray">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:id="@+id/tv_payrole_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:font="@string/font_name_bold"
+            android:paddingStart="5dip"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/iv_payslip_imageview"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/download_image"
+            android:layout_centerVertical="true"
+
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="@dimen/_8sdp"
+            />
+
+
+    </RelativeLayout>
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dip"-->
+<!--        android:background="#8b0a0a" />-->
+
+</LinearLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.savvy.hrmsnewapp.activity.LoginActivity_1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/txv_fromTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/company_logo" />
+
+        <ImageView
+            android:id="@+id/clientLogo"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/txv_fromTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rl_loginview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/clientLogo"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/edt_ipaddress"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/rounded_edittext"
+                android:cursorVisible="true"
+                android:drawableLeft="@drawable/ip_address"
+                android:drawablePadding="10dp"
+                android:drawableTint="#000"
+                android:hint="@string/ip_domain_address"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@+id/edt_username"
+                android:singleLine="true"
+
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp">
+
+
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/edt_ipaddress"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/rounded_edittext"
+                android:cursorVisible="true"
+                android:drawableLeft="@drawable/mobile_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="#000"
+                android:hint="Username"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@+id/edt_password"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textColorHint="#000"
+                android:textCursorDrawable="@null"
+                android:textSize="16dp">
+
+            </EditText>
+
+            <RelativeLayout
+                android:id="@+id/showhide_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_username"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:cursorVisible="true"
+                    android:drawableLeft="@drawable/password_icon"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="#000"
+                    android:elegantTextHeight="true"
+                    android:hint="Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:textColorHint="#000"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16dp" />
+
+                <ImageView
+
+                    android:id="@+id/show_Password"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#dbe9f4"
+                    android:src="@drawable/show_password_icon1"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/hide_Password"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/hide_password_icon1"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/bt_getstarted"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/showhide_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_border"
+                android:text="Sign In"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:textStyle="normal" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_forgotpwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bt_getstarted"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="Forgot Password?"
+                android:textColor="#0A84FF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:font="@string/font_name_light" />
+
+            <TextView
+                android:id="@+id/tv_label"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/txv_forgotpwd"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/color_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_or_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txv_forgotpwd"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/txv_forgotpwd"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="OR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_or_layout"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/qr_code_icon" />
+
+                <TextView
+                    android:id="@+id/tv_login_with_qr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Login With QR Code"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="2dp"
+            android:text="VersionName"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

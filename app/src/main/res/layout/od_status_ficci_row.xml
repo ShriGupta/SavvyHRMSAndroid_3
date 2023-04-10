@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="26dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Token No.:"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/status_approval" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/tv_odToken_value"
+                        android:layout_width="0dip"
+                        android:layout_height="26dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_toRightOf="@+id/txt_leavenameTitle"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/status_approval"
+                        app:font="@string/font_name_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="26dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="From Date:"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/status_approval" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/tv_fromodDate_value"
+                        android:layout_width="0dip"
+                        android:layout_height="26dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/status_approval"
+                        app:font="@string/font_name_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="26dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Action By:"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/status_approval" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/tv_actionBy_value"
+                        android:layout_width="0dip"
+                        android:layout_height="26dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/status_approval"
+                        app:font="@string/font_name_light" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:weightSum="8">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="26dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Status:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/status_approval" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/tv_od_status_value"
+                            android:layout_width="0dip"
+                            android:layout_height="26dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/status_approval"
+                            app:font="@string/font_name_light" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="26dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="To Date:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/status_approval" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/tv_toOd_date"
+                            android:layout_width="0dip"
+                            android:layout_height="26dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/status_approval"
+                            app:font="@string/font_name_light" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="26dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Action Date:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/status_approval" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/tv_actionOdDate"
+                            android:layout_width="0dip"
+                            android:layout_height="26dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/status_approval"
+                            app:font="@string/font_name_light" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="26dip"
+                android:layout_marginLeft="15sp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="3.8"
+                android:gravity="center_vertical"
+                android:text="Reason:"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/status_approval" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/tv_reason_value"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/status_approval"
+                app:font="@string/font_name_light" />
+
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/tv_cancel_od"
+                android:layout_width="70dp"
+                android:layout_height="26dip"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="0"
+                android:background="@drawable/button_border_cancel"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/tv_odViewDetail"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_border"
+                android:gravity="center"
+                android:text="View Detail"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/tv_pullback_od"
+                android:layout_width="70dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/button_border"
+                android:gravity="center"
+                android:text="Pull Back"
+                android:textColor="#fff"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/color_red" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "873975855040",
+    "firebase_url": "https://savvy-hrms.firebaseio.com",
+    "project_id": "savvy-hrms",
+    "storage_bucket": "savvy-hrms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873975855040:android:3cb1febbcffa2891",
+        "android_client_info": {
+          "package_name": "com.savvy.hrmsnewapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873975855040-d7kknm76g7rbi74ndnhirf4eoq1e43di.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.savvy.hrmsnewapp",
+            "certificate_hash": "ce2a123ef96c70df395fff84ce81f171ca2e0745"
+          }
+        },
+        {
+          "client_id": "873975855040-k711mlicch3klrekavj4837a50h0eo6m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.savvy.hrmsnewapp",
+            "certificate_hash": "7952b1211fa34ce0907f9ecf8483d0f86f4d00ca"
+          }
+        },
+        {
+          "client_id": "873975855040-7uuhm8601liabg2cimm0s2adgq5erk2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUqu_BIUYTBjEJBO3tTzXOYCit4PTxrU0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873975855040-7uuhm8601liabg2cimm0s2adgq5erk2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

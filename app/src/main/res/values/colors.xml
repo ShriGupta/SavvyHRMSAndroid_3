@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#277ddb</color>
+    <color name="colorPrimaryDark">#277ddb</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#5AADE1</color>
+    <color name="colorBlack">#212830</color>
+    <color name="title">#222222</color>
+    <color name="buttonBackground">#234489</color>
+    <color name="colorGray">#939393</color>
+    <color name="colorLightGray">#e4e4e4</color>
+    <color name="insufficiant_color">#CC0000</color>
+
+    <color name="color_Purple">#6463a5</color>
+    <color name="color_Green">#52d0c2</color>
+    <color name="color_Orange">#e79273</color>
+    <color name="color_parat_green">#26a131</color>
+    <color name="color_red">#b52f2f</color>
+    <color name="my_custom_color">#303030</color>
+    <color name="my_custom_color_1">#000000</color>
+    <color name="color_light_red">#ee8f6e</color>
+    <color name="color_yellow">#e6ef7f</color>
+    <color name="color_gray">#979b9e</color>
+    <color name="color_orange">#e08105</color>
+    <color name="color_blue">#2269B7</color>
+    <color name="color_blue_fade">#65809B</color>
+    <color name="color_purple_light">#AE63C0</color>
+    <color name="color_white_shadow">#DCEEF4</color>
+    <color name="static_text_color">#DCEE22</color>
+    <color name="action_btn_pressable">#256fc2</color>
+    <color name="orange_color">#FF8000</color>
+    <color name="new_button_color">#c167ef</color>
+    <color name="new_button_color12">#606060</color>
+
+    <color name="heading_dark">#1C4878</color>
+
+    <color name="button_click">#92a1c6</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+</resources>

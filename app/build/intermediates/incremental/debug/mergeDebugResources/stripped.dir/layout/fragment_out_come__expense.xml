@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savvy.hrmsnewapp.saleForce.OutCome_ExpenseFragment">
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_margin="2dip"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="0dip">
+
+           <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+               android:id="@+id/out_exp_Outcome"
+               android:layout_width="0dip"
+               android:layout_height="match_parent"
+               android:text="Outcome"
+               android:textSize="13dp"
+               android:textStyle="bold"
+               android:textColor="@color/my_custom_color"
+               android:background="@drawable/border_custom_new"
+               android:layout_weight="1"
+               android:gravity="center" />
+
+           <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+               android:id="@+id/out_exp_Expense"
+               android:layout_width="0dip"
+               android:layout_height="match_parent"
+               android:text="Expense"
+               android:textSize="13dp"
+               android:textStyle="bold"
+               android:textColor="@color/my_custom_color"
+               android:background="@drawable/border_custom_new"
+               android:layout_weight="1"
+               android:gravity="center" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/linear_activity_out"
+           android:layout_margin="2dip"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="0dip">
+
+           <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+               android:id="@+id/out_exp_activity"
+               android:layout_width="0dip"
+               android:layout_height="match_parent"
+               android:text="Activity"
+               android:textSize="13dp"
+               android:textStyle="bold"
+               android:textColor="@color/my_custom_color"
+               android:background="@drawable/border_custom_new"
+               android:layout_weight="1"
+               android:gravity="center" />
+
+           <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+               android:id="@+id/out_exp_contact"
+               android:layout_width="0dip"
+               android:layout_height="match_parent"
+               android:text="Contact"
+               android:textSize="13dp"
+               android:textStyle="bold"
+               android:textColor="@color/my_custom_color"
+               android:background="@drawable/border_custom_new"
+               android:layout_weight="1"
+               android:gravity="center" />
+
+           <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+               android:id="@+id/out_exp_notes"
+               android:layout_width="0dip"
+               android:layout_height="match_parent"
+               android:text="Notes"
+               android:textSize="13dp"
+               android:textStyle="bold"
+               android:textColor="@color/my_custom_color"
+               android:background="@drawable/border_custom_new"
+               android:layout_weight="1"
+               android:gravity="center" />
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:layout_marginTop="-2dip"
+           android:layout_marginLeft="2dp"
+           android:layout_marginRight="2dp"
+           android:layout_weight="14"
+           android:layout_width="match_parent"
+           android:layout_height="0dip">
+
+           <FrameLayout
+               android:id="@+id/out_exp_container"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+           </FrameLayout>
+       </LinearLayout>
+   </LinearLayout>
+</LinearLayout>

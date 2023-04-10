@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/clientlogo_MainFragment"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:elevation="2dp"
+                android:padding="5dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#2979FF"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/circuler_bordershape"
+                            android:gravity="center">
+
+                            <com.savvy.hrmsnewapp.utils.RoundedImageView
+                                android:id="@+id/profile_main_dashboard"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp" />
+                        </RelativeLayout>
+
+                     <!--   <com.savvy.hrmsnewapp.customwidgets.CircularImageView
+                            android:id="@+id/profile_main_dashboard"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/round_profile_image1"
+                            android:elevation="2dp"
+                            android:padding="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:scaleType="centerCrop" />-->
+
+                        <!-- <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                             android:id="@+id/profile_main_dashboard"
+                             android:layout_width="80dp"
+                             android:layout_height="80dp"
+                             app:civ_border_color="#FF000000"
+                             app:civ_border_width="2dp" />-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp">
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/tv_empDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp">
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/tv_employeeCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/showhide_Profile"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/show_profile_border"
+                        android:drawableLeft="@drawable/show_hide_profile"
+                        android:paddingLeft="20dp"
+                        android:text="Show Profile"
+                        android:textAllCaps="false"
+                        android:textColor="#5b39c6"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/menuitem_List"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:animateLayoutChanges="false"/>
+
+            <!-- <FrameLayout
+                 android:id="@+id/profileFrame"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 />-->
+
+            <LinearLayout
+                android:id="@+id/emp_profileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#00c3ff"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dynamicProfileRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

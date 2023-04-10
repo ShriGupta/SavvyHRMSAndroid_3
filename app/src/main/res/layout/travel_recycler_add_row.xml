@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_weight="2.5"
+                android:id="@+id/con_header"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_mode"
+                    android:background="@drawable/border_custom_new"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:textSize="@dimen/status_approval"
+                    android:gravity="center_vertical"
+                    android:layout_width="110dip"
+                    android:layout_height="25dp"
+                    android:text="Travel Mode"/>
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_class"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:textSize="@dimen/status_approval"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/border_custom_new"
+                    android:layout_width="100dip"
+                    android:layout_height="25dp"
+                    android:text="Travel Class"/>
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travelBoardingPlace"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:textSize="@dimen/status_approval"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/border_custom_new"
+                    android:layout_width="110dip"
+                    android:layout_height="25dp"
+                    android:text="Boarding Place"/>
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travelArrivalPlace"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:textSize="@dimen/status_approval"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/border_custom_new"
+                    android:layout_width="110dip"
+                    android:layout_height="25dp"
+                    android:text="Arrival Place"/>
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travelBoardingDate"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:textSize="@dimen/status_approval"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/border_custom_new"
+                    android:layout_width="110dip"
+                    android:layout_height="25dp"
+                    android:text="Boarding Date"/>
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travelArrivalDate"
+                    android:background="@drawable/border_custom_new"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:textSize="@dimen/status_approval"
+                    android:gravity="center_vertical"
+                    android:layout_width="110dip"
+                    android:layout_height="25dp"
+                    android:text="Arrival Date"/>
+
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travelExpenseNature"
+                    android:background="@drawable/border_custom_new"
+                    android:layout_weight="2"
+                    android:paddingLeft="3dp"
+                    android:textSize="@dimen/status_approval"
+                    android:gravity="center_vertical"
+                    android:layout_width="130dip"
+                    android:layout_height="25dp"
+                    android:text="Expense Nature"/>
+
+                <!--<com.savvy.hrms.customwidgets.CustomTextView-->
+                    <!--android:id="@+id/travelAction"-->
+                    <!--android:background="@drawable/button_border"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:paddingLeft="3dp"-->
+                    <!--android:textColor="#fff"-->
+                    <!--android:textSize="@dimen/status_approval"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:layout_width="80dip"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:text="Edit"/>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

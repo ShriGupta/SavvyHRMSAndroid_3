@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/upload_file"
+            android:textColor="@color/my_custom_color"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:font="@string/font_name_light"
+            tools:ignore="RtlSymmetry" />
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:layout_width="0dip"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/semi_colon"
+            android:textColor="@color/my_custom_color"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/chooseFileLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/colorLightGray">
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:src="@drawable/fileimage" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/tv_no_file_choosen"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_25sdp"
+                android:gravity="start|center"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="@string/upload_file"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imguploadIcon"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_weight="1"
+            android:src="@drawable/imageuploadicon"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_weight="6"
+            android:max="100"
+            android:progress="90"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
