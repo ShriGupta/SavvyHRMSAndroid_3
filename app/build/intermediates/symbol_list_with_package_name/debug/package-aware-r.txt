@@ -5763,6 +5763,7 @@ string item_view_role_description
 string large_text
 string late_coming
 string location_permission
+string location_string
 string mark_attendance
 string material_slider_range_end
 string material_slider_range_start

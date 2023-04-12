@@ -84,6 +84,7 @@ public class PunchInOutNew extends BaseFragment implements View.OnClickListener 
                 break;
 
             case R.id.cust_linear2:
+
                 try {
                     SaveMarkAttendanceWithInOut_withMap saveMarkAttendanceWithInOut_withMap = new SaveMarkAttendanceWithInOut_withMap();
                     transaction.replace(R.id.frame_cust_holder, saveMarkAttendanceWithInOut_withMap);

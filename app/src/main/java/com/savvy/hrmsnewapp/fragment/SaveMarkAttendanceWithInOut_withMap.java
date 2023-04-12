@@ -101,13 +101,10 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         username = (shared.getString("UserName", ""));
         title = (shared.getString("Title", ""));
 
-        locationManagerClass = new LocationManagerClass(requireActivity(), new LocationInterface() {
-            @Override
-            public void onLocationRecieve(Location mLocation) {
-                location = mLocation;
-                Log.e("TAG", "onLocationRecieve: Latitude: "+location.getLatitude() +" Longitude: "+location.getLongitude() );
-                updateUI(location);
-            }
+        locationManagerClass = new LocationManagerClass(requireActivity(), mLocation -> {
+            location = mLocation;
+            Log.e("TAG", "onLocationRecieve: Latitude: "+location.getLatitude() +" Longitude: "+location.getLongitude() );
+            updateUI(location);
         });
 
     }
@@ -259,13 +256,6 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         }
     }
 
-    LocationListener locationListener = new LocationListener() {
-        @Override
-        public void onLocationChanged(@NonNull Location mLocation) {
-
-        }
-    };
-
 
     public boolean isMockLocationON(Location location) {
         boolean isMockLocation = false;
@@ -334,7 +324,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
                     break;
 
                 case R.id.btn_punchOut:
-                    if (isGPSTurnedOn() && location!=null) {
+                    if (Utilities.isGPSTurnedOn(requireActivity()) && location!=null) {
                         if ((Utilities.isNetworkAvailable(mContext))) {
                             if (locationAddress.equals("mocklocation")) {
                                 showMockAlert();
@@ -350,7 +340,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
                             Utilities.showDialog(coordinatorLayout, ErrorConstants.NO_NETWORK);
                         }
                     } else {
-                        if (!isGPSTurnedOn()) {
+                        if (!Utilities.isGPSTurnedOn(requireActivity())) {
                             moveToLocationSetting();
                         }
                     }
@@ -467,4 +457,5 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
             }
         }
     }
+
 }

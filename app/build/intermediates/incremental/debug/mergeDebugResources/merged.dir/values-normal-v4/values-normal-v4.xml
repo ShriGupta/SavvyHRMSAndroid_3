@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="status_approval">9sp</dimen>
-    <dimen name="text_size">11sp</dimen>
-    <dimen name="text_size_heading">14sp</dimen>
-</resources>

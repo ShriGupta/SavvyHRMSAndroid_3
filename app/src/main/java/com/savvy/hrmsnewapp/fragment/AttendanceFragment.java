@@ -21,6 +21,7 @@ import com.savvy.hrmsnewapp.retrofit.APIServiceClass;
 import com.savvy.hrmsnewapp.retrofit.ResultHandler;
 import com.savvy.hrmsnewapp.retrofitModel.ServerDateTimeModel;
 import com.savvy.hrmsnewapp.utils.Constants;
+import com.savvy.hrmsnewapp.utils.Utilities;
 
 public class AttendanceFragment extends BaseFragment {
     public static final String MY_PREFS_NAME = "MyPrefsFile";
@@ -60,19 +61,21 @@ public class AttendanceFragment extends BaseFragment {
 
         edt_messagefeedback.setVisibility(View.GONE);
 
-        btn_submit.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-            @Override
-            public void onClick(View v) {
+        btn_submit.setOnClickListener(v -> {
 
+
+            if (Utilities.isGPSTurnedOn(requireActivity())) {
                 Intent intent = new Intent(requireActivity(), MarkAttendance.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("latlongFlag", latlongFlag);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 requireActivity().overridePendingTransition(0, 0);
-
+            } else {
+                Utilities.showLocationErrorDialog(requireActivity(), requireActivity().getResources().getString(R.string.location_string));
             }
+
+
         });
     }
 
