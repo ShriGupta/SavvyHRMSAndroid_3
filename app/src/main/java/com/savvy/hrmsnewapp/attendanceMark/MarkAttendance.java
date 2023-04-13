@@ -140,7 +140,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         hideKeyBoard();
         if (v.getId() == R.id.btn_submit) {
-
+            Log.e("TAG", "onClick: latlongFlag: " + latlongFlag);
             if (Utilities.isGPSTurnedOn(MarkAttendance.this)) {
                 if (checkLocationPermission()) {
                     String commentreplace = edt_messagefeedback.getText().toString().trim().replace(" ", "-");
@@ -149,10 +149,11 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
                             if (!(latitude.equals("") && longitude_.equals(""))) {
                                 markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
                             } else {
-                                Utilities.showDialog(coordinatorLayout, "Please Enable Your location...");
+                                Utilities.showDialog(coordinatorLayout, "Please wait fetching your current location...");
                             }
                         } else {
-                            markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
+                            Utilities.showDialog(coordinatorLayout, "Please wait fetching your current location...");
+                           // markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
                         }
                     } else if (latlongFlag.equals("1")) {
                         if (!(latitude.equals("") && longitude_.equals(""))) {

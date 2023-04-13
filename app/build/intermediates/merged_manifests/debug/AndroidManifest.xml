@@ -156,10 +156,7 @@
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name="com.savvy.hrmsnewapp.activity.LeaveBalanceActivity" />
-        <activity
-            android:name="com.savvy.hrmsnewapp.activity.LoginActivity_1"
-            android:screenOrientation="fullSensor"
-            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.savvy.hrmsnewapp.activity.LoginActivity_1" />
         <activity
             android:name="com.savvy.hrmsnewapp.activity.MarkAttendance"
             android:screenOrientation="fullSensor"

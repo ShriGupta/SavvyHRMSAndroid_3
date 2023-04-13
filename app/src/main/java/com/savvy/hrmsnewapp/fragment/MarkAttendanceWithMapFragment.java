@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.android.volley.AuthFailureError;
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.core.app.ActivityCompat;
@@ -89,61 +90,24 @@ import static android.content.ContentValues.TAG;
 /**
  * Created by Ravi on 29/07/15.
  */
-public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMapReadyCallback,
-        GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMapReadyCallback {
 
-    int userid;
-    SimpleDateFormat df;
-    String formattedDate = "";
-    TextView currentMonth, currentYear, tvHeader, tvAddress;
-    String eventDate = "";
-    ProfileModel profileDB;
-    ProfileModel profileModel;
-    RecyclerView recyclerView;
     public static final String MY_PREFS_NAME = "MyPrefsFile";
     SharedPreferences shared;
-    CustomTextView txv_currentDate, txv_currentTime;
     Button btn_submit;
     EditText edt_messagefeedback;
-    private TrackGPS gps;
-    private static String address;
-    String longitude, longi;
-    String latitude, latit;
-    private GoogleApiClient googleApiClient;
-    private LocationService locationService;
-
     private static final int LOCATION_REQUEST_CODE = 101;
-    final static int REQUEST_LOCATION = 199;
 
     String token = "", empoyeeId = "", username = "";
-
-    Handler handler1;
-    Runnable rRunnable;
-    static int counter = 0;
-    int count_method = 0;
-
-    CustomTextView txv_userName, txv_studentcode_value, txv_course_value, txv_batch_value, txv_email_value, txv_fathername_value;
     private Context mContext;
     private GoogleMap mMap;
     private Snackbar snackbar;
-    private TrackGPS track;
     private Location location;
-    private boolean permissionGranted;
     private MarkerOptions markerOptions;
-
-
-    /*
-     * Define a request code to send to Google Play services
-     * This code is returned in Activity.onActivityResult
-     */
-    private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
-
-
-    private LocationRequest mLocationRequest;
     private boolean statusOfGPS;
     private String title;
-    private AddressDetails addressDetails;
+    TextView tvHeader, tvAddress;
+    private FusedLocationProviderClient fusedLocationClient;
 
     public MarkAttendanceWithMapFragment() {
     }
@@ -154,34 +118,6 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         mContext = getActivity();
     }
 
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Log.e("MarkAttendance", "onStart");
-        LocationService.setCallbacks(new LocationService.GPSStatusCallback() {
-            @Override
-            public void gpsStatusChanged(boolean status) {
-                Log.e("GPS Status: ", status + "");
-                statusOfGPS = status;
-                if (!statusOfGPS) {
-
-                    setLocationResult();
-                    /* TODO GPS off */
-
-                } else {
-                    /* TODO GPS on */
-
-                }
-
-
-            }
-        });
-
-        mContext.startService(new Intent(mContext, LocationService.class));
-
-
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -195,6 +131,7 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         username = (shared.getString("UserName", ""));
 
         title = (shared.getString("Title", ""));
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity());
 
 
     }
@@ -204,6 +141,8 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_mark_attendance_with_map, container, false);
         Log.e("MarkAttendance", "onCreateView");
+
+        setMap();
 
         return rootView;
     }
@@ -226,43 +165,33 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         tvAddress = rootView.findViewById(R.id.tvAddress);
         edt_messagefeedback.setImeOptions(EditorInfo.IME_ACTION_DONE);
         edt_messagefeedback.setRawInputType(InputType.TYPE_CLASS_TEXT);
-        tvAddress.setText("");
 
 
         if (title.contains("Customer")) {
-
             tvHeader.setText("Customer Name/Remarks");
             edt_messagefeedback.setHint("Customer Name/Remarks");
-
         } else {
             tvHeader.setText("Comment");
             edt_messagefeedback.setHint("Comment");
         }
 
-
-        btn_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().overridePendingTransition(0, 0);
-                if (location != null) {
-                    if ((Utilities.isNetworkAvailable(mContext))) {
-                        if (isMockLocationON(location)) {
-                            showMockAlert();
-                        } else {
-                            String locationAddress = Utilities.getAddressFromLocation(getActivity(), location);
-                            markAttendancePost(edt_messagefeedback.getText().toString(), String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()), locationAddress);
-                        }
-
-
+        btn_submit.setOnClickListener(v -> {
+            if (Utilities.isGPSTurnedOn(requireActivity())) {
+                if ((Utilities.isNetworkAvailable(mContext))) {
+                    if (isMockLocationON(location)) {
+                        showMockAlert();
                     } else {
-                        Utilities.showDialog(coordinatorLayout, ErrorConstants.NO_NETWORK);
+                        String locationAddress = Utilities.getAddressFromLocation(getActivity(), location);
+                        markAttendancePost(edt_messagefeedback.getText().toString(), String.valueOf(location.getLatitude()), String.valueOf(location.getLongitude()), locationAddress);
                     }
 
 
                 } else {
-                    snackbar.show();
+                    Utilities.showDialog(coordinatorLayout, ErrorConstants.NO_NETWORK);
                 }
 
+            } else {
+                Utilities.moveToLocationSetting(requireActivity());
             }
         });
     }
@@ -283,108 +212,44 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        //Instantiating the GoogleApiClient
-        googleApiClient = new GoogleApiClient.Builder(mContext)
-                .addApi(LocationServices.API)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .build();
-
-
-        setLocationResult();
-
-
+        requestLocation();
     }
 
-    private void setLocationResult() {
-        // Create the LocationRequest object
-        mLocationRequest = LocationRequest.create()
-                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-                .setInterval(10 * 1000)        // 10 seconds, in milliseconds
-                .setFastestInterval(1 * 1000); // 1 second, in milliseconds
-
-        LocationRequest locationRequest = LocationRequest.create();
-        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(30 * 1000);
-        locationRequest.setFastestInterval(5 * 1000);
-
-        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder()
-                .addLocationRequest(locationRequest);
-        builder.setAlwaysShow(true);
-
-
-        PendingResult<LocationSettingsResult> result =
-                LocationServices.SettingsApi.checkLocationSettings(googleApiClient, builder.build());
-        result.setResultCallback(new ResultCallback<LocationSettingsResult>() {
-            @Override
-            public void onResult(LocationSettingsResult result) {
-                final Status status = result.getStatus();
-                switch (status.getStatusCode()) {
-                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
-                        try {
-                            startIntentSenderForResult(status.getResolution().getIntentSender(), REQUEST_LOCATION, null, 0, 0, 0, null);
-                        } catch (IntentSender.SendIntentException e) {
-                            e.printStackTrace();
-                        }
-                        break;
-                }
-            }
-        });
-    }
-
-    private void checkLocationPermission() {
-        //Checking if the user has granted the permission
-        if (ActivityCompat.checkSelfPermission(mContext, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            permissionGranted = false;
-
-            //Requesting the Location permission
-            ActivityCompat.requestPermissions((Activity) mContext,
-                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION
-                    }, LOCATION_REQUEST_CODE);
-            return;
-
-
+    private void requestLocation() {
+        if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
         } else {
-            permissionGranted = true;
-
-
+            fusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(requireActivity(), mLocation -> {
+                        if (mLocation != null) {
+                            location = mLocation;
+                            Log.e("TAG", "onLocationRecieve: Latitude: " + location.getLatitude() + " Longitude: " + location.getLongitude());
+                            updateUI(location);
+                        }
+                    });
         }
     }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        checkLocationPermission();
         if (mMap != null) {
             LocationManager manager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
             statusOfGPS = manager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-
             if (!statusOfGPS) {
-
                 location = null;
                 mMap.clear();
-
-
-            } else {
-                checkLocationPermission();
-                mMap.setMyLocationEnabled(true);
             }
-
-
         }
-
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case LOCATION_REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    permissionGranted = true;
-
                     checkLocationandAddToMap(location);
                 } else {
-                    permissionGranted = false;
                     Toast.makeText(mContext, "Location Permission Denied", Toast.LENGTH_SHORT).show();
                 }
                 break;
@@ -393,109 +258,22 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
 
     private void checkLocationandAddToMap(Location location) {
         mMap.clear();
+        markerOptions = new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title(location.getLatitude() + "," + location.getLongitude());
+        mMap.addMarker(markerOptions);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 14.0f));
 
-        if (!permissionGranted) {
-
-            btn_submit.setVisibility(View.INVISIBLE);
-            snackbar.show();
-
-
-        } else {
-
-            if (location != null && statusOfGPS) {
-
-                //MarkerOptions are used to create a new Marker.You can specify location, title etc with MarkerOptions
-                markerOptions = new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title(location.getLatitude() + "," + location.getLongitude());
-                //Adding the created the marker on the map
-
-                mMap.addMarker(markerOptions);
-
-                //Move the camera to the user's location and zoom in!
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 14.0f));
-
-            }
-
-
-        }
-
-
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.e("MarkAttendance", "onResume");
-        googleApiClient.connect();
-
-
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.e("MarkAttendance", "onPause");
-        if (googleApiClient.isConnected()) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(googleApiClient, this);
-            googleApiClient.disconnect();
-        }
-    }
-
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        LocationService.removeCallbacks(null);
-
-        mContext.stopService(new Intent(mContext, LocationService.class));
-
-    }
-
-
-    //Callback invoked once the GoogleApiClient is connected successfully
-    @Override
-    public void onConnected(Bundle bundle) {
-
-
-        if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-
-
-        LocationServices.FusedLocationApi.requestLocationUpdates(googleApiClient, mLocationRequest, this);
-        location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
-
-        if (location == null) {
-
-            //  LogMaintainance.WriteLog("Location :"+location.getLatitude()+", "+location.getLongitude());
-
-        } else {
-            if (isMockLocationON(location)) {
-                tvAddress.setText(R.string.mocklocation);
-                showMockAlert();
-            } else {
-                checkLocationandAddToMap(location);
-            }
-
-
-        }
     }
 
     public boolean isMockLocationON(Location location) {
-        boolean isMockLocation=false;
-        try{
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2 && location != null && location.isFromMockProvider()) {
-            isMockLocation = true;
-        } else {
-            isMockLocation = !Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ALLOW_MOCK_LOCATION).equals("0");
-        }}catch (Exception e){}
+        boolean isMockLocation = false;
+        try {
+            if (location != null && location.isFromMockProvider()) {
+                isMockLocation = true;
+            } else {
+                isMockLocation = !Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ALLOW_MOCK_LOCATION).equals("0");
+            }
+        } catch (Exception ignored) {
+        }
         return isMockLocation;
     }
 
@@ -505,61 +283,17 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         builder.setTitle("Mock Location is ON");
         builder.setMessage("Please disable the mock location for Punch In/Punch Out");
         builder.setCancelable(false);
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(android.provider.Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS));
-            }
-        });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
-
+        builder.setPositiveButton("Yes", (dialogInterface, i) -> startActivity(new Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)));
+        builder.setNegativeButton("No", (dialogInterface, i) -> dialogInterface.cancel());
         AlertDialog alert = builder.create();
         alert.show();
     }
 
-    @Override
-    public void onConnectionSuspended(int i) {
-        location = null;
-    }
-
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        /*
-         * Google Play services can resolve some errors it detects.
-         * If the error has a resolution, try sending an Intent to
-         * start a Google Play services activity that can resolve
-         * error.
-         */
-        if (connectionResult.hasResolution()) {
-            try {
-                // Start an Activity that tries to resolve the error
-                connectionResult.startResolutionForResult((Activity) mContext, CONNECTION_FAILURE_RESOLUTION_REQUEST);
-                /*
-                 * Thrown if Google Play services canceled the original
-                 * PendingIntent
-                 */
-            } catch (IntentSender.SendIntentException e) {
-                // Log the error
-                e.printStackTrace();
-            }
-        } else {
-            /*
-             * If no resolution is available, display a dialog to the
-             * user with the error.
-             */
-            Log.i("Log", "Location services connection failed with code " + connectionResult.getErrorCode());
-        }
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {
-            case REQUEST_LOCATION:
+            case LOCATION_REQUEST_CODE:
                 onMapReady(mMap);
 
                 break;
@@ -638,7 +372,6 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
                     return params;
                 }
 
-
                 @Override
                 public String getBodyContentType() {
                     return "application/json";
@@ -652,28 +385,11 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
-    @Override
-    public void onLocationChanged(Location location) {
-
+    private void updateUI(Location location) {
         checkLocationandAddToMap(location);
-        if (location != null) {
-            LogMaintainance.WriteLog("NewTrackServiceActivity-> Location Changed " + location.getLatitude());
-
-            addressDetails = new AddressDetails(mContext, location.getLatitude(), location.getLongitude());
-            try {
-                Geocoder geocoder = new Geocoder(mContext, Locale.getDefault());
-                List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
-                if (addresses != null && addresses.size() > 0) {
-                    tvAddress.setText("\n" + addresses.get(0).getAddressLine(0));
-                }
-
-
-            } catch (Exception e) {
-            }
-        }
+        String newAddress = Utilities.getAddressFromLocation(requireActivity(), location);
+        tvAddress.setText(newAddress);
     }
 }

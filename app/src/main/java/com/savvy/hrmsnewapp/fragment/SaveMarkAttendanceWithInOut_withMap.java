@@ -41,12 +41,15 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.savvy.hrmsnewapp.R;
 import com.savvy.hrmsnewapp.interfaces.LocationInterface;
 import com.savvy.hrmsnewapp.utils.Constants;
@@ -77,8 +80,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
     String locationAddress = "";
     private String title;
     Location location;
-
-    LocationManagerClass locationManagerClass;
+    private FusedLocationProviderClient fusedLocationClient;
 
 
     public SaveMarkAttendanceWithInOut_withMap() {
@@ -100,12 +102,8 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         empoyeeId = (shared.getString("EmpoyeeId", ""));
         username = (shared.getString("UserName", ""));
         title = (shared.getString("Title", ""));
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity());
 
-        locationManagerClass = new LocationManagerClass(requireActivity(), mLocation -> {
-            location = mLocation;
-            Log.e("TAG", "onLocationRecieve: Latitude: "+location.getLatitude() +" Longitude: "+location.getLongitude() );
-            updateUI(location);
-        });
 
     }
 
@@ -166,10 +164,16 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
         } else {
-            locationManagerClass.startLocationUpdates();
+            fusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(requireActivity(), mLocation -> {
+                        if (mLocation != null) {
+                            location = mLocation;
+                            Log.e("TAG", "onLocationRecieve: Latitude: " + location.getLatitude() + " Longitude: " + location.getLongitude());
+                            updateUI(location);
+                        }
+                    });
         }
     }
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -219,33 +223,13 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         locationAddress = "";
         Log.e("MarkAttendance", "onResume");
 
-        if(!isGPSTurnedOn()){
+        if (!isGPSTurnedOn()) {
             showLocationErrorDialog("Please Enable Location");
         }
 
 
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.e("MarkAttendance", "onPause");
-
-
-    }
-
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        locationManagerClass.stopLocationUpdates();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        locationManagerClass.stopLocationUpdates();
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -299,7 +283,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             switch (v.getId()) {
                 case R.id.btn_punchIn:
-                    if (isGPSTurnedOn() && location!=null) {
+                    if (isGPSTurnedOn() && location != null) {
                         if ((Utilities.isNetworkAvailable(mContext))) {
 
                             if (locationAddress.equals("mocklocation")) {
@@ -324,7 +308,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
                     break;
 
                 case R.id.btn_punchOut:
-                    if (Utilities.isGPSTurnedOn(requireActivity()) && location!=null) {
+                    if (Utilities.isGPSTurnedOn(requireActivity()) && location != null) {
                         if ((Utilities.isNetworkAvailable(mContext))) {
                             if (locationAddress.equals("mocklocation")) {
                                 showMockAlert();
