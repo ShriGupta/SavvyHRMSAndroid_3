@@ -2,6 +2,7 @@ package com.savvy.hrmsnewapp.fragment;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -159,6 +160,7 @@ public class INOUTRequestFragment extends BaseFragment {
     ArrayList<String> chargesTypeIDArray = new ArrayList<>();
     ArrayList<String> workTypeStringArray = new ArrayList<>();
     ArrayList<String> workTypeIdArray = new ArrayList<>();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -179,16 +181,12 @@ public class INOUTRequestFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        // View view = inflater.inflate(R.layout.in_out_request_fragment, container, false);
+
         binding = DataBindingUtil.inflate(inflater, R.layout.in_out_request_fragment, container, false);
         view = binding.getRoot();
         context = getActivity();
         coordinatorLayout = getActivity().findViewById(R.id.coordinatorLayout);
-//
-
         calanderHRMS = new CalanderHRMS(getActivity());
-//
         btn_InOutdate = view.findViewById(R.id.btn_InOutdate);
         btn_spin_select_supplier = view.findViewById(R.id.btn_spin_select_supplier);
         spin_comp_status = view.findViewById(R.id.spin_comp_status);
@@ -333,7 +331,7 @@ public class INOUTRequestFragment extends BaseFragment {
         });
         shared = getActivity().getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
 
-        employeeId=shared.getString("EMPLOYEE_ID_FINAL", "");
+        employeeId = shared.getString("EMPLOYEE_ID_FINAL", "");
         getWorkType();
         getMeetingType();
         getChargeType();
@@ -350,18 +348,15 @@ public class INOUTRequestFragment extends BaseFragment {
         int mm = calendar.get(Calendar.MONTH);
         int dd = calendar.get(Calendar.DAY_OF_MONTH);
 
-        DatePickerDialog datePicker = new DatePickerDialog(context, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Date d = new Date(year - 1900, monthOfYear, dayOfMonth);
-                String date1 = new SimpleDateFormat("dd-MM-yyyy", Locale.UK).format(d);
-                btn_InOutdate.setText(date1);
-                Intent intent = new Intent("refresh");
-                intent.putExtra("date", btn_InOutdate.getText().toString());
-                LocalBroadcastManager.getInstance((context)).sendBroadcast(intent);
-                getSupplierData(btn_InOutdate.getText().toString());
-                //  getAllDetails(date1);
-            }
+        DatePickerDialog datePicker = new DatePickerDialog(context, (view, year, monthOfYear, dayOfMonth) -> {
+            Date d = new Date(year - 1900, monthOfYear, dayOfMonth);
+            String date1 = new SimpleDateFormat("dd-MM-yyyy", Locale.UK).format(d);
+            btn_InOutdate.setText(date1);
+            Intent intent = new Intent("refresh");
+            intent.putExtra("date", btn_InOutdate.getText().toString());
+            LocalBroadcastManager.getInstance((context)).sendBroadcast(intent);
+            getSupplierData(btn_InOutdate.getText().toString());
+            //  getAllDetails(date1);
         }, yy, mm, dd);
         datePicker.getDatePicker().setCalendarViewShown(false);
         datePicker.getDatePicker().setMaxDate(new Date().getTime());
@@ -381,7 +376,7 @@ public class INOUTRequestFragment extends BaseFragment {
                 JSONObject params_final = new JSONObject();
 
                 params_final.put("employeeId", shared.getString("EMPLOYEE_ID_FINAL", ""));
-                params_final.put("type","0");
+                params_final.put("type", "0");
                 params_final.put("date", date);
 
 
@@ -463,7 +458,6 @@ public class INOUTRequestFragment extends BaseFragment {
         if (requestCode == 999 && resultCode == RESULT_OK && data != null) {
             try {
 
-
                 try {
                     Uri uri = data.getData();
                     displayFileName = fileName(uri);
@@ -496,6 +490,7 @@ public class INOUTRequestFragment extends BaseFragment {
             getImageFromDevide(uri, finalFile);
         }
     }
+
     public byte[] getBytes(InputStream inputStream) throws IOException {
         ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
         int bufferSize = 1024;
@@ -508,6 +503,7 @@ public class INOUTRequestFragment extends BaseFragment {
         return byteBuffer.toByteArray();
     }
 
+    @SuppressLint("Range")
     private void getFileData(Uri uri) {
         String uriString = uri.toString();
         File myFile = new File(uriString);
@@ -525,7 +521,8 @@ public class INOUTRequestFragment extends BaseFragment {
                         final byte[] inputData = getBytes(iStream);
                         imageProcessRequest(inputData, displayFileName);*/
                         uploadPDF(displayFileName, uri);
-                    }catch (Exception e){}
+                    } catch (Exception e) {
+                    }
                     // uploadPDF(displayFileName, uri);
                 }
             } finally {
@@ -536,6 +533,7 @@ public class INOUTRequestFragment extends BaseFragment {
             displayFileName = myFile.getName();
         }
     }
+
     public byte[] getFileDataFromDrawable(Bitmap bitmap) {
 
         if (bitmap != null) {
@@ -558,6 +556,7 @@ public class INOUTRequestFragment extends BaseFragment {
         returnCursor.close();
         return name;
     }
+
     public Uri getImageUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
@@ -579,6 +578,7 @@ public class INOUTRequestFragment extends BaseFragment {
         return path;
     }
 
+    @SuppressLint("Range")
     public void getImageFromDevide(Uri uri, File finalFile) {
         byte[] byteArray = new byte[0];
         String uriString = uri.toString();
@@ -588,7 +588,7 @@ public class INOUTRequestFragment extends BaseFragment {
                 cursor = getActivity().getContentResolver().query(uri, null, null, null, null);
                 if (cursor != null && cursor.moveToFirst()) {
                     displayFileName = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME));
-                    Log.e("displayFileName>>",""+displayFileName.toString());
+                    Log.e("displayFileName>>", "" + displayFileName.toString());
                 }
             } finally {
                 cursor.close();
@@ -598,12 +598,12 @@ public class INOUTRequestFragment extends BaseFragment {
         }
         try {
             File file = new File(uri.getPath());
-            Log.e("getImageFromDevide>>",""+file.getPath().toString());
+            Log.e("getImageFromDevide>>", "" + file.getPath().toString());
 
             byteArray = new byte[(int) file.length()];
-            Log.e("getImageFromDevide>>",""+byteArray.length);
+            Log.e("getImageFromDevide>>", "" + byteArray.length);
             RandomAccessFile f = new RandomAccessFile(displayFileName, "r");
-            byte[] b = new byte[(int)f.length()];
+            byte[] b = new byte[(int) f.length()];
             f.readFully(b);
 
         } catch (Exception e) {
@@ -645,20 +645,18 @@ public class INOUTRequestFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        coordinatorLayout = getActivity().findViewById(R.id.coordinatorLayout);
+        coordinatorLayout = requireActivity().findViewById(R.id.coordinatorLayout);
     }
 
 
     public void getSupplierData(String From_date) {
         try {
-            if (Utilities.isNetworkAvailable(getActivity())) {
-                String From_Date = From_date;
-
+            if (Utilities.isNetworkAvailable(requireActivity())) {
 
                 String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/GetSupplierData";
                 final JSONObject pm = new JSONObject();
                 JSONObject params_final = new JSONObject();
-                params_final.put("datetime", From_Date);
+                params_final.put("datetime", From_date);
                 params_final.put("employeeId", shared.getString("EMPLOYEE_ID_FINAL", ""));
 
 
@@ -702,7 +700,7 @@ public class INOUTRequestFragment extends BaseFragment {
                                             if (!btn_spin_select_supplier.getSelectedItem().toString().equals("Please Select")) {
                                                 supplierid = spinnerItemIDArray.get(position).toString();
                                                 supplier_name = spinnerArray.get(position).toString();
-                                                getShowDetailsBySupplier(spinnerItemIDArray.get(position).toString(), From_Date);
+                                                getShowDetailsBySupplier(spinnerItemIDArray.get(position).toString(), From_date);
                                                 getCheckInCheckOutForButton();
                                             } // getCheckInCheckOutForButton();
                                         }
@@ -1527,10 +1525,8 @@ public class INOUTRequestFragment extends BaseFragment {
 
                                 Log.e("Save all data", "<><>" + response.toString());
                                 try {
-                                    if (progressDialog != null) {
-                                        progressDialog.dismiss();
-                                    }
-                                } catch (Exception e) {
+                                    progressDialog.dismiss();
+                                } catch (Exception ignored) {
                                 }
                                 Utilities.showDialog(coordinatorLayout, "Data Saved successfully!");
                                 Toast.makeText(context, "Data Saved successfully!", Toast.LENGTH_SHORT).show();
@@ -1625,29 +1621,30 @@ public class INOUTRequestFragment extends BaseFragment {
                                             chargestype = jsonObject.getString("TPCICO_CHARGES");
                                             binding.edtInOutAmount.setText(jsonObject.getString("TPCICO_TOLL"));
                                             binding.cabAmount.setText(jsonObject.getString("TPCICO_CAB_AMT"));
-                                            if (meetingTypeIDArray.size()>0){
-                                                for (int i=0;i<meetingTypeIDArray.size();i++){
-                                                    if (meetingTypeIDArray.get(i).toString().equals(meetingtype)){
+                                            if (meetingTypeIDArray.size() > 0) {
+                                                for (int i = 0; i < meetingTypeIDArray.size(); i++) {
+                                                    if (meetingTypeIDArray.get(i).toString().equals(meetingtype)) {
                                                         spin_meeting_type.setSelection(i);
                                                         break;
                                                     }
                                                 }
-                                            }if (workTypeIdArray.size()>0){
-                                                for (int i=0;i<workTypeIdArray.size();i++){
-                                                    if (workTypeIdArray.get(i).toString().equals(worktype)){
+                                            }
+                                            if (workTypeIdArray.size() > 0) {
+                                                for (int i = 0; i < workTypeIdArray.size(); i++) {
+                                                    if (workTypeIdArray.get(i).toString().equals(worktype)) {
                                                         spin_comp_status.setSelection(i);
                                                         break;
                                                     }
                                                 }
-                                            }if (chargesTypeIDArray.size()>0){
-                                                for (int i=0;i<chargesTypeIDArray.size();i++){
-                                                    if (chargesTypeIDArray.get(i).toString().equals(chargestype)){
+                                            }
+                                            if (chargesTypeIDArray.size() > 0) {
+                                                for (int i = 0; i < chargesTypeIDArray.size(); i++) {
+                                                    if (chargesTypeIDArray.get(i).toString().equals(chargestype)) {
                                                         spin_charge_type.setSelection(i);
                                                         break;
                                                     }
                                                 }
                                             }
-
 
 
                                         } else {
@@ -1857,24 +1854,19 @@ public class INOUTRequestFragment extends BaseFragment {
                             fileNameModel1.setPosition(0);
                             multiple_item_list.add(fileNameModel1);
                             addMultipleItem();
-                        }
-                        else if (check_click.equals("other")) {
+                        } else if (check_click.equals("other")) {
                             // ml.callback(actualFileName);
                             btn_otheruploadFile.setText(actualFileName);
-                        }
-                        else if (check_click.equals("hotel")) {
+                        } else if (check_click.equals("hotel")) {
                             // ml.callback(actualFileName);
                             binding.btnHotelUploadFile.setText(actualFileName);
-                        }
-                        else if (check_click.equals("train")) {
+                        } else if (check_click.equals("train")) {
                             // ml.callback(actualFileName);
                             binding.btnTrainUploadFile.setText(actualFileName);
-                        }
-                        else if (check_click.equals("flight")) {
+                        } else if (check_click.equals("flight")) {
                             // ml.callback(actualFileName);
                             binding.btnFlightUploadFile.setText(actualFileName);
-                        }
-                        else {
+                        } else {
                             btn_cabuploadFile.setText(actualFileName);
                         }
 
@@ -1905,6 +1897,7 @@ public class INOUTRequestFragment extends BaseFragment {
         }
 
     }
+
     private void uploadPDF(final String pdfname, Uri pdffile) {
         InputStream iStream;
         try {
@@ -1912,7 +1905,7 @@ public class INOUTRequestFragment extends BaseFragment {
             iStream = getActivity().getContentResolver().openInputStream(pdffile);
             assert iStream != null;
             final byte[] inputData = getBytes(iStream);
-          //  String upload_URL = Constants.IP_ADDRESS + "/MobileFileUpload.ashx?empCode=" + employeeId;
+            //  String upload_URL = Constants.IP_ADDRESS + "/MobileFileUpload.ashx?empCode=" + employeeId;
             String upload_URL = Constants.IP_ADDRESS + "/MobileFileUpload.ashx?Type=TravelCheckInOut";
             VolleyMultipartRequest volleyMultipartRequest = new VolleyMultipartRequest(Request.Method.POST, upload_URL,
                     new Response.Listener<NetworkResponse>() {
@@ -1924,7 +1917,7 @@ public class INOUTRequestFragment extends BaseFragment {
                             List<String> list = Arrays.asList(new String(response.data).split(","));
                            /* int value = Integer.parseInt(list.get(0));
                             if (value == 1) {*/
-                                Utilities.showDialog(coordinatorLayout, "File Upload Successfully");
+                            Utilities.showDialog(coordinatorLayout, "File Upload Successfully");
                             /*}*/
                             actualFileName = list.get(1);
                             if (check_click.equals("multi")) {
@@ -1941,24 +1934,19 @@ public class INOUTRequestFragment extends BaseFragment {
                                 fileNameModel1.setPosition(0);
                                 multiple_item_list.add(fileNameModel1);
                                 addMultipleItem();
-                            }
-                            else if (check_click.equals("other")) {
+                            } else if (check_click.equals("other")) {
                                 // ml.callback(actualFileName);
                                 btn_otheruploadFile.setText(actualFileName);
-                            }
-                            else if (check_click.equals("hotel")) {
+                            } else if (check_click.equals("hotel")) {
                                 // ml.callback(actualFileName);
                                 binding.btnHotelUploadFile.setText(actualFileName);
-                            }
-                            else if (check_click.equals("train")) {
+                            } else if (check_click.equals("train")) {
                                 // ml.callback(actualFileName);
                                 binding.btnTrainUploadFile.setText(actualFileName);
-                            }
-                            else if (check_click.equals("flight")) {
+                            } else if (check_click.equals("flight")) {
                                 // ml.callback(actualFileName);
                                 binding.btnFlightUploadFile.setText(actualFileName);
-                            }
-                            else {
+                            } else {
                                 btn_cabuploadFile.setText(actualFileName);
                             }
                         }

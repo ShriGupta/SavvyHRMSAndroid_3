@@ -22,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.savvy.hrmsnewapp.BuildConfig;
 import com.savvy.hrmsnewapp.attendanceMark.MarkAttendanceInOut;
@@ -57,7 +58,7 @@ public class SaveMarkAttendanceWithInOut extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         shared = requireActivity().getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
-      //  getCurrentDateTime();
+        getCurrentDateTime();
     }
 
     @Override
@@ -80,8 +81,13 @@ public class SaveMarkAttendanceWithInOut extends Fragment {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getCurrentDateTime();
-                requireActivity().startActivity(new Intent(requireActivity(), MarkAttendanceInOut.class));
+                if (Utilities.isNetworkAvailable(requireActivity())) {
+                    if(!txv_currentDate.getText().toString().equals("")){
+                        requireActivity().startActivity(new Intent(requireActivity(), MarkAttendanceInOut.class));
+                    }
+                } else {
+                    Toast.makeText(requireActivity(), "Internet Not Available.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -96,6 +102,7 @@ public class SaveMarkAttendanceWithInOut extends Fragment {
                 String replacecurrDate = serverDateSplit[0].replace("\\", "");
                 txv_currentTime.setText(data.getServerTime());
                 txv_currentDate.setText(replacecurrDate);
+
             }
 
             @Override

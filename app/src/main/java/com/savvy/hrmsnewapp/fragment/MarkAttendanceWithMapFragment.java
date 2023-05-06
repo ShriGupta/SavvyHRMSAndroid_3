@@ -209,8 +209,8 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
 
 
     private void setMap() {
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+        /*SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);*/
 
         requestLocation();
     }
@@ -248,7 +248,7 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         switch (requestCode) {
             case LOCATION_REQUEST_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    checkLocationandAddToMap(location);
+                    //checkLocationandAddToMap(location);
                 } else {
                     Toast.makeText(mContext, "Location Permission Denied", Toast.LENGTH_SHORT).show();
                 }
@@ -261,7 +261,6 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
         markerOptions = new MarkerOptions().position(new LatLng(location.getLatitude(), location.getLongitude())).title(location.getLatitude() + "," + location.getLongitude());
         mMap.addMarker(markerOptions);
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 14.0f));
-
     }
 
     public boolean isMockLocationON(Location location) {
@@ -388,7 +387,7 @@ public class MarkAttendanceWithMapFragment extends BaseFragment implements OnMap
     }
 
     private void updateUI(Location location) {
-        checkLocationandAddToMap(location);
+        //checkLocationandAddToMap(location);
         String newAddress = Utilities.getAddressFromLocation(requireActivity(), location);
         tvAddress.setText(newAddress);
     }

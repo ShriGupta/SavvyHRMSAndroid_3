@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinator"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txtOD_FromDateTitle"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="From Date *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <Button
+                        android:id="@+id/btn_from_wfhdate"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:hint="From Date"
+                        android:nextFocusDown="@+id/btn_to_oddate"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txtOD_ToDateTitle"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="To Date *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <Button
+                        android:id="@+id/btn_to_wfhdate"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:hint="To Date"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_compareDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txt_compareDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:text="Result"
+                        android:textColor="@color/color_red"
+                        android:textSize="10dp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:weightSum="10">
+
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dip"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="WHF Status"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_fullday"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingLeft="@dimen/_13sdp"
+                        android:scaleX=".8"
+                        android:scaleY=".8"
+                        android:text="Full Day"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_halfday"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingLeft="@dimen/_13sdp"
+                        android:scaleX=".8"
+                        android:scaleY=".8"
+                        android:text="Half Day"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:weightSum="10">
+
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="35dip"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="WHF Sub Status"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_firsthalf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingLeft="@dimen/_13sdp"
+                        android:scaleX=".8"
+                        android:scaleY=".8"
+                        android:text="First Half"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_secondHalf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:paddingLeft="@dimen/_13sdp"
+                        android:scaleX=".8"
+                        android:scaleY=".8"
+                        android:text="Second Day"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="From Time"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <Button
+                        android:id="@+id/btn_whf_time_from"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:hint="From Time"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="To Time"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <Button
+                        android:id="@+id/btn_whf_to_time"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:hint="To Time"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/text_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txtOD_ReasonTitle"
+                        android:layout_width="0dip"
+                        android:layout_height="35dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="Reason *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/edt_whf_reason"
+                        android:layout_width="0dip"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:hint="Reason "
+                        android:maxLines="1"
+                        android:nextFocusDown="@+id/btn_od_request_submit"
+                        android:singleLine="true"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/text_size" />
+
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_whf_request_submit"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="@color/color_red"
+                    android:gravity="center"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size"
+                    app:cornerRadius="@dimen/_5sdp"
+                    app:rippleColor="@color/color_blue" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

@@ -45,7 +45,7 @@ import com.savvy.hrmsnewapp.utils.Utilities;
 import org.json.JSONObject;
 
 public class MarkAttendance extends BaseActivity implements View.OnClickListener {
-    FusedLocationProviderClient fusedLocationClient;
+
     CoordinatorLayout coordinatorLayout;
     CustomTextView txv_currentDate, txv_currentTime;
     EditText edt_messagefeedback;
@@ -61,7 +61,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
     private static String longitude_ = "";
     String locationAddress = "";
     String latlongFlag = "";
-    /* private LocationAssistant assistant;*/
+
     private final int PERMISSION_REQUEST_CODE = 1111;
 
     LocationManagerClass locationManagerClass;
@@ -131,6 +131,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
                 }
             });
             locationManagerClass.startLocationUpdates();
+
         } else {
             requestPermission();
         }
@@ -145,15 +146,10 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
                 if (checkLocationPermission()) {
                     String commentreplace = edt_messagefeedback.getText().toString().trim().replace(" ", "-");
                     if (latlongFlag.equals("0")) {
-                        if (locationAddress.equals("")) {
-                            if (!(latitude.equals("") && longitude_.equals(""))) {
-                                markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
-                            } else {
-                                Utilities.showDialog(coordinatorLayout, "Please wait fetching your current location...");
-                            }
+                        if (!(latitude.equals("") && longitude_.equals(""))) {
+                            markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
                         } else {
                             Utilities.showDialog(coordinatorLayout, "Please wait fetching your current location...");
-                           // markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
                         }
                     } else if (latlongFlag.equals("1")) {
                         if (!(latitude.equals("") && longitude_.equals(""))) {
@@ -162,14 +158,10 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
                     } else if (latlongFlag.equals("2")) {
                         markAttendancePostWithLocation(commentreplace, "", "", "");
                     } else {
-                        if (locationAddress.equals("")) {
-                            if (!(latitude.equals("") && longitude_.equals(""))) {
-                                markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
-                            } else {
-                                Utilities.showDialog(coordinatorLayout, "Please wait fetching your current location...");
-                            }
-                        } else {
+                        if (!(latitude.equals("") && longitude_.equals(""))) {
                             markAttendancePostWithLocation(commentreplace, latitude, longitude_, locationAddress);
+                        } else {
+                            Utilities.showDialog(coordinatorLayout, "Please wait fetching your current location...");
                         }
                     }
                 } else {

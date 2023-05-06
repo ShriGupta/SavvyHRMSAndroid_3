@@ -45,6 +45,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -104,6 +105,8 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         title = (shared.getString("Title", ""));
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity());
 
+        MapsInitializer.initialize(requireContext());
+
 
     }
 
@@ -152,9 +155,9 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
 
     private void setMap() {
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        /*SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         assert mapFragment != null;
-        mapFragment.getMapAsync(this);
+        mapFragment.getMapAsync(this);*/
 
         requestLocation();
 
@@ -223,8 +226,10 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
         locationAddress = "";
         Log.e("MarkAttendance", "onResume");
 
-        if (!isGPSTurnedOn()) {
+        if (!Utilities.isGPSTurnedOn(requireContext())) {
             showLocationErrorDialog("Please Enable Location");
+        }else {
+            requestLocation();
         }
 
 
@@ -284,6 +289,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
             switch (v.getId()) {
                 case R.id.btn_punchIn:
                     if (isGPSTurnedOn() && location != null) {
+                        setMap();
                         if ((Utilities.isNetworkAvailable(mContext))) {
 
                             if (locationAddress.equals("mocklocation")) {
@@ -309,6 +315,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
 
                 case R.id.btn_punchOut:
                     if (Utilities.isGPSTurnedOn(requireActivity()) && location != null) {
+                        setMap();
                         if ((Utilities.isNetworkAvailable(mContext))) {
                             if (locationAddress.equals("mocklocation")) {
                                 showMockAlert();
@@ -425,7 +432,7 @@ public class SaveMarkAttendanceWithInOut_withMap extends BaseFragment implements
     }
 
     private void updateUI(Location location) {
-        checkLocationandAddToMap(location);
+        //checkLocationandAddToMap(location);
         if (location != null) {
             if (isMockLocationON(location)) {
                 locationAddress = "mocklocation";

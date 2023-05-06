@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,10 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:elevation="2dp"
             android:background="#ffffff"
-            android:padding="5dp"
-            />
+            android:elevation="2dp"
+            android:padding="5dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -50,16 +50,16 @@
                             android:layout_height="80dp" />
                     </RelativeLayout>
 
-                  <!--  <com.savvy.hrmsnewapp.customwidgets.CircularImageView
-                        android:id="@+id/profile_main_dashboard"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/round_profile_image1"
-                        android:elevation="2dp"
-                        android:padding="5dp"
-                        android:scaleType="centerCrop" />-->
+                    <!--  <com.savvy.hrmsnewapp.customwidgets.CircularImageView
+                          android:id="@+id/profile_main_dashboard"
+                          android:layout_width="80dp"
+                          android:layout_height="80dp"
+                          android:layout_gravity="center"
+                          android:layout_marginLeft="20dp"
+                          android:background="@drawable/round_profile_image1"
+                          android:elevation="2dp"
+                          android:padding="5dp"
+                          android:scaleType="centerCrop" />-->
 
                     <!-- <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                          android:id="@+id/profile_main_dashboard"
@@ -108,23 +108,27 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="85dp"
-                android:gravity="center">
 
-                <Button
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_65sdp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/showhide_Profile"
-                    android:layout_width="150dp"
-                    android:layout_height="35dp"
-                    android:layout_alignParentRight="true"
-                    android:background="@drawable/show_profile_border"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="@dimen/_10sdp"
+                    android:textColor="@color/colorPrimary"
+                    app:strokeColor="@color/colorPrimary"
+                    android:backgroundTint="@color/white"
                     android:drawableLeft="@drawable/show_hide_profile"
-                    android:paddingLeft="20dp"
                     android:text="Show Profile"
                     android:textAllCaps="false"
-                    android:textColor="#5b39c6"
+                    android:textSize="@dimen/_10ssp"
                     android:textStyle="bold" />
 
 
@@ -138,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:animateLayoutChanges="false"/>
+            android:animateLayoutChanges="false" />
 
         <!-- <FrameLayout
              android:id="@+id/profileFrame"
@@ -153,10 +157,11 @@
             android:layout_marginTop="10dp"
             android:background="#00c3ff"
             android:orientation="vertical">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/dynamicProfileRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
 
         </LinearLayout>

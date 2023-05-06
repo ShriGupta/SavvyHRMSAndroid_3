@@ -80,8 +80,11 @@ public class ODRequestFragment extends BaseFragment {
     String positionId = "", positionValue = "";
 
     String spinnerPosition = "";
-    String odsubstatusPosition = "0";
+
+
     String odStatusPosition = "1";
+    String odsubstatusPosition = "0";
+
     CustomTextView txtOD_ReasonTitle, txtOD_TypeTitle, txtOD_ToDateTitle, txtOD_FromDateTitle;
 
     @Override
@@ -176,7 +179,6 @@ public class ODRequestFragment extends BaseFragment {
 
                 odStatusPosition = "" + "1";
                 odsubstatusPosition = "" + "0";
-                Log.e("Full Day", "" + odStatusPosition);
 
             }
         });
@@ -203,8 +205,7 @@ public class ODRequestFragment extends BaseFragment {
 
                 odStatusPosition = "" + "2";
                 odsubstatusPosition = "" + "1";
-                Log.e("Half Day", "" + odStatusPosition);
-                Log.e("First half", "" + odsubstatusPosition);
+
             }
         });
 
@@ -220,9 +221,7 @@ public class ODRequestFragment extends BaseFragment {
                 firstHalf_off.setVisibility(View.INVISIBLE);
                 secondHalf_on.setVisibility(View.INVISIBLE);
                 secondHalf_off.setVisibility(View.VISIBLE);
-
                 odsubstatusPosition = "" + "1";
-                Log.e("First Half", "" + odsubstatusPosition);
 
             }
         });
@@ -241,7 +240,6 @@ public class ODRequestFragment extends BaseFragment {
                 secondHalf_off.setVisibility(View.INVISIBLE);
 
                 odsubstatusPosition = "" + "2";
-                Log.e("Secon Half", "" + odsubstatusPosition);
             }
         });
 
@@ -262,7 +260,7 @@ public class ODRequestFragment extends BaseFragment {
                         positionId = arlRequestStatusData.get(position - 1).get("KEY");
                         positionValue = arlRequestStatusData.get(position - 1).get("VALUE");
                     }
-                    Log.e("Spin Value", "Spin Id " + positionId + " Value " + positionValue);
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -466,33 +464,30 @@ public class ODRequestFragment extends BaseFragment {
 
             RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, param,
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
-                                String result = response.getString("SendODRequestPostResult");
-                                int res = Integer.parseInt(result);
-                                if (res > 0) {
-                                    btn_od_from_date.setText("");
-                                    btn_od_to_date.setText("");
-                                    btn_od_from_time.setText("");
-                                    btn_od_to_time.setText("");
-                                    spin_reason_od.setSelection(0);
-                                    edt_od_reason.setText("");
-                                    Utilities.showDialog(coordinatorLayout, "On Duty request Send successfully.");
-                                } else if (res == -1) {
-                                    Utilities.showDialog(coordinatorLayout, "On Duty request on the same date and same type already exists.");
-                                } else if (res == -2) {
-                                    Utilities.showDialog(coordinatorLayout, "On Duty request for previous payroll cycle not allowed.");
-                                } else if (res == -3) {
-                                    Utilities.showDialog(coordinatorLayout, "OD/AR/Leave on Same Date Already Requested.");
-                                } else if (res == 0) {
-                                    Utilities.showDialog(coordinatorLayout, "Error during sending On Duty Request.");
-                                }
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                                Utilities.showDialog(coordinatorLayout, ex.getMessage());
+                    response -> {
+                        try {
+                            String result = response.getString("SendODRequestPostResult");
+                            int res = Integer.parseInt(result);
+                            if (res > 0) {
+                                btn_od_from_date.setText("");
+                                btn_od_to_date.setText("");
+                                btn_od_from_time.setText("");
+                                btn_od_to_time.setText("");
+                                spin_reason_od.setSelection(0);
+                                edt_od_reason.setText("");
+                                Utilities.showDialog(coordinatorLayout, "On Duty request Send successfully.");
+                            } else if (res == -1) {
+                                Utilities.showDialog(coordinatorLayout, "On Duty request on the same date and same type already exists.");
+                            } else if (res == -2) {
+                                Utilities.showDialog(coordinatorLayout, "On Duty request for previous payroll cycle not allowed.");
+                            } else if (res == -3) {
+                                Utilities.showDialog(coordinatorLayout, "OD/AR/Leave on Same Date Already Requested.");
+                            } else if (res == 0) {
+                                Utilities.showDialog(coordinatorLayout, "Error during sending On Duty Request.");
                             }
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                            Utilities.showDialog(coordinatorLayout, ex.getMessage());
                         }
                     }, new Response.ErrorListener() {
                 @Override

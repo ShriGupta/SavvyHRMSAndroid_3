@@ -309,5 +309,6 @@ settings. </string>
     <string name="app_status">App. Status</string>
     <string name="select_file">File Chooser</string>
     <string name="location_string">Please Enable Your Device Location</string>
+    <string name="whf_sub_status">WHF Sub Status</string>
 </resources>
 

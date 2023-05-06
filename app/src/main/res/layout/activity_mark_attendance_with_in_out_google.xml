@@ -37,59 +37,14 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:weightSum="10">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="0dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/btn_back_cancel_1"
-                            android:layout_width="0dip"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="1.5"
-                            android:background="#fff"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:textColor="@color/color_red"
-                            android:textSize="16dip"
-                            android:textStyle="bold" />
-
-                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
-                            android:layout_width="0dip"
-                            android:layout_height="40dp"
-                            android:layout_marginBottom="15dp"
-                            android:layout_weight="7"
-                            android:gravity="center"
-                            android:text="MARK ATTENDANCE"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-
-                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
-                            android:layout_width="0dip"
-                            android:layout_height="40dp"
-                            android:layout_marginRight="5dip"
-                            android:layout_marginBottom="15dp"
-                            android:layout_weight="1.5"
-                            android:gravity="center_vertical"
-                            android:textColor="@color/colorPrimary"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
+                    android:text="MARK ATTENDANCE"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

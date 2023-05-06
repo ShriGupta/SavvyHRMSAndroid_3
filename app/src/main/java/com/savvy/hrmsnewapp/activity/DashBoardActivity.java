@@ -105,6 +105,7 @@ import com.savvy.hrmsnewapp.fragment.TravelExpenseFicciHolder;
 import com.savvy.hrmsnewapp.fragment.TravelFragmentHolder;
 import com.savvy.hrmsnewapp.fragment.TravelRequestApprovalFicciFragment;
 import com.savvy.hrmsnewapp.fragment.TravelRequestFiccciFragmentHolder;
+import com.savvy.hrmsnewapp.fragment.WFH_HolderFragment;
 import com.savvy.hrmsnewapp.fragment.WorkFromHomeApprovalMMTFragment;
 import com.savvy.hrmsnewapp.fragment.WorkFromHomeMMTRequestFrgament;
 import com.savvy.hrmsnewapp.interfaces.FragmentDrawerListener;
@@ -499,7 +500,7 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
                     break;
                 case "20":
                     fragment = new DashBoardFragmentMain();
-                   // fragment = new PunchReportFragment();
+                    // fragment = new PunchReportFragment();
                     // fragment = new FaceDetectionHolderFrgamnet();
 
                     //Todo  Face detection implemments.....
@@ -559,7 +560,7 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
                     title = privillageName;
                     break;
                 case "32":
-                     fragment = new TrackMeFragment();
+                    fragment = new TrackMeFragment();
                     title = privillageName;
                     break;
                 case "33":
@@ -633,6 +634,7 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
                     title = privillageName;
                     break;
                 case "49":
+                    // For MMT
                     fragment = new WorkFromHomeMMTRequestFrgament();
                     title = privillageName;
                     break;
@@ -736,6 +738,11 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
                 case "77":
                     Intent intent1 = new Intent(DashBoardActivity.this, WebviewActivity.class);
                     startActivity(intent1);
+                    title = privillageName;
+                    break;
+
+                case "78":
+                    fragment = new WFH_HolderFragment();
                     title = privillageName;
                     break;
 

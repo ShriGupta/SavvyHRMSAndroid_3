@@ -25,6 +25,7 @@
         android:required="true" />
 
     <application
+        android:name=".classes.SavvyHRMS"
         android:configChanges="keyboardHidden|orientation"
         android:hardwareAccelerated="false"
         android:icon="@drawable/logohrms"
@@ -35,7 +36,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true"
-        tools:targetApi="m">
+        android:fullBackupContent="false"
+        android:allowBackup="false"
+        >
         <!-- android:networkSecurityConfig="@xml/network_security_config"-->
         <activity android:name=".activity.BarCodeActivity" />
         <activity android:name=".activity.OfflineMarkAttendanceActivity" />

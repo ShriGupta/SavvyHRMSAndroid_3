@@ -12,6 +12,7 @@ import android.os.Bundle;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,18 +31,20 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.savvy.hrmsnewapp.R;
+import com.savvy.hrmsnewapp.adapter.SupplierStatusAdapter;
 import com.savvy.hrmsnewapp.databinding.FragmentINOUTStatusNewBinding;
 import com.savvy.hrmsnewapp.utils.Constants;
-import com.savvy.hrmsnewapp.utils.ErrorConstants;
 import com.savvy.hrmsnewapp.utils.Utilities;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -52,6 +55,8 @@ public class INOUTStatusNewFragment extends Fragment {
     SharedPreferences shared;
     public final String MY_PREFS_NAME = "MyPrefsFile";
     FragmentINOUTStatusNewBinding binding;
+    List<HashMap<String,String>> supplierList=new ArrayList<>();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -132,25 +137,33 @@ public class INOUTStatusNewFragment extends Fragment {
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
-                                int len = (String.valueOf(response)).length();
-
                                 Log.e("Save all data", "<><>" + response.toString());
-
                                 try {
-                                    if (progressDialog != null) {
-                                        progressDialog.dismiss();
-                                    }
+                                    progressDialog.dismiss();
                                     //    JSONArray jsonArray = new JSONArray(response);
                                     JSONArray jsonArray = response.getJSONArray("GetTravelPlanCheckInOutResult");
                                     if (jsonArray.length() > 0) {
-                                        binding.cardView.setVisibility(View.VISIBLE);
+
+                                        HashMap<String,String> hashMap;
+
+                                        supplierList.clear();
+
                                         binding.dataNotFoundTv.setVisibility(View.GONE);
                                         for (int i = 0; i < jsonArray.length(); i++) {
+                                            hashMap=new HashMap<>();
                                             JSONObject explrObject = jsonArray.getJSONObject(i);
-                                            binding.supplierNameTv.setText(explrObject.getString("SM_SUPPLIER_NAME"));
-                                            binding.activityNameTv.setText(explrObject.getString("AM_ACTIVITY_NAME"));
-                                            binding.locationTv.setText(explrObject.getString("SLD_LOCATION"));
-                                            binding.locationTypeTv.setText(explrObject.getString("SLD_LOCATION_TYPE"));
+                                            hashMap.put("SM_SUPPLIER_NAME",explrObject.getString("SM_SUPPLIER_NAME"));
+                                            hashMap.put("AM_ACTIVITY_NAME",explrObject.getString("AM_ACTIVITY_NAME"));
+                                            hashMap.put("SLD_LOCATION",explrObject.getString("SLD_LOCATION"));
+                                            hashMap.put("SLD_LOCATION_TYPE",explrObject.getString("SLD_LOCATION_TYPE"));
+                                            hashMap.put("TPCICO_MEETING_TYPE",explrObject.getString("TPCICO_MEETING_TYPE"));
+                                            hashMap.put("TPCICO_CHARGES",explrObject.getString("TPCICO_CHARGES"));
+                                            hashMap.put("TPCICO_TOLL",explrObject.getString("TPCICO_TOLL"));
+                                            hashMap.put("TPCICO_CHECK_IN_TIME",explrObject.getString("TPCICO_CHECK_IN_TIME"));
+                                            hashMap.put("TPCICO_CHECK_OUT_TIME",explrObject.getString("TPCICO_CHECK_OUT_TIME"));
+                                            hashMap.put("TPCICO_WORK_TYPE",explrObject.getString("TPCICO_WORK_TYPE"));
+                                            supplierList.add(hashMap);
+
                                             /*if (explrObject.getString("SLD_LOCATION_TYPE").equals("NCR")) {
                                                 ncr_radio.setChecked(true);
                                                 non_ncr_radio.setChecked(false);
@@ -163,16 +176,16 @@ public class INOUTStatusNewFragment extends Fragment {
                                                 ncr_view_layout.setVisibility(View.GONE);
                                             }*/
                                             // edt_InOut_conveyance.setText(explrObject.getString("SLD_LOCATION_TYPE"));
-                                            binding.meetingTypeTv.setText(explrObject.getString("TPCICO_MEETING_TYPE"));
-                                            binding.chargesTypeTv.setText(explrObject.getString("TPCICO_CHARGES"));
-                                            binding.tollTv.setText(explrObject.getString("TPCICO_TOLL"));
-                                            binding.checkInTimeTv.setText(explrObject.getString("TPCICO_CHECK_IN_TIME"));
-                                            binding.workTypeTv.setText(explrObject.getString("TPCICO_WORK_TYPE"));
 
 
                                         }
+
+                                        binding.rvSupplierList.setLayoutManager(new LinearLayoutManager(requireActivity()));
+                                        binding.rvSupplierList.setAdapter(new SupplierStatusAdapter(supplierList));
+                                        binding.rvSupplierList.setVisibility(View.VISIBLE);
+
                                     }else {
-                                        binding.cardView.setVisibility(View.GONE);
+                                        binding.rvSupplierList.setVisibility(View.GONE);
                                         binding.dataNotFoundTv.setVisibility(View.VISIBLE);
 
                                         Toast.makeText(getActivity(), "Data Not Found!", Toast.LENGTH_SHORT).show();
@@ -187,10 +200,8 @@ public class INOUTStatusNewFragment extends Fragment {
                         error.printStackTrace();
                         Log.d("Error", "" + error.getMessage());
                         try {
-                            if (progressDialog != null) {
-                                progressDialog.dismiss();
-                            }
-                        } catch (Exception e) {
+                            progressDialog.dismiss();
+                        } catch (Exception ignored) {
                         }
                     }
                 }) {

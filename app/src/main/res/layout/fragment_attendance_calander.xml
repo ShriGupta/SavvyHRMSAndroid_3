@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#fff"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <!--<ScrollView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent">-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,114 +21,115 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dip"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="10">
 
                 <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:id="@+id/txtFromDate"
                     android:layout_width="0dip"
-                    android:layout_height="30dip"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_marginLeft="30dp"
                     android:layout_weight="4.5"
                     android:gravity="center_vertical"
-                    app:font="@string/font_name_light"
                     android:text="From Date *"
                     android:textColor="@color/my_custom_color"
-                    android:textSize="12dp" />
+                    android:textSize="@dimen/_10ssp"
+                    app:font="@string/font_name_light" />
 
                 <Button
                     android:id="@+id/btn_attendanceCalFromDate"
                     android:layout_width="0dip"
-                    android:layout_height="30dip"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_weight="5.5"
                     android:background="@drawable/border_custom"
                     android:gravity="center"
-                    app:font="@string/font_name_light"
                     android:hint="Pick From Date"
                     android:nextFocusDown="@+id/btn_to_oddate"
                     android:textColor="@color/my_custom_color"
                     android:textColorHint="@color/color_gray"
-                    android:textSize="11dp" />
+                    android:textSize="11dp"
+                    app:font="@string/font_name_light" />
 
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dip"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="10">
 
                 <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:id="@+id/txtToDate"
                     android:layout_width="0dip"
-                    android:layout_height="30dip"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_marginLeft="30dp"
                     android:layout_weight="4.5"
-                    app:font="@string/font_name_light"
                     android:gravity="center_vertical"
                     android:text="To Date *"
                     android:textColor="@color/my_custom_color"
-                    android:textSize="12dp" />
+                    android:textSize="@dimen/_10ssp"
+                    app:font="@string/font_name_light" />
 
                 <Button
                     android:id="@+id/btn_attendanceCalToDate"
                     android:layout_width="0dip"
-                    android:layout_height="30dip"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="@dimen/_20sdp"
                     android:layout_weight="5.5"
                     android:background="@drawable/border_custom"
                     android:gravity="center"
-                    app:font="@string/font_name_light"
                     android:hint="Pick To Date"
                     android:nextFocusDown="@+id/btn_to_oddate"
                     android:textColor="@color/my_custom_color"
                     android:textColorHint="@color/color_gray"
-                    android:textSize="11dp" />
+                    android:textSize="@dimen/_10ssp"
+                    app:font="@string/font_name_light" />
 
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/linearResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:visibility="gone"
                 android:gravity="center"
-                android:id="@+id/linearResult">
+                android:visibility="gone">
 
                 <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:id="@+id/txtDateResult"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    app:font="@string/font_name_light"
                     android:gravity="center_vertical"
                     android:text="Result"
                     android:textColor="@color/color_red"
-                    android:textSize="11dip" />
+                    android:textSize="@dimen/_10ssp"
+                    app:font="@string/font_name_light" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="35dip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:gravity="center">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_attendanceCal_submit"
                     android:layout_width="wrap_content"
-                    android:paddingRight="15dip"
-                    android:paddingLeft="15dip"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="@color/color_red"
+
                     android:gravity="center"
                     android:text="Get Calendar"
                     android:textColor="#fff" />
@@ -140,74 +141,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="0.2dp"
                 android:layout_gravity="top"
-                android:layout_marginBottom="2dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
                 android:background="@color/color_red" />
 
             <LinearLayout
                 android:id="@+id/mainCalendarLayout"
                 android:layout_width="match_parent"
-                android:gravity="center_vertical"
-                android:layout_height="35dip">
+                android:layout_height="35dip"
+                android:gravity="center_vertical">
 
                 <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:layout_width="0dip"
                     android:layout_height="35dip"
                     android:layout_weight="5"
-                    app:font="@string/font_name_bold"
                     android:gravity="center"
                     android:text="Date"
-                    android:textStyle="bold"
                     android:textColor="@color/my_custom_color"
-                    android:textSize="14dp" />
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_bold" />
 
                 <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:layout_width="0dip"
                     android:layout_height="35dip"
                     android:layout_weight="5"
-                    android:textStyle="bold"
-                    app:font="@string/font_name_bold"
                     android:gravity="right|center_vertical  "
                     android:text="In Time"
                     android:textColor="@color/my_custom_color"
-                    android:textSize="14dp" />
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_bold" />
 
                 <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:layout_width="0dip"
                     android:layout_height="35dip"
                     android:layout_weight="5"
-                    android:textStyle="bold"
-                    app:font="@string/font_name_bold"
                     android:gravity="right|center_vertical"
                     android:text="Out Time"
                     android:textColor="@color/my_custom_color"
-                    android:textSize="14dp" />
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_bold" />
 
                 <com.savvy.hrmsnewapp.customwidgets.CustomTextView
                     android:layout_width="0dip"
                     android:layout_height="35dip"
                     android:layout_weight="5"
-                    android:textStyle="bold"
-                    app:font="@string/font_name_bold"
                     android:gravity="center"
                     android:text="Status"
                     android:textColor="@color/my_custom_color"
-                    android:textSize="14dp" />
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_bold" />
             </LinearLayout>
+
             <ImageView
                 android:id="@+id/img_line1"
                 android:layout_width="match_parent"
                 android:layout_height="0.2dp"
                 android:layout_gravity="top"
-                android:layout_marginBottom="2dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
                 android:background="@color/color_red" />
 
             <LinearLayout
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp">
 
                 <androidx.recyclerview.widget.RecyclerView

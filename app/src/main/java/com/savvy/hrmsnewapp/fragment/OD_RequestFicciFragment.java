@@ -18,6 +18,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -485,11 +486,12 @@ public class OD_RequestFicciFragment extends BaseFragment {
                     authoritySpinner.setAdapter(customspinnerAdapter);
 
                 } else {
-                    Utilities.showDialog(coordinatorLayout, ErrorConstants.DATA_ERROR);
+                    Toast.makeText(requireActivity(), ErrorConstants.DATA_ERROR, Toast.LENGTH_SHORT).show();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-                Utilities.showDialog(coordinatorLayout, ErrorConstants.CODE_FAILURE);
+                Toast.makeText(requireActivity(), ErrorConstants.CODE_FAILURE, Toast.LENGTH_SHORT).show();
+
             }
         }
     }

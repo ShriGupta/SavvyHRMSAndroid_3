@@ -7,14 +7,3 @@
  <corners android:radius="2dp"
      />
 </shape>
-
-<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">
-<item>
-    <shape>
-        <corners android:radius="1dp"/>
-        <stroke android:color="#FFD8DCD8"
-            android:width="2dp" />
-        <padding android:left="3dp"/>
-    </shape>
-</item>
-</selector>-->

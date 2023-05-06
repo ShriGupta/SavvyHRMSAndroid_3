@@ -60,8 +60,8 @@ public class FaceDetectionHolderFrgamnet extends Fragment {
     private LocationCallback mCallback;
     String locationAddress;
     String geoString;
-    String latitude;
-    String longitude;
+    String latitude="";
+    String longitude="";
     String countryName = "";
     ProgressDialog locationProcessDialog;
     public static final String MY_PREFS_NAME = "MyPrefsFile";
