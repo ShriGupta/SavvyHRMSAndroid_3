@@ -2,6 +2,7 @@ package com.savvy.hrmsnewapp.fragment;
 
 import static android.app.Activity.RESULT_OK;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -10,16 +11,23 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
 import android.graphics.Bitmap;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +46,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -57,6 +66,12 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.savvy.hrmsnewapp.R;
 
 import com.savvy.hrmsnewapp.activity.DashBoardActivity;
@@ -161,12 +176,20 @@ public class INOUTRequestFragment extends BaseFragment {
     ArrayList<String> workTypeStringArray = new ArrayList<>();
     ArrayList<String> workTypeIdArray = new ArrayList<>();
 
+    private FusedLocationProviderClient fusedLocationClient;
+    private LocationCallback locationCallback;
+
+    String latitude="";
+    String longitude="";
+    String locationAddress="";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (multiple_item_list != null) {
             multiple_item_list.clear();
         }
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity());
 //        coordinatorLayout = getActivity().findViewById(R.id.coordinatorLayout);
 //        shared = getActivity().getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
 //        token = (shared.getString("Token", ""));
@@ -176,7 +199,44 @@ public class INOUTRequestFragment extends BaseFragment {
 //
 //        GetOvertimeReason getOvertimeReason = new GetOvertimeReason();
 //        getOvertimeReason.execute();
+
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                if (locationResult == null) {
+                    return;
+                }
+                for (Location location : locationResult.getLocations()) {
+                    latitude =String.valueOf(location.getLatitude());
+                    longitude =String.valueOf(location.getLongitude());
+                    try {
+                        setLocation(location);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }
+        };
     }
+
+    private void setLocation(Location location) throws IOException {
+        Geocoder geocoder;
+        List<Address> addresses;
+        geocoder = new Geocoder(requireActivity(), Locale.getDefault());
+
+        addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+
+        String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+        String city = addresses.get(0).getLocality();
+        String state = addresses.get(0).getAdminArea();
+        String country = addresses.get(0).getCountryName();
+        String postalCode = addresses.get(0).getPostalCode();
+        String knownName = addresses.get(0).getFeatureName();
+
+        locationAddress=address;
+    }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -318,15 +378,21 @@ public class INOUTRequestFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
 
-                if (!supplier_name.contains("TRAVELLING")) {
-                    if (!btn_InOutdate.getText().toString().isEmpty() && !meetingtype.equals("") && !worktype.equals("") && !chargestype.equals("") && !supplierid.equals("")) {
-                        saveAllDetails();
+                if(checkLocationOnorOff()){
+                    if (!supplier_name.contains("TRAVELLING")) {
+                        if (!btn_InOutdate.getText().toString().isEmpty() && !meetingtype.equals("") && !worktype.equals("") && !chargestype.equals("") && !supplierid.equals("")) {
+                            saveAllDetails();
+                        } else {
+                            Toast.makeText(getActivity(), "Please select all required feilds", Toast.LENGTH_SHORT).show();
+                        }
                     } else {
-                        Toast.makeText(getActivity(), "Please select all required feilds", Toast.LENGTH_SHORT).show();
+                        saveAllDetails();
                     }
-                } else {
-                    saveAllDetails();
+                }else {
+                    checkLocationOn();
                 }
+
+
             }
         });
         shared = getActivity().getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
@@ -1477,7 +1543,8 @@ public class INOUTRequestFragment extends BaseFragment {
                 progressDialog.setMessage("Uploading...");
                 progressDialog.setCancelable(true);
                 progressDialog.show();
-                String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveCheckInOutDetails";
+              //  String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveCheckInOutDetails";
+                String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveCheckInOutDetailsWithAddress";
                 Log.e("Save all data", "<><>" + url);
                 JSONObject params_final = new JSONObject();
 
@@ -1512,6 +1579,9 @@ public class INOUTRequestFragment extends BaseFragment {
                 params_final.put("remarks", edt_InOut_remarks.getText().toString());
                 params_final.put("time", btn_od_to_time.getText().toString());
                 params_final.put("cabtype", cabtype_id);
+                params_final.put("latitude", latitude);
+                params_final.put("longitude", longitude);
+                params_final.put("locationaddress", locationAddress);
 
                 Log.e("Save all data", "<><>" + params_final.toString());
 
@@ -2035,4 +2105,42 @@ public class INOUTRequestFragment extends BaseFragment {
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        checkPermission();
+    }
+
+    private void checkPermission(){
+        if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 100);
+        } else {
+            LocationRequest locationRequest = LocationRequest.create()
+                    .setInterval(100)
+                    .setFastestInterval(3000)
+                    .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                    .setMaxWaitTime(100);
+            fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper());
+        }
+    }
+
+    private void checkLocationOn() {
+        final LocationManager manager = (LocationManager) requireActivity().getSystemService(Context.LOCATION_SERVICE);
+        if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            showLocationDialog();
+        } else {
+            checkPermission();
+        }
+    }
+
+    private void showLocationDialog() {
+        new MaterialAlertDialogBuilder(requireActivity())
+                .setTitle("Enable Device Location")
+                .setMessage("ClubgGo want to access your location.")
+                .setPositiveButton("Location Setting", (dialogInterface, i) -> {
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(intent);
+                })
+                .show();
+    }
 }
