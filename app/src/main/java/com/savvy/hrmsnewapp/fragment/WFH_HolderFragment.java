@@ -65,7 +65,7 @@ public class WFH_HolderFragment extends Fragment implements View.OnClickListener
         switch (v.getId()) {
             case R.id.od_linear1:
                 try {
-                    ODStatusFragment odStatusFragment = new ODStatusFragment();
+                    WHFStatusFragment odStatusFragment = new WHFStatusFragment();
                     transaction.replace(R.id.frame_od_holder, odStatusFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();

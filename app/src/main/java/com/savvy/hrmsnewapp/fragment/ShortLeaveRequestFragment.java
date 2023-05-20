@@ -102,22 +102,13 @@ public class ShortLeaveRequestFragment extends BaseFragment {
 
         getShortLeaveTypeData(employeeId);
 
-        edt_shortDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                edt_shortDate.setText("");
-                calanderHRMS.datePicker(edt_shortDate);
-            }
-        });
-        lateRadioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                Log.e(TAG, "lateRadioButton   onCheckedChanged: " + b);
-                if (b) {
-                    earlyRadioButton.setChecked(false);
-                    REQUEST_TYPE = "1";
-                    Log.e(TAG, "onCheckedChanged: " + REQUEST_TYPE);
-                }
+        edt_shortDate.setOnClickListener(view -> calanderHRMS.datePicker(edt_shortDate));
+        lateRadioButton.setOnCheckedChangeListener((compoundButton, b) -> {
+            Log.e(TAG, "lateRadioButton   onCheckedChanged: " + b);
+            if (b) {
+                earlyRadioButton.setChecked(false);
+                REQUEST_TYPE = "1";
+                Log.e(TAG, "onCheckedChanged: " + REQUEST_TYPE);
             }
         });
         earlyRadioButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

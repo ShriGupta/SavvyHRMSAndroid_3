@@ -52,6 +52,7 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
     private CoordinatorLayout coordinatorLayout;
     SharedPreferences shared;
     String token,employeeId;
+    public static final String TAG="WorkFromHomeRequestFragment";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
         shared = getActivity().getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
         token = (shared.getString("Token", ""));
         employeeId = (shared.getString("EmpoyeeId", ""));
+        app=(SavvyHRMS) requireActivity().getApplicationContext();
     }
 
     @Nullable
@@ -74,6 +76,13 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
     }
 
     private void init() {
+
+        binding.radioButtonFullday.setChecked(true);
+        binding.radioButtonHalfday.setChecked(false);
+        binding.radioButtonFirsthalf.setEnabled(false);
+        binding.radioButtonFirsthalf.setChecked(false);
+        binding.radioButtonSecondHalf.setChecked(false);
+        binding.radioButtonSecondHalf.setEnabled(false);
 
         binding.btnFromWfhdate.setOnClickListener(view -> {
             binding.btnFromWfhdate.setText("");
@@ -196,7 +205,6 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
         od_status = odStatusPosition;
         odsubstatus = odsubstatusPosition;
 
-        System.out.print("OD Status " + od_status + "   OD Sub Status " + odsubstatus);
 
         if (fromDate.equals("")) {
             Utilities.showDialog(coordinatorLayout, "Please Enter From Date.");
@@ -207,7 +215,7 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
 
         } else {
             if (Utilities.isNetworkAvailable(getActivity())) {
-                Send_OD_Request(employeeId, "0", fromDate, toDate, od_status, odsubstatus, fromTime, toTime, odtype, edtreason);
+                Send_WFH_Request(employeeId, "0", fromDate, toDate, od_status, odsubstatus, fromTime, toTime, odtype, edtreason);
             } else {
                 Utilities.showDialog(coordinatorLayout, ErrorConstants.NO_NETWORK);
             }
@@ -281,7 +289,7 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
         }
     }
 
-    public void Send_OD_Request(String emp_id, String req_id, String fromDate, String toDate, String od_type,
+    public void Send_WFH_Request(String emp_id, String req_id, String fromDate, String toDate, String od_type,
                                 String od_sub_type, String fromTime, String toTime, String odType, String reason) {
         try {
             if (toTime.equals("")) {
@@ -296,23 +304,23 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
             param.put("REQUEST_ID", req_id);
             param.put("FROM_DATE", fromDate);
             param.put("TO_DATE", toDate);
-            param.put("OD_REQUEST_TYPE", od_type);
-            param.put("OD_REQUEST_SUB_TYPE", od_sub_type);
+            param.put("WFH_REQUEST_TYPE", od_type);
+            param.put("WFH_REQUEST_SUB_TYPE", od_sub_type);
             param.put("FROM_TIME", fromTime);
             param.put("TO_TIME", toTime);
-            param.put("OD_TYPE", odType);
             param.put("REASON", reason);
-            Log.e("RequestJson", param.toString());
+            Log.e(TAG, param.toString());
 
-            String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SendOdRequestPost";
-            Log.e("WorkFromHomeRequestFragment", url);
+            String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SendWorkFromHomeRequestPost";
+            Log.e(TAG, url);
+
 
             RequestQueue requestQueue = Volley.newRequestQueue(requireActivity());
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, param,
                     response -> {
                         try {
-                            String result = response.getString("SendODRequestPostResult");
-                            Log.e("WorkFromHomeRequestFragment", "Send_OD_Request: "+result );
+                            Log.e(TAG, "response: "+response );
+                            String result = response.getString("SendWorkFromHomeRequestPostResult");
                             int res = Integer.parseInt(result);
                             if (res > 0) {
                                 binding.btnFromWfhdate.setText("");
@@ -320,15 +328,15 @@ public class WorkFromHomeRequestFragment extends BaseFragment {
                                 binding.btnWhfTimeFrom.setText("");
                                 binding.btnWhfToTime.setText("");
                                 binding.edtWhfReason.setText("");
-                                Utilities.showDialog(coordinatorLayout, "On Duty request Send successfully.");
+                                Utilities.showDialog(coordinatorLayout, "Work From Home request Send successfully.");
                             } else if (res == -1) {
-                                Utilities.showDialog(coordinatorLayout, "On Duty request on the same date and same type already exists.");
+                                Utilities.showDialog(coordinatorLayout, "Work From Home request on the same date and same type already exists.");
                             } else if (res == -2) {
-                                Utilities.showDialog(coordinatorLayout, "On Duty request for previous payroll cycle not allowed.");
+                                Utilities.showDialog(coordinatorLayout, "Work From Home request for previous payroll cycle not allowed.");
                             } else if (res == -3) {
-                                Utilities.showDialog(coordinatorLayout, "OD/AR/Leave on Same Date Already Requested.");
+                                Utilities.showDialog(coordinatorLayout, "Work From Home on Same Date Already Requested.");
                             } else if (res == 0) {
-                                Utilities.showDialog(coordinatorLayout, "Error during sending On Duty Request.");
+                                Utilities.showDialog(coordinatorLayout, "Error during sending Work From Home Request.");
                             }
                         } catch (Exception ex) {
                             ex.printStackTrace();

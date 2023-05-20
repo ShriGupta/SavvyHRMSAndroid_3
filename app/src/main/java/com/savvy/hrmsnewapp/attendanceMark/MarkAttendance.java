@@ -141,7 +141,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         hideKeyBoard();
         if (v.getId() == R.id.btn_submit) {
-            Log.e("TAG", "onClick: latlongFlag: " + latlongFlag);
+
             if (Utilities.isGPSTurnedOn(MarkAttendance.this)) {
                 if (checkLocationPermission()) {
                     String commentreplace = edt_messagefeedback.getText().toString().trim().replace(" ", "-");
@@ -251,6 +251,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
             params_final.put("latitude", lat);
             params_final.put("longitude", longi);
             params_final.put("locationAddress", locationaddress);
+            Log.e(TAG, "url: " + url);
             Log.e(TAG, "params_final: " + params_final.toString());
 
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());

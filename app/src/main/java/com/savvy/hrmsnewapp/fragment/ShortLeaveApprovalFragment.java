@@ -131,7 +131,9 @@ public class ShortLeaveApprovalFragment extends BaseFragment implements ItemClic
 
                             arrayList.add(hashMap);
                         } catch (JSONException e) {
+                            dismissProgressDialog();
                             e.printStackTrace();
+                            Log.e("ShortLeave", "getShortLeaveData: "+e.getMessage() );
                         }
                     }
                     shortLeaveApprovalAdapter.addItems(arrayList);
@@ -140,7 +142,8 @@ public class ShortLeaveApprovalFragment extends BaseFragment implements ItemClic
                     tvNoData.setVisibility(View.VISIBLE);
                 }
             }, error -> {
-
+                dismissProgressDialog();
+                Log.e("ShortLeave", "getShortLeaveData: "+error );
             }) {
                 @Override
                 public Map<String, String> getHeaders() {

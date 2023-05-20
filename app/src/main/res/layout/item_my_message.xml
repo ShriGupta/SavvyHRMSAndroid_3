@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:layout_marginBottom="5dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/rlMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:paddingRight="10dp"
             android:paddingTop="5dp"
+            android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
             <com.savvy.hrmsnewapp.customwidgets.CustomTextView
@@ -41,9 +43,9 @@ Krishna Gupta"
                 android:id="@+id/tvMessageDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/tvMessageData"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/tvMessageData"
                 android:paddingRight="10sp"
                 android:text="03 Aug 2018"
                 android:textColor="#000000"
@@ -52,10 +54,14 @@ Krishna Gupta"
         </RelativeLayout>
 
         <View
+            android:id="@+id/view_divider0"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_below="@+id/rlMain"
-            android:background="#ee0000"/>
-    </RelativeLayout>
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_below="@+id/ll_approve_layout"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#ee0000" />
+
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

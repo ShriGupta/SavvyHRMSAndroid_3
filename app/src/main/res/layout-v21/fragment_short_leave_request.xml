@@ -34,13 +34,19 @@
             <Button
                 android:id="@+id/edt_shortDate"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5.5"
+                android:layout_marginHorizontal="@dimen/_30sdp"
                 android:background="@drawable/border_custom"
-                android:hint="@string/selectdate"
-                android:textSize="@dimen/text_size"
-                tools:ignore="RtlSymmetry" />
+                android:gravity="center"
+                android:hint="@string/pick_date1"
+                android:paddingLeft="5sp"
+                android:paddingRight="10dp"
+                android:textColor="@color/my_custom_color"
+                android:textColorHint="@color/color_gray"
+                android:textSize="@dimen/text_size" />
 
         </LinearLayout>
 

@@ -55,10 +55,10 @@
                     android:gravity="center"
                     android:hint="Pick Date"
                     android:nextFocusDown="@+id/btn_to_oddate"
-                    android:paddingLeft="5sp"
+
                     android:textColor="@color/my_custom_color"
                     android:textColorHint="@color/color_gray"
-                    android:textSize="@dimen/text_size" />
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
@@ -91,7 +91,7 @@
                     android:nextFocusDown="@+id/btn_to_oddate"
                     android:textColor="@color/my_custom_color"
                     android:textColorHint="@color/color_gray"
-                    android:textSize="@dimen/text_size" />
+                    android:textSize="10sp" />
 
             </LinearLayout>
 

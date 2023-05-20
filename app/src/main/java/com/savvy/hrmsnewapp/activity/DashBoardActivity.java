@@ -71,6 +71,7 @@ import com.savvy.hrmsnewapp.fragment.LeaveRequest;
 import com.savvy.hrmsnewapp.fragment.LeaveRequestMMTFragment;
 import com.savvy.hrmsnewapp.fragment.ManagerDashBoardMMTFragment;
 import com.savvy.hrmsnewapp.fragment.MarkTeamAttendance;
+import com.savvy.hrmsnewapp.fragment.MyActionCenterFragment;
 import com.savvy.hrmsnewapp.fragment.MyHoliday;
 import com.savvy.hrmsnewapp.fragment.MyMessageFragment;
 import com.savvy.hrmsnewapp.fragment.MyTeamMembers;
@@ -745,6 +746,13 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
                     fragment = new WFH_HolderFragment();
                     title = privillageName;
                     break;
+
+                case "79":
+                    fragment = new MyActionCenterFragment();
+                    title = privillageName;
+                    break;
+
+
 
             }
             if (fragment != null) {

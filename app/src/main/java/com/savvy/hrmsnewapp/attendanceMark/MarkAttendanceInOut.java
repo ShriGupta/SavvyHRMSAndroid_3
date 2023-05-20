@@ -238,7 +238,8 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
             params_final.put("longitude", lon);
             params_final.put("punchType", type);
             params_final.put("locationAddress", locationaddress);
-            Log.e(TAG, "markAttendanceInOutWithLocation: " + params_final.toString());
+            Log.e(TAG, ": " + url.toString());
+            Log.e(TAG, ": " + params_final.toString());
 
             if (Utilities.isNetworkAvailable(MarkAttendanceInOut.this)) {
                 RequestQueue requestQueue = Volley.newRequestQueue(MarkAttendanceInOut.this);

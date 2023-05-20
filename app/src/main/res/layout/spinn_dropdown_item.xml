@@ -8,8 +8,9 @@
     <com.savvy.hrmsnewapp.customwidgets.CustomTextView
         android:id="@+id/txv_statusItem"
         android:layout_width="wrap_content"
-        android:layout_height="32dip"
+        android:layout_height="wrap_content"
         android:paddingTop="@dimen/_2sdp"
+        android:padding="@dimen/_5sdp"
         android:textColor="@color/my_custom_color"
         android:textSize="12sp"
         android:textStyle="bold"
