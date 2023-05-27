@@ -11,6 +11,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.nfc.Tag;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.InputType;
@@ -56,9 +57,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+import okhttp3.internal.Util;
+
 public class LoginActivity_1 extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG ="" ;
+    private static final String TAG = "";
     final String IP_ADDRESS_CONSTANT = "IP_ADDRESS_CONSTANT";
     final String MY_PREFS_NAME = "MyPrefsFile";
     EditText edt_username;
@@ -93,28 +96,31 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_1);
         init();
-      try{
-        FirebaseMessaging.getInstance().getToken()
-                .addOnCompleteListener(task -> {
-                    if (!task.isSuccessful()) {
-                        Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                    }else {
+        try {
+            FirebaseMessaging.getInstance().getToken()
+                    .addOnCompleteListener(task -> {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                        } else {
 
-                        // Get new FCM registration token
-                        regId = task.getResult();
-                        Log.e("regId>>","<><>"+regId);
-                        storeRegIdInPref(regId);
-                    }
+                            // Get new FCM registration token
+                            regId = task.getResult();
+                            Log.e("regId>>", "<><>" + regId);
+                            storeRegIdInPref(regId);
+                        }
 
-                });}
-      catch (Exception ignored){}
+                    });
+        } catch (Exception ignored) {
+        }
     }
+
     private void storeRegIdInPref(String token) {
         SharedPreferences pref = getApplicationContext().getSharedPreferences(Config.SHARED_PREF, 0);
         SharedPreferences.Editor editor = pref.edit();
         editor.putString("regId", token);
         editor.apply();
     }
+
     @SuppressLint("HardwareIds")
     private void init() {
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
@@ -220,10 +226,9 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_getstarted:
+
                 String getusername = edt_username.getText().toString().trim();
                 String getpwd = edt_password.getText().toString().trim();
-
-
 
                 if (!Constants.IP_ADDRESS.equals("") && Constants.IP_ADDRESS_STATUS) {
                     if ((Utilities.isNetworkAvailable(LoginActivity_1.this))) {
@@ -291,6 +296,17 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    private String getDeviceDetail() {
+        return "Model :" + Build.MODEL + "/" +
+                "Device: " + Build.DEVICE + "/" +
+                "Manufacturer: " + Build.MANUFACTURER + "/" +
+                "Board: " + Build.BOARD + "/" +
+                "Brand: " + Build.BRAND + "/" +
+                "OS Version: " + Build.VERSION.SDK_INT + "/" +
+                "Android Version: " + Build.VERSION.RELEASE + "/" +
+                "GPS_Status: " + Utilities.isGPSTurnedOn(this);
+    }
+
     private class ForgotpassAsync extends AsyncTask<String, String, String> {
 
         @Override
@@ -340,6 +356,7 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
                 JSONObject params_final = new JSONObject();
                 params_final.put("userid", stremail);
                 params_final.put("password", strpassword);
+                // params_final.put("deviceDetails", getDeviceDetail());
 
                 RequestQueue requestQueue = Volley.newRequestQueue(LoginActivity_1.this);
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, params_final,
@@ -348,7 +365,7 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
                             public void onResponse(JSONObject response) {
                                 dismissProgressDialog();
                                 //new Log("On response in Login",""+response);
-                                //Log.d(TAG, response.toString() + "Login responce");
+                                Log.d(TAG, response.toString() + "Login responce");
                                 int len = (String.valueOf(response)).length();
                                 try {
                                     JSONObject jsonobj = response.getJSONObject("AuthenticateLoginUserPostResult");

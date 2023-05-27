@@ -39,7 +39,7 @@ import java.util.Map;
 
 import static com.savvy.hrmsnewapp.activity.LeaveApplyFicciActivity.TAG;
 
-public class AddShowTripReport extends AppCompatActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
+public class AddShowTripReport extends BaseActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
 
     Button reportFromDate, reportTodate;
     EditText edt_FromPlace, edt_ToPlace, edt_Purpose, edt_Duration, edt_LeaderName,
@@ -63,9 +63,7 @@ public class AddShowTripReport extends AppCompatActivity implements View.OnClick
 
 
         setTitle("Trip Report");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
         shared = this.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         employeeId = shared.getString("EmpoyeeId", "");

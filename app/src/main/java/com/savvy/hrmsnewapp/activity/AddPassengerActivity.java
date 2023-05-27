@@ -42,7 +42,7 @@ import java.util.Map;
 
 import static com.savvy.hrmsnewapp.activity.DashBoardActivity.MY_PREFS_NAME;
 
-public class AddPassengerActivity extends AppCompatActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
+public class AddPassengerActivity extends BaseActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
 
     CoordinatorLayout coordinatorLayout;
     Button addPassenger, add_cloasePassenger, closeButton;
@@ -75,9 +75,7 @@ public class AddPassengerActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_add_passenger);
 
         setTitle("Passenger Details");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
         shared = this.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         employeeId = (shared.getString("EmpoyeeId", ""));

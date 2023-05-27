@@ -20,7 +20,7 @@ import com.savvy.hrmsnewapp.fragment.DashBoardFragmentMain;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
+public class BirthDayActivity extends BaseActivity implements MenuItem.OnMenuItemClickListener {
 
     BirthDayAndAnniversaryAdaptor birthDayAndAnniversaryAdaptor;
     RecyclerView birthDayandAnniversaryListView;
@@ -55,9 +55,7 @@ public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMe
             if (type.equals("arlData_Birthday")) {
                 imageView.setImageResource(R.drawable.birth_day_image);
                 setTitle("Birthday");
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setHomeButtonEnabled(true);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
                 if (size == 0) {
                     datanotFound.setVisibility(View.VISIBLE);
@@ -67,9 +65,7 @@ public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMe
             } else if (type.equals("arlData_Marriage_Anniversary")) {
                 imageView.setImageResource(R.drawable.marriage_anniversary_image);
                 setTitle("Marriage Anniversary");
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setHomeButtonEnabled(true);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
                 if (size == 0) {
                     datanotFound.setVisibility(View.VISIBLE);
                 } else {
@@ -78,9 +74,7 @@ public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMe
             } else if (type.equals("arlData_Join_Anniversary")) {
                 imageView.setImageResource(R.drawable.join_anniversary_image);
                 setTitle("Joining Anniversary");
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setHomeButtonEnabled(true);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
                 if (size == 0) {
                     datanotFound.setVisibility(View.VISIBLE);
                 } else {
@@ -89,9 +83,7 @@ public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMe
             } else if (type.equals("holiday_Data")) {
                 imageView.setImageResource(R.drawable.holiday_image);
                 setTitle("Holidays");
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setHomeButtonEnabled(true);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
                 if (size == 0) {
                     datanotFound.setVisibility(View.VISIBLE);
                 } else {
@@ -100,9 +92,6 @@ public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMe
             } else if (type.equals("arlData_Announcement")) {
                 imageView.setImageResource(R.drawable.announcement_image);
                 setTitle("Announcement");
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setHomeButtonEnabled(true);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 if (size == 0) {
                     datanotFound.setVisibility(View.VISIBLE);
                 } else {
@@ -111,9 +100,6 @@ public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMe
             } else if (type.equals("arlData_ThoughtOfDay")) {
                 imageView.setImageResource(R.drawable.thought_image);
                 setTitle("Thought Of The Day");
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setHomeButtonEnabled(true);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 if (size == 0) {
                     datanotFound.setVisibility(View.VISIBLE);
                 } else {
@@ -126,6 +112,7 @@ public class BirthDayActivity extends AppCompatActivity implements MenuItem.OnMe
             birthDayandAnniversaryListView.setAdapter(birthDayAndAnniversaryAdaptor);
 
         }
+        setUpToolBar();
     }
 
     @Override

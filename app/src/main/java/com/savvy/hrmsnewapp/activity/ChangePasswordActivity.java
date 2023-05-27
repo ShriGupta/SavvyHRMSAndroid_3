@@ -138,11 +138,7 @@ public class ChangePasswordActivity extends BaseActivity {
             }
         });
 
-        if (!LastPasswordChange.equalsIgnoreCase("0")) {
-            assert getSupportActionBar() != null;
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        setUpToolBar();
     }
 
     public boolean isValidPassword(final String password) {

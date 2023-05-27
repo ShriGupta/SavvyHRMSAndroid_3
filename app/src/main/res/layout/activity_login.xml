@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/coordinatorLayout"
     android:fitsSystemWindows="true"
-    tools:context="com.savvy.hrmsnewapp.activity.LoginActivity">
+    tools:context="com.savvy.hrmsnewapp.activity.LoginActivity_1">
 
 
     <RelativeLayout

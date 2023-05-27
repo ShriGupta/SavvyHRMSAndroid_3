@@ -52,7 +52,7 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class NewTrackServiceActivity extends AppCompatActivity implements
+public class NewTrackServiceActivity extends BaseActivity implements
         LocationListener,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener {
@@ -234,9 +234,7 @@ public class NewTrackServiceActivity extends AppCompatActivity implements
                  finish();
             }
         });
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
 
     }

@@ -18,6 +18,8 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -134,7 +137,7 @@ import java.util.Objects;
 
 import static com.savvy.hrmsnewapp.utils.Constants.CHANNEL_ID;
 
-public class DashBoardActivity extends BaseActivity implements FragmentDrawerListener {
+public class DashBoardActivity extends AppCompatActivity implements FragmentDrawerListener {
 
     private BroadcastReceiver mRegistrationBroadcastReceiver;
 
@@ -147,6 +150,7 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
     StringBuilder offlineXMLString = new StringBuilder();
     SharedPreferences sharedPreferences;
     String username;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +159,7 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
 
         sharedPreferences = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         username = sharedPreferences.getString("UserName", "");
+        editor = sharedPreferences.edit();
 
         checkOfflineData();
         if (Constants.checkTrackingStatus) {
@@ -323,7 +328,7 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
     }
 
     private void uploadOfflinePunch(String offlinexmlDetail) {
-        if (isNetworkAvailable()) {
+        if (Utilities.isNetworkAvailable(DashBoardActivity.this)) {
             String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveOffLineAttendance";
             JSONObject jsonObject = new JSONObject();
             try {
@@ -849,5 +854,72 @@ public class DashBoardActivity extends BaseActivity implements FragmentDrawerLis
     protected void onDestroy() {
         super.onDestroy();
         LocalBroadcastManager.getInstance(this).unregisterReceiver(act2InitReceiver);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        sharedPreferences = getSharedPreferences("IP_ADDRESS_CONSTANT", MODE_PRIVATE);
+        String showpassword = sharedPreferences.getString("ShowPassword", "");
+        if (showpassword.equals("1")) {
+            MenuItem logout = menu.findItem(R.id.action_change_password);
+            logout.setVisible(false);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.home_dashboard) {
+            Intent intent = new Intent(DashBoardActivity.this, DashBoardActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            overridePendingTransition(0, 0);
+        }
+
+
+        if (id == R.id.action_settings) {
+            editor.putBoolean(Constants.LOGIN_STATUS, false);
+            editor.putBoolean(Constants.DASHBOARD_STATUS, false);
+            editor.putString("USER_ID", "");
+            editor.putString("PASSWORD", "");
+            editor.commit();
+
+            Intent intent = new Intent(this, LoginActivity_1.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+            return true;
+        }
+        if (id == R.id.action_change_password) {
+
+            if (!(Constants.LEAVE_APPLY_ACTIVITY > 1)) {
+                try {
+                    Intent intent = new Intent(getApplicationContext(), ChangePasswordActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else {
+                try {
+                    Intent intent = new Intent(getApplicationContext(), ChangePasswordActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

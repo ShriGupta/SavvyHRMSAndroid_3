@@ -56,7 +56,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-public class BarCodeActivity extends AppCompatActivity {
+public class BarCodeActivity extends BaseActivity {
 
     private static final int PERMISSION_REQUEST_CAMERA = 0;
     private PreviewView previewView;
@@ -88,6 +88,7 @@ public class BarCodeActivity extends AppCompatActivity {
         previewView = findViewById(R.id.activity_main_previewView);
         cameraProviderFuture = ProcessCameraProvider.getInstance(this);
         requestCamera();
+        setUpToolBar();
     }
 
     private void checkIPAddress() {

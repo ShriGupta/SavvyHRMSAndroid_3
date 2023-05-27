@@ -2,6 +2,7 @@ package com.savvy.hrmsnewapp.fragment;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -110,7 +111,6 @@ public class CustomerVisitInOutFragment extends BaseFragment implements View.OnC
     boolean isLocationEnabled = false;
     boolean isCustomerAdd = false;
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -138,13 +138,6 @@ public class CustomerVisitInOutFragment extends BaseFragment implements View.OnC
             isLocationEnabled = true;
 
             if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
                 return;
             }
             mFusedLocationClient.getLastLocation().addOnCompleteListener(

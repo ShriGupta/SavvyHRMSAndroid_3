@@ -104,9 +104,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
 
         getCurrentDateTime();
 
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
     }
 
     private void getCurrentDateTime() {

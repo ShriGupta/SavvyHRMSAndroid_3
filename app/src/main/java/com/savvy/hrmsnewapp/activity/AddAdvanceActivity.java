@@ -40,7 +40,7 @@ import java.util.Map;
 import static com.savvy.hrmsnewapp.activity.DashBoardActivity.MY_PREFS_NAME;
 
 
-public class AddAdvanceActivity extends AppCompatActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
+public class AddAdvanceActivity extends BaseActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
 
     Button addButton, addcloseButton, closeButton;
     Spinner currecnySpinner, payModeSpinner;
@@ -65,9 +65,7 @@ public class AddAdvanceActivity extends AppCompatActivity implements View.OnClic
         shared = this.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
 
         setTitle("Advance Details");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
         Bundle bundle = getIntent().getExtras();
         traveWay = bundle.getString("TRAVEL_TYPE");

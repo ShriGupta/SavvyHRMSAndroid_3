@@ -1,5 +1,6 @@
 package com.savvy.hrmsnewapp.attendanceMark;
 
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 import android.Manifest;
@@ -108,7 +109,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
 
 
     private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION,ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_CODE);
     }
 
 
@@ -166,9 +167,7 @@ public class MarkAttendance extends BaseActivity implements View.OnClickListener
                     }
                 } else {
                     requestPermission();
-
                 }
-
             } else {
                 Utilities.showLocationErrorDialog(MarkAttendance.this, getResources().getString(R.string.location_string));
             }

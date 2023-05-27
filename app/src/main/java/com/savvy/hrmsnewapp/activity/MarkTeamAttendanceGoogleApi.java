@@ -116,9 +116,7 @@ public class MarkTeamAttendanceGoogleApi extends BaseActivity implements GoogleA
 
 //        new MarkTeamAttendanceGoogleApi.AddNewLocationInPopUp().execute();
 
-        assert getSupportActionBar()!=null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
     }
 
     private synchronized void setUpGClient() {

@@ -106,22 +106,9 @@ public class SaveMarkAttWithInOut extends BaseActivity implements View.OnClickLi
         btn_punch_in.setOnClickListener(this);
         btn_punch_out.setOnClickListener(this);
         btn_back_cancel.setOnClickListener(this);
-//
-//        assert getSupportActionBar()!=null;
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-////        getSupportActionBar().setHomeButtonEnabled(true);
-////        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-//        final ActionBar actionBar = getSupportActionBar();
-//        actionBar.setDisplayHomeAsUpEnabled(true);
-//        actionBar.setHomeButtonEnabled(true);
         getCurrentDateTime();
-
-        assert getSupportActionBar()!=null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        setUpToolBar();
     }
 
     private void getCurrentDateTime() {

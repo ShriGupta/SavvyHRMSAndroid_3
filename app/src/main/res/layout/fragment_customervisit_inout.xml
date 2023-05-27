@@ -76,16 +76,18 @@
                 android:id="@+id/dropDownLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:visibility="visible"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
                 android:weightSum="10">
 
                 <AutoCompleteTextView
                     android:id="@+id/customerSpinner"
                     android:layout_width="0dip"
-                    android:layout_height="30dp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="8"
+                    android:layout_marginBottom="@dimen/_2sdp"
                     android:background="@drawable/border_custom"
                     android:drawableRight="@drawable/places_ic_search"
                     android:hint="Search Customer"
@@ -95,14 +97,15 @@
                 <Button
                     android:id="@+id/add_NewCustomer"
                     android:layout_width="0dip"
-                    android:layout_height="30dp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_alignParentRight="true"
-                    android:layout_weight="2.1"
+                    android:layout_weight="2"
                     android:background="@drawable/button_border_cancel"
                     android:text="New"
+                    android:gravity="center"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size" />
+                    android:textSize="12sp" />
 
             </LinearLayout>
 
@@ -369,6 +372,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/colorLightGray"
                 android:src="@drawable/line" />
 

@@ -110,9 +110,7 @@ public class MarkAttendanceWithInOutGoogle extends BaseActivity implements Googl
         getCurrentDateTime();
         setUpGClient();
 
-        assert getSupportActionBar()!=null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
     }
 
     private synchronized void setUpGClient() {

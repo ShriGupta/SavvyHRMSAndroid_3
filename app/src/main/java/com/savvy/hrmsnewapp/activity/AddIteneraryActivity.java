@@ -55,7 +55,7 @@ import java.util.Map;
 
 import static com.savvy.hrmsnewapp.activity.DashBoardActivity.MY_PREFS_NAME;
 
-public class AddIteneraryActivity extends AppCompatActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
+public class AddIteneraryActivity extends BaseActivity implements View.OnClickListener, MenuItem.OnMenuItemClickListener {
 
     CoordinatorLayout coordinatorLayout;
     Button closeIteneraryButton;
@@ -104,9 +104,7 @@ public class AddIteneraryActivity extends AppCompatActivity implements View.OnCl
         shared = this.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
 
         setTitle("Itenerary Details");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
         seatPrefSpinner = (Spinner) findViewById(R.id.seatPrefSpinner);
         insuranceCheckBox = (CheckBox) findViewById(R.id.insuranceCheckBox);

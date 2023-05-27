@@ -16,7 +16,7 @@ import com.savvy.hrmsnewapp.room_database.CarDetailsModel;
 import com.savvy.hrmsnewapp.room_database.DatabaseClient;
 import com.savvy.hrmsnewapp.utils.Utilities;
 
-public class AddCarPickUpActivity extends AppCompatActivity implements View.OnClickListener,MenuItem.OnMenuItemClickListener {
+public class AddCarPickUpActivity extends BaseActivity implements View.OnClickListener,MenuItem.OnMenuItemClickListener {
 
     Button carpickupTime, carReleaseTime, pickupDate, addButton, addcloseButton, closeButton;
     EditText edt_Pickupat, edt_DropAt, edt_Comment;
@@ -31,9 +31,7 @@ public class AddCarPickUpActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_add_car_pic_up);
 
         setTitle("Car PickUp Details");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
         calanderHRMS = new CalanderHRMS(AddCarPickUpActivity.this);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);

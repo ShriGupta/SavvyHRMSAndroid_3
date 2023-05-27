@@ -63,7 +63,7 @@ import java.util.Timer;
 import static com.google.android.gms.common.api.GoogleApiClient.*;
 //mport static com.savvy.hrmsnewapp.activity.Timer.*;
 
-public class BaseTrackMeActivity extends AppCompatActivity implements
+public class BaseTrackMeActivity extends BaseActivity implements
         ConnectionCallbacks,
         OnConnectionFailedListener,
         LocationListener, View.OnClickListener {
@@ -113,9 +113,7 @@ public class BaseTrackMeActivity extends AppCompatActivity implements
         employeeName = (shared.getString("EmpoyeeName", ""));
 
         initView();
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
 
     }

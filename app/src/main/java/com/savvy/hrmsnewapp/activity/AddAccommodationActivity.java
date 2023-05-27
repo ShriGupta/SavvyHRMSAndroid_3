@@ -40,7 +40,7 @@ import java.util.Map;
 
 import static com.savvy.hrmsnewapp.activity.TravelDeskItineraryDetails.MY_PREFS_NAME;
 
-public class AddAccommodationActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddAccommodationActivity extends BaseActivity implements View.OnClickListener {
 
     CoordinatorLayout coordinatorLayout;
     EditText edt_City, edt_HotelLocation;
@@ -64,9 +64,7 @@ public class AddAccommodationActivity extends AppCompatActivity implements View.
         shared = this.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
 
         setTitle("Accommodation Details");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
         Bundle bundle = getIntent().getExtras();
         traveWay = bundle.getString("Travel_Way");

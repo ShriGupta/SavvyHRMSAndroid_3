@@ -159,7 +159,6 @@ public class LeaveApplyActivity extends BaseActivity implements View.OnClickList
     List<HashMap<String, String>> coLeaveDataList;
     String formantedCoffDate = null;
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -217,9 +216,7 @@ public class LeaveApplyActivity extends BaseActivity implements View.OnClickList
 
         mSavvyHrmsApp = SavvyHRMSApplication.getInstance();
         init();
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
     }
 

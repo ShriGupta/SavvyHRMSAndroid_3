@@ -33,7 +33,7 @@ import java.util.Map;
 
 import static com.savvy.hrmsnewapp.activity.DashBoardActivity.MY_PREFS_NAME;
 
-public class AddNewCustomer extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
+public class AddNewCustomer extends BaseActivity implements MenuItem.OnMenuItemClickListener {
 
     EditText name, mobile, address, email_id;
     Button saveDetail;
@@ -52,10 +52,7 @@ public class AddNewCustomer extends AppCompatActivity implements MenuItem.OnMenu
         employee_Id = (shared.getString("EmpoyeeId", ""));
 
         setTitle("Add New Customer");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        setUpToolBar();
 
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
         name = (EditText) findViewById(R.id.edt_CustomerName);

@@ -1,5 +1,7 @@
 package com.savvy.hrmsnewapp.attendanceMark;
 
+import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.content.ContentValues.TAG;
 
 import android.Manifest;
@@ -11,18 +13,23 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 import android.provider.Settings;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -55,6 +62,7 @@ import com.savvy.hrmsnewapp.retrofitModel.ServerDateTimeModel;
 import com.savvy.hrmsnewapp.utils.Constants;
 import com.savvy.hrmsnewapp.utils.ErrorConstants;
 import com.savvy.hrmsnewapp.utils.LocationAssistant;
+import com.savvy.hrmsnewapp.utils.LocationManagerClass;
 import com.savvy.hrmsnewapp.utils.Utilities;
 
 import org.json.JSONObject;
@@ -75,16 +83,16 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
     Button btn_punch_in, btn_punch_out;
     private static final String TAG = "MarkTeamAttendanceNew";
 
-    public static final int REQUEST_CODE = 1;
     private static String latitude = "";
     private static String longitude = "";
     String locationAddress = "";
 
-    FusedLocationProviderClient fusedClient;
-
     String countryName = "";
     String geoString;
-    ProgressDialog locationProcessDialog;
+    private final int PERMISSION_REQUEST_CODE = 1111;
+    LocationManagerClass locationManagerClass;
+    Location location;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,8 +100,6 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
         setContentView(R.layout.activity_mark_attendance_with_in_out_google);
 
         address = (CustomTextView) findViewById(R.id.address);
-
-        // initLocation();
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
         shared = getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
 
@@ -108,17 +114,21 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
         btn_punch_in = (Button) findViewById(R.id.btn_punchIn);
         btn_punch_out = (Button) findViewById(R.id.btn_punchOut);
 
-        fusedClient = LocationServices.getFusedLocationProviderClient(this);
-
 
         btn_punch_in.setOnClickListener(this);
         btn_punch_out.setOnClickListener(this);
 
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
 
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -289,47 +299,63 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
         finish();
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     protected void onResume() {
         super.onResume();
         getCurrentDateTime();
-        checkLocationPermission();
 
+        if (Utilities.isGPSTurnedOn(MarkAttendanceInOut.this)) {
+            initLocation();
+        } else {
+            Utilities.showLocationErrorDialog(MarkAttendanceInOut.this, "PLease Enable Your Location");
+        }
+
+    }
+
+    private void initLocation() {
+        if (checkLocationPermission()) {
+            address.setText("Please wait, fetching your location...");
+            locationManagerClass = new LocationManagerClass(MarkAttendanceInOut.this, mLocation -> {
+                location = mLocation;
+                Log.e("TAG", "onLocationRecieve: Latitude: " + location.getLatitude() + " Longitude: " + location.getLongitude());
+                if (location == null)
+                    return;
+                updateUI(location);
+            });
+            locationManagerClass.startLocationUpdates();
+
+        } else {
+            requestPermission();
+        }
+    }
+
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_CODE);
+    }
+
+
+    private boolean checkLocationPermission() {
+        boolean isPermissionGranted = false;
+        if (ContextCompat.checkSelfPermission(getApplicationContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
+        } else {
+            isPermissionGranted = true;
+        }
+        return isPermissionGranted;
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_CODE) {
+        if (requestCode == PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                requestLocation();
+                initLocation();
             } else {
-                checkLocationPermission();
+                Utilities.showLocationErrorDialog(MarkAttendanceInOut.this, "Location permission not granted !");
             }
         }
-    }
-
-    private void requestLocation() {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            return;
-        }
-        fusedClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
-            @Override
-            public void onSuccess(Location location) {
-                if (location != null) {
-                    updateUI(location);
-                }
-            }
-        });
     }
 
 
@@ -404,37 +430,20 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
     }
 
 
-    void checkLocationPermission() {
-
-        if (Utilities.isGPSTurnedOn(MarkAttendanceInOut.this)) {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED) {
-
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                    showRationale();
-                } else {
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 2);
-                }
-            } else {
-                requestLocation();
-            }
-        } else {
-            Utilities.showLocationErrorDialog(MarkAttendanceInOut.this, "Please Enable The Location");
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (locationManagerClass != null) {
+            locationManagerClass.stopLocationUpdates();
         }
-
     }
 
-    private void showRationale() {
-        androidx.appcompat.app.AlertDialog dialog = new androidx.appcompat.app.AlertDialog.Builder(this).setMessage("SavvyHRMS wants to access your device location..").setPositiveButton("Sure", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        ActivityCompat.requestPermissions(MarkAttendanceInOut.this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 2);
-                        dialogInterface.dismiss();
-                    }
-                })
-                .create();
-        dialog.show();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (locationManagerClass != null) {
+            locationManagerClass.stopLocationUpdates();
+        }
     }
 
 

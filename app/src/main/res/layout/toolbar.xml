@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar
+<com.google.android.material.appbar.MaterialToolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
@@ -8,4 +8,5 @@
     android:minHeight="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
     local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    local:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    local:popupTheme="@style/AppTheme.PopupOverlay"
+ />

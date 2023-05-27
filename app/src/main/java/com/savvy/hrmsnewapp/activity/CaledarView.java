@@ -20,7 +20,7 @@ import java.util.logging.LogRecord;
  * Created by Nitesh Kumar Verma on 6/7/2017.
  */
 
-public class CaledarView extends Activity
+public class CaledarView extends BaseActivity
 {
     public Calendar month;
     public CalendarAdapter adapter;
@@ -107,6 +107,8 @@ public class CaledarView extends Activity
 
             }
         });
+
+        setUpToolBar();
     }
 
     public void refreshCalendar()

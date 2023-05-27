@@ -187,9 +187,7 @@ public class LeaveApplyFicciActivity extends BaseActivity implements View.OnClic
 
         setTitle("Request For " + value_name);
         initValue();
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
     }
 
     private void initValue() {

@@ -43,7 +43,7 @@ import java.util.Map;
 
 import static com.savvy.hrmsnewapp.activity.LeaveApplyFicciActivity.TAG;
 
-public class ItineraryDetailsWithTicketsActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
+public class ItineraryDetailsWithTicketsActivity extends BaseActivity implements MenuItem.OnMenuItemClickListener {
 
     ItineraryDetailsWithTicketsAdapter adapter;
     CoordinatorLayout coordinatorLayout;
@@ -61,9 +61,7 @@ public class ItineraryDetailsWithTicketsActivity extends AppCompatActivity imple
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_details_with_tickets);
         setTitle("Itinerary Details with Tickets");
-        assert getSupportActionBar() != null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
 
         shared = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         employeeId = (shared.getString("EmpoyeeId", ""));

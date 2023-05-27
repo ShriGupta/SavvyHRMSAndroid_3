@@ -119,96 +119,83 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="10">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_fromDate_title"
+                    android:layout_width="0dip"
                     android:layout_height="30dp"
-                    android:layout_weight="1">
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="From Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
 
-                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
-                        android:id="@+id/txv_fromDate_title"
-                        android:layout_width="0dip"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="From Date *"
-                        android:textColor="@color/my_custom_color"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
-                        app:font="@string/font_name_light" />
+                <Button
+                    android:id="@+id/btn_fromDate_leave"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_weight="7"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Select Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="12sp"
+                    app:font="@string/font_name_light">
 
-                    <Button
-                        android:id="@+id/btn_fromDate_leave"
-                        android:layout_width="0dip"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="2"
-                        android:background="@drawable/border_custom"
-                        android:gravity="center_vertical"
-                        android:hint="Select Date"
-                        android:paddingLeft="10dp"
-                        android:textColor="@color/my_custom_color"
-                        android:textColorHint="@color/color_gray"
-                        android:textSize="12dp"
-                        app:font="@string/font_name_light">
-
-                    </Button>
-
-                </LinearLayout>
+                </Button>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dip"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
-                <LinearLayout
-                    android:layout_width="30dip"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_toDate_title"
+                    android:layout_width="0dip"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="To Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
 
-                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
-                        android:id="@+id/txv_toDate_title"
-                        android:layout_width="0dip"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="To Date *"
-                        android:textColor="@color/my_custom_color"
-                        android:textSize="12dp"
-                        android:textStyle="bold"
-                        app:font="@string/font_name_light" />
+                <Button
+                    android:id="@+id/btn_toDate_leave"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_weight="7"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Select Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="12sp"
+                    app:font="@string/font_name_light">
 
-                    <Button
-                        android:id="@+id/btn_toDate_leave"
-                        android:layout_width="0dip"
-                        android:layout_height="30dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="2"
-                        android:background="@drawable/border_custom"
-                        android:gravity="center_vertical"
-                        android:hint="Select Date"
-                        android:paddingLeft="10dp"
-                        android:textColor="@color/my_custom_color"
-                        android:textColorHint="@color/color_gray"
-                        android:textSize="12dp"
-                        app:font="@string/font_name_light">
-
-                    </Button>
-
-                </LinearLayout>
+                </Button>
 
             </LinearLayout>
+
 
             <LinearLayout
                 android:id="@+id/Linear_result_compareDate"
@@ -230,7 +217,7 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="30dip"
+                android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
@@ -238,10 +225,9 @@
                 android:orientation="horizontal">
 
                 <Button
-
                     android:id="@+id/btn_showDates"
                     android:layout_width="0dip"
-                    android:layout_height="30dip"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_gravity="right"
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
@@ -251,7 +237,7 @@
                     android:paddingRight="10dp"
                     android:text="Date Details"
                     android:textColor="#fff"
-                    android:textSize="14dp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout

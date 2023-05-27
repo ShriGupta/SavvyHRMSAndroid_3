@@ -108,9 +108,7 @@ public class MarkAttendanceGoogleApi extends BaseActivity implements GoogleApiCl
 
 //        new AddNewLocationInPopUp().execute();
 
-        assert getSupportActionBar()!=null;
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolBar();
     }
 
     private synchronized void setUpGClient() {

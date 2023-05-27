@@ -20,9 +20,7 @@ public class ResignationRequestFragment extends BaseFragment {
 
     Button btn_add1_resignation, btn_cancel;
     Button btn_pickFromDate, btn_pickToDate;
-    GoogleApiClient mGoogleApiClient;
-    GoogleApiClient mGoogleApiClient1;
-    LocationRequest mLocationRequest;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,16 +64,14 @@ public class ResignationRequestFragment extends BaseFragment {
         btn_pickFromDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Track_Me_Service.class);
-                getActivity().startService(intent);
+
             }
         });
 
         btn_pickToDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Track_Me_Service.class);
-                getActivity().stopService(intent);
+
             }
         });
         return view;

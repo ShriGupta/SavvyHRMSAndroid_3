@@ -2,18 +2,22 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+       >
     </style>
+
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorControlNormal">@color/white</item>
+        <item name="titleTextColor">@color/color_red</item>
+    </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
@@ -21,30 +25,8 @@
         <item name="android:padding">5dp</item>
     </style>
 
-    <style name="submitspinner" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">22dp</item>
-        <item name="android:layout_margin">10sp</item>
-        <item name="android:hint">HH</item>
-        <item name="android:textSize">10dp</item>
-    </style>
-
-    <style name="textSize1">
-        <item name="android:textSize">12dp</item>
-    </style>
     <style name="textSizeSpinner">
         <item name="android:textSize">10dp</item>
-    </style>
-
-    <style name="MyTabLayoutStyle" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title">
-
-        <item name="android:textSize">12dp</item>
-        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
-        <item name="android:textColorSecondary">@color/colorPrimaryDark</item>
-        <item name="android:textColorPrimary">#d92d2d</item>
-        <item name="android:textColor">@color/color_gray</item>
-
-
     </style>
 
     <style name="DialogAnimation">
@@ -53,9 +35,8 @@
     </style>
 
     <style name="circulerImageView" parent="ShapeAppearance.MaterialComponents.MediumComponent">
-
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
-
     </style>
+
 </resources>

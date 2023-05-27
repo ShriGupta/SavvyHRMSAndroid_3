@@ -13,7 +13,7 @@ import com.savvy.hrmsnewapp.interfaces.OnSuccessFaceAttendance;
 import com.savvy.hrmsnewapp.utils.Constants;
 import com.savvy.hrmsnewapp.utils.GifImageView;
 
-public class AttendanceSuccessActivity extends AppCompatActivity {
+public class AttendanceSuccessActivity extends BaseActivity {
 
     TextView tv_gotoback;
 
@@ -22,6 +22,7 @@ public class AttendanceSuccessActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance_success);
         setTitle("Face Verified");
+        setUpToolBar();
 
         GifImageView gifImageView = (GifImageView) findViewById(R.id.gifImage);
         gifImageView.setGifImageResource(R.drawable.mark_attendance);
