@@ -222,6 +222,7 @@ public class MyTeamMembers extends BaseFragment {
             Picasso.get().load(PHOTO_CODE).into(user_profile_photo);
         }
 
+
         getMyTeamHeirarchy(EMPLOYEE_ID_1);
 
         Log.e("Size 5", "Count = " + Constants.MY_TEAM_MEMBERS);
@@ -345,8 +346,11 @@ public class MyTeamMembers extends BaseFragment {
             String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/MyHierarchyPost";
             JSONObject params_final = new JSONObject();
 
+            if(EMPLOYEE_ID_1.equals("")){
+                EMPLOYEE_ID_1=shared.getString("EmpoyeeId","");
+            }
             params_final.put("employeeId", EMPLOYEE_ID_1);
-            params_final.put("securityToken", "");
+            params_final.put("securityToken", shared.getString("Token",""));
 
             RequestQueue requestQueue = Volley.newRequestQueue(getContext());
 
