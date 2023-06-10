@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.savvy.hrmsnewapp-mergeReleaseResources-35:/values-large-v4/values-large-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\0b7f47a6f8952264f1c2714bb61159de\\transformed\\appcompat-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,669,773",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,768,884"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9fd01cc2d3c045e3e10a44c9887c6d8e\\transformed\\material-1.2.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "14,15",
+                        "startColumns": "4,4",
+                        "startOffsets": "889,1011",
+                        "endColumns": "121,133",
+                        "endOffsets": "1006,1140"
+                    }
+                },
+                {
+                    "source": "D:\\SavvyHRMS App\\SavvyHRMSAndroid 3\\app\\src\\main\\res\\values-large\\dimens.xml",
+                    "from": {
+                        "startLines": "3,2,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "99,57,147",
+                        "endColumns": "46,40,48",
+                        "endOffsets": "141,93,191"
+                    },
+                    "to": {
+                        "startLines": "9,10,11",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "532,579,620",
+                        "endColumns": "46,40,48",
+                        "endOffsets": "574,615,664"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.savvy.hrmsnewapp-mergeDebugResources-35:/values-small-v4/values-small-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\9fd01cc2d3c045e3e10a44c9887c6d8e\\transformed\\material-1.2.1\\res\\values-small-v4\\values-small-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,128,198,270",
+                        "endColumns": "72,69,71,69",
+                        "endOffsets": "123,193,265,335"
+                    }
+                },
+                {
+                    "source": "D:\\SavvyHRMS App\\SavvyHRMSAndroid 3\\app\\src\\main\\res\\values-small\\dimens.xml",
+                    "from": {
+                        "startLines": "3,2,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "98,57,145",
+                        "endColumns": "45,39,48",
+                        "endOffsets": "139,92,189"
+                    },
+                    "to": {
+                        "startLines": "6,7,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "340,386,426",
+                        "endColumns": "45,39,48",
+                        "endOffsets": "381,421,470"
+                    }
+                }
+            ]
+        }
+    ]
+}
