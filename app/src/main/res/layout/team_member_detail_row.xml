@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_margin="5dip"
-    android:background="@drawable/rounded_border"
     android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    android:elevation="@dimen/_5sdp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/colorLightGray"
+    app:rippleColor="@color/color_blue"
     android:orientation="vertical">
     <LinearLayout
         android:layout_marginTop="5dip"
@@ -18,16 +22,17 @@
             android:layout_width="0dip"
             android:layout_height="95dip"
             android:layout_weight="3"
-            android:gravity="center_horizontal">
+
+            android:gravity="center">
             <com.savvy.hrmsnewapp.customwidgets.CircularImageView
                 android:id="@+id/img_team_member_1"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_centerHorizontal="true"
                 android:padding="20dp"
                 android:elevation="5dp"
-                android:scaleType="centerCrop"
-                android:background="@drawable/profile_rounded" />
+                android:src="@drawable/profile_rounded"
+               />
 
         </LinearLayout>
 
@@ -114,4 +119,4 @@
         </LinearLayout>
 
     </LinearLayout>
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

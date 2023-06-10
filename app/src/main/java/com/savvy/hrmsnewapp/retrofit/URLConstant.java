@@ -8,4 +8,6 @@ public class URLConstant {
     public static final String URL_PROFILE_DATA_REQUEST = "/savvymobile/SavvyMobileService.svc/EmployeeProfilePostDynamic";
     public static final String URL_SERVER_DATE_TIME_REQUEST = "/savvymobile/SavvyMobileService.svc//GetCurrentDateTime";
     public static final String URL_SHORT_LEAVE_APPROVAL_URL = "/savvymobile/SavvyMobileService.svc//GetShortLeaveChangeRequestDetail/{empId}";
+
+    public static final String URL_SERVER_DATE_TIME_WITH_BUTTON = "/savvymobile/SavvyMobileService.svc//GetCurrentDateTimeWithEnableDisableButton";
 }

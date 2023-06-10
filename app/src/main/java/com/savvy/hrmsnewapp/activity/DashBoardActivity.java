@@ -576,7 +576,7 @@ public class DashBoardActivity extends AppCompatActivity implements FragmentDraw
                     title = privillageName;
                     break;
                 case "34":
-                    fragment = new Customer_view_holder();
+                    fragment = new Customer_view_holder("34");
                     title = privillageName;
                     break;
                 case "35":
@@ -754,6 +754,11 @@ public class DashBoardActivity extends AppCompatActivity implements FragmentDraw
 
                 case "79":
                     fragment = new MyActionCenterFragment();
+                    title = privillageName;
+                    break;
+
+                case "80":
+                    fragment = new Customer_view_holder("80");
                     title = privillageName;
                     break;
 

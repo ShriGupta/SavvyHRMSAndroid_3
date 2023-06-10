@@ -88,6 +88,29 @@ public class APIServiceClass {
         });
     }
 
+    public void getServerDateTimeWithEnableButton(String authToken,String empID,ResultHandler<ServerDateTimeModel> handler) {
+
+        Call<ServerDateTimeModel> call=RetrofitClient
+                .getInstance()
+                .getApi()
+                .getServerDateTimeWithEnableButton(authToken,empID);
+        call.enqueue(new Callback<ServerDateTimeModel>() {
+            @Override
+            public void onResponse(Call<ServerDateTimeModel> call, Response<ServerDateTimeModel> response) {
+                if (response.isSuccessful()) {
+                    handler.onSuccess(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ServerDateTimeModel> call, Throwable t) {
+                handler.onFailure(t.getLocalizedMessage());
+            }
+        });
+    }
+
+
+
     public void getSLApprovalData(String authToken,String empId,ResultHandler<ServerDateTimeModel> handler) {
 
         Call<ServerDateTimeModel> call=RetrofitClient

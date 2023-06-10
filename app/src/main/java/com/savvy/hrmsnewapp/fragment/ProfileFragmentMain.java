@@ -85,18 +85,18 @@ public class ProfileFragmentMain extends Fragment {
     LinearLayout emp_profileLayout;
     ArrayList<HashMap<String, String>> dynamicArraylist;
     EmployeeDynamicProfileAdapter profileAdapter;
+    SharedPreferences.Editor sharededitor;
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         shared = Objects.requireNonNull(getActivity()).getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
+        sharededitor = getActivity().getSharedPreferences("PROFILE_SESSION", MODE_PRIVATE).edit();
         token = (shared.getString("Token", ""));
         employeeId = (shared.getString("EmpoyeeId", ""));
         dynamicArraylist = new ArrayList<>();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -114,7 +114,6 @@ public class ProfileFragmentMain extends Fragment {
         return view;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -211,6 +210,13 @@ public class ProfileFragmentMain extends Fragment {
                                     hashMap.put("CaptionValue", jarray.getJSONObject(i).getString("CaptionValue"));
                                     dynamicArraylist.add(hashMap);
                                 }
+                                sharededitor.putString("EmployeeCode",jarray.getJSONObject(0).getString("CaptionValue"));
+                                sharededitor.putString("EmployeeName",jarray.getJSONObject(1).getString("CaptionValue"));
+                                sharededitor.putString("department",jarray.getJSONObject(2).getString("CaptionValue"));
+                                sharededitor.putString("designation",jarray.getJSONObject(3).getString("CaptionValue"));
+                                sharededitor.putString("Supervisor",jarray.getJSONObject(4).getString("CaptionValue"));
+                                sharededitor.putString("EmpPhotoPath",shared.getString("EmpPhotoPath",""));
+                                sharededitor.apply();
 
                                 profileAdapter = new EmployeeDynamicProfileAdapter(getActivity(), dynamicArraylist);
                                 dynamicProfileRecyclerView.setAdapter(profileAdapter);
@@ -278,7 +284,6 @@ public class ProfileFragmentMain extends Fragment {
 
     //All DashBoard Menu Item List Api Call here and set Adapter Dynamically-----------------------------------------------------------------
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void getMenuDetails(String employeeId, String token) {
         APIServiceClass.getInstance().sendMenuDataRequest(employeeId, token, new ResultHandler<List<MenuModule>>() {
             @Override

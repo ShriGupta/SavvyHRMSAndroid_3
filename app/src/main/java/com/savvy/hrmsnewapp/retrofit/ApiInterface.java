@@ -38,6 +38,13 @@ public interface ApiInterface {
     Call<ServerDateTimeModel> getServerDateTime(
             @Header("auth-token") String authToken);
 
+    @GET(URLConstant.URL_SERVER_DATE_TIME_WITH_BUTTON+"/{empId}")
+    Call<ServerDateTimeModel> getServerDateTimeWithEnableButton(
+            @Header("auth-token") String authToken,
+            @Path("empId") String empId);
+
+
+
     @GET(URLConstant.URL_SHORT_LEAVE_APPROVAL_URL)
     Call<ServerDateTimeModel> getSLApprovalData(
             @Header("auth-token") String authToken,

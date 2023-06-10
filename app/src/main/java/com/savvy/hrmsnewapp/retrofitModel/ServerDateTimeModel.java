@@ -19,6 +19,34 @@ public class ServerDateTimeModel {
     @SerializedName("ServerTime24hour")
     @Expose
     private String serverTime24hour;
+
+    @SerializedName("IOButtonCurrentMode")
+    @Expose
+    private String IOButtonCurrentMode;
+
+    public String getIOButtonCurrentMode() {
+        return IOButtonCurrentMode;
+    }
+
+    public void setIOButtonCurrentMode(String IOButtonCurrentMode) {
+        this.IOButtonCurrentMode = IOButtonCurrentMode;
+    }
+
+    public String getTotalTimeWorked() {
+        return TotalTimeWorked;
+    }
+
+    public void setTotalTimeWorked(String totalTimeWorked) {
+        TotalTimeWorked = totalTimeWorked;
+    }
+
+    @SerializedName("TotalTimeWorked")
+    @Expose
+    private String TotalTimeWorked;
+
+
+
+
     @SerializedName("errorMessage")
     @Expose
     private Object errorMessage;

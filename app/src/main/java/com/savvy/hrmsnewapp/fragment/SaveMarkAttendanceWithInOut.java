@@ -52,12 +52,18 @@ public class SaveMarkAttendanceWithInOut extends Fragment {
     CoordinatorLayout coordinatorLayout;
     public static final String MY_PREFS_NAME = "MyPrefsFile";
     SharedPreferences shared;
+    String privilageId;
+    String IOButtonStatus="";
+    String totalTimeWorked="";
+    public SaveMarkAttendanceWithInOut(String privilageId){
+        this.privilageId=privilageId;
+    }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         shared = requireActivity().getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
+
         getCurrentDateTime();
     }
 
@@ -82,8 +88,13 @@ public class SaveMarkAttendanceWithInOut extends Fragment {
             @Override
             public void onClick(View v) {
                 if (Utilities.isNetworkAvailable(requireActivity())) {
+
                     if(!txv_currentDate.getText().toString().equals("")){
-                        requireActivity().startActivity(new Intent(requireActivity(), MarkAttendanceInOut.class));
+                        Intent intent=new Intent(new Intent(requireActivity(), MarkAttendanceInOut.class));
+                        intent.putExtra("privilageId",privilageId);
+                        if(!txv_currentDate.getText().toString().equals("")){
+                            requireActivity().startActivity(intent);
+                        }
                     }
                 } else {
                     Toast.makeText(requireActivity(), "Internet Not Available.", Toast.LENGTH_SHORT).show();

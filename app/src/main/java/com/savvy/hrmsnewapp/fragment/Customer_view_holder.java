@@ -15,6 +15,10 @@ import com.savvy.hrmsnewapp.customwidgets.CustomTextView;
 
 public class Customer_view_holder extends BaseFragment implements View.OnClickListener {
 
+    String privilageId;
+    public Customer_view_holder(String privilageId){
+        this.privilageId=privilageId;
+    }
     LinearLayout ll_custRequest, ll_custStatus;
     ImageView img_custRequest, img_custStatus;
     CustomTextView txt_custRequest, txt_custStatus;
@@ -42,7 +46,7 @@ public class Customer_view_holder extends BaseFragment implements View.OnClickLi
         try {
 
             FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
-            SaveMarkAttendanceWithInOut custRequestFragment = new SaveMarkAttendanceWithInOut();
+            SaveMarkAttendanceWithInOut custRequestFragment = new SaveMarkAttendanceWithInOut(privilageId);
             transaction.replace(R.id.frame_cust_holder, custRequestFragment);
             transaction.addToBackStack(null);
             transaction.commit();
@@ -83,7 +87,7 @@ public class Customer_view_holder extends BaseFragment implements View.OnClickLi
 
             case R.id.cust_linear2:
                 try {
-                    SaveMarkAttendanceWithInOut custRequestFragment = new SaveMarkAttendanceWithInOut();
+                    SaveMarkAttendanceWithInOut custRequestFragment = new SaveMarkAttendanceWithInOut(privilageId);
                     transaction.replace(R.id.frame_cust_holder, custRequestFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();

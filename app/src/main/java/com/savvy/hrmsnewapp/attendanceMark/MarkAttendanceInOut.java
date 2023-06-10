@@ -28,6 +28,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -54,6 +55,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.savvy.hrmsnewapp.R;
 import com.savvy.hrmsnewapp.activity.BaseActivity;
+import com.savvy.hrmsnewapp.activity.LeaveApplyFicciActivity;
 import com.savvy.hrmsnewapp.customwidgets.CustomTextView;
 import com.savvy.hrmsnewapp.fragment.FaceDetectionHolderFrgamnet;
 import com.savvy.hrmsnewapp.retrofit.APIServiceClass;
@@ -81,7 +83,7 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
     SharedPreferences shared;
     private TextView address;
     Button btn_punch_in, btn_punch_out;
-    private static final String TAG = "MarkTeamAttendanceNew";
+    private static final String TAG = "savvyhrmslogs";
 
     private static String latitude = "";
     private static String longitude = "";
@@ -92,6 +94,9 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
     private final int PERMISSION_REQUEST_CODE = 1111;
     LocationManagerClass locationManagerClass;
     Location location;
+    EditText edtTotalWorked;
+    LinearLayout llEnableDisableLayout;
+    String privilageId="";
 
 
     @Override
@@ -110,6 +115,8 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
         txv_currentDate = (CustomTextView) findViewById(R.id.txv_currentDate);
         txv_currentTime = (CustomTextView) findViewById(R.id.txv_currentTime);
         edt_messagefeedback = (EditText) findViewById(R.id.edt_messagefeedback);
+        edtTotalWorked = (EditText) findViewById(R.id.edt_total_worked);
+        llEnableDisableLayout = (LinearLayout) findViewById(R.id.ll_enable_disable_layout);
 
         btn_punch_in = (Button) findViewById(R.id.btn_punchIn);
         btn_punch_out = (Button) findViewById(R.id.btn_punchOut);
@@ -118,6 +125,15 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
         btn_punch_in.setOnClickListener(this);
         btn_punch_out.setOnClickListener(this);
 
+        if (getIntent().getExtras() != null) {
+             privilageId = getIntent().getStringExtra("privilageId");
+            if(privilageId.equals("80")){
+                llEnableDisableLayout.setVisibility(View.VISIBLE);
+                getCurrentDateTimeWithEnableButton();
+            }else {
+                llEnableDisableLayout.setVisibility(View.GONE);
+            }
+        }
         setUpToolBar();
     }
 
@@ -129,6 +145,41 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void getCurrentDateTimeWithEnableButton() {
+        APIServiceClass.getInstance().getServerDateTimeWithEnableButton(shared.getString(Constants.EMPLOYEE_ID_FINAL, ""),
+                shared.getString("EmpoyeeId", ""),new ResultHandler<ServerDateTimeModel>() {
+                    @Override
+                    public void onSuccess(ServerDateTimeModel data) {
+
+                        String[] serverDateSplit = data.getServerDateDDMMYYYYY().split(" ");
+                        String replacecurrDate = serverDateSplit[0].replace("\\", "");
+                        txv_currentTime.setText(data.getServerTime());
+                        txv_currentDate.setText(replacecurrDate);
+
+                        if(!data.getTotalTimeWorked().equals("")){
+                            edtTotalWorked.setText(data.getTotalTimeWorked());
+                        }
+                        switch (data.getIOButtonCurrentMode()) {
+                            case "1":
+                                btn_punch_in.setEnabled(true);
+                                btn_punch_out.setEnabled(false);
+                                break;
+                            case "2":
+                                btn_punch_in.setEnabled(false);
+                                btn_punch_out.setEnabled(true);
+                                break;
+                            case "3":
+                                btn_punch_in.setEnabled(false);
+                                btn_punch_out.setEnabled(false);
+                                break;
+                        }
+                    }
+                    @Override
+                    public void onFailure(String message) {
+                    }
+                });
     }
 
 
@@ -206,6 +257,10 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
                                     } else if (statusId.equals("2")) {
                                         Utilities.showDialog(coordinatorLayout, statusDescription);
                                     }
+                                    if(privilageId.equals("80")){
+                                        getCurrentDateTimeWithEnableButton();
+                                    }
+
                                 } catch (Exception ex) {
                                     ex.printStackTrace();
                                 }
@@ -236,7 +291,6 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
     private void markAttendanceInOutWithLocation(final String comment, final String lat, final String lon, final String type, String locationaddress) {
         try {
             showProgressDialog();
-
             String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveAttendanceMarkInOutWithLocationAddress";
             JSONObject params_final = new JSONObject();
 
@@ -248,8 +302,6 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
             params_final.put("longitude", lon);
             params_final.put("punchType", type);
             params_final.put("locationAddress", locationaddress);
-            Log.e(TAG, ": " + url.toString());
-            Log.e(TAG, ": " + params_final.toString());
 
             if (Utilities.isNetworkAvailable(MarkAttendanceInOut.this)) {
                 RequestQueue requestQueue = Volley.newRequestQueue(MarkAttendanceInOut.this);
@@ -258,7 +310,7 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
                             @Override
                             public void onResponse(JSONObject response) {
                                 dismissProgressDialog();
-
+                                Log.e(TAG, "onResponse: "+response.toString() );
                                 try {
                                     JSONObject jsonobj = response.getJSONObject("SaveAttendanceMarkInOutWithLocationAddressResult");
                                     String statusId = jsonobj.getString("statusId");
@@ -271,6 +323,11 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
                                     } else if (statusId.equals("2")) {
                                         Utilities.showDialog(coordinatorLayout, statusDescription);
                                     }
+
+                                    if(privilageId.equals("80")){
+                                        getCurrentDateTimeWithEnableButton();
+                                    }
+
                                 } catch (Exception ex) {
                                     ex.printStackTrace();
                                 }
@@ -303,7 +360,12 @@ public class MarkAttendanceInOut extends BaseActivity implements View.OnClickLis
     @Override
     protected void onResume() {
         super.onResume();
-        getCurrentDateTime();
+
+        if(privilageId.equals("80")){
+            getCurrentDateTimeWithEnableButton();
+        }else{
+            getCurrentDateTime();
+        }
 
         if (Utilities.isGPSTurnedOn(MarkAttendanceInOut.this)) {
             initLocation();
