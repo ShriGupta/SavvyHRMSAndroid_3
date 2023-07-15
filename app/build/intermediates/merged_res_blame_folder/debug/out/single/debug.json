@@ -988,6 +988,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\mipmap-xxhdpi\\comp_off_approve.png"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_adapter_company_directory_row.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\adapter_company_directory_row.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_fragment_no__internet.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\fragment_no__internet.xml"
     },
@@ -1582,6 +1586,10 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_simple_header.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\simple_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_layout_company_directory.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\layout_company_directory.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\mipmap-hdpi_ic_logo_3.png.flat",

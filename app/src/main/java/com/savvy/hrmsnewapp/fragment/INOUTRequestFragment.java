@@ -165,6 +165,7 @@ public class INOUTRequestFragment extends BaseFragment {
     String TPCICO_ID="";
     String convence="";
     String hotelFileName="",cabFileName="",flightFileName="",trainFileName="",otherFileName;
+    String hotelNewFileName="",cabNewFileName="",flightNewFileName="",trainNewFileName="",otherNewFileName;
     StringBuilder stringBuilder=new StringBuilder();
 
 
@@ -1055,7 +1056,7 @@ public class INOUTRequestFragment extends BaseFragment {
                                     if (jsonArray.length() > 0) {
                                         for (int i = 0; i <= jsonArray.length(); i++) {
                                             JSONObject explrObject = jsonArray.getJSONObject(i);
-                                            Log.e("TAG", "activityResponseArrayacti" + explrObject.getString("AM_ACTIVITY_NAME"));
+                                            Log.e("savvylogs", "getShowDetailsBySupplier" + explrObject.getString("AM_ACTIVITY_NAME"));
 
                                             edt_InOut_activity.setText(explrObject.getString("AM_ACTIVITY_NAME"));
                                             edt_InOut_location.setText(explrObject.getString("SLD_LOCATION"));
@@ -1287,10 +1288,19 @@ public class INOUTRequestFragment extends BaseFragment {
                                                     binding.nonNcrViewLayout.setVisibility(View.GONE);
                                                     binding.cabTypeLayout.setVisibility(View.GONE);
                                                     binding.otherLayout.setVisibility(View.GONE);
+                                                    binding.ncrViewLayout.setVisibility(View.GONE);
                                                 }else {
-                                                    binding.nonNcrViewLayout.setVisibility(View.VISIBLE);
-                                                    binding.cabTypeLayout.setVisibility(View.VISIBLE);
-                                                    binding.otherLayout.setVisibility(View.VISIBLE);
+                                                    if(ncr_radio.isChecked()){
+                                                        binding.nonNcrViewLayout.setVisibility(View.GONE);
+                                                        binding.cabTypeLayout.setVisibility(View.VISIBLE);
+                                                        binding.otherLayout.setVisibility(View.VISIBLE);
+                                                        binding.ncrViewLayout.setVisibility(View.VISIBLE);
+                                                    }else {
+                                                        binding.nonNcrViewLayout.setVisibility(View.VISIBLE);
+                                                        binding.cabTypeLayout.setVisibility(View.VISIBLE);
+                                                        binding.otherLayout.setVisibility(View.VISIBLE);
+                                                        binding.ncrViewLayout.setVisibility(View.GONE);
+                                                    }
                                                 }
                                             }
                                         }
@@ -1769,17 +1779,17 @@ public class INOUTRequestFragment extends BaseFragment {
                 params_final.put("trainamt", binding.trainAmountEtv.getText().toString());
                 params_final.put("cabbookby", cabtype_id);
                 params_final.put("cabamt", binding.cabAmount.getText().toString());
-                params_final.put("otheramt", "");
-                params_final.put("newfileflight", binding.btnFlightUploadFile.getText().toString());
-                params_final.put("newfiletrain", binding.btnTrainUploadFile.getText().toString());
-                params_final.put("newfilehotel", binding.btnHotelUploadFile.getText().toString());
-                params_final.put("newfilecab", btn_cabuploadFile.getText().toString());
-                params_final.put("newfileother", "");
+                params_final.put("otheramt", edt_InOut_other.getText().toString());
+                params_final.put("newfileflight", flightNewFileName);
+                params_final.put("newfiletrain", trainNewFileName);
+                params_final.put("newfilehotel", hotelNewFileName);
+                params_final.put("newfilecab", cabNewFileName);
+                params_final.put("newfileother", otherNewFileName);
                 params_final.put("orgfileflight", flightFileName);
                 params_final.put("orgfiletrain",trainFileName);
                 params_final.put("orgfilehotel", hotelFileName);
                 params_final.put("orgfilecab", cabFileName);
-                params_final.put("orgfileother", btn_otheruploadFile.getText().toString());
+                params_final.put("orgfileother",otherFileName );
                 params_final.put("remarks", edt_InOut_remarks.getText().toString());
                 params_final.put("time", btn_od_to_time.getText().toString());
                 params_final.put("cabtype", cabtype_id);
@@ -1896,45 +1906,40 @@ public class INOUTRequestFragment extends BaseFragment {
                                         binding.flightAmountEtv.setText(jsonObject.getString("TPCICO_FLIGHT_AMT"));
                                         binding.trainAmountEtv.setText(jsonObject.getString("TPCICO_TRAIN_AMT"));
                                         binding.cabAmount.setText(jsonObject.getString("TPCICO_CAB_AMT"));
+                                        binding.edtInOutOther.setText(jsonObject.getString("TPCICO_OTHER_AMT"));
+                                        btn_otheruploadFile.setText(jsonObject.getString("ORGFILEOTHER"));
 
                                         // Travel Text
                                         if(jsonObject.getString("TPCICO_BOOK_BY_HOTEL") !=null && !jsonObject.getString("TPCICO_BOOK_BY_HOTEL").equals("")){
                                             setSpinnerSelection(hotel_book_spinner,Integer.parseInt(jsonObject.getString("TPCICO_BOOK_BY_HOTEL")));
                                         }
-                                        binding.btnHotelUploadFile.setText(jsonObject.getString("NEWFILEHOTEL"));
+                                        binding.btnHotelUploadFile.setText(jsonObject.getString("ORGFILEHOTEL"));
 
                                         if(jsonObject.getString("TPCICO_BOOK_BY_FLIGHT") !=null && !jsonObject.getString("TPCICO_BOOK_BY_FLIGHT").equals("")){
                                             setSpinnerSelection(flight_book_spinner,Integer.parseInt(jsonObject.getString("TPCICO_BOOK_BY_FLIGHT")));
                                         }
-                                        binding.btnFlightUploadFile.setText(jsonObject.getString("NEWFILEFLIGHT"));
+                                        binding.btnFlightUploadFile.setText(jsonObject.getString("ORGFILEFLIGHT"));
 
                                         if(jsonObject.getString("PCICO_BOOK_BY_TRAIN") !=null && !jsonObject.getString("PCICO_BOOK_BY_TRAIN").equals("")){
                                             setSpinnerSelection(train_book_spinner,Integer.parseInt(jsonObject.getString("PCICO_BOOK_BY_TRAIN")));
                                         }
-                                        binding.btnTrainUploadFile.setText(jsonObject.getString("NEWFILETRAIN"));
+                                        binding.btnTrainUploadFile.setText(jsonObject.getString("ORGFILETRAIN"));
 
                                         if(jsonObject.getString("PCICO_BOOK_BY_CAB") !=null && !jsonObject.getString("PCICO_BOOK_BY_CAB").equals("")){
                                             setSpinnerSelection(spin_dropdown_type,Integer.parseInt(jsonObject.getString("PCICO_BOOK_BY_CAB")));
                                         }
-                                        binding.btnCabuploadFile.setText(jsonObject.getString("NEWFILECAB"));
+                                        binding.btnCabuploadFile.setText(jsonObject.getString("ORGFILECAB"));
 
                                         if(jsonObject.getString("CAB_TYPE_TEXT") !=null && !jsonObject.getString("CAB_TYPE_TEXT").equals("")){
                                             setSpinnerSelection(spin_cab_type,Integer.parseInt(jsonObject.getString("CAB_TYPE_TEXT")));
                                         }
 
 
-
-
-
-
-                                        if (meetingTypeIDArray.size() > 0) {
-                                            for (int i = 0; i < meetingTypeIDArray.size(); i++) {
-                                                if (meetingTypeIDArray.get(i).toString().equals(meetingtype)) {
-                                                    spin_meeting_type.setSelection(i);
-                                                    break;
-                                                }
-                                            }
+                                        if(jsonObject.getString("TPCICO_MEETING_TYPE") !=null && !jsonObject.getString("TPCICO_MEETING_TYPE").equals("")){
+                                            setSpinnerSelection(spin_meeting_type,Integer.parseInt(jsonObject.getString("TPCICO_MEETING_TYPE")));
                                         }
+                                        // Set Meeting Type
+
                                         if (workTypeIdArray.size() > 0) {
                                             for (int i = 0; i < workTypeIdArray.size(); i++) {
                                                 if (workTypeIdArray.get(i).toString().equals(worktype)) {
@@ -1951,6 +1956,7 @@ public class INOUTRequestFragment extends BaseFragment {
                                                 }
                                             }
                                         }
+
 
 
                                     } else {
@@ -2070,18 +2076,23 @@ public class INOUTRequestFragment extends BaseFragment {
                             addMultipleItem();
                         } else if (check_click.equals("other")) {
                             // ml.callback(actualFileName);
-                            btn_otheruploadFile.setText(actualFileName);
+                            otherNewFileName=actualFileName;
+                            btn_otheruploadFile.setText(otherFileName);
                         } else if (check_click.equals("hotel")) {
                             // ml.callback(actualFileName);
-                            binding.btnHotelUploadFile.setText(actualFileName);
+                            hotelNewFileName=actualFileName;
+                            binding.btnHotelUploadFile.setText(hotelFileName);
                         } else if (check_click.equals("train")) {
                             // ml.callback(actualFileName);
-                            binding.btnTrainUploadFile.setText(actualFileName);
+                            trainNewFileName=actualFileName;
+                            binding.btnTrainUploadFile.setText(trainFileName);
                         } else if (check_click.equals("flight")) {
                             // ml.callback(actualFileName);
-                            binding.btnFlightUploadFile.setText(actualFileName);
+                            flightNewFileName=actualFileName;
+                            binding.btnFlightUploadFile.setText(flightFileName);
                         } else {
-                            btn_cabuploadFile.setText(actualFileName);
+                            cabNewFileName=actualFileName;
+                            btn_cabuploadFile.setText(cabFileName);
                         }
 
                         Log.e("actualFileName", "<><>" + actualFileName);
