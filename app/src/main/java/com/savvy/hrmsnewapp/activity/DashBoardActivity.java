@@ -52,6 +52,7 @@ import com.savvy.hrmsnewapp.fragment.CompOffAccrualRequestMMTFragment;
 import com.savvy.hrmsnewapp.fragment.CompOffAcuralApprovalMMTFragment;
 import com.savvy.hrmsnewapp.fragment.CompOffApproval;
 import com.savvy.hrmsnewapp.fragment.CompOffHolderFragment;
+import com.savvy.hrmsnewapp.fragment.CompanyDirectory.CompanyDirectoryFragment;
 import com.savvy.hrmsnewapp.fragment.ConveyanceApprovalHolder;
 import com.savvy.hrmsnewapp.fragment.ConveyancefragmentHolder;
 import com.savvy.hrmsnewapp.fragment.CustomerVisitInOutHolder;
@@ -759,6 +760,10 @@ public class DashBoardActivity extends AppCompatActivity implements FragmentDraw
 
                 case "80":
                     fragment = new Customer_view_holder("80");
+                    title = privillageName;
+                    break;
+                case "81":
+                    fragment = new CompanyDirectoryFragment();
                     title = privillageName;
                     break;
 

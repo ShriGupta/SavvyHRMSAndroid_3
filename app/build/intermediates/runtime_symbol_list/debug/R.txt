@@ -3520,6 +3520,7 @@ int id image1 0x7f0903e2
 int id image2 0x7f0903e3
 int id imageData23 0x7f0903e4
 int id imageView 0x7f0903e5
+int id imageView2 0x7f0909fb
 int id image_data 0x7f0903e6
 int id image_data1 0x7f0903e7
 int id imgLine 0x7f0903e8
@@ -4096,6 +4097,7 @@ int id roundTrip 0x7f090620
 int id rounded 0x7f090621
 int id row_index_key 0x7f090622
 int id rv_approval_recyclerview 0x7f090623
+int id rv_company_list 0x7f0909fa
 int id rv_offlinePunch_recyclerview 0x7f090624
 int id rv_position_detail 0x7f090625
 int id rv_requisition_assign_list 0x7f090626
@@ -4560,6 +4562,7 @@ int id tv_empcode 0x7f0907ee
 int id tv_employeeCode 0x7f0907ef
 int id tv_employee_code 0x7f0907f0
 int id tv_employee_name 0x7f0907f1
+int id tv_empname 0x7f0909fc
 int id tv_error_textview 0x7f0907f2
 int id tv_eyeBlinkText 0x7f0907f3
 int id tv_faceMessage 0x7f0907f4
@@ -5186,6 +5189,7 @@ int layout activity_travel_expense 0x7f0c0046
 int layout activity_view_history 0x7f0c0047
 int layout activity_visit_history 0x7f0c0048
 int layout activity_webview 0x7f0c0049
+int layout adapter_company_directory_row 0x7f0c0202
 int layout adapter_my_action_center_item 0x7f0c004a
 int layout adapter_offline_punch_row 0x7f0c004b
 int layout adapter_reimbursement_approval_layout 0x7f0c004c
@@ -5447,6 +5451,7 @@ int layout item_online_test 0x7f0c014b
 int layout item_question_answer 0x7f0c014c
 int layout iteneray_details_row 0x7f0c014d
 int layout itinerary_details_with_tickets_adapter 0x7f0c014e
+int layout layout_company_directory 0x7f0c0201
 int layout layout_location_testing 0x7f0c014f
 int layout layout_network_error 0x7f0c0150
 int layout leave_apply_ficci_row 0x7f0c0151

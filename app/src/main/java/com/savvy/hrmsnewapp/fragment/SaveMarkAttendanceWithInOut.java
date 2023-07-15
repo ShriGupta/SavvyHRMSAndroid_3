@@ -53,8 +53,7 @@ public class SaveMarkAttendanceWithInOut extends Fragment {
     public static final String MY_PREFS_NAME = "MyPrefsFile";
     SharedPreferences shared;
     String privilageId;
-    String IOButtonStatus="";
-    String totalTimeWorked="";
+
     public SaveMarkAttendanceWithInOut(String privilageId){
         this.privilageId=privilageId;
     }

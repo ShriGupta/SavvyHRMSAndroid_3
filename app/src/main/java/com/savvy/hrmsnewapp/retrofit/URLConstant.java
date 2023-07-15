@@ -10,4 +10,6 @@ public class URLConstant {
     public static final String URL_SHORT_LEAVE_APPROVAL_URL = "/savvymobile/SavvyMobileService.svc//GetShortLeaveChangeRequestDetail/{empId}";
 
     public static final String URL_SERVER_DATE_TIME_WITH_BUTTON = "/savvymobile/SavvyMobileService.svc//GetCurrentDateTimeWithEnableDisableButton";
+
+    public static final String URL_COMPANY_DIRECTORY_REQUEST = "/savvymobile/SavvyMobileService.svc/MyHierarchyBasedOnRolePost";
 }
