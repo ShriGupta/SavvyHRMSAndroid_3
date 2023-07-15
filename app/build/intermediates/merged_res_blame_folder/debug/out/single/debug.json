@@ -32,10 +32,6 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\fragment_ltf_status.xml"
     },
     {
-        "merged": "com.savvy.hrmsnewapp-merged_res-37:/layout_team_member_detail_row.xml.flat",
-        "source": "com.savvy.hrmsnewapp-main-39:/layout/team_member_detail_row.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\drawable_rounded_edittext.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable\\rounded_edittext.xml"
     },
@@ -378,6 +374,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\drawable_background_white.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable\\background_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_layout_company_directory.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\layout_company_directory.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_fragment_travel_desk_ficci.xml.flat",
@@ -1064,12 +1064,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\fragment_new_customer_visit.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\menu_menu_main.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\menu\\menu_main.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\drawable_surface_rounded.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable\\surface_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\menu_menu_main.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\menu\\menu_main.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_request_details_row.xml.flat",
@@ -1394,6 +1394,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\drawable-hdpi_nitesh.jpg.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable-hdpi\\nitesh.jpg"
+    },
+    {
+        "merged": "com.savvy.hrmsnewapp-merged_res-37:/layout_adapter_company_directory_row.xml.flat",
+        "source": "com.savvy.hrmsnewapp-main-39:/layout/adapter_company_directory_row.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_fragment_out_come__expense.xml.flat",
@@ -2634,6 +2638,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\drawable-xxhdpi_face_camera_icon.jpg.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable-xxhdpi\\face_camera_icon.jpg"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_adapter_company_directory_row.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\layout\\adapter_company_directory_row.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\layout_travel_approval_row.xml.flat",

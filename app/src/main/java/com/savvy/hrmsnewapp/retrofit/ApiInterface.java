@@ -2,6 +2,8 @@ package com.savvy.hrmsnewapp.retrofit;
 
 import android.provider.ContactsContract;
 
+import com.google.gson.JsonObject;
+import com.savvy.hrmsnewapp.fragment.CompanyDirectory.model.CompanyDirectoryModel;
 import com.savvy.hrmsnewapp.retrofitModel.EmployeeProfilePostDynamicResult;
 import com.savvy.hrmsnewapp.retrofitModel.MenuModule;
 import com.savvy.hrmsnewapp.retrofitModel.ProfileDataModel;
@@ -50,4 +52,11 @@ public interface ApiInterface {
             @Header("auth-token") String authToken,
             @Path(value="empId") String name
             );
+
+
+    @Headers({"Accept:application/json", "Content-Type:application/json;"})
+    @POST(URLConstant.URL_COMPANY_DIRECTORY_REQUEST)
+    Call<CompanyDirectoryModel> getCompanyDirectoryList(
+            @Header("securityToken") String token,
+            @Body JsonObject jsonObject);
 }

@@ -1,5 +1,7 @@
 package com.savvy.hrmsnewapp.retrofit;
 
+import com.google.gson.JsonObject;
+import com.savvy.hrmsnewapp.fragment.CompanyDirectory.model.CompanyDirectoryModel;
 import com.savvy.hrmsnewapp.retrofitModel.EmployeeProfilePostDynamicResult;
 import com.savvy.hrmsnewapp.retrofitModel.MenuModule;
 import com.savvy.hrmsnewapp.retrofitModel.ProfileDataModel;
@@ -131,6 +133,29 @@ public class APIServiceClass {
             }
         });
     }
+
+    public void getCompanyDirectoryList(String authToken, JsonObject jsonObject, ResultHandler<CompanyDirectoryModel> handler) {
+
+        Call<CompanyDirectoryModel> call=RetrofitClient
+                .getInstance()
+                .getApi()
+                .getCompanyDirectoryList(authToken,jsonObject);
+        call.enqueue(new Callback<CompanyDirectoryModel>() {
+            @Override
+            public void onResponse(Call<CompanyDirectoryModel> call, Response<CompanyDirectoryModel> response) {
+                if (response.isSuccessful()) {
+                    handler.onSuccess(response.body());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<CompanyDirectoryModel> call, Throwable t) {
+                handler.onFailure(t.getLocalizedMessage());
+            }
+        });
+    }
+
+
 
 }
 
