@@ -7,6 +7,7 @@ import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -46,7 +47,12 @@ public class OkHttpFileUploadHelper {
         bitmap.compress(Bitmap.CompressFormat.JPEG, 15, stream);
         final byte[] bitmapdata = stream.toByteArray();
 
-        OkHttpClient client = new OkHttpClient();
+        OkHttpClient  client = new OkHttpClient.Builder()
+                .connectTimeout(10, TimeUnit.SECONDS)
+                .writeTimeout(10, TimeUnit.SECONDS)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .build();
+
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
                 .addPart(

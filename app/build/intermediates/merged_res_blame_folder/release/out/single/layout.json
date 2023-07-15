@@ -1,14 +1,18 @@
 [
     {
-        "merged": "com.savvy.hrmsnewapp-mergeReleaseResources-36:/layout/fragment_wfh_layout.xml",
-        "source": "com.savvy.hrmsnewapp-main-38:/layout/fragment_wfh_layout.xml"
-    },
-    {
         "merged": "com.savvy.hrmsnewapp-mergeReleaseResources-36:/layout/in_out_request_fragment.xml",
         "source": "com.savvy.hrmsnewapp-main-38:/layout/in_out_request_fragment.xml"
     },
     {
-        "merged": "com.savvy.hrmsnewapp-mergeReleaseResources-36:/layout/fragment_i_n_o_u_t_status_new.xml",
-        "source": "com.savvy.hrmsnewapp-main-38:/layout/fragment_i_n_o_u_t_status_new.xml"
+        "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-mergeReleaseResources-36:\\layout\\in_out_request_fragment.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-38:\\layout\\in_out_request_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-mergeReleaseResources-36:\\layout\\fragment_i_n_o_u_t_status_new.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-38:\\layout\\fragment_i_n_o_u_t_status_new.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-mergeReleaseResources-36:\\layout\\fragment_wfh_layout.xml",
+        "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-38:\\layout\\fragment_wfh_layout.xml"
     }
 ]

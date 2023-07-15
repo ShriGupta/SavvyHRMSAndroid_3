@@ -4,7 +4,6 @@ import static android.app.Activity.RESULT_OK;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -14,14 +13,12 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.graphics.Bitmap;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -35,7 +32,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -43,7 +39,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
@@ -75,7 +70,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.savvy.hrmsnewapp.R;
 
 import com.savvy.hrmsnewapp.activity.DashBoardActivity;
-import com.savvy.hrmsnewapp.activity.TravelDeskRequest;
 import com.savvy.hrmsnewapp.adapter.AddMultipleItemsAdapter;
 import com.savvy.hrmsnewapp.adapter.CustomSpinnerAdapter;
 import com.savvy.hrmsnewapp.calendar.CalanderHRMS;
@@ -85,7 +79,6 @@ import com.savvy.hrmsnewapp.databinding.InOutRequestFragmentBinding;
 import com.savvy.hrmsnewapp.interfaces.ClickListener;
 import com.savvy.hrmsnewapp.interfaces.FilePathListener;
 import com.savvy.hrmsnewapp.model.FileNameModel;
-import com.savvy.hrmsnewapp.retrofitModel.MenuModule;
 import com.savvy.hrmsnewapp.utils.Constants;
 import com.savvy.hrmsnewapp.utils.ErrorConstants;
 import com.savvy.hrmsnewapp.utils.Utilities;
@@ -113,53 +106,32 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Objects;
 
 public class INOUTRequestFragment extends BaseFragment {
 
     protected CoordinatorLayout coordinatorLayout;
     ProgressDialog progressDialog;
     public static final String MY_PREFS_NAME = "MyPrefsFile";
-    String token = "", employeeId = "", username = "";
+    String  employeeId = "";
     SharedPreferences shared;
-    String displayFileName = "", actualFileName = "", other_actualFileName = "";
+    String displayFileName = "", actualFileName = "";
     private final String twoHyphens = "--";
     private final String lineEnd = "\r\n";
     private final String boundary = "apiclient-" + System.currentTimeMillis();
     private final String mimeType = "multipart/form-data;boundary=" + boundary;
     private byte[] multipartBody;
-    Button btn_InOutdate, btn_otheruploadFile, btn_spin_meeting_type, btn_spin_work_type, btn_spin_charges_type, btn_TEuploadFile, txt_TEnoFileChoose, btn_spin_cab, btn_cabuploadFile, btn_submit;
+    Button btn_InOutdate, btn_otheruploadFile,  btn_cabuploadFile, btn_submit;
     Spinner btn_spin_select_supplier, spin_comp_status, spin_meeting_type, spin_charge_type, spin_cab_type, spin_dropdown_type, hotel_book_spinner, flight_book_spinner, train_book_spinner;
     RecyclerView add_multiple_file;
     EditText edt_InOut_activity, edt_InOut_location, edt_InOut_sublocation, edt_InOut_amount, edt_InOut_remarks, edt_InOut_other;
     CalanderHRMS calanderHRMS;
-    CustomSpinnerAdapter customspinnerAdapter;
     TextView btn_od_to_time;
     public static FilePathListener ml;
     public static Context context;
     boolean click_handle = false;
-    //    ODRequestFragmentAsync odRequestFragmentAsync;
 
-    CustomTextView txt_AddMore, halfDay_on, firstHalf_on, secondHalf_on, fullDay_off, halfDay_off, firstHalf_off, secondHalf_off;
+    CustomTextView txt_AddMore;
 
-    String str_hour = "", str_minute = "";
-    int pos, pos1;
-    Uri mImageCaptureUri;
-    private String selectedImagePath = "";
-
-    CustomTextView txt_compareDate;
-    Handler handler;
-    Runnable rRunnable;
-
-    String FROM_DATE = "", TO_DATE = "";
-    String COMPARE_DATE = "";
-    ArrayList<HashMap<String, String>> arlData, arlRequestStatusData;
-    String positionId = "", positionValue = "";
-
-    String spinnerPosition = "";
-    String odsubstatusPosition = "0";
-    String odStatusPosition = "1";
-    CustomTextView txtOD_ReasonTitle, txtOD_TypeTitle, txtOD_ToDateTitle, txtOD_FromDateTitle;
     String supplierid = "", supplier_name = "", worktype = "", meetingtype = "", chargestype = "", cabtype = "", cabtmt = "", cabtype_id = "";
     RadioButton ncr_radio, non_ncr_radio;
     String check_click = "";
@@ -179,9 +151,23 @@ public class INOUTRequestFragment extends BaseFragment {
     private FusedLocationProviderClient fusedLocationClient;
     private LocationCallback locationCallback;
 
-    String latitude="";
-    String longitude="";
-    String locationAddress="";
+    String latitude = "";
+    String longitude = "";
+    String locationAddress = "";
+    String visitAsId = "";
+    String activityId = "";
+    ArrayList<String> activityArray = new ArrayList<>();
+    ArrayList<String> activityIDArray = new ArrayList<>();
+    ArrayList<String> activityConvenceArray = new ArrayList<>();
+    ArrayList<String> visitArray = new ArrayList<>();
+    ArrayList<String> visitIDArray = new ArrayList<>();
+
+    String TPCICO_ID="";
+    String convence="";
+    String hotelFileName="",cabFileName="",flightFileName="",trainFileName="",otherFileName;
+    StringBuilder stringBuilder=new StringBuilder();
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -190,16 +176,6 @@ public class INOUTRequestFragment extends BaseFragment {
             multiple_item_list.clear();
         }
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity());
-//        coordinatorLayout = getActivity().findViewById(R.id.coordinatorLayout);
-//        shared = getActivity().getSharedPreferences(MY_PREFS_NAME, Context.MODE_PRIVATE);
-//        token = (shared.getString("Token", ""));
-//        employeeId = (shared.getString("EmpoyeeId", ""));
-//        username = (shared.getString("UserName", ""));
-//        arlRequestStatusData = new ArrayList<HashMap<String, String>>();
-//
-//        GetOvertimeReason getOvertimeReason = new GetOvertimeReason();
-//        getOvertimeReason.execute();
-
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
@@ -207,8 +183,8 @@ public class INOUTRequestFragment extends BaseFragment {
                     return;
                 }
                 for (Location location : locationResult.getLocations()) {
-                    latitude =String.valueOf(location.getLatitude());
-                    longitude =String.valueOf(location.getLongitude());
+                    latitude = String.valueOf(location.getLatitude());
+                    longitude = String.valueOf(location.getLongitude());
                     try {
                         setLocation(location);
                     } catch (IOException e) {
@@ -220,22 +196,26 @@ public class INOUTRequestFragment extends BaseFragment {
     }
 
     private void setLocation(Location location) throws IOException {
-        Geocoder geocoder;
-        List<Address> addresses;
-        geocoder = new Geocoder(requireActivity(), Locale.getDefault());
+        try{
+            Geocoder geocoder;
+            List<Address> addresses;
+            geocoder = new Geocoder(requireActivity(), Locale.getDefault());
 
-        addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+            addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
 
-        String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
-        String city = addresses.get(0).getLocality();
-        String state = addresses.get(0).getAdminArea();
-        String country = addresses.get(0).getCountryName();
-        String postalCode = addresses.get(0).getPostalCode();
-        String knownName = addresses.get(0).getFeatureName();
+            String address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+            String city = addresses.get(0).getLocality();
+            String state = addresses.get(0).getAdminArea();
+            String country = addresses.get(0).getCountryName();
+            String postalCode = addresses.get(0).getPostalCode();
+            String knownName = addresses.get(0).getFeatureName();
 
-        locationAddress=address;
+            locationAddress = address;
+        }catch (Exception e){e.printStackTrace();
+            locationAddress="";
+        }
+
     }
-
 
 
     @Override
@@ -318,7 +298,7 @@ public class INOUTRequestFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 try {
-                    check_click = "";
+                    check_click = "cab";
                     Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                     intent.setType("*/*");
                     startActivityForResult(intent, 999);
@@ -378,7 +358,7 @@ public class INOUTRequestFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
 
-                if(checkLocationOnorOff()){
+                if (checkLocationOnorOff()) {
                     if (!supplier_name.contains("TRAVELLING")) {
                         if (!btn_InOutdate.getText().toString().isEmpty() && !meetingtype.equals("") && !worktype.equals("") && !chargestype.equals("") && !supplierid.equals("")) {
                             saveAllDetails();
@@ -388,7 +368,7 @@ public class INOUTRequestFragment extends BaseFragment {
                     } else {
                         saveAllDetails();
                     }
-                }else {
+                } else {
                     checkLocationOn();
                 }
 
@@ -403,9 +383,217 @@ public class INOUTRequestFragment extends BaseFragment {
         getChargeType();
         getCabType();
         getDropDownType();
+        setVisitSpinner();
 
 
         return view;
+    }
+
+    private void getActivityList(String supplierid, String visitAsId) {
+
+
+        binding.spinnerActivity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Log.e("savvylogs", "onItemSelected: position:"+position +" activityId:"+activityId);
+                if(position!=0){
+                    activityId = activityIDArray.get(position-1);
+                    convence=activityConvenceArray.get(position-1);
+                    binding.edtInOutConveyance.setText(convence);
+                }else {
+                    activityId="";
+                    binding.edtInOutConveyance.setText("");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        try {
+            if (Utilities.isNetworkAvailable(getActivity())) {
+                String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/GetActivityMaster";
+                JSONObject params_final = new JSONObject();
+
+                params_final.put("employeeId", shared.getString("EMPLOYEE_ID_FINAL", ""));
+                params_final.put("supplierid", supplierid);
+                params_final.put("visitAs", visitAsId);
+                RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+                Log.e("TAG", "getActivityList: " + params_final.toString());
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, params_final,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                Log.e("activityList", "activityList = " + response.toString());
+                                try {
+                                    JSONArray jsonArray = response.getJSONArray("GetActivityMasterResult");
+                                    activityArray.clear();
+                                    activityIDArray.clear();
+                                    activityConvenceArray.clear();
+                                    activityArray.add(0,"Please Select");
+                                    int mIndex = 0;
+                                    if (jsonArray.length() > 0) {
+                                        for (int i = 0; i < jsonArray.length(); i++) {
+                                            JSONObject explrObject = jsonArray.getJSONObject(i);
+                                            activityArray.add(explrObject.getString("AM_ACTIVITY_NAME"));
+                                            activityIDArray.add(explrObject.getString("TSAM_ID"));
+                                            activityConvenceArray.add(explrObject.getString("TSAM_RATE"));
+                                            if(activityId.equals(explrObject.getString("TSAM_ID"))){
+                                                mIndex=i+1;         
+                                            }
+                                        }
+                                    }
+                                    ArrayAdapter spinnerArrayAdapter = new ArrayAdapter(getActivity(),
+                                            android.R.layout.simple_spinner_dropdown_item,
+                                            activityArray);
+                                    binding.spinnerActivity.setAdapter(spinnerArrayAdapter);
+
+                                    if(btn_submit.getText().toString().equals("Check Out")){
+                                        binding.spinnerActivity.setSelection(mIndex);
+                                    }
+
+
+                                } catch (Exception ex) {
+                                    ex.printStackTrace();
+                                    Log.e("Error In", "" + ex.getMessage());
+                                }
+
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                        Log.d("Error", "" + error.getMessage());
+                    }
+                }) {
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put("securityToken", shared.getString("EMPLOYEE_ID_FINAL", ""));
+                        return params;
+                    }
+
+
+                    @Override
+                    public String getBodyContentType() {
+                        return "application/json";
+                    }
+                };
+
+                int socketTimeout = 3000000;
+                RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+                jsonObjectRequest.setRetryPolicy(policy);
+                requestQueue.add(jsonObjectRequest);
+            } else {
+                Utilities.showDialog(coordinatorLayout, ErrorConstants.NO_NETWORK);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    private void setVisitSpinner() {
+
+        binding.spinnerVisit.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if(position!=0){
+                    binding.llMainLayout.setVisibility(View.VISIBLE);
+                    visitAsId = visitIDArray.get(position-1);
+                }else {
+                    visitAsId="";
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        try {
+            if (Utilities.isNetworkAvailable(getActivity())) {
+
+                String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/GetAuditType";
+                JSONObject params_final = new JSONObject();
+                params_final.put("employeeId", shared.getString("EMPLOYEE_ID_FINAL", ""));
+                RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, params_final,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                int len = (String.valueOf(response)).length();
+                                Log.e("setVisitSpinner", "setVisitSpinner = " + response.toString());
+                                try {
+//                                    JSONArray jsonArray = new JSONArray(response);
+                                    JSONArray jsonArray = response.getJSONArray("GetAuditTypeResult");
+                                    visitArray.clear();
+                                    visitIDArray.clear();
+                                    visitArray.add("Please Select");
+
+                                    if (jsonArray.length() > 0) {
+                                        for (int i = 0; i < jsonArray.length(); i++) {
+                                            JSONObject explrObject = jsonArray.getJSONObject(i);
+                                            String sm_supplier_name = explrObject.getString("TATM_AUDIT_TYPE_NAME");
+                                            String SM_SUPPLIER_ID = explrObject.getString("TATM_ID");
+                                            visitArray.add(sm_supplier_name);
+                                            visitIDArray.add(SM_SUPPLIER_ID);
+                                        }
+                                    }
+                                    ArrayAdapter spinnerArrayAdapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item, visitArray);
+                                    binding.spinnerVisit.setAdapter(spinnerArrayAdapter);
+
+                                } catch (Exception ex) {
+                                    ex.printStackTrace();
+                                    Log.e("Error In", "" + ex.getMessage());
+                                }
+
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                        Log.d("Error", "" + error.getMessage());
+                    }
+                }) {
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> params = new HashMap<String, String>();
+                        params.put("securityToken", shared.getString("EMPLOYEE_ID_FINAL", ""));
+                        return params;
+                    }
+
+
+                    @Override
+                    public String getBodyContentType() {
+                        return "application/json";
+                    }
+                };
+
+                int socketTimeout = 3000000;
+                RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+                jsonObjectRequest.setRetryPolicy(policy);
+                requestQueue.add(jsonObjectRequest);
+            } else {
+                Utilities.showDialog(coordinatorLayout, ErrorConstants.NO_NETWORK);
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void datePicker() {
@@ -421,6 +609,7 @@ public class INOUTRequestFragment extends BaseFragment {
             Intent intent = new Intent("refresh");
             intent.putExtra("date", btn_InOutdate.getText().toString());
             LocalBroadcastManager.getInstance((context)).sendBroadcast(intent);
+            binding.llVisitLayout.setVisibility(View.VISIBLE);
             getSupplierData(btn_InOutdate.getText().toString());
             //  getAllDetails(date1);
         }, yy, mm, dd);
@@ -527,6 +716,7 @@ public class INOUTRequestFragment extends BaseFragment {
                 try {
                     Uri uri = data.getData();
                     displayFileName = fileName(uri);
+                    Log.e("savvylogs", "onActivityResult: displayFileName: "+displayFileName );
                     try {
                         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
                         if (bitmap != null) {
@@ -734,6 +924,7 @@ public class INOUTRequestFragment extends BaseFragment {
                         new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
+
                                 int len = (String.valueOf(response)).length();
 
                                 System.out.print("Array " + " Length = " + len + " Value = " + response.toString());
@@ -768,8 +959,9 @@ public class INOUTRequestFragment extends BaseFragment {
                                                 supplier_name = spinnerArray.get(position).toString();
                                                 getShowDetailsBySupplier(spinnerItemIDArray.get(position).toString(), From_date);
                                                 getCheckInCheckOutForButton();
-                                            } // getCheckInCheckOutForButton();
+                                            }
                                         }
+
 
                                         @Override
                                         public void onNothingSelected(AdapterView<?> parentView) {
@@ -1064,7 +1256,6 @@ public class INOUTRequestFragment extends BaseFragment {
                             public void onResponse(JSONObject response) {
                                 int len = (String.valueOf(response)).length();
 
-                                System.out.print("Array " + " Length = " + len + " Value = " + response.toString());
                                 Log.e("getMeetingType", " Length = " + len + " Value = " + response.toString());
 
                                 try {
@@ -1072,7 +1263,6 @@ public class INOUTRequestFragment extends BaseFragment {
                                     JSONArray jsonArray = response.getJSONArray("GetMeetingTypeResult");
 
                                     meetingTypeStringArray.add("Please Select");
-                                    meetingTypeIDArray.add("0");
                                     if (jsonArray.length() > 0) {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject explrObject = jsonArray.getJSONObject(i);
@@ -1090,8 +1280,18 @@ public class INOUTRequestFragment extends BaseFragment {
                                         @Override
                                         public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                                             // your code here
-                                            if (!spin_meeting_type.getSelectedItem().toString().equals("Please Select")) {
-                                                meetingtype = meetingTypeIDArray.get(position).toString();
+                                            if (position!=0) {
+                                                meetingtype = meetingTypeIDArray.get(position-1);
+                                                Log.e("meetingtype", "onItemSelected: "+meetingtype );
+                                                if(meetingtype.equals("2")){
+                                                    binding.nonNcrViewLayout.setVisibility(View.GONE);
+                                                    binding.cabTypeLayout.setVisibility(View.GONE);
+                                                    binding.otherLayout.setVisibility(View.GONE);
+                                                }else {
+                                                    binding.nonNcrViewLayout.setVisibility(View.VISIBLE);
+                                                    binding.cabTypeLayout.setVisibility(View.VISIBLE);
+                                                    binding.otherLayout.setVisibility(View.VISIBLE);
+                                                }
                                             }
                                         }
 
@@ -1350,14 +1550,9 @@ public class INOUTRequestFragment extends BaseFragment {
             if (Utilities.isNetworkAvailable(getActivity())) {
 
                 String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/GetDropDownType";
-                final JSONObject pm = new JSONObject();
                 JSONObject params_final = new JSONObject();
 
                 params_final.put("employeeId", shared.getString("EMPLOYEE_ID_FINAL", ""));
-
-
-//            pm.put("objSendConveyanceRequestInfo", params_final);
-
                 RequestQueue requestQueue = Volley.newRequestQueue(getContext());
 
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, params_final,
@@ -1530,6 +1725,7 @@ public class INOUTRequestFragment extends BaseFragment {
     public void saveAllDetails() {
         try {
             String Newfilemul = "";
+            String OrgFilemul = "";
             if (multiple_item_list.size() > 0)
                 for (int i = 0; i < multiple_item_list.size(); i++) {
                     if (i == 0) {
@@ -1538,24 +1734,32 @@ public class INOUTRequestFragment extends BaseFragment {
                         Newfilemul = Newfilemul + "," + multiple_item_list.get(i).getFile_name();
                     }
                 }
+            if(stringBuilder.toString().contains(",")){
+                OrgFilemul= stringBuilder.substring(0, stringBuilder.toString().length() - 1);
+
+            }
+
             if (Utilities.isNetworkAvailable(getActivity())) {
                 ProgressDialog progressDialog = new ProgressDialog(getActivity());
                 progressDialog.setMessage("Uploading...");
                 progressDialog.setCancelable(true);
                 progressDialog.show();
-              //  String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveCheckInOutDetails";
+                //  String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveCheckInOutDetails";
                 String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/SaveCheckInOutDetailsWithAddress";
                 Log.e("Save all data", "<><>" + url);
                 JSONObject params_final = new JSONObject();
 
                 params_final.put("employeeid", shared.getString("EMPLOYEE_ID_FINAL", ""));
+                params_final.put("tpcico_id", TPCICO_ID);
+                params_final.put("activityID", activityId);
+                params_final.put("type", visitAsId);
                 params_final.put("supplierid", supplierid);
                 params_final.put("worktype", worktype);
                 params_final.put("meetingtype", meetingtype);
                 params_final.put("chargestype", chargestype);
                 params_final.put("date", btn_InOutdate.getText().toString());
                 params_final.put("newfilemul", Newfilemul);
-                params_final.put("orgfilemul", Newfilemul);
+                params_final.put("orgfilemul", OrgFilemul);
                 params_final.put("toll", edt_InOut_amount.getText().toString());
                 params_final.put("hotelbookby", hotelid);
                 params_final.put("hotelamt", binding.hotelAmountEtv.getText().toString());
@@ -1571,10 +1775,10 @@ public class INOUTRequestFragment extends BaseFragment {
                 params_final.put("newfilehotel", binding.btnHotelUploadFile.getText().toString());
                 params_final.put("newfilecab", btn_cabuploadFile.getText().toString());
                 params_final.put("newfileother", "");
-                params_final.put("orgfileflight", "");
-                params_final.put("orgfiletrain", "");
-                params_final.put("orgfilehotel", "");
-                params_final.put("orgfilecab", actualFileName);
+                params_final.put("orgfileflight", flightFileName);
+                params_final.put("orgfiletrain",trainFileName);
+                params_final.put("orgfilehotel", hotelFileName);
+                params_final.put("orgfilecab", cabFileName);
                 params_final.put("orgfileother", btn_otheruploadFile.getText().toString());
                 params_final.put("remarks", edt_InOut_remarks.getText().toString());
                 params_final.put("time", btn_od_to_time.getText().toString());
@@ -1583,7 +1787,7 @@ public class INOUTRequestFragment extends BaseFragment {
                 params_final.put("longitude", longitude);
                 params_final.put("locationaddress", locationAddress);
 
-                Log.e("Save all data", "<><>" + params_final.toString());
+                Log.e("finalparam", "<><>" + params_final.toString());
 
                 RequestQueue requestQueue = Volley.newRequestQueue(getContext());
 
@@ -1601,7 +1805,9 @@ public class INOUTRequestFragment extends BaseFragment {
                                 Utilities.showDialog(coordinatorLayout, "Data Saved successfully!");
                                 Toast.makeText(context, "Data Saved successfully!", Toast.LENGTH_SHORT).show();
 
-                                startActivity(new Intent(getActivity(), DashBoardActivity.class));
+                                Intent i = new Intent(requireActivity(), DashBoardActivity.class);
+                                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(i);
 
                             }
                         }, new Response.ErrorListener() {
@@ -1648,13 +1854,12 @@ public class INOUTRequestFragment extends BaseFragment {
 
     public void getCheckInCheckOutForButton() {
         try {
-            if (Utilities.isNetworkAvailable(getActivity())) {
+            if (Utilities.isNetworkAvailable(requireActivity())) {
                 ProgressDialog progressDialog = new ProgressDialog(getActivity());
                 progressDialog.setMessage("Uploading...");
                 progressDialog.setCancelable(true);
                 progressDialog.show();
                 String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/GetCheckInCheckOutForButton";
-                Log.e("Save all data", "<><>" + url);
                 JSONObject params_final = new JSONObject();
 
                 params_final.put("employeeId", shared.getString("EMPLOYEE_ID_FINAL", ""));
@@ -1664,69 +1869,100 @@ public class INOUTRequestFragment extends BaseFragment {
                 params_final.put("chargestype", "0");
                 params_final.put("date", btn_InOutdate.getText().toString());
 
-
-                Log.e("Save all data", "<><>" + params_final.toString());
-
                 RequestQueue requestQueue = Volley.newRequestQueue(getContext());
 
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, params_final,
-                        new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                int len = (String.valueOf(response)).length();
+                        response -> {
+                            Log.e("getCheckInCheckOutForButton", "<><>" + response.toString());
+                            try {
+                                if (progressDialog != null) {
+                                    progressDialog.dismiss();
 
-                                Log.e("Save all data", "<><>" + response.toString());
-                                try {
-                                    if (progressDialog != null) {
-                                        progressDialog.dismiss();
+                                    JSONArray jsonArray = response.getJSONArray("GetCheckInCheckOutForButtonResult");
 
-                                        JSONArray jsonArray = response.getJSONArray("GetCheckInCheckOutForButtonResult");
+                                    if (jsonArray.length() > 0) {
+                                        btn_submit.setText("Check Out");
+                                        btn_submit.setBackgroundTintList(ColorStateList.valueOf(getActivity().getResources().getColor(R.color.color_red)));
+                                        JSONObject jsonObject = jsonArray.getJSONObject(0);
+                                        TPCICO_ID = jsonObject.getString("TPCICO_ID");
+                                        meetingtype = jsonObject.getString("TPCICO_MEETING_TYPE");
+                                        worktype = jsonObject.getString("TPCICO_WORK_TYPE");
+                                        chargestype = jsonObject.getString("TPCICO_CHARGES");
+                                        binding.edtInOutAmount.setText(jsonObject.getString("TPCICO_TOLL"));
+                                        activityId=jsonObject.getString("TSAM_ID");
 
-                                        if (jsonArray.length() > 0) {
-                                            btn_submit.setText("Check Out");
-                                            btn_submit.setBackgroundTintList(ColorStateList.valueOf(getActivity().getResources().getColor(R.color.color_red)));
-                                            JSONObject jsonObject = jsonArray.getJSONObject(0);
-                                            meetingtype = jsonObject.getString("TPCICO_MEETING_TYPE");
-                                            worktype = jsonObject.getString("TPCICO_WORK_TYPE");
-                                            chargestype = jsonObject.getString("TPCICO_CHARGES");
-                                            binding.edtInOutAmount.setText(jsonObject.getString("TPCICO_TOLL"));
-                                            binding.cabAmount.setText(jsonObject.getString("TPCICO_CAB_AMT"));
-                                            if (meetingTypeIDArray.size() > 0) {
-                                                for (int i = 0; i < meetingTypeIDArray.size(); i++) {
-                                                    if (meetingTypeIDArray.get(i).toString().equals(meetingtype)) {
-                                                        spin_meeting_type.setSelection(i);
-                                                        break;
-                                                    }
-                                                }
-                                            }
-                                            if (workTypeIdArray.size() > 0) {
-                                                for (int i = 0; i < workTypeIdArray.size(); i++) {
-                                                    if (workTypeIdArray.get(i).toString().equals(worktype)) {
-                                                        spin_comp_status.setSelection(i);
-                                                        break;
-                                                    }
-                                                }
-                                            }
-                                            if (chargesTypeIDArray.size() > 0) {
-                                                for (int i = 0; i < chargesTypeIDArray.size(); i++) {
-                                                    if (chargesTypeIDArray.get(i).toString().equals(chargestype)) {
-                                                        spin_charge_type.setSelection(i);
-                                                        break;
-                                                    }
-                                                }
-                                            }
+                                        // Travel Amount
+                                        binding.hotelAmountEtv.setText(jsonObject.getString("TPCICO_HOTEL_AMT"));
+                                        binding.flightAmountEtv.setText(jsonObject.getString("TPCICO_FLIGHT_AMT"));
+                                        binding.trainAmountEtv.setText(jsonObject.getString("TPCICO_TRAIN_AMT"));
+                                        binding.cabAmount.setText(jsonObject.getString("TPCICO_CAB_AMT"));
 
-
-                                        } else {
-                                            btn_submit.setText("Check In");
-                                            btn_submit.setBackgroundTintList(ColorStateList.valueOf(getActivity().getResources().getColor(R.color.color_parat_green)));
-
+                                        // Travel Text
+                                        if(jsonObject.getString("TPCICO_BOOK_BY_HOTEL") !=null && !jsonObject.getString("TPCICO_BOOK_BY_HOTEL").equals("")){
+                                            setSpinnerSelection(hotel_book_spinner,Integer.parseInt(jsonObject.getString("TPCICO_BOOK_BY_HOTEL")));
                                         }
-                                    }
-                                } catch (Exception e) {
-                                }
+                                        binding.btnHotelUploadFile.setText(jsonObject.getString("NEWFILEHOTEL"));
 
+                                        if(jsonObject.getString("TPCICO_BOOK_BY_FLIGHT") !=null && !jsonObject.getString("TPCICO_BOOK_BY_FLIGHT").equals("")){
+                                            setSpinnerSelection(flight_book_spinner,Integer.parseInt(jsonObject.getString("TPCICO_BOOK_BY_FLIGHT")));
+                                        }
+                                        binding.btnFlightUploadFile.setText(jsonObject.getString("NEWFILEFLIGHT"));
+
+                                        if(jsonObject.getString("PCICO_BOOK_BY_TRAIN") !=null && !jsonObject.getString("PCICO_BOOK_BY_TRAIN").equals("")){
+                                            setSpinnerSelection(train_book_spinner,Integer.parseInt(jsonObject.getString("PCICO_BOOK_BY_TRAIN")));
+                                        }
+                                        binding.btnTrainUploadFile.setText(jsonObject.getString("NEWFILETRAIN"));
+
+                                        if(jsonObject.getString("PCICO_BOOK_BY_CAB") !=null && !jsonObject.getString("PCICO_BOOK_BY_CAB").equals("")){
+                                            setSpinnerSelection(spin_dropdown_type,Integer.parseInt(jsonObject.getString("PCICO_BOOK_BY_CAB")));
+                                        }
+                                        binding.btnCabuploadFile.setText(jsonObject.getString("NEWFILECAB"));
+
+                                        if(jsonObject.getString("CAB_TYPE_TEXT") !=null && !jsonObject.getString("CAB_TYPE_TEXT").equals("")){
+                                            setSpinnerSelection(spin_cab_type,Integer.parseInt(jsonObject.getString("CAB_TYPE_TEXT")));
+                                        }
+
+
+
+
+
+
+                                        if (meetingTypeIDArray.size() > 0) {
+                                            for (int i = 0; i < meetingTypeIDArray.size(); i++) {
+                                                if (meetingTypeIDArray.get(i).toString().equals(meetingtype)) {
+                                                    spin_meeting_type.setSelection(i);
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        if (workTypeIdArray.size() > 0) {
+                                            for (int i = 0; i < workTypeIdArray.size(); i++) {
+                                                if (workTypeIdArray.get(i).toString().equals(worktype)) {
+                                                    spin_comp_status.setSelection(i);
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        if (chargesTypeIDArray.size() > 0) {
+                                            for (int i = 0; i < chargesTypeIDArray.size(); i++) {
+                                                if (chargesTypeIDArray.get(i).toString().equals(chargestype)) {
+                                                    spin_charge_type.setSelection(i);
+                                                    break;
+                                                }
+                                            }
+                                        }
+
+
+                                    } else {
+                                        btn_submit.setText("Check In");
+                                        btn_submit.setBackgroundTintList(ColorStateList.valueOf(getActivity().getResources().getColor(R.color.color_parat_green)));
+
+                                    }
+                                    getActivityList(supplierid, visitAsId);
+                                }
+                            } catch (Exception e) {
                             }
+
                         }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
@@ -1765,99 +2001,6 @@ public class INOUTRequestFragment extends BaseFragment {
         }
     }
 
-
-    //
-//    private class GetOvertimeReason extends AsyncTask<String, String, String> {
-//        private ProgressDialog pDialog;
-//
-//        @Override
-//        protected void onPreExecute() {
-//            // Things to be done before execution of long running operation. For
-//            // example showing ProgessDialog
-//            pDialog = new ProgressDialog(getActivity());
-//            pDialog.setMessage("Please wait...");
-//            pDialog.setIndeterminate(false);
-//            pDialog.setCancelable(true);
-//            pDialog.show();
-//
-//        }
-//
-//        @Override
-//        protected String doInBackground(String... params) {
-//            //publishProgress("Sleeping..."); // Calls onProgressUpdate()
-//
-//            try {
-//
-//                //String LOGIN_URL = "http://savvyshippingsoftware.com/SavvyMobile/SavvyMobileService.svc//GetCurrentDateTime";
-//                String GETREQUESTSTATUS_URL = Constants.IP_ADDRESS + "/SavvyMobileService.svc/GetODTypeMaster/1";
-//
-//                System.out.println("ATTENDANCE_URL====" + GETREQUESTSTATUS_URL);
-//                JSONParser jParser = new JSONParser(getActivity()); // get JSON data from URL JSONArray json = jParser.getJSONFromUrl(url);
-//                String json = jParser.makeHttpRequest(
-//                        GETREQUESTSTATUS_URL, "GET");
-//
-//                if (json != null) {
-//                    Log.d("JSON result", json.toString());
-//
-//                    return json;
-//                }
-//
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//
-//            return null;
-//        }
-//
-//
-//        @Override
-//        protected void onPostExecute(String result) {
-//            // execution of result of Long time consuming operation
-//            //finalResult.setText(result);
-//            if (pDialog != null && pDialog.isShowing()) {
-//                pDialog.dismiss();
-//                try {
-//                    HashMap<String, String> requestStatusmap;
-//                    // ArrayList<String> requestArray;
-//                    JSONArray jsonArray = new JSONArray(result);
-//                    System.out.println("jsonArray===" + jsonArray);
-//                    //requestArray=new ArrayList<String>();
-//                    if (jsonArray.length() > 0) {
-//                        for (int i = 0; i < jsonArray.length(); i++) {
-//                            requestStatusmap = new HashMap<String, String>();
-//                            JSONObject explrObject = jsonArray.getJSONObject(i);
-//                            String key = explrObject.getString("ODMasterId");
-//                            String value = explrObject.getString("ODType");
-//                            // requestArray.add(value);
-//                            requestStatusmap.put("KEY", key);
-//                            requestStatusmap.put("VALUE", value);
-//
-//                            arlRequestStatusData.add(requestStatusmap);
-//                        }
-//                        System.out.println("Array===" + arlRequestStatusData);
-//
-//                        customspinnerAdapter = new CustomSpinnerAdapter(getActivity(), arlRequestStatusData);
-//                        spin_reason_od.setAdapter(customspinnerAdapter);
-//
-//                    } else {
-//                        Utilities.showDialog(coordinatorLayout, ErrorConstants.DATA_ERROR);
-//                        System.out.println("Data not getting on server side");
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//
-//
-//        @Override
-//        protected void onProgressUpdate(String... text) {
-//            // finalResult.setText(text[0]);
-//            // Things to be done while execution of long running operation is in
-//            // progress. For example updating ProgessDialog
-//        }
-//    }
     private void buildPart(DataOutputStream dataOutputStream, byte[] fileData, String fileName) throws IOException {
         dataOutputStream.writeBytes(twoHyphens + boundary + lineEnd);
         dataOutputStream.writeBytes("Content-Disposition: form-data; name=\"uploaded_file\"; filename=\"" + fileName + "\"" + lineEnd);
@@ -1881,6 +2024,7 @@ public class INOUTRequestFragment extends BaseFragment {
     }
 
     public void imageProcessRequest(byte[] fileData1, String filename) {
+        setDisplayFileName(filename);
         //  String IMG_URL = Constants.IP_ADDRESS + "/MobileFileUpload.ashx?empCode=" + employeeId;
         String IMG_URL = Constants.IP_ADDRESS + "/MobileFileUpload.ashx?Type=TravelCheckInOut";
 
@@ -2111,7 +2255,7 @@ public class INOUTRequestFragment extends BaseFragment {
         checkPermission();
     }
 
-    private void checkPermission(){
+    private void checkPermission() {
         if (ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 100);
         } else {
@@ -2142,5 +2286,33 @@ public class INOUTRequestFragment extends BaseFragment {
                     startActivity(intent);
                 })
                 .show();
+    }
+
+    private void setSpinnerSelection(Spinner spinner,int position){
+        spinner.setSelection(position);
+    }
+
+    private void setDisplayFileName(String file){
+        switch (check_click) {
+            case "hotel":
+                hotelFileName = file;
+                break;
+            case "flight":
+                flightFileName = file;
+                break;
+            case "cab":
+                cabFileName = file;
+                break;
+            case "train":
+                trainFileName = file;
+                break;
+            case "other":
+                otherFileName = file;
+                break;
+            case "multi":
+                stringBuilder.append(file).append(",");
+                break;
+        }
+
     }
 }

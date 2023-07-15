@@ -3688,6 +3688,7 @@ int id ll_calendarList 0x7f09048a
 int id ll_dialogLayout 0x7f09048b
 int id ll_enable_disable_layout 0x7f09048c
 int id ll_fromDate 0x7f09048d
+int id ll_main_layout 0x7f0909fb
 int id ll_or_layout 0x7f09048e
 int id ll_position_detail_layout 0x7f09048f
 int id ll_position_heading_layout 0x7f090490
@@ -3695,6 +3696,7 @@ int id ll_reason 0x7f090491
 int id ll_requisition 0x7f090492
 int id ll_status 0x7f090493
 int id ll_toDate 0x7f090494
+int id ll_visit_layout 0x7f0909fc
 int id loan_statusFromDate 0x7f090495
 int id loan_statusRecyclerView 0x7f090496
 int id loan_statusToDate 0x7f090497
@@ -4228,6 +4230,8 @@ int id spin_saveLoc_Territory 0x7f0906a6
 int id spin_saveLoc_Type 0x7f0906a7
 int id spinner 0x7f0906a8
 int id spinnerItem 0x7f0906a9
+int id spinner_activity 0x7f0909fa
+int id spinner_visit 0x7f0909f9
 int id split_action_bar 0x7f0906aa
 int id spread 0x7f0906ab
 int id spread_inside 0x7f0906ac

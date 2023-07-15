@@ -4,7 +4,7 @@
             "outputFile": "com.savvy.hrmsnewapp-mergeReleaseResources-35:/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "D:\\SavvyHRMS App\\SavvyHRMSAndroid 3\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+                    "source": "D:\\SavvyHRMS\\Saavy Project\\SavvyHRMSAndroid_3\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",

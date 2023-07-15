@@ -117,6 +117,12 @@ public abstract class InOutRequestFragmentBinding extends ViewDataBinding {
   public final Spinner hotelBookSpinner;
 
   @NonNull
+  public final LinearLayout llMainLayout;
+
+  @NonNull
+  public final LinearLayout llVisitLayout;
+
+  @NonNull
   public final LinearLayout lrMedicalCertificateLayout;
 
   @NonNull
@@ -159,6 +165,12 @@ public abstract class InOutRequestFragmentBinding extends ViewDataBinding {
   public final Spinner spinMeetingType;
 
   @NonNull
+  public final Spinner spinnerActivity;
+
+  @NonNull
+  public final Spinner spinnerVisit;
+
+  @NonNull
   public final EditText trainAmountEtv;
 
   @NonNull
@@ -196,15 +208,16 @@ public abstract class InOutRequestFragmentBinding extends ViewDataBinding {
       EditText edtInOutAmount, TextView edtInOutConveyance, EditText edtInOutLocation,
       EditText edtInOutOther, EditText edtInOutRemarks, EditText edtInOutSublocation,
       EditText flightAmountEtv, Spinner flightBookSpinner, EditText hotelAmountEtv,
-      Spinner hotelBookSpinner, LinearLayout lrMedicalCertificateLayout,
-      CustomTextView meetingTextView, LinearLayout meetingTypeLayout, RadioButton ncrRadio,
-      LinearLayout ncrViewLayout, RadioButton nonNcrRadio, LinearLayout nonNcrViewLayout,
-      LinearLayout otherLayout, RadioGroup radioGroup, Spinner spinCabType, Spinner spinChargeType,
-      Spinner spinCompStatus, Spinner spinDropdownType, Spinner spinMeetingType,
-      EditText trainAmountEtv, Spinner trainBookSpinner, CustomTextView txtAddMore,
-      CustomTextView txtDocument, CustomTextView txtInOutActivityTitle, CustomTextView txtInOutDate,
-      CustomTextView txtInOutLocationTitle, CustomTextView txtInOutSubLocationTitle,
-      CustomTextView workTextView) {
+      Spinner hotelBookSpinner, LinearLayout llMainLayout, LinearLayout llVisitLayout,
+      LinearLayout lrMedicalCertificateLayout, CustomTextView meetingTextView,
+      LinearLayout meetingTypeLayout, RadioButton ncrRadio, LinearLayout ncrViewLayout,
+      RadioButton nonNcrRadio, LinearLayout nonNcrViewLayout, LinearLayout otherLayout,
+      RadioGroup radioGroup, Spinner spinCabType, Spinner spinChargeType, Spinner spinCompStatus,
+      Spinner spinDropdownType, Spinner spinMeetingType, Spinner spinnerActivity,
+      Spinner spinnerVisit, EditText trainAmountEtv, Spinner trainBookSpinner,
+      CustomTextView txtAddMore, CustomTextView txtDocument, CustomTextView txtInOutActivityTitle,
+      CustomTextView txtInOutDate, CustomTextView txtInOutLocationTitle,
+      CustomTextView txtInOutSubLocationTitle, CustomTextView workTextView) {
     super(_bindingComponent, _root, _localFieldCount);
     this.CabTextView = CabTextView;
     this.addMultipleFile = addMultipleFile;
@@ -237,6 +250,8 @@ public abstract class InOutRequestFragmentBinding extends ViewDataBinding {
     this.flightBookSpinner = flightBookSpinner;
     this.hotelAmountEtv = hotelAmountEtv;
     this.hotelBookSpinner = hotelBookSpinner;
+    this.llMainLayout = llMainLayout;
+    this.llVisitLayout = llVisitLayout;
     this.lrMedicalCertificateLayout = lrMedicalCertificateLayout;
     this.meetingTextView = meetingTextView;
     this.meetingTypeLayout = meetingTypeLayout;
@@ -251,6 +266,8 @@ public abstract class InOutRequestFragmentBinding extends ViewDataBinding {
     this.spinCompStatus = spinCompStatus;
     this.spinDropdownType = spinDropdownType;
     this.spinMeetingType = spinMeetingType;
+    this.spinnerActivity = spinnerActivity;
+    this.spinnerVisit = spinnerVisit;
     this.trainAmountEtv = trainAmountEtv;
     this.trainBookSpinner = trainBookSpinner;
     this.txtAddMore = txtAddMore;

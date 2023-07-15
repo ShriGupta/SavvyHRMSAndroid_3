@@ -1,0 +1,7 @@
+com.savvy.hrmsnewapp.test.app-jetified-annotation-experimental-1.1.0-0 C:\Users\Admin\.gradle\caches\transforms-3\1e5f7bfa52d2697ee5bea686989412d5\transformed\jetified-annotation-experimental-1.1.0\res
+com.savvy.hrmsnewapp.test.app-jetified-core-1.5.0-1 C:\Users\Admin\.gradle\caches\transforms-3\ec7ba25c670b4e01e3b81b80096f5ad6\transformed\jetified-core-1.5.0\res
+com.savvy.hrmsnewapp.test.app-androidTest-2 D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\build\generated\res\resValues\androidTest\debug
+com.savvy.hrmsnewapp.test.app-androidTest-3 D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\build\generated\res\rs\androidTest\debug
+com.savvy.hrmsnewapp.test.app-mergeDebugAndroidTestResources-4 D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.savvy.hrmsnewapp.test.app-mergeDebugAndroidTestResources-5 D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.savvy.hrmsnewapp.test.app-merged_res-6 D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\build\intermediates\merged_res\debugAndroidTest

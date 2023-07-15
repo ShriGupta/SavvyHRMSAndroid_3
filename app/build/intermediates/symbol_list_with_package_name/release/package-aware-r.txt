@@ -3689,6 +3689,7 @@ id ll_calendarList
 id ll_dialogLayout
 id ll_enable_disable_layout
 id ll_fromDate
+id ll_main_layout
 id ll_or_layout
 id ll_position_detail_layout
 id ll_position_heading_layout
@@ -3696,6 +3697,7 @@ id ll_reason
 id ll_requisition
 id ll_status
 id ll_toDate
+id ll_visit_layout
 id loan_statusFromDate
 id loan_statusRecyclerView
 id loan_statusToDate
@@ -4229,6 +4231,8 @@ id spin_saveLoc_Territory
 id spin_saveLoc_Type
 id spinner
 id spinnerItem
+id spinner_activity
+id spinner_visit
 id split_action_bar
 id spread
 id spread_inside
