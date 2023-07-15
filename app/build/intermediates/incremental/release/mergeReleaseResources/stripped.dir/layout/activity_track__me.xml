@@ -1,0 +1,158 @@
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.savvy.hrmsnewapp.activity.Track_Me">
+
+    <LinearLayout
+        android:id="@+id/tolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <!-- <include
+             android:id="@+id/toolbar"
+             layout="@layout/toolbar"
+             />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tolbar"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_marginTop="15dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/track_location_heading"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                app:font="@string/font_name_bold"
+                android:textSize="16dip"
+                android:text="Track My Location"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:textColor="@color/my_custom_color_1"
+                android:textStyle="bold"
+                android:gravity="bottom|left"
+                android:paddingLeft="10dip"
+                android:paddingBottom="5dip"
+                app:font="@string/font_name_light"
+                android:textSize="@dimen/text_size"
+                android:text="Start Location Tracking"/>
+
+            <Button
+                android:id="@+id/btn_startService"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dip"
+                android:layout_height="0dip"
+                android:layout_weight="1.5"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size"
+                android:textColor="#fff"
+                android:background="@drawable/button_border"
+                app:font="@string/font_name_bold"
+                android:text="Start LOCATION TRACKING"/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text=""
+                 android:id="@+id/locationText"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:textColor="@color/my_custom_color_1"
+                android:textStyle="bold"
+                android:gravity="bottom"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                app:font="@string/font_name_light"
+                android:textSize="@dimen/text_size"
+                android:text="Stop Location Tracking"/>
+
+            <Button
+                android:id="@+id/btn_stopService"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1.5"
+                android:layout_marginTop="5dip"
+                android:textSize="@dimen/text_size"
+                android:background="@drawable/button_border"
+                android:textColor="#fff"
+                app:font="@string/font_name_bold"
+                android:textStyle="bold"
+                android:text="STOP LOCATION TRACKING"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="6"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="0dip">
+            <Button
+                android:layout_marginTop="25dip"
+                android:id="@+id/btn_Back"
+                android:textColor="#fff"
+                android:background="@drawable/button_border_cancel"
+                android:textStyle="bold"
+                android:textSize="12dip"
+                android:gravity="center"
+                android:layout_width="100dip"
+                android:layout_height="35dip"
+                android:text="Back"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+        android:id="@+id/spinnerItem"
+        android:layout_width="wrap_content"
+        android:layout_height="30dip"
+        android:paddingLeft="10dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="2dp"
+        android:text="Please Select :"
+        android:textColor="@color/my_custom_color"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

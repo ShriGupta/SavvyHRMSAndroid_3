@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#d3d3d3"
+        android:orientation="horizontal">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:layout_width="0dip"
+            android:layout_height="26dp"
+            android:layout_weight="5"
+            android:background="@drawable/border_custom"
+            android:gravity="center"
+            android:text="Date"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:layout_width="0dip"
+            android:layout_height="26dp"
+            android:layout_weight="5"
+            android:background="@drawable/border_custom"
+            android:gravity="center"
+            android:text="Time In"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:layout_width="0dip"
+            android:layout_height="26dp"
+            android:layout_weight="5"
+            android:background="@drawable/border_custom"
+            android:gravity="center"
+            android:text="Time Out"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/odc_DialogList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/imgLineView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_red"
+                android:src="@drawable/line" />
+
+            <Button
+                android:id="@+id/odc_OkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/imgLineView"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/border_custom"
+                android:text="Cancel"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

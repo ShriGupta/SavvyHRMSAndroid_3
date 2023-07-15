@@ -3521,6 +3521,7 @@ id image1
 id image2
 id imageData23
 id imageView
+id imageView2
 id image_data
 id image_data1
 id imgLine
@@ -4097,6 +4098,7 @@ id roundTrip
 id rounded
 id row_index_key
 id rv_approval_recyclerview
+id rv_company_list
 id rv_offlinePunch_recyclerview
 id rv_position_detail
 id rv_requisition_assign_list
@@ -4561,6 +4563,7 @@ id tv_empcode
 id tv_employeeCode
 id tv_employee_code
 id tv_employee_name
+id tv_empname
 id tv_error_textview
 id tv_eyeBlinkText
 id tv_faceMessage
@@ -5187,6 +5190,7 @@ layout activity_travel_expense
 layout activity_view_history
 layout activity_visit_history
 layout activity_webview
+layout adapter_company_directory_row
 layout adapter_my_action_center_item
 layout adapter_offline_punch_row
 layout adapter_reimbursement_approval_layout
@@ -5448,6 +5452,7 @@ layout item_online_test
 layout item_question_answer
 layout iteneray_details_row
 layout itinerary_details_with_tickets_adapter
+layout layout_company_directory
 layout layout_location_testing
 layout layout_network_error
 layout leave_apply_ficci_row

@@ -1,0 +1,178 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savvy.hrmsnewapp.saleForce.Activity_Notes_Contact_Holder">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <LinearLayout
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="0dip"
+           android:orientation="horizontal"
+           android:weightSum="18">
+
+           <LinearLayout
+               android:id="@+id/undoActivityLayout"
+               android:layout_width="0dip"
+               android:layout_height="35dip"
+               android:weightSum="3"
+               android:background="#fff"
+               android:orientation="vertical"
+               android:layout_weight="3"
+               >
+               <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                   android:id="@+id/undoActivity"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dip"
+                   android:layout_weight="2.8"
+                   android:background="@color/colorPrimaryDark"
+                   android:gravity="left"
+                   android:paddingRight="25dip"
+                   android:textStyle="bold"
+                   android:textSize="14dp"
+                   android:textColor="@color/white"
+                   android:drawableRight="@drawable/ic_keyboard_backspace_white_24dp"/>
+
+               <!--<ImageView-->
+               <!--android:id="@+id/visit_activity_line1"-->
+               <!--android:layout_width="match_parent"-->
+               <!--android:layout_height="0dp"-->
+               <!--android:layout_marginLeft="5dp"-->
+               <!--android:layout_marginRight="5dp"-->
+               <!--android:layout_weight="0.2"-->
+               <!--android:visibility="visible"-->
+               <!--android:background="@color/colorPrimaryDark"/>-->
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/visit_activity_linear"
+               android:layout_width="0dip"
+               android:layout_height="35dip"
+               android:weightSum="3"
+               android:background="#fff"
+               android:orientation="vertical"
+               android:layout_weight="5"
+               >
+               <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                   android:id="@+id/visit_activity"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dip"
+                   android:layout_weight="2.8"
+                   android:background="@color/colorPrimaryDark"
+                   android:gravity="center"
+                   android:textStyle="bold"
+                   android:textSize="14dp"
+                   android:textColor="@color/white"
+                   android:text="Activity"/>
+
+               <!--<ImageView-->
+                   <!--android:id="@+id/visit_activity_line1"-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="0dp"-->
+                   <!--android:layout_marginLeft="5dp"-->
+                   <!--android:layout_marginRight="5dp"-->
+                   <!--android:layout_weight="0.2"-->
+                   <!--android:visibility="visible"-->
+                   <!--android:background="@color/colorPrimaryDark"/>-->
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/visit_contact_linear"
+               android:layout_width="0dip"
+               android:layout_height="35dip"
+               android:layout_weight="5"
+               android:weightSum="3"
+               android:background="#fff"
+               android:orientation="vertical"
+               >
+               <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                   android:id="@+id/visit_contact"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dip"
+                   android:layout_weight="2.8"
+                   android:background="@color/colorPrimaryDark"
+                   android:gravity="center"
+                   android:textStyle="bold"
+                   android:textSize="14dp"
+                   android:textColor="@color/white"
+                   android:text="Contacts"/>
+
+               <!--<ImageView-->
+                   <!--android:layout_gravity="bottom"-->
+                   <!--android:foregroundGravity="bottom"-->
+                   <!--android:id="@+id/visit_contact_line"-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="0dp"-->
+                   <!--android:layout_marginLeft="5dp"-->
+                   <!--android:layout_marginRight="5dp"-->
+                   <!--android:layout_weight="0.2"-->
+                   <!--android:visibility="visible"-->
+                   <!--android:background="@color/colorPrimaryDark"/>-->
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/visit_notes_linear"
+               android:layout_width="0dip"
+               android:layout_height="35dip"
+               android:layout_weight="5"
+               android:weightSum="3"
+               android:background="#fff"
+               android:orientation="vertical"
+               >
+               <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                   android:id="@+id/visit_notes"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dip"
+                   android:layout_weight="2.8"
+                   android:background="@color/colorPrimaryDark"
+                   android:gravity="center"
+                   android:textStyle="bold"
+                   android:textSize="14dp"
+                   android:textColor="@color/white"
+                   android:text="Notes"/>
+
+               <!--<ImageView-->
+                   <!--android:id="@+id/visit_notes_line"-->
+                   <!--android:layout_gravity="bottom"-->
+                   <!--android:foregroundGravity="bottom"-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="0dp"-->
+                   <!--android:layout_marginLeft="5dp"-->
+                   <!--android:layout_marginRight="5dp"-->
+                   <!--android:layout_weight="0.2"-->
+                   <!--android:visibility="visible"-->
+                   <!--android:background="@color/colorPrimaryDark"/>-->
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dip"
+           android:layout_weight="9">
+
+           <FrameLayout
+               android:background="#fff"
+               android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/frame_activity_notes">
+
+           </FrameLayout>
+
+       </LinearLayout>
+
+   </LinearLayout>
+</LinearLayout>

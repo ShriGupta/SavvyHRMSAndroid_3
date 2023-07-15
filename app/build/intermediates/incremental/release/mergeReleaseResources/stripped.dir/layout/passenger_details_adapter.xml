@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="First Name :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_FirstName"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Middle Name :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_MiddleName"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Last Name :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_LastName"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Gender :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_Gender"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Contact No :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_ContactNumber"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Address :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_Address"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Age :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_Age"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="Type :"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txt_Type"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/removeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40sp"
+            android:backgroundTint="@color/color_red"
+            android:focusable="false"
+            android:text="Remove"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

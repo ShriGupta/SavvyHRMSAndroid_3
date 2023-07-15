@@ -1957,7 +1957,19 @@ public class INOUTRequestFragment extends BaseFragment {
                                             }
                                         }
 
+                                      /* String multipleNewFiles= jsonObject.getString("TPCICO_NEW_FILE");
+                                        List<String> listNew = new ArrayList<>(Arrays.asList(multipleNewFiles.split(",")));
 
+                                        */
+                                       String multipleORGFiles= jsonObject.getString("TPCICO_ORG_FILE");
+                                        List<String> listORG = new ArrayList<>(Arrays.asList(multipleORGFiles.split(",")));
+                                        for(int i=0;i<listORG.size();i++){
+                                            FileNameModel fileNameModel1 = new FileNameModel();
+                                            fileNameModel1.setFile_name(listORG.get(i));
+                                            fileNameModel1.setPosition(i);
+                                            multiple_item_list.add(fileNameModel1);
+                                        }
+                                        addMultipleItem();
 
                                     } else {
                                         btn_submit.setText("Check In");

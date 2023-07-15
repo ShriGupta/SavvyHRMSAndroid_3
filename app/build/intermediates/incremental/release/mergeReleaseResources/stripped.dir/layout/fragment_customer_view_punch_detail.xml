@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savvy.hrmsnewapp.fragment.CustomerViewPunchDetail">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtFromDate"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="4.5"
+                    android:gravity="center_vertical"
+                    android:text="From Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="12dp"
+                    app:font="@string/font_name_light" />
+
+                <Button
+                    android:id="@+id/btn_CustDetailFromDate"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="5.5"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center"
+                    android:hint="Pick From Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/my_custom_color"
+                    android:textSize="12dp"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtToDate"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="30dp"
+                    android:layout_weight="4.5"
+                    android:gravity="center_vertical"
+                    android:text="To Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="12dp"
+                    app:font="@string/font_name_light" />
+
+                <Button
+                    android:id="@+id/btn_CustDetailToDate"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="5.5"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center"
+                    android:hint="Pick To Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/my_custom_color"
+                    android:textSize="12dp"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_mark_attendance"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_border"
+                    android:gravity="center"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="2dp"
+                    android:text="Mark Attendance"
+                    android:textColor="#fff"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_cust_detail_submit"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_border"
+                    android:gravity="center"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="2dp"
+                    android:text="Punch Detail"
+                    android:textColor="#fff" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/cust_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

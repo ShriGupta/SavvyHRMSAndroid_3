@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/windowBackground"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight=".5"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/ll_fromDate"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_YearTitle"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:text="Year"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content" />
+
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_YearValue"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:text="REQUEST FOR LEAVE"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content" />
+
+                <!--  <EditText
+                      android:id="@+id/edt_fromDate"
+                      android:layout_width="0dip"
+                      android:layout_height="35dp"
+                      android:layout_weight="2"
+                      android:textColor="#fff"
+                      android:textColorHint="#fff"
+                      android:paddingLeft="10dp"
+                      android:singleLine="true"
+                      android:focusable="false"
+                      android:cursorVisible="false"
+                      android:layout_marginLeft="20dp"
+                      android:inputType="textEmailAddress"
+                      android:nextFocusDown="@+id/edt_password"
+                      android:drawablePadding="15dp"
+                      android:fontFamily="@string/font_name_light"
+                      android:textSize="16dp"
+                      android:drawableRight="@drawable/small_calendar"
+                      android:hint=""
+                      android:textCursorDrawable="@null"
+                      android:background="@drawable/border_custom">
+                      <requestFocus/>
+                  </EditText>
+  -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_toDate"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/ll_fromDate"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_financ_year_title"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:text="Financial Year"
+                    android:layout_marginTop="0dp"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_financ_year_value"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:text="Value"
+                    android:layout_marginTop="0dp"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content" />
+
+                <!-- <EditText
+                     android:id="@+id/edt_toDate"
+                     android:layout_weight="2"
+                     android:layout_width="0dip"
+                     android:layout_height="35dp"
+                     android:textColor="#fff"
+                     android:textColorHint="#fff"
+                     android:paddingLeft="10dp"
+                     android:singleLine="true"
+                     android:focusable="false"
+                     android:cursorVisible="false"
+                     android:layout_marginLeft="20dp"
+                     android:inputType="textEmailAddress"
+                     android:nextFocusDown="@+id/edt_password"
+                     android:drawablePadding="15dp"
+                     android:fontFamily="@string/font_name_light"
+                     android:textSize="16dp"
+                     android:drawableRight="@drawable/small_calendar"
+                     android:hint=""
+                     android:textCursorDrawable="@null"
+                     android:background="@drawable/border_custom">
+                     <requestFocus/>
+                 </EditText>-->
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ll_toDate"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_legendTitle"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:text="Legend"
+                    android:layout_marginTop="0dp"
+
+                    android:layout_weight="1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="0dp"
+                    >
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txv_lopLeave"
+                        app:font="@string/font_name_light"
+                        android:gravity="center_vertical"
+                        android:textColor="#ffa500"
+                        android:drawablePadding="2dp"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:text="Advance/Lop Leave"
+                        android:layout_marginTop="0dp"
+                        android:drawableLeft="@drawable/checked_orange"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txv_with_balance"
+                        app:font="@string/font_name_light"
+                        android:gravity="center_vertical"
+                        android:textColor="#006400"
+                        android:drawablePadding="2dp"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:text="With Balance"
+                        android:layout_marginTop="0dp"
+                        android:drawableLeft="@drawable/checked_green"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txv_without_balance"
+                        app:font="@string/font_name_light"
+                        android:gravity="center_vertical"
+                        android:textColor="#ff0000"
+                        android:drawablePadding="2dp"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:text="Without Balance"
+                        android:layout_marginTop="0dp"
+                        android:drawableLeft="@drawable/checked_red"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                    <!-- <ImageView
+                         android:id="@+id/iv_arrowdown2"
+                         android:layout_width="0dp"
+                         android:layout_weight=".15"
+                         android:layout_height="wrap_content"
+
+                         android:gravity="center_vertical"
+
+
+                         android:src="@drawable/arrow_down" />-->
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- <Button
+                 android:id="@+id/btn_submit"
+                 android:layout_width="wrap_content"
+                 android:layout_height="35dp"
+                 android:layout_centerHorizontal="true"
+
+                 android:layout_below="@+id/ll_status"
+                 android:textColor="#ffffff"
+                 android:padding="0dp"
+                 android:background="@android:color/holo_red_light"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginBottom="5dp"
+                 android:text="Search" />
+ -->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="0dp">
+
+       <!-- <android.support.v7.widget.RecyclerView
+            android:id="@+id/leaveBalanceList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/img_line"
+            android:layout_margin="0dp" />
+
+-->
+
+    </LinearLayout>
+
+</LinearLayout>

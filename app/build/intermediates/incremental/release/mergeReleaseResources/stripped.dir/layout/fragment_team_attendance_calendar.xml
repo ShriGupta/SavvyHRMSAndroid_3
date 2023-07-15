@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtEmployeeCode"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="Employee Code *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edt_employee_code"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="5.5"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Employee Code"
+                    android:imeOptions="actionDone"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:nextFocusForward="@+id/btn_attendanceCalFromDate"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtFromDate"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="From Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <Button
+                    android:id="@+id/btn_team_attendanceCalFromDate"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="5.5"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick From Date"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtToDate"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="To Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <Button
+                    android:id="@+id/btn_team_attendanceCalToDate"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="5.5"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick To Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearCompareDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dip"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dip"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtResulDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Result"
+                    android:textColor="@color/color_red"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btn_team_attendanceCal_submit"
+                    android:layout_width="140dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_border_cancel"
+                    android:gravity="center"
+                    android:text="Get Calendar"
+                    android:textColor="#fff"
+                    android:textSize="13sp"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/color_red" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="5dp"
+                android:layout_weight="16">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/team_attendanceCal_Recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--</ScrollView>-->
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

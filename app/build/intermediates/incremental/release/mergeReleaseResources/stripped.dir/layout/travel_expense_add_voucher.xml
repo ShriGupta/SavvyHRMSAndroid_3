@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travelExpenseTitle"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Travel Expense"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Click Here to view the Journey Details"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <Button
+                    android:id="@+id/btn_showTravelDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dip"
+                    android:layout_weight="4"
+                    android:background="@drawable/button_border"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Show Detail"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_travel_detail"
+                android:layout_width="match_parent"
+                android:layout_height="205dip"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Travel Type : "
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/TRDTravelType"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Travel Type"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/travletType"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <Button
+                        android:id="@+id/close_travel_detail"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="15dp"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:text="X"
+                        android:textColor="@color/color_red"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Start Date : "
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/TRDStartDate"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Start Date"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Ret. Date :"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/TRDReturnDate"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Return Date"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_custom_new">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/con_header"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dip"
+                                android:orientation="horizontal">
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="110dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Travel Mode"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="100dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Travel Class"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="110dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Boarding Place"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="110dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Arrival Place"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="110dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Boarding Date"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="110dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Arrival Date"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="100dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Expense Type"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="60dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Ticket"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="60dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Hotel"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="60dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Cab"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="120dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Reason"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_add_travel_expense"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dip"
+                                android:layout_weight="8">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dip"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:text="Expense Details"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border_custom_new">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dip"
+                                android:orientation="horizontal">
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="100dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Expense Type"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="90dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Bill No."
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="100dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Bill Date"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="80dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Bill Amount"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="120dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Com. Provided"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="140dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Reason"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="80dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Action"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:layout_width="80dip"
+                                    android:layout_height="20dp"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/border_custom_new"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="3dp"
+                                    android:text="Remove"
+                                    android:textSize="@dimen/text_size"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_new_travelExpense"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dip"
+                                android:layout_weight="8">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/TRE_ExpenseTypeTitle"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="4.8"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:text="Expense Type *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <Spinner
+                        android:id="@+id/TRE_Spin_ExpenseType"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="3.9"
+                        android:background="@drawable/border_custom_new"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <ImageView
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="-2dp"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/spin_border_new"
+                        android:padding="7dp"
+                        android:src="@drawable/arrow_down" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/TREBillNoTitle"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:text="Bill No. *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <EditText
+                        android:id="@+id/edt_TREBillNo"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom_new"
+                        android:gravity="center_vertical"
+                        android:hint="Bill No."
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/color_gray"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/btn_TREBillDateTitle"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:text="Bill Date *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <Button
+                        android:id="@+id/btn_TREBillDate"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom_new"
+                        android:gravity="center_vertical"
+                        android:hint="Bill Date"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/color_gray"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearErrorResultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/errorResultText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:text="Result"
+                        android:textColor="@color/color_red"
+                        android:textSize="10dp"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/edt_TREBillAmountTitle"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:text="Bill Amount *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <EditText
+                        android:id="@+id/edt_TREBillAmount"
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom_new"
+                        android:gravity="center_vertical"
+                        android:hint="Bill Amount"
+                        android:inputType="number"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/color_gray"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/check_companyProvided"
+                        android:layout_width="100dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_custom"
+                        android:gravity="center_vertical"
+                        android:layoutDirection="rtl"
+                        android:text="Company Provided"
+                        android:textColor="@color/color_gray"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="18"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="9.5">
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="80dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_weight="6.5"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dip"
+                            android:layout_weight="6"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:text="File Upload"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            android:textStyle="bold"
+                            app:font="@string/font_name_light" />
+
+                        <Button
+                            android:id="@+id/btn_fileUpload"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dip"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/border_custom_new"
+                            android:cursorVisible="true"
+                            android:gravity="center"
+                            android:hint="Upload"
+                            android:textColor="@color/my_custom_color"
+                            android:textColorHint="@color/colorGray"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="80dip"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/updloadFileImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"
+                            android:background="@color/color_gray" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="10dip"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Upload File"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <Button
+                        android:id="@+id/btnVoucher_imgUpload"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/border_custom_new"
+                        android:cursorVisible="true"
+                        android:gravity="center"
+                        android:hint="Upload"
+                        android:textColor="@color/my_custom_color"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/text_size" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/txt_Voucher_NoFileChoose"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/border_custom"
+                        android:paddingLeft="2dp"
+                        android:text="No File Chosen"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <ImageView
+                        android:id="@+id/btnVoucher_imgIcon"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/imageuploadicon"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dip"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/TRE_remarksTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="Remarks *"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        app:font="@string/font_name_light" />
+
+                    <EditText
+                        android:id="@+id/TRE_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/border_custom_new"
+                        android:hint="Remarks"
+                        android:lines="3"
+                        android:paddingLeft="10dp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/color_gray"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_TREsubmit"
+                        android:layout_width="100dip"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/button_border_cancel"
+                        android:gravity="center"
+                        android:text="Save"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_TREclear"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/button_border_cancel"
+                        android:gravity="center"
+                        android:text="Clear"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_TREclose"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/button_border_cancel"
+                        android:gravity="center"
+                        android:text="Close"
+                        android:textColor="#fff"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground"
+        android:orientation="vertical"
+        android:weightSum="16">
+
+        <LinearLayout
+            android:id="@+id/ll_fromDate"
+            android:layout_width="match_parent"
+            android:layout_height="25dip"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="4.5">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_YearTitle"
+                android:layout_width="0dip"
+                android:layout_height="25sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Year"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_YearValue"
+                android:layout_width="0dip"
+                android:layout_height="25sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Year Value"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_financ_year_title"
+                android:layout_width="0dip"
+                android:layout_height="25sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Fin Year"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_financ_year_value"
+                android:layout_width="0dip"
+                android:layout_height="25sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical"
+                android:text="Value"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1.71"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_legendTitle"
+                android:layout_width="0dip"
+                android:layout_height="25sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="0.7"
+                android:gravity="center_vertical"
+                android:text="Legend"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_lopLeave"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1.1"
+                android:drawableLeft="@drawable/checked_orange"
+                android:drawablePadding="2sp"
+                android:gravity="center_vertical"
+                android:text="Advance/Lop Leave"
+                android:textColor="#ffa500"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_with_balance"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1.1"
+                android:drawableLeft="@drawable/checked_green"
+                android:drawablePadding="2sp"
+                android:gravity="center_vertical"
+                android:text="With Balance"
+                android:textColor="#006400"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txv_without_balance"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="0sp"
+                android:layout_weight="1.1"
+                android:drawableLeft="@drawable/checked_red"
+                android:drawablePadding="2sp"
+                android:gravity="center_vertical"
+                android:text="Without Balance"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="13.5"
+            android:background="@drawable/border_custom"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leaveBalanceList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
