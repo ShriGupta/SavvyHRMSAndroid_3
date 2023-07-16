@@ -166,7 +166,8 @@ public class INOUTRequestFragment extends BaseFragment {
     String convence="";
     String hotelFileName="",cabFileName="",flightFileName="",trainFileName="",otherFileName;
     String hotelNewFileName="",cabNewFileName="",flightNewFileName="",trainNewFileName="",otherNewFileName;
-    StringBuilder stringBuilder=new StringBuilder();
+    StringBuilder stringBuilderOrgFile;
+    StringBuilder stringBuilderNewFile;
 
 
 
@@ -1734,7 +1735,8 @@ public class INOUTRequestFragment extends BaseFragment {
 
     public void saveAllDetails() {
         try {
-            String Newfilemul = "";
+
+           /* String Newfilemul = "";
             String OrgFilemul = "";
             if (multiple_item_list.size() > 0)
                 for (int i = 0; i < multiple_item_list.size(); i++) {
@@ -1747,7 +1749,7 @@ public class INOUTRequestFragment extends BaseFragment {
             if(stringBuilder.toString().contains(",")){
                 OrgFilemul= stringBuilder.substring(0, stringBuilder.toString().length() - 1);
 
-            }
+            }*/
 
             if (Utilities.isNetworkAvailable(getActivity())) {
                 ProgressDialog progressDialog = new ProgressDialog(getActivity());
@@ -1768,8 +1770,8 @@ public class INOUTRequestFragment extends BaseFragment {
                 params_final.put("meetingtype", meetingtype);
                 params_final.put("chargestype", chargestype);
                 params_final.put("date", btn_InOutdate.getText().toString());
-                params_final.put("newfilemul", Newfilemul);
-                params_final.put("orgfilemul", OrgFilemul);
+                params_final.put("newfilemul", stringBuilderNewFile.toString());
+                params_final.put("orgfilemul", stringBuilderOrgFile);
                 params_final.put("toll", edt_InOut_amount.getText().toString());
                 params_final.put("hotelbookby", hotelid);
                 params_final.put("hotelamt", binding.hotelAmountEtv.getText().toString());
@@ -1957,19 +1959,7 @@ public class INOUTRequestFragment extends BaseFragment {
                                             }
                                         }
 
-                                      /* String multipleNewFiles= jsonObject.getString("TPCICO_NEW_FILE");
-                                        List<String> listNew = new ArrayList<>(Arrays.asList(multipleNewFiles.split(",")));
-
-                                        */
-                                       String multipleORGFiles= jsonObject.getString("TPCICO_ORG_FILE");
-                                        List<String> listORG = new ArrayList<>(Arrays.asList(multipleORGFiles.split(",")));
-                                        for(int i=0;i<listORG.size();i++){
-                                            FileNameModel fileNameModel1 = new FileNameModel();
-                                            fileNameModel1.setFile_name(listORG.get(i));
-                                            fileNameModel1.setPosition(i);
-                                            multiple_item_list.add(fileNameModel1);
-                                        }
-                                        addMultipleItem();
+                                        setMultipleFile(jsonObject.getString("TPCICO_ORG_FILE"),jsonObject.getString("TPCICO_NEW_FILE"));
 
                                     } else {
                                         btn_submit.setText("Check In");
@@ -2017,6 +2007,33 @@ public class INOUTRequestFragment extends BaseFragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void setMultipleFile(String tpcico_org_file, String tpcico_new_file) {
+        stringBuilderOrgFile=new StringBuilder();
+        stringBuilderNewFile=new StringBuilder();
+
+
+        if(!tpcico_org_file.equals("")){
+            List<String> listORG = new ArrayList<>(Arrays.asList(tpcico_org_file.split(",")));
+            for(int i=0;i<listORG.size();i++){
+                stringBuilderOrgFile.append(listORG.get(i)).append(",");
+                FileNameModel fileNameModel1 = new FileNameModel();
+                fileNameModel1.setFile_name(listORG.get(i));
+                fileNameModel1.setPosition(i);
+                multiple_item_list.add(fileNameModel1);
+            }
+            addMultipleItem();
+        }
+
+        if(!tpcico_new_file.equals("")){
+            List<String> listNew = new ArrayList<String>(Arrays.asList(tpcico_new_file.split(",")));
+            for(int i=0;i<listNew.size();i++){
+                stringBuilderNewFile.append(listNew.get(i)).append(",");
+            }
+        }
+
+
     }
 
     private void buildPart(DataOutputStream dataOutputStream, byte[] fileData, String fileName) throws IOException {
@@ -2073,9 +2090,10 @@ public class INOUTRequestFragment extends BaseFragment {
                         /*}*/
                         actualFileName = list.get(1);
                         if (check_click.equals("multi")) {
+                            stringBuilderNewFile.append(actualFileName).append(",");
                             // ml.callback(actualFileName);
                             FileNameModel fileNameModel = new FileNameModel();
-                            fileNameModel.setFile_name(actualFileName);
+                            fileNameModel.setFile_name(filename);
                             fileNameModel.setPosition(Position);
                             multiple_item_list.set(Position, fileNameModel);
                             //  addMultipleItem();
@@ -2333,7 +2351,7 @@ public class INOUTRequestFragment extends BaseFragment {
                 otherFileName = file;
                 break;
             case "multi":
-                stringBuilder.append(file).append(",");
+                stringBuilderOrgFile.append(file).append(",");
                 break;
         }
 
