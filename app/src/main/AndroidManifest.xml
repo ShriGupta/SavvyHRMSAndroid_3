@@ -26,19 +26,21 @@
 
     <application
         android:name=".classes.SavvyHRMS"
+        android:allowBackup="false"
         android:configChanges="keyboardHidden|orientation"
+        android:fullBackupContent="false"
         android:hardwareAccelerated="false"
         android:icon="@drawable/logohrms"
         android:label="@string/app_name"
         android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/logohrms"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        android:requestLegacyExternalStorage="true"
-        android:fullBackupContent="false"
-        android:allowBackup="false">
-
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.EmployeeDetailActivity"
+            android:exported="false" />
         <activity android:name=".activity.BarCodeActivity" />
         <activity android:name=".activity.OfflineMarkAttendanceActivity" />
         <activity android:name=".activity.OfflineLoginActivity" />
@@ -134,9 +136,7 @@
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.LeaveBalanceActivity" />
-        <activity
-            android:name=".activity.LoginActivity_1"
-            />
+        <activity android:name=".activity.LoginActivity_1" />
         <activity
             android:name=".activity.MarkAttendance"
             android:screenOrientation="fullSensor"
@@ -229,13 +229,15 @@
 
         <activity android:name=".activity.NewTrackServiceActivity" />
 
-        <service android:name=".service.MyFirebaseInstanceIdService"
+        <service
+            android:name=".service.MyFirebaseInstanceIdService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".service.MyFirebaseMessagingService"
+        <service
+            android:name=".service.MyFirebaseMessagingService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -285,9 +287,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.savvy.hrmsnewapp.activity.WebviewActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="false">
+            android:name=".WebviewActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -296,7 +298,6 @@
             android:name=".fragment.CustomerVisit_GOIP"
             tools:ignore="Instantiatable" />
         <activity android:name=".adapter.CustomerAdapterList" />
-
 
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
@@ -321,7 +322,6 @@
         <receiver
             android:name=".receiver.TrackMeReceiver"
             android:exported="true" />
-
     </application>
 
 </manifest>

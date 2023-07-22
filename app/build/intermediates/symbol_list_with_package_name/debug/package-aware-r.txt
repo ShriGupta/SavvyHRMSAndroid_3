@@ -3557,6 +3557,7 @@ id itenerayAddButton
 id iteraryAddCloseButton
 id itinerarySubmitTicket
 id iv_payslip_imageview
+id iv_profile
 id iv_reverse_camera
 id iv_user_image
 id joiningdate_value
@@ -4099,6 +4100,7 @@ id rounded
 id row_index_key
 id rv_approval_recyclerview
 id rv_company_list
+id rv_emp_list
 id rv_offlinePunch_recyclerview
 id rv_position_detail
 id rv_requisition_assign_list
@@ -5161,6 +5163,7 @@ layout activity_change_password
 layout activity_customer_adapter_list
 layout activity_customer_visit__goip
 layout activity_dash_board
+layout activity_employee_detail
 layout activity_face_attendance
 layout activity_gps1
 layout activity_gps__tracker__demo

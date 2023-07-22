@@ -1168,6 +1168,21 @@
             ]
         },
         {
+            "outputFile": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\values-port_values-port.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\caches\\transforms-3\\0b7f47a6f8952264f1c2714bb61159de\\transformed\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\values-ro_values-ro.arsc.flat",
             "map": [
                 {
@@ -1236,21 +1251,6 @@
                         "startOffsets": "3871",
                         "endColumns": "144",
                         "endOffsets": "4011"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\values-port_values-port.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\caches\\transforms-3\\0b7f47a6f8952264f1c2714bb61159de\\transformed\\appcompat-1.1.0\\res\\values-port\\values-port.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "55",
-                        "endOffsets": "106"
                     }
                 }
             ]

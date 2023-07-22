@@ -166,8 +166,9 @@ public class INOUTRequestFragment extends BaseFragment {
     String convence="";
     String hotelFileName="",cabFileName="",flightFileName="",trainFileName="",otherFileName;
     String hotelNewFileName="",cabNewFileName="",flightNewFileName="",trainNewFileName="",otherNewFileName;
-    StringBuilder stringBuilderOrgFile;
-    StringBuilder stringBuilderNewFile;
+
+   StringBuilder stringBuilderOrgFile=new StringBuilder();
+    StringBuilder stringBuilderNewFile=new StringBuilder();
 
 
 
@@ -361,15 +362,20 @@ public class INOUTRequestFragment extends BaseFragment {
             public void onClick(View view) {
 
                 if (checkLocationOnorOff()) {
-                    if (!supplier_name.contains("TRAVELLING")) {
-                        if (!btn_InOutdate.getText().toString().isEmpty() && !meetingtype.equals("") && !worktype.equals("") && !chargestype.equals("") && !supplierid.equals("")) {
-                            saveAllDetails();
+                    if(activityIDArray.size()>0 && activityId.equals("")){
+                        Toast.makeText(getActivity(), "Please Select Activity ", Toast.LENGTH_SHORT).show();
+                    }else {
+                        if (!supplier_name.contains("TRAVELLING")) {
+                            if (!btn_InOutdate.getText().toString().isEmpty() && !meetingtype.equals("") && !worktype.equals("") && !chargestype.equals("") && !supplierid.equals("")) {
+                                saveAllDetails();
+                            } else {
+                                Toast.makeText(getActivity(), "Please select all required feilds", Toast.LENGTH_SHORT).show();
+                            }
                         } else {
-                            Toast.makeText(getActivity(), "Please select all required feilds", Toast.LENGTH_SHORT).show();
+                            saveAllDetails();
                         }
-                    } else {
-                        saveAllDetails();
                     }
+
                 } else {
                     checkLocationOn();
                 }
@@ -397,11 +403,12 @@ public class INOUTRequestFragment extends BaseFragment {
         binding.spinnerActivity.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Log.e("savvylogs", "onItemSelected: position:"+position +" activityId:"+activityId);
+
                 if(position!=0){
                     activityId = activityIDArray.get(position-1);
                     convence=activityConvenceArray.get(position-1);
                     binding.edtInOutConveyance.setText(convence);
+                    Log.e("savvylogs", "onItemSelected: position:"+position +" activityId:"+activityId);
                 }else {
                     activityId="";
                     binding.edtInOutConveyance.setText("");
@@ -1771,7 +1778,7 @@ public class INOUTRequestFragment extends BaseFragment {
                 params_final.put("chargestype", chargestype);
                 params_final.put("date", btn_InOutdate.getText().toString());
                 params_final.put("newfilemul", stringBuilderNewFile.toString());
-                params_final.put("orgfilemul", stringBuilderOrgFile);
+                params_final.put("orgfilemul", stringBuilderOrgFile.toString());
                 params_final.put("toll", edt_InOut_amount.getText().toString());
                 params_final.put("hotelbookby", hotelid);
                 params_final.put("hotelamt", binding.hotelAmountEtv.getText().toString());
@@ -2010,8 +2017,7 @@ public class INOUTRequestFragment extends BaseFragment {
     }
 
     private void setMultipleFile(String tpcico_org_file, String tpcico_new_file) {
-        stringBuilderOrgFile=new StringBuilder();
-        stringBuilderNewFile=new StringBuilder();
+
 
 
         if(!tpcico_org_file.equals("")){

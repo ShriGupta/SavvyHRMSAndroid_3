@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.savvy.hrmsnewapp"
-    android:versionCode="53"
-    android:versionName="6.7" >
+    android:versionCode="54"
+    android:versionName="6.8" >
 
     <uses-sdk
         android:minSdkVersion="24"
@@ -63,6 +63,9 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.savvy.hrmsnewapp.activity.EmployeeDetailActivity"
+            android:exported="false" />
         <activity android:name="com.savvy.hrmsnewapp.activity.BarCodeActivity" />
         <activity android:name="com.savvy.hrmsnewapp.activity.OfflineMarkAttendanceActivity" />
         <activity android:name="com.savvy.hrmsnewapp.activity.OfflineLoginActivity" />
@@ -306,7 +309,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.savvy.hrmsnewapp.activity.WebviewActivity"
+            android:name="com.savvy.hrmsnewapp.WebviewActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data

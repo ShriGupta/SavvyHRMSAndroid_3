@@ -21,8 +21,8 @@ android {
         applicationId 'com.savvy.hrmsnewapp'
         minSdkVersion 24
         targetSdkVersion 31
-        versionName '6.7'
-        versionCode 53
+        versionName '6.8'
+        versionCode 54
 
 //        minVersionName "1.12.2"
 //        minVersionCode 4

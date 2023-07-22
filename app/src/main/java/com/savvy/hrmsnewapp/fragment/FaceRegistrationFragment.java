@@ -3,9 +3,11 @@ package com.savvy.hrmsnewapp.fragment;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -57,7 +59,7 @@ public class FaceRegistrationFragment extends Fragment implements OnFileUploadLi
     Button send_Approval_Button;
 
     File photoFile = null;
-    static final int CAPTURE_IMAGE_REQUEST = 1454;
+    static final int CAPTURE_IMAGE_REQUEST = 1400;
     String mCurrentPhotoPath;
     private static final String IMAGE_DIRECTORY_NAME = "FACE_IMAGES";
     SharedPreferences sharedPreferences;
@@ -117,11 +119,7 @@ public class FaceRegistrationFragment extends Fragment implements OnFileUploadLi
         selectCameraImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    captureImage();
-                } else {
-                    captureImage2();
-                }
+                chooseImage(requireActivity());
             }
         });
     }
@@ -173,12 +171,7 @@ public class FaceRegistrationFragment extends Fragment implements OnFileUploadLi
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == CAPTURE_IMAGE_REQUEST && grantResults[0] > 0) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                captureImage();
-            } else {
-                captureImage2();
-            }
-
+            captureImage();
         } else {
             displayMessage(getActivity(), "Request cancelled or something went wrong.");
         }
@@ -249,8 +242,23 @@ public class FaceRegistrationFragment extends Fragment implements OnFileUploadLi
             // roundImageView.setImageBitmap(scaled);
             newImageView.setImageBitmap(scaled);
             return;
+        }else {
+            if (resultCode == Activity.RESULT_OK && data != null) {
+                Uri selectedImage = data.getData();
+                String[] filePathColumn = {MediaStore.Images.Media.DATA};
+                if (selectedImage != null) {
+                    Cursor cursor = requireActivity().getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+                    if (cursor != null) {
+                        cursor.moveToFirst();
+                        int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                        String picturePath = cursor.getString(columnIndex);
+                        finalbitmap=BitmapFactory.decodeFile(picturePath);
+                        newImageView.setImageBitmap(finalbitmap);
+                        cursor.close();
+                    }
+                }
+            }
         }
-        Log.e("TAG", "hello");
     }
 
     public static Bitmap rotateImage(Bitmap source, float angle) {
@@ -354,5 +362,29 @@ public class FaceRegistrationFragment extends Fragment implements OnFileUploadLi
                 showFaceResponse(list.get(1));
             }
         });
+    }
+
+    private void chooseImage(Context context){
+        final CharSequence[] optionsMenu = {"Take Photo", "Choose from Gallery", "Exit" }; // create a menuOption Array
+        // create a dialog for showing the optionsMenu
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        // set the items in builder
+        builder.setItems(optionsMenu, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if(optionsMenu[i].equals("Take Photo")){
+                    captureImage();
+                }
+                else if(optionsMenu[i].equals("Choose from Gallery")){
+                    // choose from  external storage
+                    Intent pickPhoto = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    startActivityForResult(pickPhoto , 1500);
+                }
+                else if (optionsMenu[i].equals("Exit")) {
+                    dialogInterface.dismiss();
+                }
+            }
+        });
+        builder.show();
     }
 }

@@ -254,7 +254,7 @@
     <string name="back">Back</string>
     <string name="attendance_mark_successfully">Attendance mark successfully</string>
     <string name="go_to_back">Go to back</string>
-    <string name="send_for_approval">Send for approval</string>
+    <string name="send_for_approval">Upload</string>
     <string name="tracking_my_location">Tracking My Location</string>
     <string name="search_employee_name">Search Employee Name or Code</string>
 

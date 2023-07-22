@@ -2,6 +2,7 @@ package com.savvy.hrmsnewapp.fragment;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.savvy.hrmsnewapp.R;
+import com.savvy.hrmsnewapp.activity.EmployeeDetailActivity;
 import com.savvy.hrmsnewapp.adapter.MyTeamMembersAdapter;
 import com.savvy.hrmsnewapp.adapter.TeamMembersDemoAdapter;
 import com.savvy.hrmsnewapp.customwidgets.CircularImageView;
@@ -61,7 +63,7 @@ public class MyTeamMembers extends BaseFragment {
             designation = "", photocode = "";
     TeamMembersDemoAdapter adapter;
     MyTeamMembers.TeamMemberAsynTask teamMemberAsynTask;
-    String TAG = "MyTeamMembers";
+    String TAG = "savvylogs";
     HashMap<String, String> hashMap;
     HashMap<String, String> hashMap_1;
 
@@ -73,6 +75,7 @@ public class MyTeamMembers extends BaseFragment {
 
     String EMPLOYEE_NAME_1 = "", EMPLOYEE_ID_1 = "", EMPLOYEE_CODE_1 = "", PHOTO_CODE = "", DEPARTMENT = "", DESIGNATION = "", BRANCH = "";
 
+    int listTouchCount=0;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +112,7 @@ public class MyTeamMembers extends BaseFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        listTouchCount=0;
         user_profile_photo = getActivity().findViewById(R.id.img_myHeirarchyTitle);
 
         txt_empName_1 = getActivity().findViewById(R.id.txt_MyEmployeeName);
@@ -171,7 +175,6 @@ public class MyTeamMembers extends BaseFragment {
         }
         if (Constants.My_Team_Members.size() > 0) {
             hashMap_1 = Constants.My_Team_Members.get(Constants.My_Team_Members.size() - 1);
-
             EMPLOYEE_ID_1 = hashMap_1.get("empoyeeId");
             EMPLOYEE_CODE_1 = hashMap_1.get("EmployeeCode");
             EMPLOYEE_NAME_1 = hashMap_1.get("EmployeeName");
@@ -232,12 +235,16 @@ public class MyTeamMembers extends BaseFragment {
             @Override
             public void onClick(View view, int position) {
 
+                if(listTouchCount>1)
+                    listTouchCount=0;
+
                     CustomTextView txtDepth = view.findViewById(R.id.txtDepth);
                     final int pos = position;
 
                     String depth = txtDepth.getText().toString().trim();
 
                     Log.e("Depth", depth);
+
                     if (!depth.equals("0")) {
                         txtDepth.setOnClickListener(v -> {
                             try {
@@ -271,9 +278,19 @@ public class MyTeamMembers extends BaseFragment {
                                 e.printStackTrace();
                             }
                         });
+                    }else {
+                        if(listTouchCount==0){
+                            final HashMap<String, String> mapdata = arlData.get(pos);
+                            String employeeId = mapdata.get("employeeId");
+                            String pic = mapdata.get("photoCode");
+                            Log.e(TAG, "onClick: employeeId "+employeeId +" employeeName: "+employeeName );
+                            Intent intent=new Intent(requireActivity(), EmployeeDetailActivity.class);
+                            intent.putExtra("EMP_ID",employeeId);
+                            intent.putExtra("PHOTO_CODE",pic);
+                            startActivity(intent);
+                        }
+                        listTouchCount++;
                     }
-
-
             }
 
             @Override

@@ -3556,6 +3556,7 @@ int id itenerayAddButton 0x7f090406
 int id iteraryAddCloseButton 0x7f090407
 int id itinerarySubmitTicket 0x7f090408
 int id iv_payslip_imageview 0x7f090409
+int id iv_profile 0x7f090a01
 int id iv_reverse_camera 0x7f09040a
 int id iv_user_image 0x7f09040b
 int id joiningdate_value 0x7f09040c
@@ -4098,6 +4099,7 @@ int id rounded 0x7f090624
 int id row_index_key 0x7f090625
 int id rv_approval_recyclerview 0x7f090626
 int id rv_company_list 0x7f090627
+int id rv_emp_list 0x7f090a00
 int id rv_offlinePunch_recyclerview 0x7f090628
 int id rv_position_detail 0x7f090629
 int id rv_requisition_assign_list 0x7f09062a
@@ -5160,6 +5162,7 @@ int layout activity_change_password 0x7f0c0029
 int layout activity_customer_adapter_list 0x7f0c002a
 int layout activity_customer_visit__goip 0x7f0c002b
 int layout activity_dash_board 0x7f0c002c
+int layout activity_employee_detail 0x7f0c0203
 int layout activity_face_attendance 0x7f0c002d
 int layout activity_gps1 0x7f0c002e
 int layout activity_gps__tracker__demo 0x7f0c002f
