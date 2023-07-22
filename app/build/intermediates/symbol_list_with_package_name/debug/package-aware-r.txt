@@ -5270,6 +5270,7 @@ layout dialogbox_leave_approval
 layout dialogbox_request_cancel
 layout dimens
 layout dp_example
+layout emp_detail_dialog
 layout employee_dynamic_profile_adapter
 layout exp_recycle_adapterview_row
 layout expandable_list_title

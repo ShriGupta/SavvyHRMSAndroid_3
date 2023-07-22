@@ -60,6 +60,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.savvy.hrmsnewapp.activity.EmployeeDetailActivity"
+            android:exported="false" />
         <activity android:name="com.savvy.hrmsnewapp.activity.BarCodeActivity" />
         <activity android:name="com.savvy.hrmsnewapp.activity.OfflineMarkAttendanceActivity" />
         <activity android:name="com.savvy.hrmsnewapp.activity.OfflineLoginActivity" />
@@ -303,7 +306,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.savvy.hrmsnewapp.activity.WebviewActivity"
+            android:name="com.savvy.hrmsnewapp.WebviewActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data

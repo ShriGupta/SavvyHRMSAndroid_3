@@ -6,8 +6,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/shado_layer"
         android:orientation="horizontal"
@@ -18,7 +18,7 @@
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_weight="3"
+            android:layout_weight="3.5"
             android:gravity="start|center"
 
             android:textColor="#000000"
@@ -28,7 +28,7 @@
         <com.savvy.hrmsnewapp.customwidgets.CustomTextView
             android:layout_width="0dip"
             android:layout_height="match_parent"
-            android:layout_weight=".5"
+            android:layout_weight=".3"
             android:gravity="start|center"
             android:text=":"
             android:textStyle="bold" />
@@ -37,7 +37,7 @@
             android:id="@+id/tv_captionValue"
             android:layout_width="0dip"
             android:layout_height="match_parent"
-            android:layout_weight="6.5"
+            android:layout_weight="6.2"
             android:paddingLeft="10dp"
             android:gravity="start|center"
             android:textColor="#000000"

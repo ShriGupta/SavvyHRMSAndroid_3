@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.android.volley.AuthFailureError;
@@ -31,6 +33,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.savvy.hrmsnewapp.R;
 import com.savvy.hrmsnewapp.activity.EmployeeDetailActivity;
+import com.savvy.hrmsnewapp.adapter.EmployeeDynamicProfileAdapter;
 import com.savvy.hrmsnewapp.adapter.MyTeamMembersAdapter;
 import com.savvy.hrmsnewapp.adapter.TeamMembersDemoAdapter;
 import com.savvy.hrmsnewapp.customwidgets.CircularImageView;
@@ -42,6 +45,7 @@ import com.savvy.hrmsnewapp.utils.Utilities;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -76,6 +80,10 @@ public class MyTeamMembers extends BaseFragment {
     String EMPLOYEE_NAME_1 = "", EMPLOYEE_ID_1 = "", EMPLOYEE_CODE_1 = "", PHOTO_CODE = "", DEPARTMENT = "", DESIGNATION = "", BRANCH = "";
 
     int listTouchCount=0;
+
+    String EMP_PIC_URL="";
+    ArrayList<HashMap<String, String>> dynamicArraylist;
+    EmployeeDynamicProfileAdapter profileAdapter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +92,7 @@ public class MyTeamMembers extends BaseFragment {
         shared = getActivity().getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         shared_1 = getActivity().getSharedPreferences("PROFILE_SESSION", MODE_PRIVATE);
         arlData = new ArrayList<>();
+        dynamicArraylist=new ArrayList<>();
 
 //        getTeamRequestStatus();
     }
@@ -282,12 +291,9 @@ public class MyTeamMembers extends BaseFragment {
                         if(listTouchCount==0){
                             final HashMap<String, String> mapdata = arlData.get(pos);
                             String employeeId = mapdata.get("employeeId");
-                            String pic = mapdata.get("photoCode");
-                            Log.e(TAG, "onClick: employeeId "+employeeId +" employeeName: "+employeeName );
-                            Intent intent=new Intent(requireActivity(), EmployeeDetailActivity.class);
-                            intent.putExtra("EMP_ID",employeeId);
-                            intent.putExtra("PHOTO_CODE",pic);
-                            startActivity(intent);
+                            EMP_PIC_URL = mapdata.get("photoCode");
+                            dynamicArraylist.clear();
+                            getEmployeeDetail(employeeId);
                         }
                         listTouchCount++;
                     }
@@ -549,6 +555,90 @@ public class MyTeamMembers extends BaseFragment {
 
         }
 
+    }
+
+    private void getEmployeeDetail(String emp_id) {
+        if (Utilities.isNetworkAvailable(requireActivity())) {
+            String url = Constants.IP_ADDRESS + "/SavvyMobileService.svc/EmployeeDetailsPostDynamic";
+            JSONObject params_final = new JSONObject();
+
+            try {
+                params_final.put("employeeId", emp_id);
+                params_final.put("securityToken", shared.getString("Token", ""));
+            } catch (JSONException e) {
+                Log.e("TAG", "getEmployeeDetail: ",e );
+            }
+            RequestQueue requestQueue = Volley.newRequestQueue(requireActivity());
+
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, params_final,
+                    response -> {
+                        HashMap<String, String> hashMap;
+                        try {
+                            JSONArray jarray = response.getJSONArray("EmployeeDetailsPostDynamicResult");
+
+                            if (jarray.length() > 0) {
+                                for (int i = 0; i < jarray.length(); i++) {
+                                    hashMap = new HashMap<>();
+                                    hashMap.put("CaptionKey", jarray.getJSONObject(i).getString("CaptionName"));
+                                    hashMap.put("CaptionValue", jarray.getJSONObject(i).getString("CaptionValue"));
+                                    dynamicArraylist.add(hashMap);
+                                }
+                                showEmpDetailDialog(dynamicArraylist);
+                            }
+
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                            Log.e("Error In", "" + ex.getMessage());
+                        }
+
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    error.printStackTrace();
+                    Log.d("Error", "" + error.getMessage());
+                }
+            }) {
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("securityToken", shared.getString("EMPLOYEE_ID_FINAL", ""));
+                    return params;
+                }
+
+
+                @Override
+                public String getBodyContentType() {
+                    return "application/json";
+                }
+            };
+
+            int socketTimeout = 3000000;
+            RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+            jsonObjectRequest.setRetryPolicy(policy);
+            requestQueue.add(jsonObjectRequest);
+        }
+
+    }
+
+    private void showEmpDetailDialog(ArrayList<HashMap<String, String>> dynamicArraylist){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
+        View dialogView = LayoutInflater.from(requireActivity()).inflate(R.layout.emp_detail_dialog, null, false);
+        RecyclerView list=dialogView.findViewById(R.id.rv_emp_list);
+        list.setLayoutManager(new LinearLayoutManager(requireActivity()));
+        ImageView imageview=dialogView.findViewById(R.id.iv_profile);
+        if (EMP_PIC_URL.equals("")) {
+            imageview.setImageResource(R.drawable.profile_image);
+        } else {
+            Picasso.get().load(EMP_PIC_URL).error(R.drawable.profile_image).into(imageview);
+        }
+        profileAdapter = new EmployeeDynamicProfileAdapter(requireActivity(), dynamicArraylist);
+        list.setAdapter(profileAdapter);
+
+        builder.setView(dialogView);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.setCancelable(true);
+        alertDialog.show();
     }
 
 }

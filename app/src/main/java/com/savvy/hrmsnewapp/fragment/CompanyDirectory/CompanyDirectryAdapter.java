@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.savvy.hrmsnewapp.R;
 import com.savvy.hrmsnewapp.fragment.CompanyDirectory.model.MyHierarchyBasedOnRolePostResult;
+import com.savvy.hrmsnewapp.interfaces.ItemClickListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -22,9 +23,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class CompanyDirectryAdapter extends RecyclerView.Adapter<CompanyDirectryAdapter.MyViewHolder> {
     List<MyHierarchyBasedOnRolePostResult> list;
     Context context;
-    public CompanyDirectryAdapter(List<MyHierarchyBasedOnRolePostResult> list,Context context){
+
+    ItemClickListener itemClickListener;
+    public CompanyDirectryAdapter(List<MyHierarchyBasedOnRolePostResult> list, Context context, ItemClickListener itemClickListener){
         this.list=list;
         this.context=context;
+        this.itemClickListener=itemClickListener;
     }
 
     @NonNull
@@ -44,6 +48,10 @@ public class CompanyDirectryAdapter extends RecyclerView.Adapter<CompanyDirectry
         if(!list.get(position).getPhotoCode().equals("")){
             Picasso.get().load(list.get(position).getPhotoCode()).error(R.drawable.profile_rounded).into(holder.circleImageView);
         }
+        holder.itemView.setOnClickListener(v -> {
+            String data=list.get(holder.getAdapterPosition()).getEmployeeId()+"@"+list.get(position).getPhotoCode();
+            itemClickListener.onClickItem(position,data);
+        });
     }
 
     @Override

@@ -5269,6 +5269,7 @@ int layout dialogbox_leave_approval 0x7f0c0093
 int layout dialogbox_request_cancel 0x7f0c0094
 int layout dimens 0x7f0c0095
 int layout dp_example 0x7f0c0096
+int layout emp_detail_dialog 0x7f0c0204
 int layout employee_dynamic_profile_adapter 0x7f0c0097
 int layout exp_recycle_adapterview_row 0x7f0c0098
 int layout expandable_list_title 0x7f0c0099

@@ -1,4 +1,4 @@
-#Sun Jul 16 20:20:22 IST 2023
+#Sat Jul 22 19:31:01 IST 2023
 base.1=D\:\\SavvyHRMS\\Saavy Project\\SavvyHRMSAndroid_3\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
 path.1=classes2.dex
 base.0=D\:\\SavvyHRMS\\Saavy Project\\SavvyHRMSAndroid_3\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
