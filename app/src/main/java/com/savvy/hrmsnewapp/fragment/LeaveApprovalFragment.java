@@ -6,9 +6,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.Html;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -433,6 +435,7 @@ public class LeaveApprovalFragment extends BaseFragment {
                                 try {
                                     int res = response.getInt("ProcessLeaveRequestPostResult");
                                     if (res == 1) {
+                                        tg_text = "true";
                                         Utilities.showDialog(coordinatorLayout, "Leave Request processed sucessfully.");
                                         getLeaveApproval(empoyeeId);
                                     } else if (res > 1) {
@@ -449,11 +452,11 @@ public class LeaveApprovalFragment extends BaseFragment {
                     public void onErrorResponse(VolleyError error) {
 
                     }
-                }){
+                }) {
                     @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         Map<String, String> params = new HashMap<String, String>();
-                        params.put("securityToken", shared.getString("EMPLOYEE_ID_FINAL",""));
+                        params.put("securityToken", shared.getString("EMPLOYEE_ID_FINAL", ""));
                         return params;
                     }
 
