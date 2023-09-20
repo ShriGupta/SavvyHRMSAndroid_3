@@ -1,12 +1,12 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.savvy.hrmsnewapp"
-4    android:versionCode="54"
-5    android:versionName="6.8" >
+4    android:versionCode="55"
+5    android:versionName="6.9" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-9        android:targetSdkVersion="31" />
+9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 11-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\debug\AndroidManifest.xml:3:5-79

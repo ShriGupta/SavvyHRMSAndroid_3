@@ -10,7 +10,7 @@ android {
             storePassword 'orasis!@#$%'
         }
     }
-    compileSdkVersion 31
+    compileSdkVersion 33
     buildToolsVersion '28.0.3'
     useLibrary 'org.apache.http.legacy'
     dexOptions {
@@ -20,9 +20,9 @@ android {
         multiDexEnabled true
         applicationId 'com.savvy.hrmsnewapp'
         minSdkVersion 24
-        targetSdkVersion 31
-        versionName '6.8'
-        versionCode 54
+        targetSdkVersion 33
+        versionName '6.9'
+        versionCode 55
 
 //        minVersionName "1.12.2"
 //        minVersionCode 4
