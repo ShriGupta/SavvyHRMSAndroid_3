@@ -23,9 +23,6 @@ android {
         targetSdkVersion 33
         versionName '6.9'
         versionCode 55
-
-//        minVersionName "1.12.2"
-//        minVersionCode 4
     }
     buildTypes {
         debug {
