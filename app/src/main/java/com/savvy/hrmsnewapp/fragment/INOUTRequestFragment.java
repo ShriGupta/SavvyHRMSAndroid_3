@@ -367,7 +367,22 @@ public class INOUTRequestFragment extends BaseFragment {
                     }else {
                         if (!supplier_name.contains("TRAVELLING")) {
                             if (!btn_InOutdate.getText().toString().isEmpty() && !meetingtype.equals("") && !worktype.equals("") && !chargestype.equals("") && !supplierid.equals("")) {
-                                saveAllDetails();
+                                if(meetingtype.equals("1") && non_ncr_radio.isChecked()){
+                                    if(hotelid.equals("")){
+                                        Toast.makeText(getActivity(), "Please Enter Hotel Details", Toast.LENGTH_SHORT).show();
+                                    }else if(flightid.equals("")){
+                                        Toast.makeText(getActivity(), "Please Enter Flight Details", Toast.LENGTH_SHORT).show();
+                                    }else if(trainid.equals("")){
+                                        Toast.makeText(getActivity(), "Please Enter Train Details", Toast.LENGTH_SHORT).show();
+                                    }else if(cabtype_id.equals("") || cabtmt.equals("")){
+                                        Toast.makeText(getActivity(), "Please Enter Cab Details", Toast.LENGTH_SHORT).show();
+                                    }else {
+                                        saveAllDetails();
+                                    }
+                                }else {
+                                    saveAllDetails();
+                                }
+
                             } else {
                                 Toast.makeText(getActivity(), "Please select all required feilds", Toast.LENGTH_SHORT).show();
                             }
@@ -1512,6 +1527,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                             if (!spin_cab_type.getSelectedItem().toString().equals("Please Select")) {
                                                 cabtype_id = spinnerIDArray.get(position).toString();
                                                 cabtype = spinnerArray.get(position).toString();
+                                            }else {
+                                                cabtype_id="";
                                             }
                                         }
 
@@ -1615,6 +1632,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                                     btn_cabuploadFile.setVisibility(View.GONE);
                                                     binding.cabAmount.setVisibility(View.GONE);
                                                 }
+                                            }else{
+                                                cabtmt="";
                                             }
                                         }
 
@@ -1642,7 +1661,10 @@ public class INOUTRequestFragment extends BaseFragment {
                                                     binding.hotelAmountEtv.setVisibility(View.GONE);
                                                     binding.btnHotelUploadFile.setVisibility(View.GONE);
                                                 }
+                                            }else {
+                                                hotelid="";
                                             }
+
                                         }
 
                                         @Override
@@ -1667,6 +1689,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                                     binding.trainAmountEtv.setVisibility(View.GONE);
                                                     binding.btnTrainUploadFile.setVisibility(View.GONE);
                                                 }
+                                            }else {
+                                                trainid="";
                                             }
                                         }
 
@@ -1681,8 +1705,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                         public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                                             // your code here
                                             if (!flight_book_spinner.getSelectedItem().toString().equals("Please Select")) {
-                                                flightid = spinnerIDArray.get(position).toString();
-                                                flightbookby = spinnerArray.get(position).toString();
+                                                flightid = spinnerIDArray.get(position);
+                                                flightbookby = spinnerArray.get(position);
                                                 if (flight_book_spinner.getSelectedItem().toString().contains("Self")) {
                                                     binding.flightAmountEtv.setVisibility(View.VISIBLE);
                                                     binding.btnFlightUploadFile.setVisibility(View.VISIBLE);
@@ -1690,6 +1714,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                                     binding.flightAmountEtv.setVisibility(View.GONE);
                                                     binding.btnFlightUploadFile.setVisibility(View.GONE);
                                                 }
+                                            }else {
+                                                flightid="";
                                             }
                                         }
 

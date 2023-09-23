@@ -310,5 +310,6 @@ settings. </string>
     <string name="select_file">File Chooser</string>
     <string name="location_string">Please Enable Your Device Location</string>
     <string name="whf_sub_status">WHF Sub Status</string>
+    <string name="mandays_rate">Mandays Rate</string>
 </resources>
 

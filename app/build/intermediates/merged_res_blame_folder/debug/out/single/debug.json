@@ -2024,6 +2024,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "com.savvy.hrmsnewapp-merged_res-37:/layout_in_out_request_fragment.xml.flat",
+        "source": "com.savvy.hrmsnewapp-main-39:/layout/in_out_request_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\drawable-xxhdpi_error_icon.png.flat",
         "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable-xxhdpi\\error_icon.png"
     },
@@ -2742,10 +2746,6 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\drawable-xxhdpi_thought_image.jpg.flat",
         "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-main-39:\\drawable-xxhdpi\\thought_image.jpg"
-    },
-    {
-        "merged": "com.savvy.hrmsnewapp-merged_res-37:/layout_emp_detail_dialog.xml.flat",
-        "source": "com.savvy.hrmsnewapp-main-39:/layout/emp_detail_dialog.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\daemon\\7.5\\com.savvy.hrmsnewapp-merged_res-37:\\mipmap-hdpi_ic_back_button_round.png.flat",

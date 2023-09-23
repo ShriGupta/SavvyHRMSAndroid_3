@@ -26,7 +26,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -485,7 +485,7 @@
                                       android:layout_marginLeft="10dp"
                                       android:layout_weight="3"
                                       android:gravity="center_vertical"
-                                      android:text="Conveyance"
+                                      android:text="@string/mandays_rate"
                                       android:textColor="@color/my_custom_color"
                                       android:textSize="@dimen/_10ssp" />
 
@@ -1284,7 +1284,7 @@
 
                                   <LinearLayout
                                       android:layout_width="match_parent"
-                                      android:layout_height="@dimen/_30sdp"
+                                      android:layout_height="@dimen/_35sdp"
                                       android:layout_marginTop="10dp"
                                       android:gravity="center_vertical"
                                       android:orientation="horizontal"
@@ -1298,8 +1298,8 @@
 
                                       <Button
                                           android:id="@+id/btn_otheruploadFile"
-                                          android:layout_width="0dip"
-                                          android:layout_height="wrap_content"
+                                          android:layout_width="0dp"
+                                          android:layout_height="match_parent"
                                           android:layout_weight="7"
                                           android:background="@drawable/border_custom"
                                           android:drawableRight="@drawable/fileimage"
