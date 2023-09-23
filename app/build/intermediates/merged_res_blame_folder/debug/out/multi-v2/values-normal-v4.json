@@ -4,7 +4,7 @@
             "outputFile": "com.savvy.hrmsnewapp-mergeDebugResources-35:/values-normal-v4/values-normal-v4.xml",
             "map": [
                 {
-                    "source": "D:\\SavvyHRMS\\Saavy Project\\SavvyHRMSAndroid_3\\app\\src\\main\\res\\values-normal\\dimens.xml",
+                    "source": "D:\\SavvyHRMS App\\SavvyHRMSAndroid 3\\app\\src\\main\\res\\values-normal\\dimens.xml",
                     "from": {
                         "startLines": "3,2,4",
                         "startColumns": "4,4,4",

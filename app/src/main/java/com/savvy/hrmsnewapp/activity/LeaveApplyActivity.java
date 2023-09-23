@@ -221,10 +221,17 @@ public class LeaveApplyActivity extends BaseActivity implements View.OnClickList
     }
 
     private void init() {
-        coordinatorLayout = findViewById(R.id.coordinatorLayout);
-        edt_reason = findViewById(R.id.edt_reason);
         edt_contactNo = findViewById(R.id.edt_contactNo);
         edt_address = findViewById(R.id.edt_address);
+
+        try{
+            edt_contactNo.setText(shared.getString("Mobile",""));
+            edt_address.setText(shared.getString("Address",""));
+        }catch (Exception e){e.printStackTrace();}
+
+        coordinatorLayout = findViewById(R.id.coordinatorLayout);
+        edt_reason = findViewById(R.id.edt_reason);
+
 //        edt_workHandover=(EditText)findViewById(R.id.edt_workHandover);
         btn_fromDate = findViewById(R.id.btn_fromDate_leave);
         btn_toDate = findViewById(R.id.btn_toDate_leave);

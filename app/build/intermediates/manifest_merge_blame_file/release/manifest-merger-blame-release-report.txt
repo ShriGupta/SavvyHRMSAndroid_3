@@ -1,458 +1,458 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.savvy.hrmsnewapp"
-4    android:versionCode="55"
-5    android:versionName="6.9" >
+4    android:versionCode="56"
+5    android:versionName="7.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml
+8-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml
+9-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-11-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:6:5-79
-11-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:6:22-76
+11-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:6:5-79
+11-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:6:22-76
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:7:5-81
-12-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:7:22-78
+12-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:7:5-81
+12-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:7:22-78
 13    <uses-permission android:name="android.permission.CAMERA" />
-13-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:8:5-65
-13-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:8:22-62
+13-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:8:5-65
+13-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:8:22-62
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:9:5-81
-14-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:9:22-78
+14-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:9:5-81
+14-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:9:22-78
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:10:5-80
-15-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:10:22-77
+15-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:10:5-80
+15-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:10:22-77
 16    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-16-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:11:5-75
-16-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:11:22-72
+16-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:11:5-75
+16-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:11:22-72
 17    <uses-permission android:name="android.permission.INTERNET" />
-17-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:12:5-67
-17-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:12:22-64
+17-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:12:5-67
+17-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:12:22-64
 18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-18-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:13:5-79
-18-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:13:22-76
+18-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:13:5-79
+18-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:13:22-76
 19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-19-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:14:5-76
-19-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:14:22-73
+19-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:14:5-76
+19-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:14:22-73
 20    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-20-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:15:5-76
-20-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:15:22-73
+20-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:15:5-76
+20-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:15:22-73
 21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-21-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:16:5-77
-21-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:16:22-74
+21-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:16:5-77
+21-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:16:22-74
 22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-22-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:17:5-81
-22-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:17:22-78
+22-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:17:5-81
+22-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:17:22-78
 23
 24    <uses-feature android:name="android.hardware.location.gps" />
-24-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:19:5-66
-24-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:19:19-63
+24-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:19:5-66
+24-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:19:19-63
 25    <uses-feature
-25-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:20:5-22:35
+25-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:20:5-22:35
 26        android:name="android.hardware.camera"
-26-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:21:9-47
+26-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:21:9-47
 27        android:required="true" />
-27-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:22:9-32
+27-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:22:9-32
 28    <uses-feature
-28-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:23:5-25:35
+28-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:23:5-25:35
 29        android:name="android.hardware.sensor.accelerometer"
-29-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:24:9-61
+29-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:24:9-61
 30        android:required="true" />
-30-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:25:9-32
+30-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:25:9-32
 31    <uses-feature
-31-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+31-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
 32        android:glEsVersion="0x00020000"
-32-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+32-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
 33        android:required="true" />
-33-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+33-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
 34
 35    <queries>
-35-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
+35-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
 36
 37        <!-- Needs to be explicitly declared on Android R+ -->
 38        <package android:name="com.google.android.apps.maps" />
-38-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
-38-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+38-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+38-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\cdceac9fbddc55203d587c9644f45e10\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
 39    </queries>
 40
 41    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-41-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:25:5-77
-41-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:25:22-74
+41-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:25:5-77
+41-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:25:22-74
 42    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-42-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:26:5-68
-42-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:26:22-65
+42-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:26:5-68
+42-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:26:22-65
 43    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-43-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:5-82
-43-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:22-79
+43-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:5-82
+43-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:28:22-79
 44    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-44-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:25:5-79
-44-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:25:22-76
+44-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:25:5-79
+44-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:25:22-76
 45    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-45-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:26:5-110
-45-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:26:22-107
+45-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:26:5-110
+45-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:26:22-107
 46
 47    <application
-47-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:27:5-325:19
+47-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:27:5-325:19
 48        android:name="com.savvy.hrmsnewapp.classes.SavvyHRMS"
-48-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:28:9-42
+48-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:28:9-42
 49        android:allowBackup="false"
-49-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:29:9-36
+49-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:29:9-36
 50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-50-->[androidx.core:core:1.6.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0c97d26b8cee6e729c881d127b3af61\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+50-->[androidx.core:core:1.6.0] C:\Users\HP\.gradle\caches\transforms-3\b0c97d26b8cee6e729c881d127b3af61\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 51        android:configChanges="keyboardHidden|orientation"
-51-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:30:9-59
+51-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:30:9-59
 52        android:extractNativeLibs="false"
 53        android:fullBackupContent="false"
-53-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:31:9-42
+53-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:31:9-42
 54        android:hardwareAccelerated="false"
-54-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:32:9-44
+54-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:32:9-44
 55        android:icon="@drawable/logohrms"
-55-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:33:9-42
+55-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:33:9-42
 56        android:label="@string/app_name"
-56-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:34:9-41
+56-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:34:9-41
 57        android:largeHeap="true"
-57-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:35:9-33
+57-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:35:9-33
 58        android:requestLegacyExternalStorage="true"
-58-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:36:9-52
+58-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:36:9-52
 59        android:roundIcon="@drawable/logohrms"
-59-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:37:9-47
+59-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:37:9-47
 60        android:supportsRtl="true"
-60-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:38:9-35
+60-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:38:9-35
 61        android:theme="@style/AppTheme"
-61-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:39:9-40
+61-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:39:9-40
 62        android:usesCleartextTraffic="true" >
-62-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:40:9-44
+62-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:40:9-44
 63        <activity
-63-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:41:9-43:40
+63-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:41:9-43:40
 64            android:name="com.savvy.hrmsnewapp.activity.EmployeeDetailActivity"
-64-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:42:13-60
+64-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:42:13-60
 65            android:exported="false" />
-65-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:43:13-37
+65-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:43:13-37
 66        <activity android:name="com.savvy.hrmsnewapp.activity.BarCodeActivity" />
-66-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:44:9-62
-66-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:44:19-59
+66-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:44:9-62
+66-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:44:19-59
 67        <activity android:name="com.savvy.hrmsnewapp.activity.OfflineMarkAttendanceActivity" />
-67-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:45:9-76
-67-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:45:19-73
+67-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:45:9-76
+67-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:45:19-73
 68        <activity android:name="com.savvy.hrmsnewapp.activity.OfflineLoginActivity" />
-68-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:46:9-67
-68-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:46:19-64
+68-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:46:9-67
+68-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:46:19-64
 69        <activity android:name="com.savvy.hrmsnewapp.activity.TrackMeActivity" />
-69-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:47:9-62
-69-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:47:19-59
+69-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:47:9-62
+69-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:47:19-59
 70        <activity android:name="com.savvy.hrmsnewapp.activity.AttendanceSuccessActivity" />
-70-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:48:9-72
-70-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:48:19-69
+70-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:48:9-72
+70-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:48:19-69
 71        <activity android:name="com.savvy.hrmsnewapp.activity.FaceAttendanceActivity" />
-71-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:49:9-69
-71-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:49:19-66
+71-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:49:9-69
+71-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:49:19-66
 72        <activity
-72-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:50:9-52:50
+72-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:50:9-52:50
 73            android:name="com.savvy.hrmsnewapp.activity.BirthDayActivity"
-73-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:51:13-54
+73-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:51:13-54
 74            android:screenOrientation="sensor" />
-74-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:52:13-47
+74-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:52:13-47
 75        <activity
-75-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:53:9-56:58
+75-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:53:9-56:58
 76            android:name="com.savvy.hrmsnewapp.activity.AddNewCustomer"
-76-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:54:13-52
+76-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:54:13-52
 77            android:screenOrientation="portrait"
-77-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:55:13-49
+77-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:55:13-49
 78            android:windowSoftInputMode="adjustResize" />
-78-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:56:13-55
+78-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:56:13-55
 79
 80        <uses-library
-80-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:58:9-60:40
+80-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:58:9-60:40
 81            android:name="org.apache.http.legacy"
-81-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:59:13-50
+81-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:59:13-50
 82            android:required="false" />
-82-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:60:13-37
+82-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:60:13-37
 83
 84        <activity
-84-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:62:9-64:58
+84-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:62:9-64:58
 85            android:name="com.savvy.hrmsnewapp.activity.AddShowTripReport"
-85-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:63:13-55
+85-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:63:13-55
 86            android:windowSoftInputMode="adjustResize" />
-86-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:64:13-55
+86-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:64:13-55
 87        <activity
-87-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:65:9-67:58
+87-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:65:9-67:58
 88            android:name="com.savvy.hrmsnewapp.activity.TravelExpenseActivity"
-88-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:66:13-59
+88-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:66:13-59
 89            android:windowSoftInputMode="adjustResize" />
-89-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:67:13-55
+89-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:67:13-55
 90        <activity
-90-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:68:9-70:58
+90-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:68:9-70:58
 91            android:name="com.savvy.hrmsnewapp.activity.ItineraryDetailsWithTicketsActivity"
-91-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:69:13-73
+91-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:69:13-73
 92            android:windowSoftInputMode="adjustResize" />
-92-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:70:13-55
+92-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:70:13-55
 93        <activity
-93-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:71:9-73:58
+93-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:71:9-73:58
 94            android:name="com.savvy.hrmsnewapp.activity.TravelDeskRequest"
-94-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:72:13-55
+94-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:72:13-55
 95            android:windowSoftInputMode="adjustResize" />
-95-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:73:13-55
+95-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:73:13-55
 96        <activity
-96-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:74:9-76:58
+96-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:74:9-76:58
 97            android:name="com.savvy.hrmsnewapp.activity.TravelDeskItineraryDetails"
-97-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:75:13-64
+97-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:75:13-64
 98            android:windowSoftInputMode="adjustResize" />
-98-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:76:13-55
+98-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:76:13-55
 99        <activity
-99-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:77:9-79:58
+99-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:77:9-79:58
 100            android:name="com.savvy.hrmsnewapp.activity.AddCarPickUpActivity"
-100-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:78:13-58
+100-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:78:13-58
 101            android:windowSoftInputMode="adjustResize" />
-101-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:79:13-55
+101-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:79:13-55
 102        <activity
-102-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:80:9-82:58
+102-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:80:9-82:58
 103            android:name="com.savvy.hrmsnewapp.activity.AddAdvanceActivity"
-103-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:81:13-56
+103-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:81:13-56
 104            android:windowSoftInputMode="adjustResize" />
-104-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:82:13-55
+104-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:82:13-55
 105        <activity
-105-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:83:9-85:58
+105-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:83:9-85:58
 106            android:name="com.savvy.hrmsnewapp.activity.AddAccommodationActivity"
-106-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:84:13-62
+106-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:84:13-62
 107            android:windowSoftInputMode="adjustResize" />
-107-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:85:13-55
+107-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:85:13-55
 108        <activity
-108-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:86:9-88:58
+108-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:86:9-88:58
 109            android:name="com.savvy.hrmsnewapp.activity.AddIteneraryActivity"
-109-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:87:13-58
+109-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:87:13-58
 110            android:windowSoftInputMode="adjustResize" />
-110-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:88:13-55
+110-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:88:13-55
 111        <activity
-111-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:89:9-91:58
+111-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:89:9-91:58
 112            android:name="com.savvy.hrmsnewapp.activity.AddPassengerActivity"
-112-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:90:13-58
+112-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:90:13-58
 113            android:windowSoftInputMode="adjustResize" />
-113-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:91:13-55
+113-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:91:13-55
 114        <activity
-114-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:92:9-94:58
+114-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:92:9-94:58
 115            android:name="com.savvy.hrmsnewapp.activity.LeaveApplyFicciActivity"
-115-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:93:13-61
+115-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:93:13-61
 116            android:windowSoftInputMode="adjustResize" />
-116-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:94:13-55
+116-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:94:13-55
 117
 118        <meta-data
-118-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:96:9-98:55
+118-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:96:9-98:55
 119            android:name="com.google.android.geo.API_KEY"
-119-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:97:13-58
+119-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:97:13-58
 120            android:value="@string/google_maps_key" />
-120-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:98:13-52
+120-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:98:13-52
 121
 122        <activity
-122-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:100:9-115:20
+122-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:100:9-115:20
 123            android:name="com.savvy.hrmsnewapp.activity.SplashActivity"
-123-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:101:13-52
+123-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:101:13-52
 124            android:exported="true"
-124-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:102:13-36
+124-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:102:13-36
 125            android:label="@string/app_name"
-125-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:103:13-45
+125-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:103:13-45
 126            android:screenOrientation="portrait" >
-126-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:104:13-49
+126-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:104:13-49
 127            <intent-filter>
-127-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:105:13-109:29
+127-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:105:13-109:29
 128                <action android:name="android.intent.action.MAIN" />
-128-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:106:17-69
-128-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:106:25-66
+128-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:106:17-69
+128-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:106:25-66
 129
 130                <category android:name="android.intent.category.LAUNCHER" />
-130-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:108:17-77
-130-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:108:27-74
+130-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:108:17-77
+130-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:108:27-74
 131            </intent-filter>
 132            <intent-filter>
-132-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:110:13-114:29
+132-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:110:13-114:29
 133                <action android:name="SPLASHACTIVITY" />
-133-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:111:17-57
-133-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:111:25-54
+133-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:111:17-57
+133-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:111:25-54
 134
 135                <category android:name="android.intent.category.DEFAULT" />
-135-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:113:17-76
-135-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:113:27-73
+135-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:113:17-76
+135-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:113:27-73
 136            </intent-filter>
 137        </activity>
 138        <activity
-138-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:116:9-120:57
+138-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:116:9-120:57
 139            android:name="com.savvy.hrmsnewapp.activity.LeaveApplyActivity"
-139-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:117:13-56
+139-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:117:13-56
 140            android:exported="true"
-140-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:118:13-36
+140-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:118:13-36
 141            android:screenOrientation="fullSensor"
-141-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:119:13-51
+141-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:119:13-51
 142            android:windowSoftInputMode="stateHidden" />
-142-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:120:13-54
+142-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:120:13-54
 143        <activity
-143-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:121:9-124:54
+143-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:121:9-124:54
 144            android:name="com.savvy.hrmsnewapp.activity.CaledarView"
-144-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:122:13-49
+144-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:122:13-49
 145            android:exported="true"
-145-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:123:13-36
+145-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:123:13-36
 146            android:screenOrientation="fullSensor" />
-146-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:124:13-51
+146-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:124:13-51
 147        <activity
-147-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:125:9-130:58
+147-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:125:9-130:58
 148            android:name="com.savvy.hrmsnewapp.activity.DashBoardActivity"
-148-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:126:13-55
+148-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:126:13-55
 149            android:label="@string/title_activity_dash_board"
-149-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:127:13-62
+149-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:127:13-62
 150            android:screenOrientation="portrait"
-150-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:128:13-49
+150-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:128:13-49
 151            android:theme="@style/AppTheme.NoActionBar"
-151-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:129:13-56
+151-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:129:13-56
 152            android:windowSoftInputMode="adjustResize" />
-152-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:130:13-55
+152-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:130:13-55
 153        <activity android:name="com.savvy.hrmsnewapp.activity.ODVisitHistoryActivity" />
-153-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:131:9-69
-153-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:131:19-66
+153-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:131:9-69
+153-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:131:19-66
 154        <activity android:name="com.savvy.hrmsnewapp.activity.ViewHistoryActivity" />
-154-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:132:9-66
-154-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:132:19-63
+154-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:132:9-66
+154-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:132:19-63
 155        <activity
-155-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:133:9-137:57
+155-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:133:9-137:57
 156            android:name="com.savvy.hrmsnewapp.activity.ChangePasswordActivity"
-156-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:134:13-60
+156-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:134:13-60
 157            android:exported="true"
-157-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:135:13-36
+157-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:135:13-36
 158            android:screenOrientation="fullSensor"
-158-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:136:13-51
+158-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:136:13-51
 159            android:windowSoftInputMode="stateHidden" />
-159-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:137:13-54
+159-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:137:13-54
 160        <activity android:name="com.savvy.hrmsnewapp.activity.LeaveBalanceActivity" />
-160-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:138:9-67
-160-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:138:19-64
+160-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:138:9-67
+160-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:138:19-64
 161        <activity android:name="com.savvy.hrmsnewapp.activity.LoginActivity_1" />
-161-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:139:9-62
-161-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:139:19-59
+161-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:139:9-62
+161-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:139:19-59
 162        <activity
-162-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:140:9-143:58
+162-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:140:9-143:58
 163            android:name="com.savvy.hrmsnewapp.activity.MarkAttendance"
-163-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:141:13-52
+163-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:141:13-52
 164            android:screenOrientation="fullSensor"
-164-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:142:13-51
+164-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:142:13-51
 165            android:windowSoftInputMode="adjustResize" />
-165-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:143:13-55
+165-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:143:13-55
 166        <activity
-166-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:144:9-146:54
+166-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:144:9-146:54
 167            android:name="com.savvy.hrmsnewapp.activity.MarkAttendanceGoogleApi"
-167-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:145:13-61
+167-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:145:13-61
 168            android:screenOrientation="fullSensor" />
-168-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:146:13-51
+168-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:146:13-51
 169        <activity
-169-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:147:9-149:54
+169-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:147:9-149:54
 170            android:name="com.savvy.hrmsnewapp.activity.MarkTeamAttendanceGoogleApi"
-170-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:148:13-65
+170-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:148:13-65
 171            android:screenOrientation="fullSensor" />
-171-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:149:13-51
+171-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:149:13-51
 172        <activity android:name="com.savvy.hrmsnewapp.activity.TestingActivity" />
-172-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:150:9-62
-172-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:150:19-59
+172-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:150:9-62
+172-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:150:19-59
 173        <activity
-173-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:151:9-155:57
+173-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:151:9-155:57
 174            android:name="com.savvy.hrmsnewapp.activity.Track_Me"
-174-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:152:13-46
+174-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:152:13-46
 175            android:exported="true"
-175-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:153:13-36
+175-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:153:13-36
 176            android:screenOrientation="fullSensor"
-176-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:154:13-51
+176-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:154:13-51
 177            android:windowSoftInputMode="stateHidden" />
-177-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:155:13-54
+177-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:155:13-54
 178        <activity
-178-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:156:9-161:57
+178-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:156:9-161:57
 179            android:name="com.savvy.hrmsnewapp.activity.Track_Me_GoogleApi"
-179-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:157:13-56
+179-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:157:13-56
 180            android:exported="true"
-180-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:158:13-36
+180-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:158:13-36
 181            android:launchMode="singleTop"
-181-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:159:13-43
+181-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:159:13-43
 182            android:screenOrientation="fullSensor"
-182-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:160:13-51
+182-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:160:13-51
 183            android:windowSoftInputMode="stateHidden" />
-183-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:161:13-54
+183-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:161:13-54
 184        <activity
-184-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:162:9-166:57
+184-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:162:9-166:57
 185            android:name="com.savvy.hrmsnewapp.activity.Track_Me_Service_Google"
-185-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:163:13-61
+185-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:163:13-61
 186            android:exported="true"
-186-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:164:13-36
+186-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:164:13-36
 187            android:screenOrientation="fullSensor"
-187-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:165:13-51
+187-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:165:13-51
 188            android:windowSoftInputMode="stateHidden" />
-188-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:166:13-54
+188-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:166:13-54
 189        <activity
-189-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:167:9-170:54
+189-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:167:9-170:54
 190            android:name="com.savvy.hrmsnewapp.attendanceMark.MarkAttendance"
-190-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:168:13-58
+190-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:168:13-58
 191            android:exported="true"
-191-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:169:13-36
+191-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:169:13-36
 192            android:screenOrientation="fullSensor" />
-192-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:170:13-51
+192-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:170:13-51
 193        <activity
-193-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:171:9-174:52
+193-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:171:9-174:52
 194            android:name="com.savvy.hrmsnewapp.attendanceMark.MarkTeamAttendanceNew"
-194-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:172:13-65
+194-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:172:13-65
 195            android:exported="true"
-195-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:173:13-36
+195-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:173:13-36
 196            android:screenOrientation="portrait" />
-196-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:174:13-49
+196-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:174:13-49
 197        <activity
-197-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:175:9-178:52
+197-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:175:9-178:52
 198            android:name="com.savvy.hrmsnewapp.attendanceMark.MarkAttendanceInOut"
-198-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:176:13-63
+198-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:176:13-63
 199            android:exported="true"
-199-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:177:13-36
+199-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:177:13-36
 200            android:screenOrientation="portrait" />
-200-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:178:13-49
+200-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:178:13-49
 201        <activity
-201-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:179:9-182:52
+201-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:179:9-182:52
 202            android:name="com.savvy.hrmsnewapp.attendanceMark.MarkAttendanceMain"
-202-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:180:13-62
+202-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:180:13-62
 203            android:exported="true"
-203-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:181:13-36
+203-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:181:13-36
 204            android:screenOrientation="portrait" />
-204-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:182:13-49
+204-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:182:13-49
 205
 206        <service
-206-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:184:9-186:40
+206-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:184:9-186:40
 207            android:name="com.savvy.hrmsnewapp.service.TheService"
-207-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:185:13-47
+207-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:185:13-47
 208            android:exported="false" />
-208-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:186:13-37
+208-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:186:13-37
 209
 210        <activity
-210-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:188:9-190:52
+210-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:188:9-190:52
 211            android:name="com.savvy.hrmsnewapp.activity.SaveMarkAttWithInOut"
-211-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:189:13-58
+211-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:189:13-58
 212            android:screenOrientation="portrait" />
-212-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:190:13-49
+212-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:190:13-49
 213        <activity
-213-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:191:9-193:52
+213-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:191:9-193:52
 214            android:name="com.savvy.hrmsnewapp.saleForce.TrackGPS_GoogleApiClient"
-214-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:192:13-63
+214-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:192:13-63
 215            android:screenOrientation="portrait" />
-215-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:193:13-49
+215-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:193:13-49
 216        <activity
-216-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:194:9-196:52
+216-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:194:9-196:52
 217            android:name="com.savvy.hrmsnewapp.markPunch.OnlineTestActivity"
-217-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:195:13-57
+217-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:195:13-57
 218            android:screenOrientation="portrait" />
-218-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:196:13-49
+218-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:196:13-49
 219        <activity
-219-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:197:9-199:52
+219-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:197:9-199:52
 220            android:name="com.savvy.hrmsnewapp.markPunch.OnlineTestResultActivity"
-220-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:198:13-63
+220-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:198:13-63
 221            android:screenOrientation="portrait" />
-221-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:199:13-49
+221-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:199:13-49
 222        <activity
-222-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:200:9-202:52
+222-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:200:9-202:52
 223            android:name="com.savvy.hrmsnewapp.saleForce.GPS_TRACKER_DEMO"
-223-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:201:13-55
+223-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:201:13-55
 224            android:screenOrientation="portrait" />
-224-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:202:13-49
+224-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:202:13-49
 225        <!--
 226             The API key for Google Maps-based APIs is defined as a string resource.
 227             (See the file "res/values/google_maps_api.xml").
@@ -462,192 +462,192 @@
 231             You can define the keys for the debug and release targets in src/debug/ and src/release/.
 232        -->
 233        <activity
-233-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:211:9-215:52
+233-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:211:9-215:52
 234            android:name="com.savvy.hrmsnewapp.saleForce.SalesForceMapActivity"
-234-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:212:13-60
+234-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:212:13-60
 235            android:exported="true"
-235-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:213:13-36
+235-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:213:13-36
 236            android:label="@string/app_name"
-236-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:214:13-45
+236-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:214:13-45
 237            android:screenOrientation="portrait" />
-237-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:215:13-49
+237-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:215:13-49
 238        <activity
-238-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:216:9-220:52
+238-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:216:9-220:52
 239            android:name="com.savvy.hrmsnewapp.saleForce.NewSalesForceMapActivity"
-239-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:217:13-63
+239-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:217:13-63
 240            android:exported="true"
-240-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:218:13-36
+240-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:218:13-36
 241            android:label="@string/app_name"
-241-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:219:13-45
+241-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:219:13-45
 242            android:screenOrientation="portrait" />
-242-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:220:13-49
+242-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:220:13-49
 243        <activity android:name="com.savvy.hrmsnewapp.activity.MarkAttendanceWithInOutGoogle" />
-243-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:221:9-76
-243-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:221:19-73
+243-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:221:9-76
+243-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:221:19-73
 244
 245        <service
-245-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:223:9-225:40
+245-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:223:9-225:40
 246            android:name="com.savvy.hrmsnewapp.service.Track_Me_Service"
-246-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:224:13-53
+246-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:224:13-53
 247            android:exported="false" />
-247-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:225:13-37
+247-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:225:13-37
 248        <service
-248-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:226:9-228:40
+248-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:226:9-228:40
 249            android:name="com.savvy.hrmsnewapp.service.Track_Me_Location_Service"
-249-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:227:13-62
+249-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:227:13-62
 250            android:exported="false" />
-250-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:228:13-37
+250-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:228:13-37
 251
 252        <activity android:name="com.savvy.hrmsnewapp.activity.NewTrackServiceActivity" />
-252-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:230:9-70
-252-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:230:19-67
+252-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:230:9-70
+252-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:230:19-67
 253
 254        <service
-254-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:232:9-238:19
+254-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:232:9-238:19
 255            android:name="com.savvy.hrmsnewapp.service.MyFirebaseInstanceIdService"
-255-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:233:13-64
+255-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:233:13-64
 256            android:exported="true" >
-256-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:234:13-36
+256-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:234:13-36
 257            <intent-filter>
-257-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:235:13-237:29
+257-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:235:13-237:29
 258                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-258-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:236:17-80
-258-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:236:25-77
+258-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:236:17-80
+258-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:236:25-77
 259            </intent-filter>
 260        </service>
 261        <service
-261-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:239:9-245:19
+261-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:239:9-245:19
 262            android:name="com.savvy.hrmsnewapp.service.MyFirebaseMessagingService"
-262-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:240:13-63
+262-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:240:13-63
 263            android:exported="true" >
-263-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:241:13-36
+263-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:241:13-36
 264            <intent-filter>
-264-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:242:13-244:29
+264-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:242:13-244:29
 265                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-265-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:243:17-78
-265-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:243:25-75
+265-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:243:17-78
+265-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:243:25-75
 266            </intent-filter>
 267        </service>
 268        <service
-268-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:246:9-249:39
+268-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:246:9-249:39
 269            android:name="com.savvy.hrmsnewapp.service.BaseTrackMeService"
-269-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:247:13-55
+269-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:247:13-55
 270            android:enabled="true"
-270-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:248:13-35
+270-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:248:13-35
 271            android:exported="true" />
-271-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:249:13-36
+271-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:249:13-36
 272
 273        <receiver
-273-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:251:9-259:20
+273-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:251:9-259:20
 274            android:name="com.savvy.hrmsnewapp.service.AlarmReceiver"
-274-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:252:13-50
+274-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:252:13-50
 275            android:enabled="true"
-275-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:253:13-35
+275-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:253:13-35
 276            android:exported="true"
-276-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:254:13-36
+276-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:254:13-36
 277            android:label="RestartServiceWhenStopped" >
-277-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:255:13-54
+277-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:255:13-54
 278            <intent-filter>
-278-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:256:13-258:29
+278-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:256:13-258:29
 279                <action android:name="uk.ac.shef.oak.ActivityRecognition.RestartSensor" />
-279-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:257:17-91
-279-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:257:25-88
+279-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:257:17-91
+279-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:257:25-88
 280            </intent-filter>
 281        </receiver>
 282
 283        <activity android:name="com.savvy.hrmsnewapp.activity.Gps1Activity" />
-283-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:261:9-59
-283-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:261:19-56
+283-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:261:9-59
+283-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:261:19-56
 284
 285        <service android:name="com.savvy.hrmsnewapp.service.GoogleServices" />
-285-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:263:9-265:45
-285-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:264:13-51
+285-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:263:9-265:45
+285-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:264:13-51
 286
 287        <activity android:name="com.savvy.hrmsnewapp.activity.BaseTrackMeActivity" />
-287-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:267:9-66
-287-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:267:19-63
+287-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:267:9-66
+287-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:267:19-63
 288
 289        <service
-289-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:269:9-272:45
+289-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:269:9-272:45
 290            android:name="com.savvy.hrmsnewapp.rahul.TrackMeRahul"
-290-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:270:13-47
+290-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:270:13-47
 291            android:exported="false" />
-291-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:271:13-37
+291-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:271:13-37
 292        <service
-292-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:273:9-275:40
+292-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:273:9-275:40
 293            android:name="com.savvy.hrmsnewapp.service.VisService"
-293-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:274:13-47
+293-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:274:13-47
 294            android:exported="false" />
-294-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:275:13-37
+294-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:275:13-37
 295        <service
-295-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:276:9-278:40
+295-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:276:9-278:40
 296            android:name="com.savvy.hrmsnewapp.service.LocationService"
-296-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:277:13-52
+296-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:277:13-52
 297            android:exported="false" />
-297-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:278:13-37
+297-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:278:13-37
 298
 299        <activity
-299-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:280:9-288:20
+299-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:280:9-288:20
 300            android:name="com.savvy.hrmsnewapp.activity.MainActivity"
-300-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:281:13-50
+300-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:281:13-50
 301            android:exported="true" >
-301-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:282:13-36
+301-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:282:13-36
 302            <intent-filter>
-302-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:283:13-287:29
+302-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:283:13-287:29
 303                <action android:name="MAINACTIVITY" />
-303-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:284:17-55
-303-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:284:25-52
+303-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:284:17-55
+303-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:284:25-52
 304
 305                <category android:name="android.intent.category.DEFAULT" />
-305-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:113:17-76
-305-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:113:27-73
+305-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:113:17-76
+305-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:113:27-73
 306            </intent-filter>
 307        </activity>
 308        <activity
-308-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:289:9-296:20
+308-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:289:9-296:20
 309            android:name="com.savvy.hrmsnewapp.WebviewActivity"
-309-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:290:13-44
+309-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:290:13-44
 310            android:exported="false"
-310-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:291:13-37
+310-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:291:13-37
 311            android:theme="@style/AppTheme.NoActionBar" >
-311-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:292:13-56
+311-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:292:13-56
 312            <meta-data
-312-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:293:13-295:36
+312-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:293:13-295:36
 313                android:name="android.app.lib_name"
-313-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:294:17-52
+313-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:294:17-52
 314                android:value="" />
-314-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:295:17-33
+314-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:295:17-33
 315        </activity>
 316        <activity android:name="com.savvy.hrmsnewapp.fragment.CustomerVisit_GOIP" />
-316-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:297:9-299:45
-316-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:298:13-56
+316-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:297:9-299:45
+316-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:298:13-56
 317        <activity android:name="com.savvy.hrmsnewapp.adapter.CustomerAdapterList" />
-317-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:300:9-65
-317-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:300:19-62
+317-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:300:9-65
+317-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:300:19-62
 318
 319        <meta-data
-319-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:302:9-304:36
+319-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:302:9-304:36
 320            android:name="com.google.mlkit.vision.DEPENDENCIES"
-320-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:303:13-64
+320-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:303:13-64
 321            android:value="face" />
-321-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:304:13-33
+321-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:304:13-33
 322
 323        <provider
-323-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:306:9-314:20
+323-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:306:9-314:20
 324            android:name="androidx.core.content.FileProvider"
-324-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:307:13-62
+324-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:307:13-62
 325            android:authorities="com.savvy.hrmsnewapp.fileprovider"
-325-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:308:13-68
+325-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:308:13-68
 326            android:exported="false"
-326-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:309:13-37
+326-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:309:13-37
 327            android:grantUriPermissions="true" >
-327-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:310:13-47
+327-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:310:13-47
 328            <meta-data
-328-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:311:13-313:54
+328-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:311:13-313:54
 329                android:name="android.support.FILE_PROVIDER_PATHS"
-329-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:312:17-67
+329-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:312:17-67
 330                android:resource="@xml/file_paths" />
-330-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:313:17-51
+330-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:313:17-51
 331        </provider>
 332        <!--
 333    <service
@@ -657,66 +657,66 @@
 337              />
 338        -->
 339        <receiver
-339-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:322:9-324:39
+339-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:322:9-324:39
 340            android:name="com.savvy.hrmsnewapp.receiver.TrackMeReceiver"
-340-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:323:13-53
+340-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:323:13-53
 341            android:exported="true" />
-341-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:324:13-36
+341-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:324:13-36
 342
 343        <activity
-343-->[com.karumi:dexter:4.2.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\df0bd269fd11faec79d76610469906fb\transformed\jetified-dexter-4.2.0\AndroidManifest.xml:27:9-29:72
+343-->[com.karumi:dexter:4.2.0] C:\Users\HP\.gradle\caches\transforms-3\df0bd269fd11faec79d76610469906fb\transformed\jetified-dexter-4.2.0\AndroidManifest.xml:27:9-29:72
 344            android:name="com.karumi.dexter.DexterActivity"
-344-->[com.karumi:dexter:4.2.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\df0bd269fd11faec79d76610469906fb\transformed\jetified-dexter-4.2.0\AndroidManifest.xml:28:13-60
+344-->[com.karumi:dexter:4.2.0] C:\Users\HP\.gradle\caches\transforms-3\df0bd269fd11faec79d76610469906fb\transformed\jetified-dexter-4.2.0\AndroidManifest.xml:28:13-60
 345            android:theme="@style/Dexter.Internal.Theme.Transparent" />
-345-->[com.karumi:dexter:4.2.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\df0bd269fd11faec79d76610469906fb\transformed\jetified-dexter-4.2.0\AndroidManifest.xml:29:13-69
+345-->[com.karumi:dexter:4.2.0] C:\Users\HP\.gradle\caches\transforms-3\df0bd269fd11faec79d76610469906fb\transformed\jetified-dexter-4.2.0\AndroidManifest.xml:29:13-69
 346
 347        <provider
-347-->[com.squareup.picasso:picasso:2.71828] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+347-->[com.squareup.picasso:picasso:2.71828] C:\Users\HP\.gradle\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 348            android:name="com.squareup.picasso.PicassoProvider"
-348-->[com.squareup.picasso:picasso:2.71828] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+348-->[com.squareup.picasso:picasso:2.71828] C:\Users\HP\.gradle\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 349            android:authorities="com.savvy.hrmsnewapp.com.squareup.picasso"
-349-->[com.squareup.picasso:picasso:2.71828] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+349-->[com.squareup.picasso:picasso:2.71828] C:\Users\HP\.gradle\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 350            android:exported="false" />
-350-->[com.squareup.picasso:picasso:2.71828] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+350-->[com.squareup.picasso:picasso:2.71828] C:\Users\HP\.gradle\caches\transforms-3\96500e61fd7e70a0296814482b0f6727\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 351
 352        <activity
-352-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:23:9-27:75
+352-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:23:9-27:75
 353            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-353-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:24:13-93
+353-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:24:13-93
 354            android:excludeFromRecents="true"
-354-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:25:13-46
+354-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:25:13-46
 355            android:exported="false"
-355-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:26:13-37
+355-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:26:13-37
 356            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-356-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:27:13-72
+356-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:27:13-72
 357        <!--
 358            Service handling Google Sign-In user revocation. For apps that do not integrate with
 359            Google Sign-In, this service will never be started.
 360        -->
 361        <service
-361-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:33:9-37:51
+361-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:33:9-37:51
 362            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-362-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:34:13-89
+362-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:34:13-89
 363            android:exported="true"
-363-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:35:13-36
+363-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:35:13-36
 364            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-364-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:36:13-107
+364-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:36:13-107
 365            android:visibleToInstantApps="true" />
-365-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:37:13-48
+365-->[com.google.android.gms:play-services-auth:20.4.0] C:\Users\HP\.gradle\caches\transforms-3\d2209ea9c961e32c79de83472917e630\transformed\jetified-play-services-auth-20.4.0\AndroidManifest.xml:37:13-48
 366
 367        <receiver
-367-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:31:9-38:20
+367-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:31:9-38:20
 368            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-368-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:32:13-78
+368-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:32:13-78
 369            android:exported="true"
-369-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:33:13-36
+369-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:33:13-36
 370            android:permission="com.google.android.c2dm.permission.SEND" >
-370-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:34:13-73
+370-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:34:13-73
 371            <intent-filter>
-371-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:35:13-37:29
+371-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:35:13-37:29
 372                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-372-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:36:17-81
-372-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:36:25-78
+372-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:36:17-81
+372-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:36:25-78
 373            </intent-filter>
 374        </receiver>
 375        <!--
@@ -724,351 +724,351 @@
 377             but set to not exported to explicitly avoid allowing another app to call it.
 378        -->
 379        <service
-379-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:44:9-51:19
+379-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:44:9-51:19
 380            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-380-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:45:13-82
+380-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:45:13-82
 381            android:directBootAware="true"
-381-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:46:13-43
+381-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:46:13-43
 382            android:exported="false" >
-382-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:47:13-37
+382-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:47:13-37
 383            <intent-filter android:priority="-500" >
-383-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:242:13-244:29
+383-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:242:13-244:29
 384                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-384-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:243:17-78
-384-->D:\SavvyHRMS\Saavy Project\SavvyHRMSAndroid_3\app\src\main\AndroidManifest.xml:243:25-75
+384-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:243:17-78
+384-->D:\SavvyHRMS App\SavvyHRMSAndroid 3\app\src\main\AndroidManifest.xml:243:25-75
 385            </intent-filter>
 386        </service>
 387        <service
-387-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:52:9-58:19
+387-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:52:9-58:19
 388            android:name="com.google.firebase.components.ComponentDiscoveryService"
-388-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:53:13-84
+388-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:53:13-84
 389            android:directBootAware="true"
-389-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:34:13-43
+389-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP\.gradle\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:34:13-43
 390            android:exported="false" >
-390-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:54:13-37
+390-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:54:13-37
 391            <meta-data
-391-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:55:13-57:85
+391-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:55:13-57:85
 392                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-392-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:56:17-119
+392-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:56:17-119
 393                android:value="com.google.firebase.components.ComponentRegistrar" />
-393-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:57:17-82
+393-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\HP\.gradle\caches\transforms-3\e1eb7eec340b59fdb4f085d1b5dfd6d4\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:57:17-82
 394            <meta-data
-394-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\c858b99e592cf510f87506c2237c93e4\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:17:13-19:85
+394-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\HP\.gradle\caches\transforms-3\c858b99e592cf510f87506c2237c93e4\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:17:13-19:85
 395                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-395-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\c858b99e592cf510f87506c2237c93e4\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:18:17-115
+395-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\HP\.gradle\caches\transforms-3\c858b99e592cf510f87506c2237c93e4\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:18:17-115
 396                android:value="com.google.firebase.components.ComponentRegistrar" />
-396-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\c858b99e592cf510f87506c2237c93e4\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:19:17-82
+396-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\HP\.gradle\caches\transforms-3\c858b99e592cf510f87506c2237c93e4\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:19:17-82
 397            <meta-data
-397-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\a1095fc888720489e602243d99d8e083\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+397-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HP\.gradle\caches\transforms-3\a1095fc888720489e602243d99d8e083\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
 398                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-398-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\a1095fc888720489e602243d99d8e083\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+398-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HP\.gradle\caches\transforms-3\a1095fc888720489e602243d99d8e083\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
 399                android:value="com.google.firebase.components.ComponentRegistrar" />
-399-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\a1095fc888720489e602243d99d8e083\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+399-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\HP\.gradle\caches\transforms-3\a1095fc888720489e602243d99d8e083\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
 400            <meta-data
-400-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:31:13-33:85
+400-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:31:13-33:85
 401                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-401-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:32:17-139
+401-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:32:17-139
 402                android:value="com.google.firebase.components.ComponentRegistrar" />
-402-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:33:17-82
+402-->[com.google.android.gms:play-services-measurement-api:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\93dfa6b85ea5f668f37773a35cb0c951\transformed\jetified-play-services-measurement-api-21.2.1\AndroidManifest.xml:33:17-82
 403            <meta-data
-403-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\919591553fce02ace807672a5245d601\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+403-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\HP\.gradle\caches\transforms-3\919591553fce02ace807672a5245d601\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
 404                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-404-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\919591553fce02ace807672a5245d601\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
+404-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\HP\.gradle\caches\transforms-3\919591553fce02ace807672a5245d601\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
 405                android:value="com.google.firebase.components.ComponentRegistrar" />
-405-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\919591553fce02ace807672a5245d601\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
+405-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\HP\.gradle\caches\transforms-3\919591553fce02ace807672a5245d601\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
 406        </service>
 407
 408        <provider
-408-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:31:9-39:20
+408-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:31:9-39:20
 409            android:name="androidx.startup.InitializationProvider"
-409-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:32:13-67
+409-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:32:13-67
 410            android:authorities="com.savvy.hrmsnewapp.androidx-startup"
-410-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:33:13-68
+410-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:33:13-68
 411            android:exported="false" >
-411-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:34:13-37
+411-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:34:13-37
 412            <meta-data
-412-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:36:13-38:52
+412-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:36:13-38:52
 413                android:name="androidx.work.WorkManagerInitializer"
-413-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:37:17-68
+413-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:37:17-68
 414                android:value="androidx.startup" />
-414-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:38:17-49
+414-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:38:17-49
 415        </provider>
 416
 417        <service
-417-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:41:9-46:35
+417-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:41:9-46:35
 418            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-418-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:42:13-88
+418-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:42:13-88
 419            android:directBootAware="false"
-419-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:43:13-44
+419-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:43:13-44
 420            android:enabled="@bool/enable_system_alarm_service_default"
-420-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:44:13-72
+420-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:44:13-72
 421            android:exported="false" />
-421-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:45:13-37
+421-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:45:13-37
 422        <service
-422-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:47:9-53:35
+422-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:47:9-53:35
 423            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-423-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:48:13-84
+423-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:48:13-84
 424            android:directBootAware="false"
-424-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:49:13-44
+424-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:49:13-44
 425            android:enabled="@bool/enable_system_job_service_default"
-425-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:50:13-70
+425-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:50:13-70
 426            android:exported="true"
-426-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:51:13-36
+426-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:51:13-36
 427            android:permission="android.permission.BIND_JOB_SERVICE" />
-427-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:52:13-69
+427-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:52:13-69
 428        <service
-428-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:54:9-59:35
+428-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:54:9-59:35
 429            android:name="androidx.work.impl.foreground.SystemForegroundService"
-429-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:55:13-81
+429-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:55:13-81
 430            android:directBootAware="false"
-430-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:56:13-44
+430-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:56:13-44
 431            android:enabled="@bool/enable_system_foreground_service_default"
-431-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:57:13-77
+431-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:57:13-77
 432            android:exported="false" />
-432-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:58:13-37
+432-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:58:13-37
 433
 434        <receiver
-434-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:61:9-66:35
+434-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:61:9-66:35
 435            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-435-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:62:13-88
+435-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:62:13-88
 436            android:directBootAware="false"
-436-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:63:13-44
+436-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:63:13-44
 437            android:enabled="true"
-437-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:64:13-35
+437-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:64:13-35
 438            android:exported="false" />
-438-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:65:13-37
+438-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:65:13-37
 439        <receiver
-439-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:67:9-77:20
+439-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:67:9-77:20
 440            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-440-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:68:13-106
+440-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:68:13-106
 441            android:directBootAware="false"
-441-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:69:13-44
+441-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:69:13-44
 442            android:enabled="false"
-442-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:70:13-36
+442-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:70:13-36
 443            android:exported="false" >
-443-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:71:13-37
+443-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:71:13-37
 444            <intent-filter>
-444-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:73:13-76:29
+444-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:73:13-76:29
 445                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-445-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:17-87
-445-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:25-84
+445-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:17-87
+445-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:74:25-84
 446                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-446-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:17-90
-446-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:25-87
+446-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:17-90
+446-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:75:25-87
 447            </intent-filter>
 448        </receiver>
 449        <receiver
-449-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:78:9-88:20
+449-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:78:9-88:20
 450            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-450-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:79:13-104
+450-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:79:13-104
 451            android:directBootAware="false"
-451-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:80:13-44
+451-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:80:13-44
 452            android:enabled="false"
-452-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:81:13-36
+452-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:81:13-36
 453            android:exported="false" >
-453-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:82:13-37
+453-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:82:13-37
 454            <intent-filter>
-454-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:84:13-87:29
+454-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:84:13-87:29
 455                <action android:name="android.intent.action.BATTERY_OKAY" />
-455-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:17-77
-455-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:25-74
+455-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:17-77
+455-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:85:25-74
 456                <action android:name="android.intent.action.BATTERY_LOW" />
-456-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:17-76
-456-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:25-73
+456-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:17-76
+456-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:86:25-73
 457            </intent-filter>
 458        </receiver>
 459        <receiver
-459-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:89:9-99:20
+459-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:89:9-99:20
 460            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-460-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:90:13-104
+460-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:90:13-104
 461            android:directBootAware="false"
-461-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:91:13-44
+461-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:91:13-44
 462            android:enabled="false"
-462-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:92:13-36
+462-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:92:13-36
 463            android:exported="false" >
-463-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:93:13-37
+463-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:93:13-37
 464            <intent-filter>
-464-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:95:13-98:29
+464-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:95:13-98:29
 465                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-465-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:17-83
-465-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:25-80
+465-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:17-83
+465-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:96:25-80
 466                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-466-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:17-82
-466-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:25-79
+466-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:17-82
+466-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:97:25-79
 467            </intent-filter>
 468        </receiver>
 469        <receiver
-469-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:100:9-109:20
+469-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:100:9-109:20
 470            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-470-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:101:13-103
+470-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:101:13-103
 471            android:directBootAware="false"
-471-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:102:13-44
+471-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:102:13-44
 472            android:enabled="false"
-472-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:103:13-36
+472-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:103:13-36
 473            android:exported="false" >
-473-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:104:13-37
+473-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:104:13-37
 474            <intent-filter>
-474-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:106:13-108:29
+474-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:106:13-108:29
 475                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-475-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:17-79
-475-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:25-76
+475-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:17-79
+475-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:107:25-76
 476            </intent-filter>
 477        </receiver>
 478        <receiver
-478-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:110:9-121:20
+478-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:110:9-121:20
 479            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-479-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:111:13-88
+479-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:111:13-88
 480            android:directBootAware="false"
-480-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:112:13-44
+480-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:112:13-44
 481            android:enabled="false"
-481-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:113:13-36
+481-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:113:13-36
 482            android:exported="false" >
-482-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:114:13-37
+482-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:114:13-37
 483            <intent-filter>
-483-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:116:13-120:29
+483-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:116:13-120:29
 484                <action android:name="android.intent.action.BOOT_COMPLETED" />
-484-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:117:17-79
-484-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:117:25-76
+484-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:117:17-79
+484-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:117:25-76
 485                <action android:name="android.intent.action.TIME_SET" />
-485-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:17-73
-485-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:25-70
+485-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:17-73
+485-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:25-70
 486                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-486-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:17-81
-486-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:25-78
+486-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:17-81
+486-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:119:25-78
 487            </intent-filter>
 488        </receiver>
 489        <receiver
-489-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:122:9-131:20
+489-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:122:9-131:20
 490            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-490-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:123:13-99
+490-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:123:13-99
 491            android:directBootAware="false"
-491-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:124:13-44
+491-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:124:13-44
 492            android:enabled="@bool/enable_system_alarm_service_default"
-492-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:125:13-72
+492-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:125:13-72
 493            android:exported="false" >
-493-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:126:13-37
+493-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:126:13-37
 494            <intent-filter>
-494-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:128:13-130:29
+494-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:128:13-130:29
 495                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-495-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:17-98
-495-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:25-95
+495-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:17-98
+495-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:129:25-95
 496            </intent-filter>
 497        </receiver>
 498        <receiver
-498-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:132:9-142:20
+498-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:132:9-142:20
 499            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
-499-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:133:13-78
+499-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:133:13-78
 500            android:directBootAware="false"
-500-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:134:13-44
+500-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:134:13-44
 501            android:enabled="true"
-501-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:135:13-35
+501-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:135:13-35
 502            android:exported="true"
-502-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:136:13-36
+502-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:136:13-36
 503            android:permission="android.permission.DUMP" >
-503-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:137:13-57
+503-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:137:13-57
 504            <intent-filter>
-504-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:139:13-141:29
+504-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:139:13-141:29
 505                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
-505-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:17-88
-505-->[androidx.work:work-runtime:2.7.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:25-85
+505-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:17-88
+505-->[androidx.work:work-runtime:2.7.1] C:\Users\HP\.gradle\caches\transforms-3\2365aafdf97dd1857d2cf87cfdf5f2c5\transformed\work-runtime-2.7.1\AndroidManifest.xml:140:25-85
 506            </intent-filter>
 507        </receiver>
 508
 509        <service
-509-->[androidx.room:room-runtime:2.2.5] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+509-->[androidx.room:room-runtime:2.2.5] C:\Users\HP\.gradle\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
 510            android:name="androidx.room.MultiInstanceInvalidationService"
-510-->[androidx.room:room-runtime:2.2.5] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+510-->[androidx.room:room-runtime:2.2.5] C:\Users\HP\.gradle\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
 511            android:directBootAware="true"
-511-->[androidx.room:room-runtime:2.2.5] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+511-->[androidx.room:room-runtime:2.2.5] C:\Users\HP\.gradle\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
 512            android:exported="false" />
-512-->[androidx.room:room-runtime:2.2.5] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+512-->[androidx.room:room-runtime:2.2.5] C:\Users\HP\.gradle\caches\transforms-3\b756b54ef536fcc330ee2ad487079ea4\transformed\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
 513        <service
-513-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+513-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
 514            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-514-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+514-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
 515            android:exported="false" >
-515-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+515-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
 516            <meta-data
-516-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+516-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
 517                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-517-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+517-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
 518                android:value="cct" />
-518-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+518-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\52447cc69f25bac3d65b5ef7f46150e4\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
 519        </service>
 520        <service
-520-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+520-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
 521            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-521-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+521-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
 522            android:exported="false"
-522-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+522-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
 523            android:permission="android.permission.BIND_JOB_SERVICE" >
-523-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+523-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
 524        </service>
 525
 526        <receiver
-526-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+526-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
 527            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-527-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+527-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
 528            android:exported="false" />
-528-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+528-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\HP\.gradle\caches\transforms-3\b0d365f5f431751398e7c145809bcf10\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
 529
 530        <provider
-530-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
+530-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP\.gradle\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
 531            android:name="com.google.firebase.provider.FirebaseInitProvider"
-531-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:26:13-77
+531-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP\.gradle\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:26:13-77
 532            android:authorities="com.savvy.hrmsnewapp.firebaseinitprovider"
-532-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:27:13-72
+532-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP\.gradle\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:27:13-72
 533            android:directBootAware="true"
-533-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:28:13-43
+533-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP\.gradle\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:28:13-43
 534            android:exported="false"
-534-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:29:13-37
+534-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP\.gradle\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:29:13-37
 535            android:initOrder="100" />
-535-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:30:13-36
+535-->[com.google.firebase:firebase-common:20.3.2] C:\Users\HP\.gradle\caches\transforms-3\6b44e61e6e05b5b6305dc9b44d2c46e7\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:30:13-36
 536
 537        <activity
-537-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+537-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
 538            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-538-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+538-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
 539            android:exported="false"
-539-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+539-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
 540            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-540-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+540-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\3775ad985e7db03a774c0325c7778612\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
 541
 542        <receiver
-542-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:29:9-33:20
+542-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:29:9-33:20
 543            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-543-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:30:13-85
+543-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:30:13-85
 544            android:enabled="true"
-544-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:31:13-35
+544-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:31:13-35
 545            android:exported="false" >
-545-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:32:13-37
+545-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:32:13-37
 546        </receiver>
 547
 548        <service
-548-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:35:9-38:40
+548-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:35:9-38:40
 549            android:name="com.google.android.gms.measurement.AppMeasurementService"
-549-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:36:13-84
+549-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:36:13-84
 550            android:enabled="true"
-550-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:37:13-35
+550-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:37:13-35
 551            android:exported="false" />
-551-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:38:13-37
+551-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:38:13-37
 552        <service
-552-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:39:9-43:72
+552-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:39:9-43:72
 553            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-553-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:40:13-87
+553-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:40:13-87
 554            android:enabled="true"
-554-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:41:13-35
+554-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:41:13-35
 555            android:exported="false"
-555-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:42:13-37
+555-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:42:13-37
 556            android:permission="android.permission.BIND_JOB_SERVICE" />
-556-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:43:13-69
+556-->[com.google.android.gms:play-services-measurement:21.2.1] C:\Users\HP\.gradle\caches\transforms-3\bdf4b5c5e397e87a275cd36fb8ec8a23\transformed\jetified-play-services-measurement-21.2.1\AndroidManifest.xml:43:13-69
 557
 558        <meta-data
-558-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\c002b4d2c7b37e8f5960344f800f8382\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+558-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\c002b4d2c7b37e8f5960344f800f8382\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 559            android:name="com.google.android.gms.version"
-559-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\c002b4d2c7b37e8f5960344f800f8382\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+559-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\c002b4d2c7b37e8f5960344f800f8382\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 560            android:value="@integer/google_play_services_version" />
-560-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Admin\.gradle\wrapper\dists\caches\transforms-3\c002b4d2c7b37e8f5960344f800f8382\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+560-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\HP\.gradle\caches\transforms-3\c002b4d2c7b37e8f5960344f800f8382\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 561    </application>
 562
 563</manifest>

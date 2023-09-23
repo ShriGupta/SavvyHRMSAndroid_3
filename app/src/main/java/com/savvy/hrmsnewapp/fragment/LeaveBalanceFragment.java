@@ -681,96 +681,88 @@ public class LeaveBalanceFragment extends BaseFragment implements AdapterView.On
 
             RequestQueue requestQueue = Volley.newRequestQueue(getContext());
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, pm,
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            int len = (String.valueOf(response)).length();
+                    response -> {
+                        try {
+                            HashMap<String, String> leaveBalancemap;
+                            JSONArray jsonArray = response.getJSONArray("GetLeaveRunningBalanceResult");
 
-                            System.out.print("Array " + " Length = " + len + " Value = " + response.toString());
-                            Log.e("Value", " Length = " + len + " Value = " + response.toString());
+                            Log.e("response",  jsonArray.toString());
+                            if (jsonArray.length() > 0) {
+                                for (int i = 0; i < jsonArray.length(); i++) {
 
-                            try {
+                                    leaveBalancemap = new HashMap<>();
+                                    JSONObject explrObject = jsonArray.getJSONObject(i);
+                                    String advanceLeave = explrObject.getString("ADVANCE_LEAVE");
+                                    String approvedLeave = explrObject.getString("APPROVED_LEAVE");
+                                    String currentBalance = explrObject.getString("CURRENT_BALANCE");
 
-                                HashMap<String, String> leaveBalancemap;
-                                JSONArray jsonArray = response.getJSONArray("GetLeaveRunningBalanceResult");
-                                System.out.println("jsonArray===" + jsonArray);
-                                if (jsonArray.length() > 0) {
-                                    for (int i = 0; i < jsonArray.length(); i++) {
+                                    String elbd_year_fin_year = explrObject.getString("ELBD_YEAR_FIN_YEAR");
+                                    String employee_id = explrObject.getString("EMPLOYEE_ID");
 
-                                        leaveBalancemap = new HashMap<>();
-                                        JSONObject explrObject = jsonArray.getJSONObject(i);
-                                        String advanceLeave = explrObject.getString("ADVANCE_LEAVE");
-                                        String approvedLeave = explrObject.getString("APPROVED_LEAVE");
-                                        String currentBalance = explrObject.getString("CURRENT_BALANCE");
+                                    String enable = explrObject.getString("ENABLE");
+                                    String fin_year = explrObject.getString("FIN_YEAR");
+                                    String from_date = explrObject.getString("FROM_DATE");
+                                    String from_date1 = explrObject.getString("FROM_DATE1");
+                                    String is_previousyear = explrObject.getString("IS_PREVIOUS_YEAR");
 
-                                        String elbd_year_fin_year = explrObject.getString("ELBD_YEAR_FIN_YEAR");
-                                        String employee_id = explrObject.getString("EMPLOYEE_ID");
+                                    String leave_config_id = explrObject.getString("LEAVE_CONFIG_ID");
+                                    String leaveName = explrObject.getString("LEAVE_NAME");
+                                    String lm_abbrevation = explrObject.getString("LM_ABBREVATION");
+                                    String lopLeave = explrObject.getString("LOP_LEAVE");
+                                    String pendingLeave = explrObject.getString("PENDING_LEAVE");
 
-                                        String enable = explrObject.getString("ENABLE");
-                                        String fin_year = explrObject.getString("FIN_YEAR");
-                                        String from_date = explrObject.getString("FROM_DATE");
-                                        String from_date1 = explrObject.getString("FROM_DATE1");
-                                        String is_previousyear = explrObject.getString("IS_PREVIOUS_YEAR");
-
-                                        String leave_config_id = explrObject.getString("LEAVE_CONFIG_ID");
-                                        String leaveName = explrObject.getString("LEAVE_NAME");
-                                        String lm_abbrevation = explrObject.getString("LM_ABBREVATION");
-                                        String lopLeave = explrObject.getString("LOP_LEAVE");
-                                        String pendingLeave = explrObject.getString("PENDING_LEAVE");
-
-                                        String runningBalance = explrObject.getString("RUNNING_BALANCE");
-                                        String to_date = explrObject.getString("TO_DATE");
-                                        String to_date1 = explrObject.getString("TO_DATE1");
-                                        String year = explrObject.getString("YEAR");
+                                    String runningBalance = explrObject.getString("RUNNING_BALANCE");
+                                    String to_date = explrObject.getString("TO_DATE");
+                                    String to_date1 = explrObject.getString("TO_DATE1");
+                                    String year = explrObject.getString("YEAR");
 
 //                                        String ENABLE_NOTE = explrObject.getString("ENABLE_NOTE");
 //                                        String NOTE_MESSAGE = explrObject.getString("NOTE_MESSAGE");
 
 //                                        WriteLog("Leave Balance Post Execution MAPDATA","LeaveBalance");
-                                        //System.out.println("holidayName===" + holidayName);
-                                        leaveBalancemap.put("LEAVE_NAME", leaveName);
-                                        leaveBalancemap.put("APPROVED_LEAVE", approvedLeave);
-                                        leaveBalancemap.put("ADVANCE_LEAVE", advanceLeave);
-                                        leaveBalancemap.put("LOP_LEAVE", lopLeave);
-                                        leaveBalancemap.put("CURRENT_BALANCE", currentBalance);
-                                        leaveBalancemap.put("PENDING_LEAVE", pendingLeave);
-                                        leaveBalancemap.put("RUNNING_BALANCE", runningBalance);
-                                        leaveBalancemap.put("ENABLE", enable);
+                                    //System.out.println("holidayName===" + holidayName);
+                                    leaveBalancemap.put("LEAVE_NAME", leaveName);
+                                    leaveBalancemap.put("APPROVED_LEAVE", approvedLeave);
+                                    leaveBalancemap.put("ADVANCE_LEAVE", advanceLeave);
+                                    leaveBalancemap.put("LOP_LEAVE", lopLeave);
+                                    leaveBalancemap.put("CURRENT_BALANCE", currentBalance);
+                                    leaveBalancemap.put("PENDING_LEAVE", pendingLeave);
+                                    leaveBalancemap.put("RUNNING_BALANCE", runningBalance);
+                                    leaveBalancemap.put("ENABLE", enable);
 
-                                        leaveBalancemap.put("FROM_DATE", from_date);
-                                        leaveBalancemap.put("TO_DATE", to_date);
-                                        leaveBalancemap.put("LEAVE_CONFIG_ID", leave_config_id);
-                                        leaveBalancemap.put("EMPLOYEE_ID", employee_id);
+                                    leaveBalancemap.put("FROM_DATE", from_date);
+                                    leaveBalancemap.put("TO_DATE", to_date);
+                                    leaveBalancemap.put("LEAVE_CONFIG_ID", leave_config_id);
+                                    leaveBalancemap.put("EMPLOYEE_ID", employee_id);
 
-                                        leaveBalancemap.put("IS_PREVIOUS_YEAR", is_previousyear);
-                                        leaveBalancemap.put("YEAR", year);
-                                        leaveBalancemap.put("FIN_YEAR", fin_year);
-                                        leaveBalancemap.put("FROM_DATE1", from_date1);
-                                        leaveBalancemap.put("TO_DATE1", to_date1);
-                                        leaveBalancemap.put("LM_ABBREVATION", lm_abbrevation);
-                                        leaveBalancemap.put("ELBD_YEAR_FIN_YEAR", elbd_year_fin_year);
+                                    leaveBalancemap.put("IS_PREVIOUS_YEAR", is_previousyear);
+                                    leaveBalancemap.put("YEAR", year);
+                                    leaveBalancemap.put("FIN_YEAR", fin_year);
+                                    leaveBalancemap.put("FROM_DATE1", from_date1);
+                                    leaveBalancemap.put("TO_DATE1", to_date1);
+                                    leaveBalancemap.put("LM_ABBREVATION", lm_abbrevation);
+                                    leaveBalancemap.put("ELBD_YEAR_FIN_YEAR", elbd_year_fin_year);
 //                                        leaveBalancemap.put("ENABLE_NOTE", ENABLE_NOTE);
 //                                        leaveBalancemap.put("NOTE_MESSAGE", NOTE_MESSAGE);
 
-                                        arlData.add(leaveBalancemap);
-                                    }
-                                    System.out.println("LeaveBalanceArray===" + arlData);
-
-
-                                    // DisplayHolidayList(arlData);
-                                    mAdapter = new LeaveBalanceListNewAdapter(getActivity(), coordinatorLayout, arlData);
-                                    recyclerView.setAdapter(mAdapter);
-                                } else {
-                                    Utilities.showDialog(coordinatorLayout, ErrorConstants.DATA_ERROR);
-                                    System.out.println("Data not getting on server side");
+                                    arlData.add(leaveBalancemap);
                                 }
+                                System.out.println("LeaveBalanceArray===" + arlData);
 
-                            } catch (Exception ex) {
-                                ex.printStackTrace();
-                                Log.e("Error In", "" + ex.getMessage());
+
+                                // DisplayHolidayList(arlData);
+                                mAdapter = new LeaveBalanceListNewAdapter(getActivity(), coordinatorLayout, arlData);
+                                recyclerView.setAdapter(mAdapter);
+                            } else {
+                                Utilities.showDialog(coordinatorLayout, ErrorConstants.DATA_ERROR);
+                                System.out.println("Data not getting on server side");
                             }
 
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                            Log.e("Error In", "" + ex.getMessage());
                         }
+
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {

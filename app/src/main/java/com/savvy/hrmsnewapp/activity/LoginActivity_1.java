@@ -379,6 +379,9 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
                                     String securityToken = jsonobj.getString("securityToken");
                                     String userName = jsonobj.getString("userName");
                                     String groupId = jsonobj.getString("groupId");
+                                    String mobile=jsonobj.getString("ContactNo");
+                                    String address=jsonobj.getString("EmployeeAddress");
+
                                     try {
                                         showpassword = jsonobj.getString("ShowPassword");
                                     } catch (JSONException e) {
@@ -426,6 +429,8 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
                                         editor.putString("EmpoyeeName", empoyeeName);
                                         editor.putString("UserName", userName);
                                         editor.putString("GroupId", groupId);
+                                        editor.putString("Mobile", mobile);
+                                        editor.putString("Address", address);
                                         editor.putString("AccessModules", accessModules);
                                         editor.putString("EmpPhotoPath", employeePhotoPath);
                                         editor.putString("localDataInsertInterval", localDataInsertInterval);

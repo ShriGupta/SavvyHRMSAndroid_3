@@ -4,7 +4,17 @@
             "outputFile": "com.savvy.hrmsnewapp-mergeDebugResources-35:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "D:\\SavvyHRMS\\Saavy Project\\SavvyHRMSAndroid_3\\app\\src\\main\\res\\values-xlarge\\dimens.xml",
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\0b7f47a6f8952264f1c2714bb61159de\\transformed\\appcompat-1.1.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,126,197,267,337,405",
+                        "endColumns": "70,70,69,69,67,67",
+                        "endOffsets": "121,192,262,332,400,468"
+                    }
+                },
+                {
+                    "source": "D:\\SavvyHRMS App\\SavvyHRMSAndroid 3\\app\\src\\main\\res\\values-xlarge\\dimens.xml",
                     "from": {
                         "startLines": "3,2,4",
                         "startColumns": "4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "473,520,561",
                         "endColumns": "46,40,48",
                         "endOffsets": "515,556,605"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Admin\\.gradle\\wrapper\\dists\\caches\\transforms-3\\0b7f47a6f8952264f1c2714bb61159de\\transformed\\appcompat-1.1.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,126,197,267,337,405",
-                        "endColumns": "70,70,69,69,67,67",
-                        "endOffsets": "121,192,262,332,400,468"
                     }
                 }
             ]
