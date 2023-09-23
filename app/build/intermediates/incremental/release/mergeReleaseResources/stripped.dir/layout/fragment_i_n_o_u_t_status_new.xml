@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.INOUTStatusNewFragment" android:tag="layout/fragment_i_n_o_u_t_status_new_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txtInOut_Date"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="Date *"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/btn_InOutdate"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="7"
+                android:background="@drawable/border_custom"
+                android:drawableRight="@drawable/calender_svgrepo_com"
+                android:drawablePadding="@dimen/_20sdp"
+                android:drawableTint="@color/action_btn_pressable"
+                android:gravity="center_vertical"
+                android:hint="Select Date"
+                android:nextFocusDown="@+id/btn_to_oddate"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/my_custom_color"
+                android:textColorHint="@color/action_btn_pressable"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_supplier_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/date_layout"/>
+
+
+
+        <TextView
+            android:id="@+id/data_not_found_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Data Not Found !"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            android:visibility="visible" />
+    </RelativeLayout>
+         

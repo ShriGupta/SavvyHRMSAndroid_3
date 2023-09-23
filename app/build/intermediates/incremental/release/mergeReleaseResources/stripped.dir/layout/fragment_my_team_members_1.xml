@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:id="@+id/main_layout_heirachy"
+       android:layout_weight="0.7"
+       android:background="#fff"
+       android:layout_width="match_parent"
+       android:layout_height="0dip"
+       android:visibility="gone"
+       android:orientation="horizontal">
+
+       <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+           android:id="@+id/txt_BackButton"
+           android:paddingLeft="15dp"
+           android:layout_weight="1"
+           android:layout_width="0dip"
+           android:background="#fff"
+           android:layout_height="wrap_content"
+           android:drawableLeft="@mipmap/ic_back_button"
+           />
+       <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+           android:id="@+id/txt_home_button"
+           android:paddingRight="15dp"
+           android:layout_marginTop="5dp"
+           android:layout_marginRight="10dip"
+           android:drawableRight="@mipmap/ic_home"
+           android:gravity="right"
+           android:background="#fff"
+           android:layout_weight="1"
+           android:layout_width="0dip"
+           android:layout_height="wrap_content"
+           />
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="5dip"
+        android:background="#277ddb"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:background="#277ddb"
+            android:layout_weight="2.7"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txt_MyEmployeeNameTitle"
+                    android:text="Employee Name"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:paddingLeft="10dip"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txt_MyEmployeeName"
+                    android:text="Employee Name"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_weight="2"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:text="Employee Code"
+                    android:gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dip"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txt_Mydetail"
+                    android:text="Employee Code"
+                    android:gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:text="Department"
+                    android:paddingLeft="10dip"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txt_MymarginDetail"
+                    android:text="Designation"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:text="Supervisor"
+                    android:gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dip"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txt_MySupervisor"
+                    android:text="Supervisor"
+                    android:gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:textSize="12dip"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginBottom="5dip"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.savvy.hrmsnewapp.customwidgets.CircularImageView
+                android:layout_marginTop="5dp"
+                android:id="@+id/img_myHeirarchyTitle"
+                android:layout_width="80dip"
+                android:layout_height="80dip"
+                android:layout_centerHorizontal="true"
+                android:elevation="5dp"
+                android:scaleType="centerCrop"
+                android:padding="20dp"
+                android:background="@drawable/profile_rounded"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#ffffff"
+        android:layout_marginTop="3dip"
+        android:layout_weight="7.3"
+        android:layout_width="match_parent"
+        android:layout_marginRight="5dip"
+        android:layout_marginLeft="5dip"
+        android:layout_height="0dip"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_my_team_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</LinearLayout>

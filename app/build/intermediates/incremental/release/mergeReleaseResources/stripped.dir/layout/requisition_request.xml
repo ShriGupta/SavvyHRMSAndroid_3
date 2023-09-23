@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8ssp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_depart_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="start|center"
+                android:text="Department Name :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_department_name"
+                style="@style/textSizeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="5"
+                android:background="@drawable/border_transparent_new" />
+<!--            -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8ssp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_depart_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="start|center"
+                android:text="Date :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_requisitionCalendar_Date"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="5"
+                android:background="@drawable/border_transparent_new"
+                android:text="@string/selectdate"
+                android:textSize="@dimen/_10sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8ssp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_shift_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="start|center"
+                android:text="Shift Type :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/sp_shift_type"
+                style="@style/textSizeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_weight="5"
+                android:background="@drawable/border_transparent_new" />
+<!--            -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="NO DATA"
+            android:textStyle="bold"
+            android:textColor="@color/color_red"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_position_heading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:text="Position Details :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_position_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8ssp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/layout_round_border"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="Position"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_head_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:text="Head Count"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_no_emp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:text="No. of Emp."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_position_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:background="@color/color_blue"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/color_blue"
+            android:text="CLEAR"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

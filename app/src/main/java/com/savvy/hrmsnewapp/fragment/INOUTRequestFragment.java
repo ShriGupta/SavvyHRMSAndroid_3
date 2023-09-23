@@ -366,26 +366,35 @@ public class INOUTRequestFragment extends BaseFragment {
                         Toast.makeText(getActivity(), "Please Select Activity ", Toast.LENGTH_SHORT).show();
                     }else {
                         if (!supplier_name.contains("TRAVELLING")) {
-                            if (!btn_InOutdate.getText().toString().isEmpty() && !meetingtype.equals("") && !worktype.equals("") && !chargestype.equals("") && !supplierid.equals("")) {
-                                if(meetingtype.equals("1") && non_ncr_radio.isChecked()){
-                                    if(hotelid.equals("")){
-                                        Toast.makeText(getActivity(), "Please Enter Hotel Details", Toast.LENGTH_SHORT).show();
-                                    }else if(flightid.equals("")){
-                                        Toast.makeText(getActivity(), "Please Enter Flight Details", Toast.LENGTH_SHORT).show();
-                                    }else if(trainid.equals("")){
-                                        Toast.makeText(getActivity(), "Please Enter Train Details", Toast.LENGTH_SHORT).show();
-                                    }else if(cabtype_id.equals("") || cabtmt.equals("")){
-                                        Toast.makeText(getActivity(), "Please Enter Cab Details", Toast.LENGTH_SHORT).show();
+
+                            if(btn_InOutdate.getText().toString().isEmpty()){
+                                    Toast.makeText(getActivity(), "Please Select Date", Toast.LENGTH_SHORT).show();
+                                }else if(supplierid.equals("")){
+                                    Toast.makeText(getActivity(), "Please Select Supplier", Toast.LENGTH_SHORT).show();
+                                }else if(meetingtype.equals("")){
+                                    Toast.makeText(getActivity(), "Please Select Meeting Type", Toast.LENGTH_SHORT).show();
+                                }else if(worktype.equals("")) {
+                                    Toast.makeText(getActivity(), "Please Select Work Type", Toast.LENGTH_SHORT).show();
+                                }else if(chargestype.equals("")){
+                                    Toast.makeText(getActivity(), "Please Select Charges Type", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    if(meetingtype.equals("1") && non_ncr_radio.isChecked()){
+                                        if(hotelid.equals("")){
+                                            Toast.makeText(getActivity(), "Please Select Hotel", Toast.LENGTH_SHORT).show();
+                                        }else if(flightid.equals("")){
+                                            Toast.makeText(getActivity(), "Please Select Flight", Toast.LENGTH_SHORT).show();
+                                        }else if(trainid.equals("")){
+                                            Toast.makeText(getActivity(), "Please Select Train", Toast.LENGTH_SHORT).show();
+                                        }else if(cabtype_id.equals("") || cabtmt.equals("")){
+                                            Toast.makeText(getActivity(), "Please Select Cab", Toast.LENGTH_SHORT).show();
+                                        }else {
+                                            saveAllDetails();
+                                        }
                                     }else {
                                         saveAllDetails();
                                     }
-                                }else {
-                                    saveAllDetails();
                                 }
 
-                            } else {
-                                Toast.makeText(getActivity(), "Please select all required feilds", Toast.LENGTH_SHORT).show();
-                            }
                         } else {
                             saveAllDetails();
                         }
@@ -983,6 +992,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                                 supplier_name = spinnerArray.get(position).toString();
                                                 getShowDetailsBySupplier(spinnerItemIDArray.get(position).toString(), From_date);
                                                 getCheckInCheckOutForButton();
+                                            }else {
+                                                supplierid="";
                                             }
                                         }
 
@@ -1209,6 +1220,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                             // your code here
                                             if (!spin_comp_status.getSelectedItem().toString().equals("Please Select")) {
                                                 worktype = workTypeIdArray.get(position).toString();
+                                            }else {
+                                                worktype="";
                                             }
                                         }
 
@@ -1325,6 +1338,8 @@ public class INOUTRequestFragment extends BaseFragment {
                                                         binding.ncrViewLayout.setVisibility(View.GONE);
                                                     }
                                                 }
+                                            }else {
+                                                meetingtype="";
                                             }
                                         }
 

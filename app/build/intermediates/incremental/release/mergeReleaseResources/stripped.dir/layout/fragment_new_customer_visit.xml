@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.NewCustomerVisit">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/tolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tolbar"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="7"
+                    android:gravity="center"
+                    android:text="@string/customer_punch_in"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="@string/current_date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_currentDate"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="@string/current_date"
+                    android:paddingStart="20dip"
+                    android:paddingLeft="20dip"
+                    android:textAllCaps="false"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light"
+                    tools:ignore="RtlSymmetry" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="@string/current_time"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_currentTime"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="@string/current_time"
+                    android:paddingLeft="20dip"
+                    android:textAllCaps="false"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="@string/customer_name"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+                <EditText
+                    android:id="@+id/edt_CustomerName"
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:hint="Name"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/btn_submit"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="@string/comment_customer_in"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+                <EditText
+                    android:id="@+id/edt_messagefeedback"
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:focusableInTouchMode="true"
+                    android:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:hint="Comment"
+                    android:maxLines="10"
+                    android:nextFocusDown="@+id/btn_submit"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_punchIn"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_border"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/punch_in"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/getting_your_location"
+                android:textColor="@color/my_custom_color"
+                android:textSize="20sp"
+                app:font="@string/font_name_light" />
+
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</LinearLayout>

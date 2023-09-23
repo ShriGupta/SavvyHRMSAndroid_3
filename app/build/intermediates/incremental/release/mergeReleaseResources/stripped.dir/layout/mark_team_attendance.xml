@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinatorLayout">
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tolbar"
+            android:orientation="vertical"
+            android:background="#ffffff">
+
+             <ScrollView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="vertical">
+
+                 <LinearLayout
+                     android:id="@+id/ll_calendarList"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="35dp"
+                         android:layout_marginTop="30dp"
+                         android:weightSum="10">
+
+                         <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                             android:layout_width="0dip"
+                             android:layout_height="35dip"
+                             android:layout_marginLeft="10dp"
+                             android:layout_weight="4"
+                             android:gravity="center_vertical"
+                             android:text="Current Date"
+                             android:textColor="@color/my_custom_color"
+                             android:textSize="@dimen/text_size"
+                             app:font="@string/font_name_light" />
+
+                         <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                             android:id="@+id/txv_currentDate"
+                             android:layout_width="0dip"
+                             android:layout_height="35dip"
+                             android:layout_marginRight="10dp"
+                             android:layout_weight="6"
+                             android:background="@drawable/border_custom"
+                             android:gravity="center_vertical"
+                             android:hint="Current Date"
+                             android:paddingLeft="20dip"
+                             android:textAllCaps="false"
+                             android:textColor="@color/my_custom_color"
+                             android:textColorHint="@color/colorGray"
+                             android:textSize="@dimen/text_size"
+                             android:textStyle="bold"
+                             app:font="@string/font_name_light" />
+
+
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="35dp"
+                         android:layout_marginTop="10dp"
+                         android:weightSum="10">
+
+                         <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                             android:layout_width="0dip"
+                             android:layout_height="35dip"
+                             android:layout_marginLeft="10dp"
+                             android:layout_weight="4"
+                             android:gravity="center_vertical"
+                             android:text="Current Time"
+                             android:textColor="@color/my_custom_color"
+                             android:textSize="@dimen/text_size"
+                             app:font="@string/font_name_light" />
+
+                         <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                             android:id="@+id/txv_currentTime"
+                             android:layout_width="0dip"
+                             android:layout_height="35dip"
+                             android:layout_marginRight="10dp"
+                             android:layout_weight="6"
+                             android:background="@drawable/border_custom"
+                             android:gravity="center_vertical"
+                             android:hint="Current Time"
+                             android:paddingLeft="20dip"
+                             android:textAllCaps="false"
+                             android:textColor="@color/my_custom_color"
+                             android:textColorHint="@color/colorGray"
+                             android:textSize="@dimen/text_size"
+                             android:textStyle="bold"
+                             app:font="@string/font_name_light" />
+
+                     </LinearLayout>
+
+                     <Button
+                         android:id="@+id/btn_submit"
+                         android:layout_width="wrap_content"
+                         android:layout_height="40dip"
+                         android:layout_gravity="center_horizontal"
+                         android:layout_marginTop="30dp"
+                         android:layout_marginBottom="10dp"
+                         android:background="@drawable/button_border_cancel"
+                         android:paddingLeft="15dp"
+                         android:paddingRight="15dp"
+                         android:text="Mark Team Attendance"
+                         android:textColor="#ffffff"
+                         android:textSize="12sp" />
+
+                 </LinearLayout>
+             </ScrollView>
+
+         </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_custom"
+    android:padding="10dp"
+    tools:context=".activity.AddNewCustomer">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:text="Name *"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/edt_CustomerName"
+                android:layout_width="0dip"
+                android:layout_height="35dp"
+                android:layout_weight="7"
+                android:background="@drawable/border_custom"
+                android:hint="Enter Name"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:text="Mobile No"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/edt_MobNumber"
+                android:layout_width="0dip"
+                android:layout_height="35dp"
+                android:layout_weight="7"
+                android:background="@drawable/border_custom"
+                android:hint="Enter Mobile No."
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="5dp"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:text="Address"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/edt_CustomerAddress"
+                android:layout_width="0dip"
+                android:layout_height="35dp"
+                android:layout_weight="7"
+                android:background="@drawable/border_custom"
+                android:hint="Enter Address"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="start|center"
+                android:paddingLeft="10dp"
+                android:text="Email Id"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <EditText
+                android:id="@+id/edt_CustomerMailId"
+                android:layout_width="0dip"
+                android:layout_height="35dp"
+                android:layout_weight="7"
+                android:background="@drawable/border_custom"
+                android:hint="Enter Mail id"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/saveCustomerDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/button_border_cancel"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

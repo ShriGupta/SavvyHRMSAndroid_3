@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <CheckBox
+                android:id="@+id/travelExpenseCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Token No.:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/travel_expense_TokenNo"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_toRightOf="@+id/txt_leavenameTitle"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Label"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Start Date:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/travel_expense_StartDate"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Label"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Remarks:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/travel_expense_Remarks"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Label"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="6">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Travel Type:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/travel_expense_TravelType"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Label"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Return Date:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/travel_expense_ReturnDate"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Label"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:text="Budgeted Amount:"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/travel_expense_BudgetAmount"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:text="Label"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center_vertical"
+                    android:text="Project :"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_expense_Project"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="7.4"
+                    android:gravity="center_vertical"
+                    android:text="Label"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                android:weightSum="10">
+
+                <Button
+                    android:id="@+id/travel_expense_ExpenseButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_border_cancel"
+                    android:text="Add Expense"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:weightSum="10">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="3dp"
+            android:background="@color/color_red" />
+    </LinearLayout>
+
+
+</LinearLayout>

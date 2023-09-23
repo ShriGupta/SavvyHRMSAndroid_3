@@ -5797,6 +5797,7 @@ string large_text
 string late_coming
 string location_permission
 string location_string
+string mandays_rate
 string mark_attendance
 string material_slider_range_end
 string material_slider_range_start

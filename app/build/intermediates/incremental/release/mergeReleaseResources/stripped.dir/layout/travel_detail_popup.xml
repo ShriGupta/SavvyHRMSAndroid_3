@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travelTitle"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Add Travel Detail"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_mode_title"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Travel Mode *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <Spinner
+                    android:id="@+id/travel_mode"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="5"
+                    android:background="@drawable/spin_border_new"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spin_border_new"
+                    android:padding="10dp"
+                    android:src="@drawable/arrow_down" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_class_title"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Travel Class *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <Spinner
+                    android:id="@+id/travel_class"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="5"
+                    android:background="@drawable/spin_border_new"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spin_border_new"
+                    android:padding="10dp"
+                    android:src="@drawable/arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_BoardingPlace_title"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Boarding Place *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/av_boardingPlace"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="6"
+                    android:background="@drawable/spin_border_new"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Boarding Place"
+                    android:nextFocusDown="@+id/edt_custVisit_Description"
+                    android:paddingLeft="10dip"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="normal"
+                    app:font="@string/font_name_light"/>
+                <!--<Spinner-->
+                    <!--android:id="@+id/travel_BoardingPlace"-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="35dip"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:background="@drawable/spin_border_new"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/my_custom_color"-->
+                    <!--android:textSize="@dimen/text_size"-->
+                    <!--app:font="@string/font_name_light" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_marginLeft="-2dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/spin_border_new"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:src="@drawable/arrow_down" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_ArrivalPlace_title"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Arrive Place *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/av_arrivalPlace"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="6"
+                    android:background="@drawable/spin_border_new"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Arrival Place"
+                    android:nextFocusDown="@+id/edt_custVisit_Description"
+                    android:paddingLeft="10dip"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="normal"
+                    app:font="@string/font_name_light"/>
+                <!--<Spinner-->
+                    <!--android:id="@+id/travel_ArrivalPlace"-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="35dip"-->
+                    <!--android:layout_weight="5"-->
+                    <!--android:background="@drawable/spin_border_new"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/my_custom_color"-->
+                    <!--android:textSize="@dimen/text_size"-->
+                    <!--app:font="@string/font_name_light" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_marginLeft="-2dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/spin_border_new"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:src="@drawable/arrow_down" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/btn_BoardingDate_title"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Boarding Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <Button
+                    android:id="@+id/btn_BoardingDate"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom_new"
+                    android:gravity="center"
+                    android:hint="Pick Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/btn_ArrivalDate_title"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Arrive Date *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <Button
+                    android:id="@+id/btn_ArrivalDate"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom_new"
+                    android:gravity="center"
+                    android:hint="Pick Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearResultTravel"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:visibility="gone">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtResultData"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="Reason *"
+                    android:textColor="@color/color_red"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Other Details"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chk_travelTicket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="Ticket"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="normal"
+                    app:font="@string/font_name_light" />
+
+                <CheckBox
+                    android:id="@+id/chk_travelCab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="Cab"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="normal"
+                    app:font="@string/font_name_light" />
+
+                <CheckBox
+                    android:id="@+id/chk_travelHotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="Hotel"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="normal"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1.5">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/travel_ExpenseNature_title"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Nature Expense *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+                <Spinner
+                    android:id="@+id/travel_ExpenseNature"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_weight="5"
+                    android:background="@drawable/spin_border_new"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spin_border_new"
+                    android:padding="10dp"
+                    android:src="@drawable/arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/edt_travelDetailReason_title"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Reason *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:layout_weight="2.5">
+
+                <EditText
+                    android:id="@+id/edt_travelDetailReason"
+                    android:layout_width="0dip"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom_new"
+                    android:cursorVisible="true"
+                    android:gravity="top|left"
+                    android:hint="Reason"
+                    android:lines="6"
+                    android:maxLines="10"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_submit_travelRequest"
+                    android:layout_width="100dip"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_border_cancel"
+                    android:gravity="center"
+                    android:text="Add"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/button_border_cancel"
+                    android:gravity="center"
+                    android:text="cancel"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

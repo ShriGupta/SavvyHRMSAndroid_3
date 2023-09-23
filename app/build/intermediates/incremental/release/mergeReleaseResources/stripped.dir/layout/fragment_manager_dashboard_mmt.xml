@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#3aa8c1"
+                        android:gravity="center"
+                        android:text="Date Range"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dip"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="From Date"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <Button
+                            android:id="@+id/md_fromDate"
+                            android:layout_width="0dip"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="6"
+                            android:background="@drawable/border_custom"
+                            android:font="@string/font_name_light"
+                            android:gravity="center"
+                            android:hint="Pick Date"
+                            android:paddingLeft="5sp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/my_custom_color"
+                            android:textColorHint="@color/color_gray"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="To Date"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <Button
+                            android:id="@+id/md_toDate"
+                            android:layout_width="0dip"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="6"
+                            android:background="@drawable/border_custom"
+                            android:font="@string/font_name_light"
+                            android:gravity="center"
+                            android:hint="Pick Date"
+                            android:textColor="@color/my_custom_color"
+                            android:textColorHint="@color/color_gray"
+                            android:textSize="@dimen/text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mdCompareDateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/mdCompareDateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/color_red"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#3aa8c1"
+                        android:gravity="center"
+                        android:text="Search Employee"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <Button
+                        android:id="@+id/md_Spinner"
+                        android:layout_width="0dip"
+                        android:layout_height="35dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/border_custom"
+                        android:drawableRight="@drawable/arrow_down"
+                        android:text="@string/By_Employee"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_size" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextView"
+                        android:layout_width="0dip"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:drawableRight="@drawable/places_ic_search"
+                        android:hint=" Enter Name"
+                        android:textSize="@dimen/text_size" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/md_showButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_red"
+                    android:text="show"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorLightGray"
+                    android:src="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#808080"
+                        android:gravity="center"
+                        android:text="Team Summary"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_custom"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.8"
+                            android:text="AVG. WORKING HOURS"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/md_workingHours"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/border_custom"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.8"
+                            android:paddingLeft="5dp"
+                            android:text="AVG. IN"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/md_avgIn"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.7"
+                            android:background="@drawable/border_custom"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7sp"
+                        android:layout_marginBottom="5dp"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.8"
+                            android:text="AVG. LEAVE CONSUMED"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+
+                            android:id="@+id/md_leaveConsumed"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/border_custom"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.8"
+                            android:paddingLeft="5dp"
+                            android:text="AVG. OUT"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/md_AvgOut"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.7"
+                            android:background="@drawable/border_custom"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/mdBar_txtDataNotFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Data Not Found"
+                    android:textColor="@color/color_red"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#8657c5"
+                        android:gravity="center"
+                        android:text="Detailed Summary"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_custom"
+                    android:orientation="vertical">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/md_txtDataNotFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Data Not Found"
+                        android:textColor="@color/color_red"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/md_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="420dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

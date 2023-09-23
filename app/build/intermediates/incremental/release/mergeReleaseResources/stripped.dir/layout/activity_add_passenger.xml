@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_custom"
+    android:padding="10dp"
+    tools:context=".activity.AddPassengerActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioPassengerGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <RadioButton
+                    android:id="@+id/self"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Self" />
+
+                <RadioButton
+                    android:id="@+id/guest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:checked="true"
+                    android:text="Guest" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10sp"
+                android:orientation="vertical">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Passenger Detail"
+                    android:textColor="@color/color_red"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="start|center"
+                        android:text="First Name"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/firstName"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:hint="Enter First Name"
+                        android:paddingLeft="5sp"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="start|center"
+                        android:text="Middle Name"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/middleName"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:hint="Enter Middle Name"
+                        android:paddingLeft="5sp"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="start|center"
+                        android:text="Last Name"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/lastName"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:hint="Enter Last Name"
+                        android:paddingLeft="5sp"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="start|center"
+                        android:text="Contact Number"
+
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/contactNumber"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:hint="Enter contact number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="5sp"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="start|center"
+                        android:text="Address"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/addressValue"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:hint="Enter Address "
+                        android:paddingLeft="5sp"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="start|center"
+                        android:text="Age"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/age"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="7"
+                        android:background="@drawable/border_custom"
+                        android:hint="Label"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:paddingLeft="5sp"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:gravity="start|center"
+                        android:text="Food Preference :"
+                        android:paddingTop="3dp"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size" />
+
+                    <Spinner
+                        android:id="@+id/foodPrefSpinner"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:gravity="start|center"
+                        android:text="Gender"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="13dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="5"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp"
+                        android:weightSum="6">
+
+                        <RadioButton
+                            android:id="@+id/maleRadioButton"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:checked="true"
+                            android:font="@string/font_name_light"
+                            android:text="Male"
+                            android:textColor="@color/my_custom_color"
+                            android:textColorHint="@color/color_gray"
+                            android:textSize="@dimen/text_size" />
+
+                        <RadioButton
+                            android:id="@+id/femaleRadioButton"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:font="@string/font_name_light"
+                            android:text="Female"
+                            android:textColor="@color/my_custom_color"
+                            android:textColorHint="@color/color_gray"
+                            android:textSize="@dimen/text_size" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:weightSum="10">
+
+                    <Button
+                        android:id="@+id/addPassenger"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/button_border_cancel"
+                        android:text="Add"
+                        android:textColor="#ffff"
+                        android:textSize="@dimen/text_size" />
+
+
+                    <Button
+                        android:id="@+id/add_cloasePassenger"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="4"
+                        android:background="@drawable/button_border_cancel"
+                        android:text="Add &amp; Close"
+                        android:textColor="#ffff"
+                        android:textSize="@dimen/text_size" />
+
+
+                    <Button
+                        android:id="@+id/close_Button"
+                        android:layout_width="0dip"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_weight="3"
+                        android:background="@drawable/button_border_cancel"
+                        android:text="Close"
+                        android:textColor="#ffff"
+                        android:textSize="@dimen/text_size" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
