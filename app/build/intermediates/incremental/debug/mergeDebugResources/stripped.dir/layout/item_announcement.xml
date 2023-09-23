@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+            android:id="@+id/txt_AnnouncementName"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Announcement Name"
+            app:font="@string/font_name_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#393939"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/txt_AnnouncementName"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_red"/>
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savvy.hrmsnewapp.fragment.CalendarWeb"
+    android:background="#fff">
+
+  <!-- <com.imanoweb.calendarview.CustomCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:calendarBackgroundColor="@color/white"
+        app:calendarTitleTextColor="@color/colorPrimaryDark"
+        app:currentDayOfMonthColor="@color/color_red"
+        app:dayOfMonthTextColor="@color/black"
+        android:scrollbars="horizontal|vertical"
+        app:dayOfWeekTextColor="@color/black"
+        app:disabledDayBackgroundColor="@color/white"
+        app:disabledDayTextColor="@color/colorLightGray"
+        app:selectedDayBackgroundColor="@color/colorPrimary"
+        app:titleLayoutBackgroundColor="@color/white"
+        app:weekLayoutBackgroundColor="@color/white">
+    </com.imanoweb.calendarview.CustomCalendarView>-->
+
+   <!-- <com.stacktips.view.CustomCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/off_white"
+        app:calendarBackgroundColor="@color/off_white"
+        app:calendarTitleTextColor="@color/black"
+        app:currentDayOfMonthColor="@color/blue"
+        app:dayOfMonthTextColor="@color/black"
+        app:dayOfWeekTextColor="@color/black"
+        app:disabledDayBackgroundColor="@color/off_white"
+        app:disabledDayTextColor="@color/grey"
+        app:selectedDayBackgroundColor="@color/blue"
+        app:titleLayoutBackgroundColor="@color/white"
+        app:weekLayoutBackgroundColor="@color/white"/>-->
+
+
+
+</RelativeLayout>

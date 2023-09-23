@@ -1,0 +1,290 @@
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.savvy.hrmsnewapp.activity.MarkAttendance">
+
+    <LinearLayout
+        android:id="@+id/tolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <!-- <include
+             android:id="@+id/toolbar"
+             layout="@layout/toolbar"
+             />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tolbar"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+
+        <LinearLayout
+            android:id="@+id/ll_calendarList"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="MARK TEAM ATTENDANCE"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/colorPrimary"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="10dp"
+                    app:font="@string/font_name_light"
+                    android:layout_weight="4"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Current Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_currentDate"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Current Date"
+                    android:paddingLeft="20dip"
+                    android:textAllCaps="false"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Current Time"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txv_currentTime"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/border_custom"
+                    android:hint="Current Time"
+                    android:paddingLeft="20dip"
+                    android:textAllCaps="false"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    app:font="@string/font_name_light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txt_employeeCode"
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:text="Employee Code *"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/edt_TeamEmployeeId"
+                    android:layout_width="0dip"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:elegantTextHeight="true"
+                    android:background="@drawable/border_custom"
+                    android:hint="Employee Code "
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:nextFocusDown="@+id/edt_messagefeedback"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size" >
+
+                </EditText>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="35dip"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Comment"
+                    app:font="@string/font_name_light"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <EditText
+                    android:id="@+id/edt_messagefeedback"
+                    android:layout_width="0dip"
+                    android:layout_height="55dp"
+                    android:elegantTextHeight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Comment"
+                    android:textCursorDrawable="@null"
+                    android:maxLines="3"
+                    android:digits="0123456789 .,qwertzuiopasdfghjklyxcvbnmQWERTZUIOPASDFGHJKLYXCVBNM"
+                    android:nextFocusDown="@+id/btn_submit"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/text_size" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="45dp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#ffffff"
+                    android:padding="0dp"
+                    android:background="@drawable/button_border_cancel"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Submit" />
+
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_Cancel"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:padding="0dp"-->
+                <!--android:background="@drawable/button_border_cancel"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:text="Back" />-->
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_locationAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Getting Your Location..."
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="18sp"
+                    android:textColor="#000000"/>
+
+                <!--<Button-->
+                <!--android:id="@+id/btn_Cancel"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:padding="0dp"-->
+                <!--android:background="@drawable/button_border_cancel"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:text="Back" />-->
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

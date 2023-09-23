@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:id="@+id/coordinatorLayout"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:weightSum="12">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/border_custom"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    app:font="@string/font_name_light"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4.5"
+                    android:gravity="center_vertical"
+                    android:text="From Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <Button
+                    android:id="@+id/btn_visitFromDate"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="5.5"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick Date"
+                    app:font="@string/font_name_light"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:paddingLeft="5sp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:text="To Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <Button
+                    android:id="@+id/btn_to_visitDate"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    app:font="@string/font_name_light"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/border_custom"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/customTextView"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                app:font="@string/font_name_light"
+                android:gravity="center_vertical"
+                android:text="Status"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <!--  <Spinner
+                  android:id="@+id/spin_od_status"
+                  android:layout_width="0dip"
+                  android:layout_height="35dip"
+                  android:paddingLeft="28dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_weight="5.5"
+                  android:gravity="center"
+                  app:font="@string/font_name_light"
+                  android:spinnerMode="dropdown"
+                  android:textColor="@color/my_custom_color"
+                  android:textSize="12dp" />-->
+            <Button
+                android:id="@+id/btn_spin_visit_status"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5.5"
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/down_arrow"
+                app:font="@string/font_name_light"
+                android:background="@drawable/border_custom"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:hint="Please Select"
+                android:paddingLeft="20dp"
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/btn_visitStatus_submit"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:layout_gravity="center"
+                android:background="@drawable/button_border_cancel"
+                android:text="Search"
+                android:textSize="@dimen/text_size"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_height="0.8dp"
+            android:background="@color/colorPrimaryDark"
+            />
+        <LinearLayout
+            android:background="@drawable/border_custom"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical"
+            android:layout_weight="10">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/VistRecyclerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

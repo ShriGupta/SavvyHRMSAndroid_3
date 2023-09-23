@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:weightSum="17">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_custom"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="35dp"
+                android:layout_weight="5"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4.5"
+                    app:font="@string/font_name_light"
+                    android:gravity="center_vertical"
+                    android:text="From Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <Button
+                    android:id="@+id/btn_compFromDate"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    app:font="@string/font_name_light"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="35dp"
+                android:layout_weight="5"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="To Date"
+                    app:font="@string/font_name_light"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <Button
+                    android:id="@+id/btn_to_compDate"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:paddingLeft="5sp"
+                    app:font="@string/font_name_light"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="@dimen/text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Linear_result_compareDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/result_compareDate"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/color_red"
+                android:textSize="10dp"
+                app:font="@string/font_name_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_custom"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/customTextView"
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                app:font="@string/font_name_light"
+                android:gravity="center_vertical"
+                android:text="Status"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <!--<Spinner
+                android:id="@+id/spin_comp_status"
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5.5"
+                android:gravity="center"
+                android:paddingLeft="28dp"
+                app:font="@string/font_name_light"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/my_custom_color"
+                android:textSize="12dp" />-->
+            <Button
+                android:id="@+id/btn_spin_comp_status"
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5.5"
+                android:paddingRight="10dp"
+                android:drawableRight="@drawable/down_arrow"
+                app:font="@string/font_name_light"
+                android:background="@drawable/border_custom"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:hint="Please Select"
+                android:paddingLeft="20dp"
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/btn_compOffStatus_submit"
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:textSize="@dimen/text_size"
+                android:background="@drawable/button_border_cancel"
+                android:text="Search"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="15"
+            android:background="@drawable/border_custom"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/txtDataNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="No Data Found"
+                android:textColor="@color/color_red"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/compOffRecyclerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--</ScrollView>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

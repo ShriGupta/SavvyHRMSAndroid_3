@@ -379,8 +379,12 @@ public class LoginActivity_1 extends AppCompatActivity implements View.OnClickLi
                                     String securityToken = jsonobj.getString("securityToken");
                                     String userName = jsonobj.getString("userName");
                                     String groupId = jsonobj.getString("groupId");
-                                    String mobile=jsonobj.getString("ContactNo");
-                                    String address=jsonobj.getString("EmployeeAddress");
+                                    String mobile = null,address = null;
+                                    try{
+                                         mobile=jsonobj.getString("ContactNo");
+                                         address=jsonobj.getString("EmployeeAddress");
+                                    }catch (Exception e){e.printStackTrace();}
+                                    
 
                                     try {
                                         showpassword = jsonobj.getString("ShowPassword");

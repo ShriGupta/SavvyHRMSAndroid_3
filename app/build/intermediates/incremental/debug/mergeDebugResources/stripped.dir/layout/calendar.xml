@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+	android:background="@drawable/border_custom"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/header"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/header_background"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:gravity="left"
+    >
+<TextView  
+	android:id="@+id/previous" 
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:padding="5dp"
+    android:paddingLeft="5dp"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:gravity="center_horizontal"
+    android:text="&lt;&lt;" 
+    android:clickable="true"   
+    />
+</LinearLayout>
+
+<TextView  
+	android:id="@+id/title" 
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:padding="5dp"
+    android:paddingLeft="5dp"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:gravity="center_horizontal"
+    
+    />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:layout_toRightOf="@+id/title"
+    >
+<TextView  
+	android:id="@+id/next" 
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:padding="5dp"
+    android:paddingLeft="5dp"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    android:textColor="@color/white"
+    android:gravity="center_horizontal"
+    android:text=">>"
+    android:clickable="true"
+    />
+</LinearLayout>
+
+</RelativeLayout>
+	<!--<HorizontalScrollView
+		android:layout_width="match_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/seatLegendLayout">-->
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<LinearLayout
+				android:layout_marginRight="2dp"
+				android:id="@+id/linear_days_name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<com.savvy.hrmsnewapp.customwidgets.CustomTextView
+					android:id="@+id/sun"
+					android:layout_marginLeft="1dp"
+					android:layout_width="60dp"
+					android:layout_height="30dp"
+					android:textColor="@color/color_red"
+					android:textSize="@dimen/text_size"
+					android:textStyle="bold"
+					android:text="SUN"
+					android:background="@drawable/border_custom_new"
+					android:gravity="center"/>
+				<com.savvy.hrmsnewapp.customwidgets.CustomTextView
+					android:id="@+id/mon"
+					android:layout_marginLeft="1dp"
+					android:layout_width="60dp"
+					android:layout_height="30dp"
+					android:textColor="@color/my_custom_color"
+					android:textSize="@dimen/text_size"
+					android:textStyle="bold"
+					android:text="MON"
+					android:background="@drawable/border_custom_new"
+					android:gravity="center"/>
+				<com.savvy.hrmsnewapp.customwidgets.CustomTextView
+					android:layout_marginLeft="1dp"
+					android:id="@+id/tue"
+					android:layout_width="60dp"
+					android:layout_height="30dp"
+					android:textColor="@color/my_custom_color"
+					android:textSize="@dimen/text_size"
+					android:textStyle="bold"
+					android:text="TUE"
+					android:background="@drawable/border_custom_new"
+					android:gravity="center"/>
+				<com.savvy.hrmsnewapp.customwidgets.CustomTextView
+					android:layout_marginLeft="1dp"
+					android:layout_width="60dp"
+					android:id="@+id/wed"
+					android:layout_height="30dp"
+					android:textColor="@color/my_custom_color"
+					android:textSize="@dimen/text_size"
+					android:textStyle="bold"
+					android:text="WED"
+					android:background="@drawable/border_custom_new"
+					android:gravity="center"/>
+				<com.savvy.hrmsnewapp.customwidgets.CustomTextView
+					android:layout_width="60dp"
+					android:id="@+id/thu"
+					android:layout_marginLeft="1dp"
+					android:layout_height="30dp"
+					android:textColor="@color/my_custom_color"
+					android:textSize="@dimen/text_size"
+					android:textStyle="bold"
+					android:text="THU"
+					android:background="@drawable/border_custom_new"
+					android:gravity="center"/>
+				<com.savvy.hrmsnewapp.customwidgets.CustomTextView
+					android:layout_width="60dp"
+					android:id="@+id/fri"
+					android:layout_marginLeft="1dp"
+					android:layout_height="30dp"
+					android:textColor="@color/my_custom_color"
+					android:textSize="@dimen/text_size"
+					android:textStyle="bold"
+					android:text="FRI"
+					android:background="@drawable/border_custom_new"
+					android:gravity="center"/>
+				<com.savvy.hrmsnewapp.customwidgets.CustomTextView
+					android:layout_marginLeft="1dp"
+					android:layout_width="60dp"
+					android:id="@+id/sat"
+					android:layout_height="30dp"
+					android:textColor="@color/my_custom_color"
+					android:textSize="@dimen/text_size"
+					android:textStyle="bold"
+					android:text="SAT"
+					android:background="@drawable/border_custom_new"
+					android:gravity="center"/>
+
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_marginRight="5dp"
+				android:layout_below="@+id/linear_days_name"
+				android:id="@+id/linearLayout_gridtableLayout"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/border_custom_new"
+				android:orientation="horizontal">
+
+
+				<GridView
+					android:id="@+id/gridview"
+					android:layout_width="357dp"
+					android:layout_height="fill_parent"
+					android:layout_margin="1dp"
+					android:background="@drawable/border_custom_new"
+					android:columnWidth="50dp"
+					android:gravity="center"
+					android:horizontalSpacing="1dp"
+					android:numColumns="7"
+					android:scrollbarAlwaysDrawHorizontalTrack="true"
+					android:scrollbarAlwaysDrawVerticalTrack="true"
+					android:scrollbars="horizontal"
+					android:stretchMode="none"
+					android:verticalSpacing="1dp"
+
+
+					/>
+
+
+			</LinearLayout>
+		</RelativeLayout>
+	<!--</HorizontalScrollView>-->
+
+</LinearLayout>
+	<!-- android:stretchMode="columnWidth"-->

@@ -21,8 +21,8 @@ android {
         applicationId 'com.savvy.hrmsnewapp'
         minSdkVersion 24
         targetSdkVersion 33
-        versionName '7.0'
-        versionCode 56
+        versionName '7.1'
+        versionCode 57
     }
     buildTypes {
         debug {

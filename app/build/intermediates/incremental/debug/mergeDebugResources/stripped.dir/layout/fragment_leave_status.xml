@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:id="@+id/coordinatorLayout"
+    android:layout_height="match_parent">
+
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:weightSum="12">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_custom"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="4.5"
+                    android:gravity="center_vertical"
+                    android:text="From Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="@dimen/text_size" />
+
+                <Button
+                    android:id="@+id/btn_leaveStatus_fromDate"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="5.5"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:paddingLeft="5sp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:weightSum="10">
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="To Date"
+                    android:textColor="@color/my_custom_color"
+                    android:textSize="11dp" />
+
+                <Button
+                    android:id="@+id/btn_leaveStatus_toDate"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/border_custom"
+                    android:gravity="center_vertical"
+                    android:hint="Pick Date"
+                    android:nextFocusDown="@+id/btn_to_oddate"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/my_custom_color"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Linear_result_compareDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/result_compareDate"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/color_red"
+                android:textSize="10dp"
+                app:font="@string/font_name_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_custom"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                android:id="@+id/customTextView"
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.5"
+                android:gravity="center_vertical"
+                android:text="Status"
+                android:textColor="@color/my_custom_color"
+                android:textSize="@dimen/text_size" />
+
+            <!--  <Spinner
+                  android:id="@+id/spin_od_status"
+                  android:layout_width="0dip"
+                  android:layout_height="35dip"
+                  android:paddingLeft="28dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_weight="5.5"
+                  android:gravity="center"
+                  app:font="@string/font_name_light"
+                  android:spinnerMode="dropdown"
+                  android:textColor="@color/my_custom_color"
+                  android:textSize="12dp" />-->
+            <Button
+                android:id="@+id/btn_spin_leave_status"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="5.5"
+                android:background="@drawable/border_custom"
+                android:drawableRight="@drawable/down_arrow"
+                android:gravity="center_vertical"
+                android:hint="Please Select"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorGray"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_weight="3"
+                android:textSize="@dimen/text_size"
+                android:background="@drawable/button_border_cancel"
+                android:text="Search"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img_line"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_gravity="top"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@color/color_light_red"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="15dp"
+            android:layout_weight="10"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/border_custom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_custom"
+                android:layout_margin="5dp">
+
+
+                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                    android:id="@+id/txtDataNotFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:text="Data Not Found"
+                    android:textColor="@color/color_red"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/leaveStatusList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--</ScrollView>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:background="@color/windowBackground"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_weight="4.5"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_fromDate"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--&gt;-->
+
+                <!--<com.savvy.hrms.customwidgets.CustomTextView-->
+                    <!--android:id="@+id/txv_fromDate"-->
+                    <!--app:font="@string/font_name_light"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/my_custom_color"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:text="From Date"-->
+                    <!--android:layout_marginTop="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="35dp" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_leaveStatus_fromDate"-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/my_custom_color"-->
+                    <!--android:textColorHint="@color/colorGray"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:text=""-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:nextFocusDown="@+id/edt_password"-->
+                    <!--android:drawablePadding="15dp"-->
+                    <!--android:fontFamily="@string/font_name_light"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:hint="Select Date"-->
+                    <!--android:background="@drawable/border_custom">-->
+
+                <!--</Button>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_toDate"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_below="@+id/ll_fromDate"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp">-->
+
+                <!--<com.savvy.hrms.customwidgets.CustomTextView-->
+                    <!--android:id="@+id/txv_toDate"-->
+                    <!--app:font="@string/font_name_light"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/my_custom_color"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:text="To Date"-->
+                    <!--android:layout_marginTop="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="30dp" />-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_leaveStatus_toDate"-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/my_custom_color"-->
+                    <!--android:textColorHint="@color/colorGray"-->
+                    <!--android:paddingLeft="10dp"-->
+                    <!--android:text=""-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:nextFocusDown="@+id/edt_password"-->
+                    <!--android:drawablePadding="15dp"-->
+                    <!--android:fontFamily="@string/font_name_light"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:hint="Select Date"-->
+                    <!--android:background="@drawable/border_custom">-->
+                <!--</Button>-->
+
+
+            <!--</LinearLayout>-->
+
+
+
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ll_status"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_below="@+id/ll_toDate"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp">-->
+
+
+                <!--<com.savvy.hrms.customwidgets.CustomTextView-->
+                    <!--android:id="@+id/txv_status"-->
+                    <!--app:font="@string/font_name_light"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:textColor="@color/my_custom_color"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:text="Status"-->
+                    <!--android:layout_marginTop="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="30dp" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:background="@drawable/border_custom">-->
+
+                    <!--<Button-->
+                        <!--android:id="@+id/btn_spin_leave_status"-->
+                        <!--android:layout_width="0dip"-->
+                        <!--android:layout_height="30dip"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_weight="5.5"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:drawableRight="@drawable/down_arrow"-->
+                        <!--app:font="@string/font_name_light"-->
+                        <!--android:background="@drawable/border_custom"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:hint="Please Select"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:textColor="@color/colorGray"-->
+                        <!--android:textColorHint="@color/colorGray"-->
+                        <!--android:textSize="12dp" />-->
+
+                   <!--&lt;!&ndash; <Spinner-->
+                        <!--android:id="@+id/spinner_status"-->
+                        <!--android:layout_weight=".85"-->
+                        <!--android:layout_width="0dip"-->
+                        <!--android:layout_height="45dp"-->
+                        <!--android:layout_gravity="center_vertical"-->
+
+                        <!--android:background="@drawable/border_custom"-->
+
+                        <!--android:spinnerMode="dropdown" />-->
+
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_arrowdown2"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_weight=".15"-->
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--android:gravity="center_vertical"-->
+
+
+                        <!--android:src="@drawable/arrow_down" />&ndash;&gt;-->
+
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_below="@+id/ll_status"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp">-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_submit"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_below="@+id/ll_status"-->
+                    <!--android:textColor="#ffffff"-->
+                    <!--android:padding="0dp"-->
+                    <!--android:background="@drawable/button_border_cancel"-->
+                    <!--android:text="Search" />-->
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash; <com.savvy.hrms.customwidgets.CustomTextView-->
+                 <!--app:font="@string/font_name_bold"-->
+                 <!--android:id="@+id/title"-->
+                 <!--android:layout_width="wrap_content"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:layout_centerInParent="true"-->
+                 <!--android:layout_gravity="center"-->
+                 <!--android:gravity="center"-->
+                 <!--android:layout_marginTop="2dp"-->
+                 <!--android:textColor="@android:color/white"-->
+                 <!--android:textSize="35dp"-->
+                 <!--android:text=""-->
+                 <!--android:textStyle="normal" />-->
+
+             <!--<com.savvy.hrms.customwidgets.CustomTextView-->
+                 <!--app:font="@string/font_name_light"-->
+                 <!--android:id="@+id/title_des"-->
+                 <!--android:layout_width="wrap_content"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:layout_below="@+id/title"-->
+                 <!--android:layout_centerInParent="true"-->
+                 <!--android:layout_gravity="center"-->
+                 <!--android:gravity="center"-->
+                 <!--android:layout_marginTop="0dp"-->
+                 <!--android:textColor="@android:color/white"-->
+                 <!--android:textSize="13dp"-->
+                 <!--android:text=""-->
+                 <!--android:textStyle="normal" />-->
+ <!--&ndash;&gt;-->
+
+
+        <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_weight="7.5"-->
+        <!--android:orientation="vertical"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_height="0dp">-->
+
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/leaveStatusList"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_below="@+id/img_line"-->
+            <!--android:layout_margin="0dp" />-->
+
+        <!--&lt;!&ndash; <com.savvy.hrms.customwidgets.CustomTextView-->
+             <!--app:font="@string/font_name_bold"-->
+             <!--android:layout_width="wrap_content"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:text="No data found"-->
+             <!--android:gravity="center"-->
+             <!--android:layout_gravity="center"-->
+             <!--android:textColor="#fff"-->
+             <!--android:textSize="15dp"-->
+             <!--android:visibility="gone"-->
+             <!--android:id="@+id/no_data"/>&ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+<!--</LinearLayout>-->

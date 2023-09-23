@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/txt_TEnoFileChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_custom"
+        android:drawableLeft="@drawable/fileimage"
+        android:font="@string/font_name_light"
+        android:text="upload file"
+        android:textColor="@color/my_custom_color"
+        android:textColorHint="@color/color_gray"
+        android:textSize="@dimen/text_size" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle_svgrepo_com"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:id="@+id/cancel_img"
+        android:visibility="gone"
+        android:background="@android:color/transparent"/>
+</RelativeLayout>

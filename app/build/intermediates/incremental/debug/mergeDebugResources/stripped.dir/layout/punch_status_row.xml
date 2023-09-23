@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_alignParentTop="true"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentStart="true">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <LinearLayout
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical"
+                        android:weightSum="8">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_punch_token"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="Token No."
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_puchToken_value"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="Token Value"
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_punchdate_title"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="Punch Date"
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_puchDate_value"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="Punch Value"
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_punchtime_title"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight="5"
+                                android:text="Punch Time"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_puchTime_value"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="Punch Time Value"
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_punchreason_title"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="Punch Reason"
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+
+                            <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                android:id="@+id/txt_puchReason_value"
+                                android:layout_width="0dip"
+                                android:layout_height="26dip"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                android:layout_weight="5"
+                                android:gravity="center_vertical"
+                                android:text="Punch Reason Value"
+                                android:textColor="@color/my_custom_color"
+                                android:textSize="@dimen/status_approval"
+                                app:font="@string/font_name_light" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical"
+                        android:weightSum="8">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical"
+                            android:weightSum="8">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:id="@+id/txt_punch_status"
+                                    android:layout_width="0dip"
+                                    android:layout_height="26dip"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_weight="5"
+                                    android:text="Status"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/my_custom_color"
+                                    android:textSize="@dimen/status_approval"
+                                    app:font="@string/font_name_light" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:id="@+id/txt_status_value"
+                                    android:layout_width="0dip"
+                                    android:layout_height="26dip"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:text="Status Value"
+                                    android:textColor="@color/my_custom_color"
+                                    android:textSize="@dimen/status_approval"
+                                    app:font="@string/font_name_light" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:id="@+id/txt_actionBy_title"
+                                    android:layout_width="0dip"
+                                    android:layout_height="26dip"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:text="Action By"
+                                    android:textColor="@color/my_custom_color"
+                                    android:textSize="@dimen/status_approval"
+                                    app:font="@string/font_name_light" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:id="@+id/txt_actionBy_value"
+                                    android:layout_width="0dip"
+                                    android:layout_height="26dip"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:text="Action By Value"
+                                    android:textColor="@color/my_custom_color"
+                                    android:textSize="@dimen/status_approval"
+                                    app:font="@string/font_name_light" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:id="@+id/txt_actionDate_title"
+                                    android:layout_width="0dip"
+                                    android:layout_height="26dip"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:text="Action Date"
+                                    android:textColor="@color/my_custom_color"
+                                    android:textSize="@dimen/status_approval"
+                                    app:font="@string/font_name_light" />
+
+                                <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:id="@+id/txt_actionDate_value"
+                                    android:layout_width="0dip"
+                                    android:layout_height="26dip"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:text="Action Date Value"
+                                    android:textColor="@color/my_custom_color"
+                                    android:textSize="@dimen/status_approval"
+                                    app:font="@string/font_name_light" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+
+                               <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                    android:id="@+id/txt_clear_title"
+                                    android:layout_width="0dip"
+                                    android:layout_height="26dip"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_weight="5"
+                                    android:gravity="center_vertical"
+                                    android:text=""
+                                    android:textColor="@color/color_red"
+                                    android:textSize="@dimen/status_approval"
+                                    app:font="@string/font_name_light" />
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5">
+                                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                        android:id="@+id/txt_pullback"
+                                        android:layout_width="70dp"
+                                        android:layout_height="24dip"
+                                        android:layout_marginLeft="65dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                        android:textStyle="bold"
+                                        android:paddingLeft="5dp"
+                                        android:visibility="visible"
+                                        android:paddingRight="5dp"
+                                        android:gravity="center"
+                                        android:text="Pullback"
+                                        android:background="@drawable/button_border"
+                                        android:textColor="#fff"
+                                        android:textSize="@dimen/text_size"/>
+
+                                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                                        android:id="@+id/txt_cancel"
+                                        android:layout_width="70dp"
+                                        android:layout_height="24dip"
+                                        android:layout_marginLeft="65dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_toRightOf="@+id/txt_leavenameTitle"
+                                        android:visibility="gone"
+                                        android:background="@drawable/button_border_cancel"
+                                        android:gravity="center"
+                                        android:text="Cancel"
+                                        android:paddingLeft="5dp"
+                                        android:paddingRight="5dp"
+                                        android:textStyle="bold"
+                                        android:textColor="#fff"
+                                        android:textSize="12dp"/>
+                                </RelativeLayout>
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                 <ImageView
+
+                     android:id="@+id/img_line"
+                     android:layout_width="match_parent"
+                     android:layout_marginTop="3dp"
+                     android:layout_gravity="top"
+                     android:layout_marginLeft="15dp"
+                     android:layout_marginRight="15dp"
+                     android:layout_height="0.1dp"
+                     android:background="@color/color_red"
+                     />
+            </LinearLayout>
+
+
+</RelativeLayout>

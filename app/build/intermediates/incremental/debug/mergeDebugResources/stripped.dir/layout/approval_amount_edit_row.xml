@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:weightSum="8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Type"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/vDetailType"
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Type"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:text="Place From"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/vDetailPlaceFrom"
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_toRightOf="@+id/txt_leavenameTitle"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Place From"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:text="Distance"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/vDetailDistance"
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Distance"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:text="Reason"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+                    <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                        android:id="@+id/vDetailReason"
+                        android:layout_width="0dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:text="Reason"
+                        android:textColor="@color/my_custom_color"
+                        android:textSize="@dimen/text_size"
+                        app:font="@string/font_name_light" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="8">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/customTextView2"
+                            android:layout_width="0dip"
+                            android:gravity="center_vertical"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:text="Date"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/vDetailDate"
+                            android:layout_width="0dip"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Date"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:gravity="center_vertical"
+                            android:layout_weight="5"
+                            android:text="Place To"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/vDetailPlaceTo"
+                            android:layout_width="0dip"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_toRightOf="@+id/txt_leavenameTitle"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Place To"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Amount"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:id="@+id/vDetailAmt"
+                            android:layout_width="0dip"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center_vertical"
+                            android:text="Amount"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.savvy.hrmsnewapp.customwidgets.CustomTextView
+                            android:layout_width="0dip"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:text="App. Amt."
+                            android:gravity="center_vertical"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="@dimen/text_size"
+                            app:font="@string/font_name_light" />
+                        <!--<com.savvy.hrms.customwidgets.CustomTextView-->
+                            <!--android:id="@+id/conVoucher_appAmt"-->
+                            <!--android:layout_width="0dip"-->
+                            <!--android:layout_height="20dip"-->
+                            <!--android:layout_marginLeft="5dp"-->
+                            <!--android:layout_marginTop="0dp"-->
+                            <!--android:layout_weight="5"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:text="App. Amt"-->
+                            <!--android:textColor="@color/my_custom_color"-->
+                            <!--android:textSize="10dp"-->
+                            <!--app:font="@string/font_name_light" />-->
+
+                        <EditText
+                            android:id="@+id/conVoucher_appAmt"
+                            android:layout_width="0dip"
+                            android:layout_height="20dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="5"
+                            android:singleLine="true"
+                            android:background="@drawable/border_custom_new"
+                            android:gravity="center_vertical"
+                            android:text="App. Amt"
+                            android:inputType="number"
+                            android:textColor="@color/my_custom_color"
+                            android:textSize="10dp"
+                            app:font="@string/font_name_light" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--<com.savvy.hrms.customwidgets.CustomTextView-->
+            <!--android:id="@+id/conveyance_approval_save"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="SAVE"-->
+            <!--android:padding="8dp"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginRight="55dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@drawable/button_border"/>-->
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="0.1dp"
+            android:background="@color/color_red"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
